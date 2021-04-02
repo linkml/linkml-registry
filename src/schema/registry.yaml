@@ -1,0 +1,49 @@
+id: https://w3id.org/linkml_registry
+name: linkml_registry
+description: linkml_registry
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/link/linkml/
+  linkml_registry: https://w3id.org/linkml_registry
+default_prefix: linkml_registry
+types:
+  https identifier:
+    typeof: string
+classes:
+  schema info:
+    slots:
+    - name
+    - homepage
+    - schema url
+    - license
+    - description
+    - domain
+    slot_usage: {}
+slots:
+  name:
+    range: string
+    examples:
+      value: HOT-TermCI
+  homepage:
+    range: https identifier
+    examples:
+      value: https://github.com/HOT-Ecosystem/TermCI-model
+  schema url:
+    range: https identifier
+    examples:
+      value: https://w3id.org/biolink/
+  license:
+    range: string
+    examples:
+      value: CC-0
+  description:
+    range: string
+    examples:
+      value: Genome Feature Format LinkML rendering
+  domain:
+    range: string
+    examples:
+      value: clinical
+enums: {}
+
