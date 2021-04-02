@@ -4,7 +4,7 @@ description: linkml_registry
 imports:
 - linkml:types
 prefixes:
-  linkml: https://w3id.org/link/linkml/
+  linkml: https://w3id.org/linkml/
   linkml_registry: https://w3id.org/linkml_registry
 default_prefix: linkml_registry
 types:
@@ -34,7 +34,7 @@ slots:
     examples:
       value: https://w3id.org/biolink/
   license:
-    range: string
+    range: license_enum
     examples:
       value: CC-0
   description:
@@ -45,5 +45,11 @@ slots:
     range: string
     examples:
       value: clinical
-enums: {}
+enums:
+  license_enum:
+    permissible_values:
+      CC-BY:
+        description: CC-BY
+      CC-0:
+        description: CC-0
 

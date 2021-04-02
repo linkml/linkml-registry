@@ -1,0 +1,11 @@
+type SchemaInfo
+  {
+    name: String
+    homepage: HttpsIdentifier
+    schemaUrl: HttpsIdentifier
+    license: LicenseEnum
+    description: String
+    domain: String
+  }
+
+
