@@ -1,0 +1,10 @@
+name,homepage,schema url,license,description
+test,https://github.com/test/test,https://w3id.org/test/,CC-BY,foo
+biolink,https://github.com/biolink/biolink-model,https://w3id.org/biolink/,CC-0,A high level datamodel of biological entities and their associations
+NMDC,https://github.com/microbiomedata/nmdc-metadata,"",CC-0,National Microbiome Data Collaborative
+SSSOM,https://sssom-py.readthedocs.io/,"",CC-0,Simple Standard Sharing Object Mappings
+KGCL,https://cmungall.github.io/ontology-change-language/,"",CC-0,Knowledge Graph Change Language
+Chemistry Schema,https://cmungall.github.io/chem-schema/,"","",Chemistry Schema
+GFF3,https://github.com/berkeleybop/gff-schema,"",CC-0,Genome Feature Format LinkML rendering
+CCDH,"","","",""
+HOT-TermCI,https://github.com/HOT-Ecosystem/TermCI-model,"","",""
