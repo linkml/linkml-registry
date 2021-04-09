@@ -6,5 +6,5 @@ SSSOM,https://sssom-py.readthedocs.io/,,CC-0,Simple Standard Sharing Object Mapp
 KGCL,https://cmungall.github.io/ontology-change-language/,,CC-0,Knowledge Graph Change Language,knowledge graphs
 Chemistry Schema,https://cmungall.github.io/chem-schema/,,,Chemistry Schema,chemistry
 GFF3,https://github.com/berkeleybop/gff-schema,,CC-0,Genome Feature Format LinkML rendering,genomics
-CCDH,,,,,cancer
+CCDH,https://github.com/cancerDHC/ccdhmodel,,CC-0,CRDC-H Model,cancer
 HOT-TermCI,https://github.com/HOT-Ecosystem/TermCI-model,,,,clinical
