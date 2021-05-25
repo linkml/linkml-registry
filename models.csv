@@ -1,10 +1,18 @@
 name,homepage,schema url,license,description,domain
-test,https://github.com/test/test,https://w3id.org/test/,CC-BY,foo,test
-biolink,https://github.com/biolink/biolink-model,https://w3id.org/biolink/,CC-0,A high level datamodel of biological entities and their associations,biosciences
-NMDC,https://github.com/microbiomedata/nmdc-metadata,,CC-0,National Microbiome Data Collaborative,environmental microbiology
+LinkML Model,https://linkml.github.io/linkml-model/docs/,https://github.com/linkml/linkml-model/blob/main/model/schema/meta.yaml,CC-0,LinkML metamodel,meta
+LinkML Template Configuration Model,https://linkml.github.io/template-config-model/,https://github.com/linkml/template-config-model/blob/main/model/schema/config_model.yaml,CC-0,LinkML template configuration,meta
+NMDC,https://microbiomedata.github.io/nmdc-schema/,,CC-0,National Microbiome Data Collaborative,environmental microbiology
 SSSOM,https://sssom-py.readthedocs.io/,,CC-0,Simple Standard Sharing Object Mappings,information
 KGCL,https://cmungall.github.io/ontology-change-language/,,CC-0,Knowledge Graph Change Language,knowledge graphs
+KGViz,https://berkeleybop.github.io/kgviz-model/,,CC-0,Knowledge Graph Visualization Configuration,visualization
+Semantic Sql,https://cmungall.github.io/semantic-sql/,,CC-0,Semantic SQL,ontologies
 Chemistry Schema,https://cmungall.github.io/chem-schema/,,,Chemistry Schema,chemistry
 GFF3,https://github.com/berkeleybop/gff-schema,,CC-0,Genome Feature Format LinkML rendering,genomics
-CCDH,,,,,cancer
+CCDH,https://cancerdhc.github.io/ccdhmodel/v0.2/,,,,cancer
+GSC MIxS,,,,,genomics
+Babelon,https://matentzn.github.io/babelon/,,CC-0,A schema for describing translations and language profiles for ontologies,ontologies
 HOT-TermCI,https://github.com/HOT-Ecosystem/TermCI-model,,,,clinical
+AGR,,,,,genomics
+SESAR,,,,,earth science
+OBOGraphs,,,,,ontologies
+
