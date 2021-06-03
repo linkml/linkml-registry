@@ -7,7 +7,8 @@ KGCL,https://cmungall.github.io/ontology-change-language/,,CC-0,Knowledge Graph 
 KGViz,https://berkeleybop.github.io/kgviz-model/,,CC-0,Knowledge Graph Visualization Configuration,visualization
 Semantic Sql,https://cmungall.github.io/semantic-sql/,,CC-0,Semantic SQL,ontologies
 Chemistry Schema,https://cmungall.github.io/chem-schema/,,,Chemistry Schema,chemistry
-GFF3,https://github.com/berkeleybop/gff-schema,,CC-0,Genome Feature Format LinkML rendering,genomics
+ontology-associations,https://biodatamodels.github.io/ontology-associations/,,CC-0,common association file formats,genomics
+GFF3,https://biodatamodels.github.io/gff-schema/,,CC-0,Genome Feature Format LinkML rendering,genomics
 CCDH,https://cancerdhc.github.io/ccdhmodel/v0.2/,,,,cancer
 GSC MIxS,,,,,genomics
 Babelon,https://matentzn.github.io/babelon/,,CC-0,A schema for describing translations and language profiles for ontologies,ontologies
