@@ -9,6 +9,7 @@ Semantic Sql,https://cmungall.github.io/semantic-sql/,,CC-0,Semantic SQL,ontolog
 Chemistry Schema,https://cmungall.github.io/chem-schema/,,,Chemistry Schema,chemistry
 ontology-associations,https://biodatamodels.github.io/ontology-associations/,,CC-0,common association file formats,genomics
 GFF3,https://biodatamodels.github.io/gff-schema/,,CC-0,Genome Feature Format LinkML rendering,genomics
+Monochrom,https://monarch-initiative.github.io/monochrom/,https://github.com/monarch-initiative/monochrom/blob/master/model/schema/chromo.yaml,CC-0,Chromosome ontology and ETL,genomics
 CCDH,https://cancerdhc.github.io/ccdhmodel/v0.2/,,,,cancer
 GSC MIxS,,,,,genomics
 Babelon,https://matentzn.github.io/babelon/,,CC-0,A schema for describing translations and language profiles for ontologies,ontologies
