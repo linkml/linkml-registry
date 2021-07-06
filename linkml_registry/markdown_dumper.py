@@ -25,7 +25,12 @@ class MarkdownDumper(Dumper):
             h[f.name] = f.name
         return h
 
-    def _autoformat(self, text: str) -> str:
+    def _autoformat(self, text) -> str:
+        if isinstance(text, list):
+            return '; '.join([self._autoformat(x) for x in text])
+        if isinstance(text, float):
+            text = int(text * 100) / 100
+        text = str(text)
         if text.startswith('http'):
             return self._link(text)
         else:
@@ -62,7 +67,6 @@ class MarkdownTableDumper(MarkdownDumper):
 
 class MarkdownPageDumper(MarkdownDumper):
 
-
     def dumps(self, sr: SchemaRegistry) -> None:
         output = StringIO()
         with redirect_stdout(output):
@@ -70,14 +74,16 @@ class MarkdownPageDumper(MarkdownDumper):
             h = self._get_header_dict(SchemaMetadata)
             s: SchemaMetadata
             for s in sr.entries.values():
-                print(f'## {s.name} : {s.title}\n')
+                print(f'## {s.title}\n')
                 print(f'{s.description}\n')
                 text_list = ['key', 'value']
                 rows = 1
                 for k in h.keys():
+                    if k == 'description':
+                        continue
                     v = s.__getattr__(k)
                     if v is not None and v != '' and v != []:
-                        text_list += [k, self._autoformat(str(v))]
+                        text_list += [k, self._autoformat(v)]
                         rows += 1
                 table = Table().create_table(columns=2, rows=rows, text=text_list, text_align='center')
                 print(str(table))

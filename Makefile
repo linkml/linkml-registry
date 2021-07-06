@@ -247,6 +247,7 @@ target/rdf/%.model.ttl: $(SCHEMA_DIR)/%.yaml $(PKG_DIR)/jsonld/%.model.context.j
 # SQLDDL
 # ---------------------------------------
 gen-sqlddl: $(PKG_T_SQLDDL)/$(SCHEMA_NAME).sql
+	cp target/python/*_db_mapping.py $(PKG_T_PYTHON)
 .PHONY: gen-sqlddl
 
 $(PKG_T_SQLDDL)/%.sql: target/sqlddl/%.sql

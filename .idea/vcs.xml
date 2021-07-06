@@ -19,6 +19,7 @@
     <mapping directory="$PROJECT_DIR$/tmp/TermCI-model" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tmp/agr_curation_schema" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tmp/agr_persistent_schema" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tmp/ccdhmodel" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tmp/chem-schema" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tmp/gff-schema" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tmp/ghga-metadata-schema" vcs="Git" />

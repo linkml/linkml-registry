@@ -14,4 +14,7 @@ entries:
     schema_relative_path: src/schema/nmdc.yaml
     license: CC-0
     title: National Microbiome Data Collaborative
-    domain: environmental microbiology
+    topics:
+      - environmental microbiology
+      - genomics
+      - microbiome

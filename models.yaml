@@ -10,7 +10,7 @@ entries:
     github_repo: linkml/linkml-model
     schema_relative_path: model/schema/meta.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
-    domain:
+    topics:
     - meta
     class_count: 19
     slot_count: 125
@@ -26,7 +26,7 @@ entries:
     schema_url: https://github.com/linkml/template-config-model/blob/main/model/schema/config_model.yaml
     github_repo: linkml/template-config-model
     license: CC-0
-    domain:
+    topics:
     - meta
     github_stars: 1
   NMDC:
@@ -41,7 +41,7 @@ entries:
     github_repo: microbiomedata/nmdc-schema
     schema_relative_path: src/schema/nmdc.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
-    domain:
+    topics:
     - environmental microbiology
     class_count: 48
     slot_count: 884
@@ -58,7 +58,7 @@ entries:
     github_repo: mapping-commons/sssom-py
     schema_relative_path: schema/sssom.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
-    domain:
+    topics:
     - information
     class_count: 3
     slot_count: 49
@@ -75,7 +75,7 @@ entries:
     github_repo: cmungall/knowledge-graph-change-language
     schema_relative_path: src/schema/kgcl.yaml
     license: CC-0
-    domain:
+    topics:
     - knowledge graphs
     github_stars: 4
     errors:
@@ -95,7 +95,7 @@ entries:
     github_repo: berkeleybop/kgviz-model
     schema_relative_path: model/schema/kgviz.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
-    domain:
+    topics:
     - visualization
     class_count: 16
     slot_count: 30
@@ -127,7 +127,7 @@ entries:
     github_repo: cmungall/semantic-sql
     schema_relative_path: src/schema/semsql.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
-    domain:
+    topics:
     - ontologies
     class_count: 98
     slot_count: 80
@@ -151,7 +151,7 @@ entries:
     github_repo: cmungall/chem-schema
     schema_relative_path: src/schema/chem.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
-    domain:
+    topics:
     - chemistry
     class_count: 120
     slot_count: 266
@@ -166,10 +166,17 @@ entries:
     homepage: https://cancerdhc.github.io/ccdhmodel
     schema_url: ''
     github_repo: cancerdhc/ccdhmodel
-    license: CC-0
-    domain:
+    schema_relative_path: src/schema/ccdhmodel.yaml
+    license: https://creativecommons.org/publicdomain/zero/1.0/
+    topics:
     - cancer
+    class_count: 41
+    slot_count: 333
+    enum_count: 108
+    type_count: 21
     github_stars: 4
+    proportion_elements_with_a_description: 0.9960238568588469
+    proportion_elements_mapped: 0.7852882703777336
   ontology-associations:
     name: ontology-associations
     title: common association file formats
@@ -179,7 +186,7 @@ entries:
     github_repo: biodatamodels/ontology-associations
     schema_relative_path: src/schema/all.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
-    domain:
+    topics:
     - genomics
     class_count: 33
     slot_count: 124
@@ -197,7 +204,7 @@ entries:
     github_repo: biodatamodels/gff-schema
     schema_relative_path: src/schema/gff.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
-    domain:
+    topics:
     - genomics
     class_count: 8
     slot_count: 38
@@ -213,7 +220,7 @@ entries:
     schema_url: https://github.com/monarch-initiative/monochrom/blob/master/model/schema/chromo.yaml
     github_repo: monarch-initiative/monochrom
     license: CC-0
-    domain:
+    topics:
     - genomics
     github_stars: 4
   GSC MIxS:
@@ -222,7 +229,7 @@ entries:
     homepage: ''
     schema_url: ''
     license: ''
-    domain:
+    topics:
     - genomics
   Babelon:
     name: Babelon
@@ -231,19 +238,19 @@ entries:
     schema_url: ''
     github_repo: matentzn/babelon
     license: CC-0
-    domain:
+    topics:
     - ontologies
     github_stars: 1
   HOT-TermCI:
     name: HOT-TermCI
-    title: ''
+    title: HOT-TermCI
     description: Terminology Core Common Model
     homepage: https://github.com/HOT-Ecosystem/TermCI-model
     schema_url: ''
     github_repo: HOT-Ecosystem/TermCI-model
     schema_relative_path: src/schema/tccm_schema.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
-    domain:
+    topics:
     - clinical
     class_count: 4
     slot_count: 16
@@ -254,14 +261,14 @@ entries:
     proportion_elements_mapped: 1.0
   AGR persistent schema:
     name: AGR persistent schema
-    title: ''
+    title: AGR persistent schema
     description: Alliance Schema Prototype
     homepage: ''
     schema_url: ''
     github_repo: alliance-genome/agr_persistent_schema
     schema_relative_path: src/schema/alliance_schema.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
-    domain:
+    topics:
     - genomics
     class_count: 31
     slot_count: 158
@@ -279,7 +286,7 @@ entries:
     github_repo: alliance-genome/agr_curation_schema
     schema_relative_path: model/schema/phenotypeAndDiseaseAnnotation.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
-    domain:
+    topics:
     - genomics
     class_count: 71
     slot_count: 225
@@ -294,7 +301,7 @@ entries:
     homepage: ''
     schema_url: ''
     license: ''
-    domain:
+    topics:
     - earth science
   OBOGraphs:
     name: OBOGraphs
@@ -303,7 +310,7 @@ entries:
     schema_url: ''
     github_repo: biodatamodels/obograph
     license: ''
-    domain:
+    topics:
     - ontologies
     github_stars: 1
   GHGC Metadata:

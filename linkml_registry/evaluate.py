@@ -69,6 +69,8 @@ def evaluate_schema(schema: SchemaDefinition, sm: SchemaMetadata):
         sm.description = schema.description
     if schema.title and schema.title != '':
         sm.title = schema.title
+    if sm.title is None or sm.title == '':
+        sm.title = sm.name
     sm.class_count = len(schema.classes.values())
     print(f'CC: {sm.class_count}')
     sm.slot_count = len(schema.slots.values())
