@@ -1,5 +1,5 @@
 site_name: "LinkML Registry"
-theme: mkdocs
+theme: readthedocs
 docs_dir: target/docs
 site_dir: docs
 nav:

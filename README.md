@@ -12,7 +12,7 @@ Metadata:
 
 Registry Schema:
 
- * [https://linkml.github.io/linkml-registry/registry/]
+ * [https://linkml.github.io/linkml-registry/registry/](https://linkml.github.io/linkml-registry/registry)
 
 ## How to register a schema
 
