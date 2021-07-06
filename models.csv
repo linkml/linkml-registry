@@ -1,4 +1,4 @@
-name,homepage,schema url,license,description,domain
+name,homepage,schema_url,license,description,domain
 LinkML Model,https://linkml.github.io/linkml-model/docs/,https://github.com/linkml/linkml-model/blob/main/model/schema/meta.yaml,CC-0,LinkML metamodel,meta
 LinkML Template Configuration Model,https://linkml.github.io/template-config-model/,https://github.com/linkml/template-config-model/blob/main/model/schema/config_model.yaml,CC-0,LinkML template configuration,meta
 NMDC,https://microbiomedata.github.io/nmdc-schema/,,CC-0,National Microbiome Data Collaborative,environmental microbiology
