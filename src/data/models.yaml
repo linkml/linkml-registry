@@ -129,24 +129,17 @@ entries:
     title: ''
     topics:
       -  clinical
-  AGR persistent schema:
-    homepage: ''
-    schema_url: ''
-    github_repo: alliance-genome/agr_persistent_schema
-    schema_relative_path: src/schema/alliance_schema.yaml
-    license: ''
-    title: ''
-    topics:
-      -  genomics
-  AGR curation schema:
+  Alliance of Genome Resource Persistent Schema:
+    name: Alliance of Genome Resources Persistent Schema
+    title: Alliance of Genome Resources Persistent Schema
+    description: Alliance Persistent Schema
     homepage: ''
     schema_url: ''
     github_repo: alliance-genome/agr_curation_schema
-    schema_relative_path: model/schema/phenotypeAndDiseaseAnnotation.yaml
-    license: ''
-    title: ''
+    schema_relative_path: src/schema/alliance_schema.yaml
+    license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
-      -  genomics
+    - genomics
   SESAR:
     homepage: ''
     schema_url: ''
