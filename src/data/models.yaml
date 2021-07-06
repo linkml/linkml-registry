@@ -139,7 +139,7 @@ entries:
     schema_relative_path: src/schema/alliance_schema.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
-    - genomics
+      - genomics
   SESAR:
     homepage: ''
     schema_url: ''
