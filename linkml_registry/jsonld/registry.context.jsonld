@@ -1,0 +1,87 @@
+{
+   "_comments": "Auto generated from registry.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2021-07-05 17:10\n    Schema: linkml_registry\n    \n    id: https://w3id.org/linkml_registry\n    description: Datamodel for LinkML Registry and evaluation framework\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "@context": {
+      "OIO": "http://www.geneontology.org/formats/oboInOwl#",
+      "bibo": "http://purl.org/ontology/bibo/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "dcterms": "http://example.org/UNKNOWN/dcterms/",
+      "doap": "http://usefulinc.com/ns/doap#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "linkml": "https://w3id.org/linkml/",
+      "linkml_registry": {
+         "@id": "https://w3id.org/linkml_registry",
+         "@prefix": true
+      },
+      "oslc": "http://open-services.net/ns/core#",
+      "pav": "http://purl.org/pav/",
+      "schema": "http://schema.org/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "@vocab": "https://w3id.org/linkml_registry",
+      "base_purl": {
+         "@type": "@id"
+      },
+      "count_statistic": {
+         "@type": "xsd:integer"
+      },
+      "description": {
+         "@id": "skos:definition"
+      },
+      "domain": {
+         "@id": "dcterms:subject"
+      },
+      "entries": {
+         "@type": "@id",
+         "@id": "dcterms:hasPart"
+      },
+      "class_count": {
+         "@type": "xsd:integer"
+      },
+      "enum_count": {
+         "@type": "xsd:integer"
+      },
+      "github_stars": {
+         "@type": "xsd:integer"
+      },
+      "proportion_elements_mapped": {
+         "@type": "xsd:float"
+      },
+      "proportion_elements_with_a_description": {
+         "@type": "xsd:float"
+      },
+      "slot_count": {
+         "@type": "xsd:integer"
+      },
+      "type_count": {
+         "@type": "xsd:integer"
+      },
+      "homepage": {
+         "@id": "foaf:homepage"
+      },
+      "issue_tracker": {
+         "@id": "doap:bug-database"
+      },
+      "license": {
+         "@id": "dcterms:license"
+      },
+      "name": "@id",
+      "proportion_statistic": {
+         "@type": "xsd:float"
+      },
+      "schema_purl": {
+         "@type": "@id"
+      },
+      "schema_url": {
+         "@id": "dcterms:source"
+      },
+      "score": {
+         "@type": "xsd:integer"
+      },
+      "title": {
+         "@id": "dcterms:title"
+      },
+      "topics": {
+         "@id": "dcterms:subject"
+      }
+   }
+}
+

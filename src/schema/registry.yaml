@@ -1,55 +1,147 @@
 id: https://w3id.org/linkml_registry
 name: linkml_registry
-description: linkml_registry
+title: Schema for LinkML Schema Registry
+description: |-
+  Datamodel for LinkML Registry and evaluation framework
+
 imports:
 - linkml:types
 prefixes:
   linkml: https://w3id.org/linkml/
   linkml_registry: https://w3id.org/linkml_registry
+  skos: http://www.w3.org/2004/02/skos/core#
+  OIO: http://www.geneontology.org/formats/oboInOwl#
+  pav: http://purl.org/pav/
+  oslc: http://open-services.net/ns/core#
+  schema: http://schema.org/
+  bibo: http://purl.org/ontology/bibo/
+  foaf: http://xmlns.com/foaf/0.1/
+  dcat: http://www.w3.org/ns/dcat#
+  doap: http://usefulinc.com/ns/doap#
+
 default_prefix: linkml_registry
 types:
   https identifier:
     typeof: string
 classes:
-  schema info:
+  schema registry:
     slots:
-    - name
-    - homepage
-    - schema url
-    - license
-    - description
-    - domain
+      - name
+      - homepage
+      - entries
+      - license
+      - title
+      - description
+      - domain
+      - topics
+  schema metadata:
+    mixins:
+      - evaluation
+    slots:
+      - name
+      - title
+      - description
+      - homepage
+      - schema url
+      - github repo
+      - schema relative path
+      - license
+      - domain
+      - topics
     slot_usage: {}
+  evaluation:
+    mixin: true
+    attributes:
+      score:
+      class_count:
+        is_a: count statistic
+      slot_count:
+        is_a: count statistic
+      enum_count:
+        is_a: count statistic
+      type_count:
+        is_a: count statistic
+      github stars:
+        is_a: count statistic
+      proportion elements with a description:
+        is_a: proportion statistic
+      proportion elements mapped:
+        is_a: proportion statistic
+      errors:
+        multivalued: true
 slots:
   name:
     range: string
     examples:
-      value: HOT-TermCI
+      - value: HOT-TermCI
+    identifier: true
+    slot_uri: rdfs:label
+  base purl:
+    range: uriorcurie
+  schema purl:
+    range: uriorcurie
   homepage:
     range: https identifier
     examples:
-      value: https://github.com/HOT-Ecosystem/TermCI-model
+      - value: https://github.com/HOT-Ecosystem/TermCI-model
+    slot_uri: foaf:homepage
   schema url:
     range: https identifier
     examples:
-      value: https://w3id.org/biolink/
-  license:
-    range: license_enum
+      - value: https://w3id.org/biolink/
+    slot_uri: dcterms:source
+  github repo:
     examples:
-      value: CC-0
+      - value: linkml/linkml-registry
+  issue tracker:
+    slot_uri: doap:bug-database
+  license:
+    #range: license_enum
+    slot_uri: dcterms:license
+    examples:
+      - value: CC-0
+  title:
+    description: the official title of the schema
+    slot_uri: dcterms:title
   description:
     range: string
+    slot_uri: skos:definition
     examples:
-      value: Genome Feature Format LinkML rendering
+      - value: Genome Feature Format LinkML rendering
   domain:
     range: string
     examples:
-      value: clinical
+      - value: clinical
+    slot_uri: dcterms:subject
+    multivalued: true
+  topics:
+    range: string
+    examples:
+      - value: clinical
+    slot_uri: dcterms:subject
+    multivalued: true
+  entries:
+    range: schema metadata
+    inlined: true
+    multivalued: true
+    slot_uri: dcterms:hasPart
+  score:
+    range: integer
+  github stars:
+    range: integer
+  schema relative path:
+  statistic:
+  count statistic:
+    range: integer
+  proportion statistic:
+    range: float
 enums:
   license_enum:
     permissible_values:
-      CC-BY:
+      CC-BY-v4:
         description: CC-BY
-      CC-0:
+        meaning: http://creativecommons.org/licenses/by/4.0/
+      CC-0-v1:
         description: CC-0
+        meaning: https://creativecommons.org/publicdomain/zero/1.0/
 

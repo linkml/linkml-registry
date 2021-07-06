@@ -1,6 +1,11 @@
-site_name: "{{schema.description}}"
-theme: readthedocs
+site_name: "LinkML Registry"
+theme: mkdocs
+docs_dir: target/docs
+site_dir: docs
 nav:
   - Home: home.md
+  - Registry: registry.md
   - Index: index.md
   - Credits: credits.md
+site_url: https://linkml.github.io/linkml-registry/
+repo_url: https://github.com/linkml/linkml-registry

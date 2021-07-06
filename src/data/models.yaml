@@ -1,0 +1,154 @@
+name: LinkML-Main-Registry
+homepage: https://github.com/linkml/linkml-registry
+title: |-
+  This is the main LinkML registry
+entries:
+  LinkML Model:
+    homepage: https://linkml.github.io/linkml-model/docs/
+    schema_url: https://github.com/linkml/linkml-model/blob/main/model/schema/meta.yaml
+    github_repo: linkml/linkml-model
+    schema_relative_path: model/schema/meta.yaml
+    license: CC-0
+    title: LinkML metamodel
+    domain: meta
+  LinkML Template Configuration Model:
+    homepage: https://linkml.github.io/template-config-model/
+    schema_url: https://github.com/linkml/template-config-model/blob/main/model/schema/config_model.yaml
+    github_repo: linkml/template-config-model
+    license: CC-0
+    title: LinkML template configuration
+    domain: meta
+  NMDC:
+    homepage: https://microbiomedata.github.io/nmdc-schema/
+    github_repo: microbiomedata/nmdc-schema
+    schema_relative_path: src/schema/nmdc.yaml
+    license: CC-0
+    title: National Microbiome Data Collaborative
+    domain: environmental microbiology
+  SSSOM:
+    homepage: https://sssom-py.readthedocs.io/
+    github_repo: mapping-commons/sssom-py
+    schema_relative_path: schema/sssom.yaml
+    license: CC-0
+    title: Simple Standard Sharing Object Mappings
+    domain: information
+  KGCL:
+    homepage: https://cmungall.github.io/knowledge-graph-change-language/
+    schema_url: ''
+    github_repo: cmungall/knowledge-graph-change-language
+    schema_relative_path: src/schema/kgcl.yaml
+    license: CC-0
+    title: Knowledge Graph Change Language
+    domain: knowledge graphs
+  KGViz:
+    homepage: https://berkeleybop.github.io/kgviz-model/
+    schema_url: ''
+    github_repo: berkeleybop/kgviz-model
+    schema_relative_path: model/schema/kgviz.yaml
+    license: CC-0
+    title: Knowledge Graph Visualization Configuration
+    domain: visualization
+  Semantic Sql:
+    homepage: https://cmungall.github.io/semantic-sql/
+    github_repo: cmungall/semantic-sql
+    schema_relative_path: src/schema/semsql.yaml
+    license: CC-0
+    title: Semantic SQL
+    domain: ontologies
+  Chemistry Schema:
+    homepage: https://cmungall.github.io/chem-schema/
+    license: CC-0
+    github_repo: cmungall/chem-schema
+    schema_relative_path: src/schema/chem.yaml
+    title: Chemistry Schema
+    domain: chemistry
+  CCDH:
+    homepage: https://cancerdhc.github.io/ccdhmodel
+    schema_url: ''
+    license: CC-0
+    github_repo: cancerdhc/ccdhmodel
+    title: CRDC-H Model
+    domain: cancer
+  ontology-associations:
+    homepage: https://biodatamodels.github.io/ontology-associations/
+    schema_url: ''
+    github_repo: biodatamodels/ontology-associations
+    schema_relative_path: src/schema/all.yaml
+    license: CC-0
+    title: common association file formats
+    domain: genomics
+  GFF3:
+    homepage: https://biodatamodels.github.io/gff-schema/
+    schema_url: ''
+    github_repo: biodatamodels/gff-schema
+    schema_relative_path: src/schema/gff.yaml
+    license: CC-0
+    title: Genome Feature Format LinkML rendering
+    domain: genomics
+  Monochrom:
+    homepage: https://monarch-initiative.github.io/monochrom/
+    schema_url: https://github.com/monarch-initiative/monochrom/blob/master/model/schema/chromo.yaml
+    github_repo: monarch-initiative/monochrom
+    license: CC-0
+    title: Chromosome ontology and ETL
+    domain: genomics
+  GSC MIxS:
+    homepage: ''
+    schema_url: ''
+    license: ''
+    title: ''
+    domain: genomics
+  Babelon:
+    homepage: https://matentzn.github.io/babelon/
+    schema_url: ''
+    github_repo: matentzn/babelon
+    license: CC-0
+    title: A schema for describing translations and language profiles for ontologies
+    domain: ontologies
+  HOT-TermCI:
+    homepage: https://github.com/HOT-Ecosystem/TermCI-model
+    github_repo: HOT-Ecosystem/TermCI-model
+    schema_url: ''
+    schema_relative_path: src/schema/tccm_schema.yaml
+    license: ''
+    title: ''
+    domain: clinical
+  AGR persistent schema:
+    homepage: ''
+    schema_url: ''
+    github_repo: alliance-genome/agr_persistent_schema
+    schema_relative_path: src/schema/alliance_schema.yaml
+    license: ''
+    title: ''
+    domain: genomics
+  AGR curation schema:
+    homepage: ''
+    schema_url: ''
+    github_repo: alliance-genome/agr_curation_schema
+    schema_relative_path: model/schema/phenotypeAndDiseaseAnnotation.yaml
+    license: ''
+    title: ''
+    domain: genomics
+  SESAR:
+    homepage: ''
+    schema_url: ''
+    license: ''
+    title: ''
+    domain: earth science
+  OBOGraphs:
+    homepage: ''
+    schema_url: ''
+    github_repo: biodatamodels/obograph
+    license: ''
+    title: ''
+    domain: ontologies
+  GHGC Metadata:
+    homepage: https://ghga-de.github.io/ghga-metadata-schema/
+    title: Metadata schema for the German Human Genome-Phenome Archive (GHGA)
+    github_repo: ghga-de/ghga-metadata-schema
+    schema_relative_path: src/schema/ghgc.yaml
+  MIANCT:
+    title: Minimal information about a New Cell Type
+    homepage: https://cmungall.github.io/mianct-schema/
+    github_repo: cmungall/mianct-schema
+    schema_relative_path: model/schema/mianct.yaml

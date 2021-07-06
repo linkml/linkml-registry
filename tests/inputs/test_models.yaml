@@ -1,0 +1,17 @@
+name: default
+entries:
+  LinkML Model:
+    homepage: https://linkml.github.io/linkml-model/docs/
+    schema_url: https://github.com/linkml/linkml-model/blob/main/model/schema/meta.yaml
+    github_repo: linkml/linkml-model
+    schema_relative_path: model/schema/meta.yaml
+    license: CC-0
+    title: LinkML metamodel
+    domain: meta
+  NMDC:
+    homepage: https://microbiomedata.github.io/nmdc-schema/
+    github_repo: microbiomedata/nmdc-schema
+    schema_relative_path: src/schema/nmdc.yaml
+    license: CC-0
+    title: National Microbiome Data Collaborative
+    domain: environmental microbiology
