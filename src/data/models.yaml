@@ -28,6 +28,23 @@ entries:
     title: National Microbiome Data Collaborative
     topics:
       -  environmental microbiology
+  Biolink-Model:
+    homepage: https://biolink.github.io/biolink-model/
+    github_repo: biolink/biolink-model
+    schema_relative_path: biolink-model.yaml
+    license: CC-0
+    title: Biolink Model
+    topics:
+      - genomics
+      - disease
+      - phenotype
+      - expression
+      - GO
+      - GO-CAM
+      - human biology
+      - model organism biology
+      - biochemistry
+      - biology
   SSSOM:
     homepage: https://sssom-py.readthedocs.io/
     github_repo: mapping-commons/sssom-py
