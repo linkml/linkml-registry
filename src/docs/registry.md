@@ -68,6 +68,28 @@ This schema is organized into distinct modules:
 |proportion_elements_with_a_description|0.86|
 |proportion_elements_mapped|0.99|
 
+## Biolink Model
+
+Entity and association taxonomy and datamodel for life-sciences data
+
+
+|key|value|
+| :---: | :---: |
+|name|Biolink-Model|
+|title|Biolink Model|
+|homepage|[https://biolink.github.io/biolink-model/](https://biolink.github.io/biolink-model/)|
+|github_repo|biolink/biolink-model|
+|schema_relative_path|biolink-model.yaml|
+|license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
+|topics|genomics; disease; phenotype; expression; GO; GO-CAM; human biology; model organism biology; biochemistry; biology|
+|class_count|257|
+|slot_count|608|
+|enum_count|9|
+|type_count|27|
+|github_stars|60|
+|proportion_elements_with_a_description|0.67|
+|proportion_elements_mapped|0.99|
+
 ## Simple Standard Sharing Object Mappings
 
 Datamodel for Simple Standard for Sharing Ontology Mappings (SSSOM)
@@ -86,7 +108,7 @@ Datamodel for Simple Standard for Sharing Ontology Mappings (SSSOM)
 |slot_count|49|
 |enum_count|1|
 |type_count|14|
-|github_stars|6|
+|github_stars|7|
 |proportion_elements_with_a_description|0.98|
 |proportion_elements_mapped|0.98|
 
@@ -104,7 +126,7 @@ None
 |schema_relative_path|src/schema/kgcl.yaml|
 |license|CC-0|
 |topics|knowledge graphs|
-|github_stars|4|
+|github_stars|9|
 |errors|Error with obtaining schema for KGCL: Conflicting URIs (https://w3id.org/kgcl/basics, https://w3id.org/kgcl/prov) for item: description|
 
 ## Knowledge Graph Visualization Configuration
@@ -329,47 +351,21 @@ Terminology Core Common Model
 |proportion_elements_with_a_description|0.97|
 |proportion_elements_mapped|1.0|
 
-## AGR persistent schema
+## Alliance of Genome Resources Persistent Schema
 
-Alliance Schema Prototype
+Alliance Persistent Schema
 
 
 |key|value|
 | :---: | :---: |
-|name|AGR persistent schema|
-|title|AGR persistent schema|
-|github_repo|alliance-genome/agr_persistent_schema|
+|name|Alliance of Genome Resource Persistent Schema|
+|title|Alliance of Genome Resources Persistent Schema|
+|github_repo|alliance-genome/agr_curation_schema|
 |schema_relative_path|src/schema/alliance_schema.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|genomics|
-|class_count|31|
-|slot_count|158|
-|enum_count|10|
-|type_count|15|
-|github_stars|2|
-|proportion_elements_with_a_description|0.64|
-|proportion_elements_mapped|0.95|
-
-## Alliance Schema Prototype Phenotype and Disease Annotation
-
-Alliance Phenotype and Disease Annotation Schema Prototype with LinkML
-
-
-|key|value|
-| :---: | :---: |
-|name|AGR curation schema|
-|title|Alliance Schema Prototype Phenotype and Disease Annotation|
-|github_repo|alliance-genome/agr_curation_schema|
-|schema_relative_path|model/schema/phenotypeAndDiseaseAnnotation.yaml|
-|license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
-|topics|genomics|
-|class_count|71|
-|slot_count|225|
-|enum_count|11|
-|type_count|15|
 |github_stars|3|
-|proportion_elements_with_a_description|0.57|
-|proportion_elements_mapped|0.96|
+|errors|Error with obtaining schema for Alliance of Genome Resource Persistent Schema: [Errno 2] No such file or directory: '/Users/cjm/repos/linkml-registry/tmp/agr_curation_schema/src/schema/alliance_schema.yaml'|
 
 ## 
 
@@ -391,7 +387,7 @@ None
 |name|OBOGraphs|
 |github_repo|biodatamodels/obograph|
 |topics|ontologies|
-|github_stars|1|
+|github_stars|2|
 
 ## Metadata schema for the German Human Genome-Phenome Archive (GHGA)
 
@@ -450,7 +446,7 @@ When should one provide an entry for a cell type in a MIANCT sheet?
 |slot_count|11|
 |enum_count|3|
 |type_count|15|
-|github_stars|2|
+|github_stars|3|
 |proportion_elements_with_a_description|0.64|
 |proportion_elements_mapped|0.93|
 

@@ -50,6 +50,32 @@ entries:
     github_stars: 4
     proportion_elements_with_a_description: 0.8696109358569927
     proportion_elements_mapped: 0.9989484752891693
+  Biolink-Model:
+    name: Biolink-Model
+    title: Biolink Model
+    description: Entity and association taxonomy and datamodel for life-sciences data
+    homepage: https://biolink.github.io/biolink-model/
+    github_repo: biolink/biolink-model
+    schema_relative_path: biolink-model.yaml
+    license: https://creativecommons.org/publicdomain/zero/1.0/
+    topics:
+    - genomics
+    - disease
+    - phenotype
+    - expression
+    - GO
+    - GO-CAM
+    - human biology
+    - model organism biology
+    - biochemistry
+    - biology
+    class_count: 257
+    slot_count: 608
+    enum_count: 9
+    type_count: 27
+    github_stars: 60
+    proportion_elements_with_a_description: 0.6792452830188679
+    proportion_elements_mapped: 0.9900110987791343
   SSSOM:
     name: SSSOM
     title: Simple Standard Sharing Object Mappings
@@ -64,7 +90,7 @@ entries:
     slot_count: 49
     enum_count: 1
     type_count: 14
-    github_stars: 6
+    github_stars: 7
     proportion_elements_with_a_description: 0.9850746268656716
     proportion_elements_mapped: 0.9850746268656716
   KGCL:
@@ -77,7 +103,7 @@ entries:
     license: CC-0
     topics:
     - knowledge graphs
-    github_stars: 4
+    github_stars: 9
     errors:
     - 'Error with obtaining schema for KGCL: Conflicting URIs (https://w3id.org/kgcl/basics,
       https://w3id.org/kgcl/prov) for item: description'
@@ -259,42 +285,21 @@ entries:
     github_stars: 2
     proportion_elements_with_a_description: 0.9705882352941176
     proportion_elements_mapped: 1.0
-  AGR persistent schema:
-    name: AGR persistent schema
-    title: AGR persistent schema
-    description: Alliance Schema Prototype
+  Alliance of Genome Resource Persistent Schema:
+    name: Alliance of Genome Resource Persistent Schema
+    title: Alliance of Genome Resources Persistent Schema
+    description: Alliance Persistent Schema
     homepage: ''
     schema_url: ''
-    github_repo: alliance-genome/agr_persistent_schema
+    github_repo: alliance-genome/agr_curation_schema
     schema_relative_path: src/schema/alliance_schema.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
     - genomics
-    class_count: 31
-    slot_count: 158
-    enum_count: 10
-    type_count: 15
-    github_stars: 2
-    proportion_elements_with_a_description: 0.6401869158878505
-    proportion_elements_mapped: 0.9532710280373832
-  AGR curation schema:
-    name: AGR curation schema
-    title: Alliance Schema Prototype Phenotype and Disease Annotation
-    description: Alliance Phenotype and Disease Annotation Schema Prototype with LinkML
-    homepage: ''
-    schema_url: ''
-    github_repo: alliance-genome/agr_curation_schema
-    schema_relative_path: model/schema/phenotypeAndDiseaseAnnotation.yaml
-    license: https://creativecommons.org/publicdomain/zero/1.0/
-    topics:
-    - genomics
-    class_count: 71
-    slot_count: 225
-    enum_count: 11
-    type_count: 15
     github_stars: 3
-    proportion_elements_with_a_description: 0.577639751552795
-    proportion_elements_mapped: 0.9658385093167702
+    errors:
+    - 'Error with obtaining schema for Alliance of Genome Resource Persistent Schema:
+      [Errno 2] No such file or directory: ''/Users/cjm/repos/linkml-registry/tmp/agr_curation_schema/src/schema/alliance_schema.yaml'''
   SESAR:
     name: SESAR
     title: ''
@@ -312,7 +317,7 @@ entries:
     license: ''
     topics:
     - ontologies
-    github_stars: 1
+    github_stars: 2
   GHGC Metadata:
     name: GHGC Metadata
     title: Metadata schema for the German Human Genome-Phenome Archive (GHGA)
@@ -354,7 +359,7 @@ entries:
     slot_count: 11
     enum_count: 3
     type_count: 15
-    github_stars: 2
+    github_stars: 3
     proportion_elements_with_a_description: 0.6451612903225806
     proportion_elements_mapped: 0.9354838709677419
 title: This is the main LinkML registry

@@ -147,7 +147,6 @@ entries:
     topics:
       -  clinical
   Alliance of Genome Resource Persistent Schema:
-    name: Alliance of Genome Resources Persistent Schema
     title: Alliance of Genome Resources Persistent Schema
     description: Alliance Persistent Schema
     homepage: ''
