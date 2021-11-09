@@ -1,5 +1,5 @@
 {
-   "_comments": "Auto generated from registry.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2021-07-05 17:10\n    Schema: linkml_registry\n    \n    id: https://w3id.org/linkml_registry\n    description: Datamodel for LinkML Registry and evaluation framework\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "_comments": "Auto generated from registry.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2021-11-08 20:40\n    Schema: linkml_registry\n    \n    id: https://w3id.org/linkml_registry\n    description: Datamodel for LinkML Registry and evaluation framework\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
    "@context": {
       "OIO": "http://www.geneontology.org/formats/oboInOwl#",
       "bibo": "http://purl.org/ontology/bibo/",

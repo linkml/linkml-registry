@@ -19,7 +19,7 @@ A metamodel for defining linked open data schemas
 |slot_count|125|
 |enum_count|1|
 |type_count|14|
-|github_stars|4|
+|github_stars|10|
 |proportion_elements_with_a_description|0.91|
 |proportion_elements_mapped|0.99|
 
@@ -64,7 +64,7 @@ This schema is organized into distinct modules:
 |slot_count|884|
 |enum_count|1|
 |type_count|18|
-|github_stars|4|
+|github_stars|5|
 |proportion_elements_with_a_description|0.86|
 |proportion_elements_mapped|0.99|
 
@@ -86,7 +86,7 @@ Entity and association taxonomy and datamodel for life-sciences data
 |slot_count|608|
 |enum_count|9|
 |type_count|27|
-|github_stars|60|
+|github_stars|68|
 |proportion_elements_with_a_description|0.67|
 |proportion_elements_mapped|0.99|
 
@@ -108,7 +108,7 @@ Datamodel for Simple Standard for Sharing Ontology Mappings (SSSOM)
 |slot_count|49|
 |enum_count|1|
 |type_count|14|
-|github_stars|7|
+|github_stars|10|
 |proportion_elements_with_a_description|0.98|
 |proportion_elements_mapped|0.98|
 
@@ -126,7 +126,7 @@ None
 |schema_relative_path|src/schema/kgcl.yaml|
 |license|CC-0|
 |topics|knowledge graphs|
-|github_stars|9|
+|github_stars|13|
 |errors|Error with obtaining schema for KGCL: Conflicting URIs (https://w3id.org/kgcl/basics, https://w3id.org/kgcl/prov) for item: description|
 
 ## Knowledge Graph Visualization Configuration
@@ -148,7 +148,7 @@ An example of a use of this is https://github.com/cmungall/obographviz
 |slot_count|30|
 |enum_count|3|
 |type_count|16|
-|github_stars|3|
+|github_stars|4|
 |proportion_elements_with_a_description|0.53|
 |proportion_elements_mapped|0.95|
 
@@ -194,7 +194,7 @@ from the linkml yaml into SQL DDL
 |slot_count|80|
 |enum_count|0|
 |type_count|16|
-|github_stars|7|
+|github_stars|10|
 |proportion_elements_with_a_description|0.58|
 |proportion_elements_mapped|1.0|
 
@@ -240,7 +240,7 @@ None
 |slot_count|333|
 |enum_count|108|
 |type_count|21|
-|github_stars|4|
+|github_stars|10|
 |proportion_elements_with_a_description|0.99|
 |proportion_elements_mapped|0.78|
 
@@ -262,7 +262,7 @@ Various association data models
 |slot_count|124|
 |enum_count|18|
 |type_count|25|
-|github_stars|3|
+|github_stars|4|
 |proportion_elements_with_a_description|0.31|
 |proportion_elements_mapped|0.94|
 
@@ -284,7 +284,7 @@ Playing around with GFF spec
 |slot_count|38|
 |enum_count|3|
 |type_count|16|
-|github_stars|4|
+|github_stars|5|
 |proportion_elements_with_a_description|0.56|
 |proportion_elements_mapped|0.95|
 
@@ -302,7 +302,7 @@ None
 |github_repo|monarch-initiative/monochrom|
 |license|CC-0|
 |topics|genomics|
-|github_stars|4|
+|github_stars|8|
 
 ## 
 
@@ -347,7 +347,7 @@ Terminology Core Common Model
 |slot_count|16|
 |enum_count|0|
 |type_count|14|
-|github_stars|2|
+|github_stars|3|
 |proportion_elements_with_a_description|0.97|
 |proportion_elements_mapped|1.0|
 
@@ -387,7 +387,7 @@ None
 |name|OBOGraphs|
 |github_repo|biodatamodels/obograph|
 |topics|ontologies|
-|github_stars|2|
+|github_stars|3|
 
 ## Metadata schema for the German Human Genome-Phenome Archive (GHGA)
 
@@ -401,7 +401,7 @@ None
 |homepage|[https://ghga-de.github.io/ghga-metadata-schema/](https://ghga-de.github.io/ghga-metadata-schema/)|
 |github_repo|ghga-de/ghga-metadata-schema|
 |schema_relative_path|src/schema/ghgc.yaml|
-|github_stars|2|
+|github_stars|3|
 |errors|Error with obtaining schema for GHGC Metadata: [Errno 2] No such file or directory: '/Users/cjm/repos/linkml-registry/tmp/ghga-metadata-schema/src/schema/ghgc.yaml'|
 
 ## Minimal Information About a new Cell Type

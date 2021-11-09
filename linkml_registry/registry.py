@@ -1,5 +1,5 @@
 # Auto generated from registry.yaml by pythongen.py version: 0.9.0
-# Generation date: 2021-07-05 17:10
+# Generation date: 2021-11-08 20:40
 # Schema: linkml_registry
 #
 # id: https://w3id.org/linkml_registry
