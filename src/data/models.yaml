@@ -181,3 +181,8 @@ entries:
     homepage: https://cmungall.github.io/mianct-schema/
     github_repo: cmungall/mianct-schema
     schema_relative_path: model/schema/mianct.yaml
+  iSamples:
+    homepage: https://github.com/isamplesorg/metadata
+    github_repo: isamplesorg/metadata
+    schema_relative_path: iSamplesSchemaBasic0.3.yml
+    license: https://creativecommons.org/publicdomain/zero/1.0/
