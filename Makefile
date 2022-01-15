@@ -9,11 +9,12 @@ PKG_DIR = linkml_registry
 SCHEMA_DIR = $(SRC_DIR)/schema
 MODEL_DOCS_DIR = $(SRC_DIR)/docs
 SOURCE_FILES := $(shell find $(SCHEMA_DIR) -name '*.yaml')
+SRC = $(SCHEMA_DIR)/registry.yaml
 SCHEMA_NAMES = $(patsubst $(SCHEMA_DIR)/%.yaml, %, $(SOURCE_FILES))
 
 SCHEMA_NAME = registry
 SCHEMA_SRC = $(SCHEMA_DIR)/$(SCHEMA_NAME).yaml
-PKG_TGTS = python jsonld_context json_schema sqlddl
+PKG_TGTS = python jsonld_context json_schema
 TGTS = docs python $(PKG_TGTS)
 
 # Targets by PKG_TGT
@@ -65,7 +66,13 @@ test:
 # ---------------------------------------
 # GEN: run generator for each target
 # ---------------------------------------
-gen: $(patsubst %,gen-%,$(TGTS))
+#gen: $(patsubst %,gen-%,$(TGTS))
+
+gen:
+	$(RUN) gen-project -d . $(SRC)
+
+linkml_registry/registry.py: python/registry.py 
+	cp $< $@
 
 # ---------------------------------------
 # CLEAN: clear out all of the targets
@@ -246,9 +253,9 @@ target/rdf/%.model.ttl: $(SCHEMA_DIR)/%.yaml $(PKG_DIR)/jsonld/%.model.context.j
 # ---------------------------------------
 # SQLDDL
 # ---------------------------------------
-gen-sqlddl: $(PKG_T_SQLDDL)/$(SCHEMA_NAME).sql
-	cp target/python/*_db_mapping.py $(PKG_T_PYTHON)
-.PHONY: gen-sqlddl
+#gen-sqlddl: $(PKG_T_SQLDDL)/$(SCHEMA_NAME).sql#
+#	cp target/python/*_db_mapping.py $(PKG_T_PYTHON)
+#.PHONY: gen-sqlddl
 
 $(PKG_T_SQLDDL)/%.sql: target/sqlddl/%.sql
 	mkdir -p $(PKG_T_SQLDDL)

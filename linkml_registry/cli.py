@@ -46,10 +46,13 @@ def main(verbose: int, quiet: bool):
 @click.option('-m', '--markdown-output',
               default=None,
               help='path to markdown output')
+@click.option('-I', '--inclusion-list',
+              multiple=True,
+              help='Only include these names')
 @click.option('-w', '--workdir',
               default='tmp',
               help='working dir for checked out repos')
-def eval(input: str, output: str, markdown_output: str = None, workdir: str = 'tmp', use_github_api: bool = False):
+def eval(input: str, output: str, inclusion_list = None, markdown_output: str = None, workdir: str = 'tmp', use_github_api: bool = False):
     """Evaluate
 
     Example:
@@ -66,7 +69,8 @@ def eval(input: str, output: str, markdown_output: str = None, workdir: str = 't
 
     """
     registry = yaml_loader.load(input, SchemaRegistry)
-    evaluate(registry, use_github_api=use_github_api, workdir=workdir)
+    print(f'INCLUDES={list(inclusion_list)}')
+    evaluate(registry, use_github_api=use_github_api, workdir=workdir, include=list(inclusion_list))
     if markdown_output:
         d = MarkdownPageDumper()
         d.dump(registry, to_file=markdown_output)

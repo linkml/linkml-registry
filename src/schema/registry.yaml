@@ -85,6 +85,7 @@ slots:
     examples:
       - value: https://github.com/HOT-Ecosystem/TermCI-model
     slot_uri: foaf:homepage
+    recommended: true
   schema url:
     range: https identifier
     examples:
@@ -93,21 +94,25 @@ slots:
   github repo:
     examples:
       - value: linkml/linkml-registry
+    recommended: true
   issue tracker:
     slot_uri: doap:bug-database
   license:
     #range: license_enum
+    recommended: true
     slot_uri: dcterms:license
     examples:
       - value: CC-0
   title:
     description: the official title of the schema
     slot_uri: dcterms:title
+    recommended: true
   description:
     range: string
     slot_uri: skos:definition
     examples:
       - value: Genome Feature Format LinkML rendering
+    recommended: true
   domain:
     range: string
     examples:

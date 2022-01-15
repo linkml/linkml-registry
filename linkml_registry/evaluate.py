@@ -1,3 +1,6 @@
+from typing import List
+
+from linkml_runtime import SchemaView
 from linkml_runtime.linkml_model.meta import SchemaDefinition, Element, ClassDefinition, \
     SlotDefinition, TypeDefinition, EnumDefinition
 from linkml_runtime.loaders import yaml_loader
@@ -7,9 +10,24 @@ from .github_utils import get_stars, clone_repo
 from .registry import SchemaMetadata, SchemaRegistry
 import logging
 
-def evaluate(sr: SchemaRegistry, use_github_api=True, workdir: str = None):
+
+def evaluate(sr: SchemaRegistry, use_github_api=True, workdir: str = None, include: List[str] = None):
+    n = 0
     for s in sr.entries.values():
-        evaluate_schema_metadata(s, use_github_api=use_github_api, workdir=workdir)
+        skip = False
+        if include:
+            if s.name not in include:
+                skip = True
+        if skip:
+            print(f'SKIPPING: {s.name}')
+        else:
+            evaluate_schema_metadata(s, use_github_api=use_github_api, workdir=workdir)
+        n += 1
+    if n == 0:
+        logging.error('No schemas evaluated')
+        if include:
+            logging.error(f'Is include set correctly? Current: {include}')
+    logging.info(f'Evaluated {n} schemas')
 
 def evaluate_schema_metadata(sm: SchemaMetadata, use_github_api=True, workdir=None):
     if use_github_api:
@@ -25,16 +43,25 @@ def evaluate_schema_metadata(sm: SchemaMetadata, use_github_api=True, workdir=No
         except Exception as e:
             logging.error(f'Exception: {e}')
             sm.errors.append(f'Error with obtaining schema for {sm.name}: {e}')
+            raise e
 
 def load_schema(path: str) -> SchemaDefinition:
     #schema = load_raw_schema(path, merge_modules=True)
-    gen = YAMLGenerator(path, mergeimports=True)
-    yaml = gen.serialize()
+    sv = SchemaView(path)
+    #gen = YAMLGenerator(path, mergeimports=True)
+    #yaml = gen.serialize()
     #print(f'YAML={yaml}')
-    schema = gen.schema
+    schema = get_merged_schema(sv)
     print(f'Parsed schema: {schema.name} type: {type(schema)} classes: {type(schema.classes)} = {len(schema.classes)}')
 #    filter_schema(schema)
     return schema
+
+def get_merged_schema(sv: SchemaView) -> SchemaDefinition:
+    schema = sv.schema
+    to_merge = [s2 for s2 in sv.all_schema(True) if s2 != schema]
+    for s2 in to_merge:
+        sv.merge_schema(s2)
+    return sv.schema
 
 def filter_schema(schema: SchemaDefinition):
     """

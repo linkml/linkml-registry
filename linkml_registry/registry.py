@@ -1,5 +1,5 @@
 # Auto generated from registry.yaml by pythongen.py version: 0.9.0
-# Generation date: 2021-11-08 20:40
+# Generation date: 2022-01-14T16:33:29
 # Schema: linkml_registry
 #
 # id: https://w3id.org/linkml_registry
@@ -9,7 +9,7 @@
 import dataclasses
 import sys
 import re
-from jsonasobj2 import JsonObj
+from jsonasobj2 import JsonObj, as_dict
 from typing import Optional, List, Union, Dict, ClassVar, Any
 from dataclasses import dataclass
 from linkml_runtime.linkml_model.meta import EnumDefinition, PermissibleValue, PvFormulaOptions

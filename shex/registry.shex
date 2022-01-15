@@ -2,6 +2,9 @@ BASE <https://w3id.org/linkml_registry/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dcterms: <http://example.org/UNKNOWN/dcterms/>
 
 
 <https://w3id.org/linkml_registryHttpsIdentifier> xsd:string
@@ -34,17 +37,59 @@ linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
 
-<https://w3id.org/linkml_registrySchemaInfo> CLOSED {
-    (  $<https://w3id.org/linkml_registrySchemaInfo_tes> (  <https://w3id.org/linkml_registryname> @linkml:String ? ;
-          <https://w3id.org/linkml_registryhomepage> @<https://w3id.org/linkml_registryHttpsIdentifier> ? ;
-          <https://w3id.org/linkml_registryschema_url> @<https://w3id.org/linkml_registryHttpsIdentifier> ? ;
-          <https://w3id.org/linkml_registrylicense> @<https://w3id.org/linkml_registryLicenseEnum> ? ;
-          <https://w3id.org/linkml_registrydescription> @linkml:String ? ;
-          <https://w3id.org/linkml_registrydomain> @linkml:String ?
+<https://w3id.org/linkml_registryEvaluation> {
+    (  $<https://w3id.org/linkml_registryEvaluation_tes> (  <https://w3id.org/linkml_registryscore> @linkml:String ? ;
+          <https://w3id.org/linkml_registryclass_count> @linkml:Integer ? ;
+          <https://w3id.org/linkml_registryslot_count> @linkml:Integer ? ;
+          <https://w3id.org/linkml_registryenum_count> @linkml:Integer ? ;
+          <https://w3id.org/linkml_registrytype_count> @linkml:Integer ? ;
+          <https://w3id.org/linkml_registrygithub_stars> @linkml:Integer ? ;
+          <https://w3id.org/linkml_registryproportion_elements_with_a_description> @linkml:Float ? ;
+          <https://w3id.org/linkml_registryproportion_elements_mapped> @linkml:Float ? ;
+          <https://w3id.org/linkml_registryerrors> @linkml:String *
        ) ;
-       rdf:type [ <https://w3id.org/linkml_registrySchemaInfo> ] ?
+       rdf:type [ <https://w3id.org/linkml_registryEvaluation> ] ?
     )
 }
 
+<https://w3id.org/linkml_registrySchemaMetadata> CLOSED {
+    (  $<https://w3id.org/linkml_registrySchemaMetadata_tes> (  &<https://w3id.org/linkml_registryEvaluation_tes> ;
+          rdf:type [ <https://w3id.org/linkml_registryEvaluation> ] ? ;
+          dcterms:title @linkml:String ? ;
+          skos:definition @linkml:String ? ;
+          foaf:homepage @<https://w3id.org/linkml_registryHttpsIdentifier> ? ;
+          dcterms:source @<https://w3id.org/linkml_registryHttpsIdentifier> ? ;
+          <https://w3id.org/linkml_registrygithub_repo> @linkml:String ? ;
+          <https://w3id.org/linkml_registryschema_relative_path> @linkml:String ? ;
+          dcterms:license @linkml:String ? ;
+          dcterms:subject @linkml:String * ;
+          dcterms:subject @linkml:String * ;
+          <https://w3id.org/linkml_registryscore> @linkml:String ? ;
+          <https://w3id.org/linkml_registryclass_count> @linkml:Integer ? ;
+          <https://w3id.org/linkml_registryslot_count> @linkml:Integer ? ;
+          <https://w3id.org/linkml_registryenum_count> @linkml:Integer ? ;
+          <https://w3id.org/linkml_registrytype_count> @linkml:Integer ? ;
+          <https://w3id.org/linkml_registrygithub_stars> @linkml:Integer ? ;
+          <https://w3id.org/linkml_registryproportion_elements_with_a_description> @linkml:Float ? ;
+          <https://w3id.org/linkml_registryproportion_elements_mapped> @linkml:Float ? ;
+          <https://w3id.org/linkml_registryerrors> @linkml:String *
+       ) ;
+       rdf:type [ <https://w3id.org/linkml_registrySchemaMetadata> ]
+    )
+}
+
+<https://w3id.org/linkml_registrySchemaRegistry> CLOSED {
+    (  $<https://w3id.org/linkml_registrySchemaRegistry_tes> (  foaf:homepage @<https://w3id.org/linkml_registryHttpsIdentifier> ?
+          ;
+          dcterms:hasPart @<https://w3id.org/linkml_registrySchemaMetadata> * ;
+          dcterms:license @linkml:String ? ;
+          dcterms:title @linkml:String ? ;
+          skos:definition @linkml:String ? ;
+          dcterms:subject @linkml:String * ;
+          dcterms:subject @linkml:String *
+       ) ;
+       rdf:type [ <https://w3id.org/linkml_registrySchemaRegistry> ]
+    )
+}
 
 

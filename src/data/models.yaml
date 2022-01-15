@@ -46,13 +46,14 @@ entries:
       - biochemistry
       - biology
   SSSOM:
-    homepage: https://sssom-py.readthedocs.io/
-    github_repo: mapping-commons/sssom-py
-    schema_relative_path: schema/sssom.yaml
+    homepage: https://mapping-commons.github.io/sssom/
+    github_repo: mapping-commons/SSSOM
+    schema_relative_path: model/schema/sssom.yaml
     license: CC-0
     title: Simple Standard Sharing Object Mappings
     topics:
       -  information
+      -  mappings
   KGCL:
     homepage: https://cmungall.github.io/knowledge-graph-change-language/
     schema_url: ''
@@ -79,11 +80,11 @@ entries:
     title: Semantic SQL
     topics:
       -  ontologies
-  Chemistry Schema:
-    homepage: https://cmungall.github.io/chem-schema/
+  Chemical Entities and Mixtures Model:
+    homepage: https://chemkg.github.io/chemrof/
     license: CC-0
-    github_repo: cmungall/chem-schema
-    schema_relative_path: src/schema/chem.yaml
+    github_repo: chemkg/chemrof
+    schema_relative_path: src/schema/chemrof.yaml
     title: Chemistry Schema
     topics:
       -  chemistry
@@ -152,7 +153,7 @@ entries:
     homepage: ''
     schema_url: ''
     github_repo: alliance-genome/agr_curation_schema
-    schema_relative_path: src/schema/alliance_schema.yaml
+    schema_relative_path: model/schema/allianceModel.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
       - genomics
@@ -171,18 +172,33 @@ entries:
     title: ''
     topics:
       -  ontologies
-  GHGC Metadata:
+  GHGA Metadata:
     homepage: https://ghga-de.github.io/ghga-metadata-schema/
     title: Metadata schema for the German Human Genome-Phenome Archive (GHGA)
     github_repo: ghga-de/ghga-metadata-schema
-    schema_relative_path: src/schema/ghgc.yaml
+    schema_relative_path: src/schema/ghga.yaml
   MIANCT:
     title: Minimal information about a New Cell Type
     homepage: https://cmungall.github.io/mianct-schema/
     github_repo: cmungall/mianct-schema
     schema_relative_path: model/schema/mianct.yaml
+    topics:
+      - samples
+      - cell types
   iSamples:
     homepage: https://github.com/isamplesorg/metadata
     github_repo: isamplesorg/metadata
     schema_relative_path: iSamplesSchemaBasic0.3.yml
     license: https://creativecommons.org/publicdomain/zero/1.0/
+    topics:
+      - samples
+      - metadata
+      - earth science
+  sparqlfun:
+    homepage: https://github.com/linkml/sparqlfun
+    github_repo: linkml/sparqlfun
+    schema_relative_path: sparqlfun/schema/sparqlfun.yaml
+    license: https://creativecommons.org/publicdomain/zero/1.0/
+    topics:
+      - sparql
+      - templates
