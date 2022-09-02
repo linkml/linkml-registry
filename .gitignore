@@ -5,3 +5,4 @@ venv/
 docs/*md
 docs/types/
 */my_schema.*
+*/__pycache__/*
