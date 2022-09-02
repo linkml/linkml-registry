@@ -426,4 +426,22 @@ entries:
     github_stars: 4
     proportion_elements_with_a_description: 0.16777041942604856
     proportion_elements_mapped: 0.7439293598233996
+  NEAT_ML_Schema:
+    name: neat-ml-schema
+    title: NEAT-ML Schema
+    description: Schema for NEAT-ML.
+    homepage: https://github.com/Knowledge-Graph-Hub/neat-ml-schema
+    github_repo: Knowledge-Graph-Hub/neat-ml-schema
+    schema_relative_path: neat_ml_schema/schema/neat_ml_schema.yaml
+    license: https://opensource.org/licenses/MIT
+    topics:
+    - machine learning
+    - link prediction
+    class_count: 27
+    slot_count: 156
+    enum_count: 5
+    type_count: 15
+    github_stars: 1
+    proportion_elements_with_a_description: 
+    proportion_elements_mapped: 
 title: This is the main LinkML registry
