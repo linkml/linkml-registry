@@ -202,3 +202,15 @@ entries:
     topics:
       - sparql
       - templates
+    
+  INCLUDE: 
+    homepage: https://github.com/include-dcc/include-linkml
+    schema_url: ''
+    github_repo: include-dcc/include-linkml
+    license: CC-0
+    title: The INvestigation of Co-occurring conditions across the Lifespan to Understand Down syndromE (INCLUDE) data model
+    topics:
+      -  Ontologies
+      -  Down syndrome
+      -  Clinical research
+      
