@@ -41,7 +41,7 @@ None
 
 ## NMDC Schema
 
-Schema for National Microbiome Data Collaborative (NMDC). This schem is organized into 3 separate modules:
+Schema for National Microbiome Data Collaborative (NMDC). This scheme is organized into 3 separate modules:
   
 This schema is organized into distinct modules:
   

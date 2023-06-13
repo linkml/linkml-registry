@@ -1,0 +1,6 @@
+[codespell]
+skip = .git,*.pdf,*.svg
+# ignore escaped chars
+ignore-regex = \\[fnrstv]
+#
+# ignore-words-list =
