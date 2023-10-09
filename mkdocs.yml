@@ -12,3 +12,4 @@ nav:
   - Credits: credits.md
 site_url: https://linkml.github.io/linkml-registry/
 repo_url: https://github.com/linkml/linkml-registry
+edit_uri: blob/main/docs/
