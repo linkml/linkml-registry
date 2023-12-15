@@ -4,21 +4,63 @@ entries:
   LinkML Model:
     name: LinkML Model
     title: LinkML Schema Metamodel
-    description: A metamodel for defining linked open data schemas
+    description: 'The metamodel for schemas defined using the Linked Data Modeling
+      Language framework.
+
+
+      For more information on LinkML:
+
+
+      * [linkml.io](https://linkml.io) main website
+
+      * [specification](https://w3id.org/linkml/docs/specification/)
+
+
+      LinkML is self-describing. Every LinkML schema consists of elements
+
+      that instantiate classes in this metamodel.
+
+
+      Core metaclasses:
+
+
+      * [SchemaDefinition](https://w3id.org/linkml/SchemaDefinition)
+
+      * [ClassDefinition](https://w3id.org/linkml/ClassDefinition)
+
+      * [SlotDefinition](https://w3id.org/linkml/SlotDefinition)
+
+      * [TypeDefinition](https://w3id.org/linkml/TypeDefinition)
+
+
+      There are many subsets of *profiles* of the metamodel, for different purposes:
+
+
+      * [MinimalSubset](https://w3id.org/linkml/MinimalSubset)
+
+      * [BasicSubset](https://w3id.org/linkml/BasicSubset)
+
+      * [BasicSubset](https://w3id.org/linkml/BasicSubset)
+
+
+      For canonical reference documentation on any metamodel construct,
+
+      refer to the official URI for each construct, e.g.
+
+      [https://w3id.org/linkml/is_a](https://w3id.org/linkml/is_a)'
     homepage: https://linkml.github.io/linkml-model/docs/
     schema_url: https://github.com/linkml/linkml-model/blob/main/model/schema/meta.yaml
     github_repo: linkml/linkml-model
-    schema_relative_path: model/schema/meta.yaml
+    schema_relative_path: linkml_model/model/schema/meta.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
     - meta
-    class_count: 19
-    slot_count: 116
-    enum_count: 1
-    type_count: 14
-    github_stars: 10
-    proportion_elements_with_a_description: 0.9733333333333334
-    proportion_elements_mapped: 0.28
+    class_count: 41
+    slot_count: 220
+    enum_count: 4
+    type_count: 19
+    proportion_elements_with_a_description: 0.9683098591549296
+    proportion_elements_mapped: 0.2992957746478873
   LinkML Template Configuration Model:
     name: LinkML Template Configuration Model
     title: LinkML template configuration
@@ -28,28 +70,25 @@ entries:
     license: CC-0
     topics:
     - meta
-    github_stars: 1
   NMDC:
     name: NMDC
     title: NMDC Schema
-    description: "Schema for National Microbiome Data Collaborative (NMDC). This scheme\
-      \ is organized into 3 separate modules:\n  \nThis schema is organized into distinct\
-      \ modules:\n  \n * a set of core types for representing data values\n * the\
-      \ mixs schema (auto-translated from mixs excel)\n * annotation schema\n * the\
-      \ NMDC schema itself"
+    description: "Schema for National Microbiome Data Collaborative (NMDC).\nThis\
+      \ schema is organized into multiple modules, such as:\n\n * a set of core types\
+      \ for representing data values\n * a subset of the mixs schema\n * an annotation\
+      \ schema\n * the NMDC schema itself, into which the other modules are imported"
     homepage: https://microbiomedata.github.io/nmdc-schema/
     github_repo: microbiomedata/nmdc-schema
     schema_relative_path: src/schema/nmdc.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
     - environmental microbiology
-    class_count: 48
-    slot_count: 741
-    enum_count: 1
-    type_count: 18
-    github_stars: 5
-    proportion_elements_with_a_description: 0.926980198019802
-    proportion_elements_mapped: 0.043316831683168314
+    class_count: 69
+    slot_count: 864
+    enum_count: 124
+    type_count: 24
+    proportion_elements_with_a_description: 0.7446808510638298
+    proportion_elements_mapped: 0.5023126734505088
   Biolink-Model:
     name: Biolink-Model
     title: Biolink Model
@@ -69,31 +108,29 @@ entries:
     - model organism biology
     - biochemistry
     - biology
-    class_count: 257
-    slot_count: 425
-    enum_count: 9
-    type_count: 27
-    github_stars: 78
-    proportion_elements_with_a_description: 0.6810584958217271
-    proportion_elements_mapped: 0.46518105849582175
+    class_count: 302
+    slot_count: 460
+    enum_count: 19
+    type_count: 32
+    proportion_elements_with_a_description: 0.7220172201722017
+    proportion_elements_mapped: 0.38253382533825336
   SSSOM:
     name: SSSOM
     title: Simple Standard Sharing Object Mappings
-    description: Datamodel for Simple Standard for Sharing Ontology Mappings (SSSOM)
+    description: Datamodel for Simple Standard for Sharing Ontological Mappings (SSSOM)
     homepage: https://mapping-commons.github.io/sssom/
     github_repo: mapping-commons/SSSOM
-    schema_relative_path: model/schema/sssom.yaml
+    schema_relative_path: src/sssom_schema/schema/sssom_schema.yaml
     license: CC-0
     topics:
     - information
     - mappings
-    class_count: 2
-    slot_count: 49
-    enum_count: 5
-    type_count: 15
-    github_stars: 35
-    proportion_elements_with_a_description: 0.9295774647887324
-    proportion_elements_mapped: 0.4084507042253521
+    class_count: 5
+    slot_count: 71
+    enum_count: 3
+    type_count: 20
+    proportion_elements_with_a_description: 0.9696969696969697
+    proportion_elements_mapped: 0.3939393939393939
   KGCL:
     name: KGCL
     title: Knowledge Graph Change Language
@@ -111,36 +148,39 @@ entries:
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
     - knowledge graphs
-    class_count: 66
-    slot_count: 39
+    class_count: 71
+    slot_count: 70
     enum_count: 2
-    type_count: 15
-    github_stars: 12
-    proportion_elements_with_a_description: 0.7377049180327869
-    proportion_elements_mapped: 0.26229508196721313
+    type_count: 21
+    proportion_elements_with_a_description: 0.7439024390243902
+    proportion_elements_mapped: 0.23780487804878048
   KGViz:
     name: KGViz
     title: Knowledge Graph Visualization Configuration
     description: 'A data model for describing configurations / stylesheets for visualzing
-      graphs, and in particular Knowledge Graphs or Ontologies. These graphs are characterized
-      by having meaningful edge labels, node categories, IDs or URIs on each element,
-      as well as additional rich metadata on the nodes or edges.
+      graphs, and
 
-      An example of a use of this is https://github.com/cmungall/obographviz'
+      in particular Knowledge Graphs or Ontologies. These graphs are characterized
+      by having meaningful edge labels,
+
+      node categories, IDs or URIs on each element, as well as additional rich metadata
+      on the nodes or edges.
+
+
+      An example of a use of this is https://github.com/INCATools/obographviz'
     homepage: https://berkeleybop.github.io/kgviz-model/
     schema_url: ''
     github_repo: berkeleybop/kgviz-model
-    schema_relative_path: model/schema/kgviz.yaml
+    schema_relative_path: src/kgviz_model/linkml/kgviz.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
     - visualization
     class_count: 16
-    slot_count: 30
+    slot_count: 31
     enum_count: 3
-    type_count: 16
-    github_stars: 4
-    proportion_elements_with_a_description: 0.5384615384615384
-    proportion_elements_mapped: 0.27692307692307694
+    type_count: 21
+    proportion_elements_with_a_description: 0.5774647887323944
+    proportion_elements_mapped: 0.323943661971831
   Semantic Sql:
     name: Semantic Sql
     title: Semantic SQL
@@ -158,21 +198,20 @@ entries:
       as well as a rich searchable documentation system and other tooling.\n\nThis\
       \ schema is best browsed online: https://cmungall.github.io/semantic-sql/\n\n\
       Note that things are in flux, and there some oddities that need ironed out,\
-      \ see\nissues for details\n\nSee the [github repo](https://github.com/cmungall/semantic-sql)\
+      \ see\nissues for details.\n\nSee the [github repo](https://github.com/cmungall/semantic-sql)\
       \ for code to convert\nfrom the linkml yaml into SQL DDL"
     homepage: https://cmungall.github.io/semantic-sql/
     github_repo: cmungall/semantic-sql
-    schema_relative_path: src/schema/semsql.yaml
+    schema_relative_path: src/semsql/linkml/semsql.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
     - ontologies
-    class_count: 98
-    slot_count: 23
+    class_count: 103
+    slot_count: 34
     enum_count: 0
-    type_count: 16
-    github_stars: 10
-    proportion_elements_with_a_description: 0.5401459854014599
-    proportion_elements_mapped: 0.27007299270072993
+    type_count: 21
+    proportion_elements_with_a_description: 0.5443037974683544
+    proportion_elements_mapped: 0.2721518987341772
   Chemical Entities and Mixtures Model:
     name: Chemical Entities and Mixtures Model
     title: Chemical Entities Mixtures and Reactions Ontological Framework
@@ -196,48 +235,37 @@ entries:
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
     - chemistry
-    class_count: 122
-    slot_count: 120
-    enum_count: 5
-    type_count: 22
-    github_stars: 7
-    proportion_elements_with_a_description: 0.6319702602230484
-    proportion_elements_mapped: 0.16356877323420074
+    class_count: 126
+    slot_count: 217
+    enum_count: 9
+    type_count: 27
+    proportion_elements_with_a_description: 0.5435356200527705
+    proportion_elements_mapped: 0.19261213720316622
   CCDH:
     name: CCDH
     title: CRDC-H Model
     homepage: https://cancerdhc.github.io/ccdhmodel
     schema_url: ''
     github_repo: cancerdhc/ccdhmodel
-    schema_relative_path: src/schema/ccdhmodel.yaml
+    schema_relative_path: model/schema/crdch_model.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
     - cancer
     class_count: 41
     slot_count: 0
-    enum_count: 108
-    type_count: 21
-    github_stars: 11
-    proportion_elements_with_a_description: 0.9882352941176471
-    proportion_elements_mapped: 0.12352941176470589
+    enum_count: 106
+    type_count: 26
+    proportion_elements_with_a_description: 0.9884393063583815
+    proportion_elements_mapped: 0.15028901734104047
   ontology-associations:
     name: ontology-associations
     title: common association file formats
-    description: Various association data models
     homepage: https://biodatamodels.github.io/ontology-associations/
     schema_url: ''
     github_repo: biodatamodels/ontology-associations
-    schema_relative_path: src/schema/all.yaml
     license: CC-0
     topics:
     - genomics
-    class_count: 33
-    slot_count: 108
-    enum_count: 18
-    type_count: 25
-    github_stars: 4
-    proportion_elements_with_a_description: 0.32608695652173914
-    proportion_elements_mapped: 0.2391304347826087
   GFF3:
     name: GFF3
     title: Genome Feature Format LinkML rendering
@@ -252,10 +280,9 @@ entries:
     class_count: 8
     slot_count: 26
     enum_count: 3
-    type_count: 16
-    github_stars: 5
-    proportion_elements_with_a_description: 0.6415094339622641
-    proportion_elements_mapped: 0.37735849056603776
+    type_count: 21
+    proportion_elements_with_a_description: 0.6724137931034483
+    proportion_elements_mapped: 0.43103448275862066
   Monochrom:
     name: Monochrom
     title: Chromosome ontology and ETL
@@ -265,7 +292,6 @@ entries:
     license: CC-0
     topics:
     - genomics
-    github_stars: 9
   GSC MIxS:
     name: GSC MIxS
     title: ''
@@ -283,7 +309,6 @@ entries:
     license: CC-0
     topics:
     - ontologies
-    github_stars: 2
   HOT-TermCI:
     name: HOT-TermCI
     title: HOT-TermCI
@@ -298,14 +323,13 @@ entries:
     class_count: 4
     slot_count: 15
     enum_count: 0
-    type_count: 14
-    github_stars: 3
+    type_count: 19
     proportion_elements_with_a_description: 1.0
-    proportion_elements_mapped: 0.8484848484848485
+    proportion_elements_mapped: 0.868421052631579
   Alliance of Genome Resource Persistent Schema:
     name: Alliance of Genome Resource Persistent Schema
     title: Alliance of Genome Resources Persistent Schema
-    description: Alliance Schema Prototype
+    description: Alliance Persistent Schema
     homepage: ''
     schema_url: ''
     github_repo: alliance-genome/agr_curation_schema
@@ -313,13 +337,12 @@ entries:
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
     - genomics
-    class_count: 80
-    slot_count: 213
-    enum_count: 25
-    type_count: 15
-    github_stars: 3
-    proportion_elements_with_a_description: 0.5585585585585585
-    proportion_elements_mapped: 0.08108108108108109
+    class_count: 285
+    slot_count: 600
+    enum_count: 21
+    type_count: 20
+    proportion_elements_with_a_description: 0.712742980561555
+    proportion_elements_mapped: 0.04103671706263499
   SESAR:
     name: SESAR
     title: ''
@@ -337,21 +360,20 @@ entries:
     license: ''
     topics:
     - ontologies
-    github_stars: 4
   GHGA Metadata:
     name: GHGA Metadata
     title: Metadata schema for the German Human Genome-Phenome Archive (GHGA)
-    description: The metadata schema for the German Human Genome-Phenome Archive (GHGA).
+    description: The submission centric metadata schema for the German Human Genome-Phenome
+      Archive (GHGA).
     homepage: https://ghga-de.github.io/ghga-metadata-schema/
     github_repo: ghga-de/ghga-metadata-schema
-    schema_relative_path: src/schema/ghga.yaml
+    schema_relative_path: src/schema/submission.yaml
     class_count: 26
-    slot_count: 45
-    enum_count: 0
-    type_count: 14
-    github_stars: 5
-    proportion_elements_with_a_description: 0.9764705882352941
-    proportion_elements_mapped: 0.3058823529411765
+    slot_count: 112
+    enum_count: 30
+    type_count: 19
+    proportion_elements_with_a_description: 0.9893048128342246
+    proportion_elements_mapped: 0.18716577540106952
   MIANCT:
     name: MIANCT
     title: Minimal Information About a new Cell Type
@@ -385,29 +407,19 @@ entries:
     class_count: 2
     slot_count: 11
     enum_count: 3
-    type_count: 15
-    github_stars: 3
-    proportion_elements_with_a_description: 0.6451612903225806
-    proportion_elements_mapped: 0.7096774193548387
+    type_count: 20
+    proportion_elements_with_a_description: 0.6944444444444444
+    proportion_elements_mapped: 0.75
   iSamples:
     name: iSamples
     title: iSamples
-    description: Schema for documenting physical samples
     homepage: https://github.com/isamplesorg/metadata
     github_repo: isamplesorg/metadata
-    schema_relative_path: iSamplesSchemaBasic0.3.yml
     license: https://creativecommons.org/publicdomain/zero/1.0/
     topics:
     - samples
     - metadata
     - earth science
-    class_count: 6
-    slot_count: 27
-    enum_count: 3
-    type_count: 3
-    github_stars: 2
-    proportion_elements_with_a_description: 0.9230769230769231
-    proportion_elements_mapped: 0.07692307692307693
   sparqlfun:
     name: sparqlfun
     title: SPARQLFun
@@ -419,29 +431,22 @@ entries:
     topics:
     - sparql
     - templates
-    class_count: 263
-    slot_count: 172
+    class_count: 92
+    slot_count: 61
     enum_count: 2
-    type_count: 16
-    github_stars: 4
-    proportion_elements_with_a_description: 0.16777041942604856
-    proportion_elements_mapped: 0.7439293598233996
-  NEAT_ML_Schema:
-    name: neat-ml-schema
-    title: NEAT-ML Schema
-    description: Schema for NEAT-ML.
-    homepage: https://github.com/Knowledge-Graph-Hub/neat-ml-schema
-    github_repo: Knowledge-Graph-Hub/neat-ml-schema
-    schema_relative_path: neat_ml_schema/schema/neat_ml_schema.yaml
-    license: https://opensource.org/licenses/MIT
+    type_count: 21
+    proportion_elements_with_a_description: 0.3352272727272727
+    proportion_elements_mapped: 0.3409090909090909
+  INCLUDE:
+    name: INCLUDE
+    title: The INvestigation of Co-occurring conditions across the Lifespan to Understand
+      Down syndromE (INCLUDE) data model
+    homepage: https://github.com/include-dcc/include-linkml
+    schema_url: ''
+    github_repo: include-dcc/include-linkml
+    license: CC-0
     topics:
-    - machine learning
-    - link prediction
-    class_count: 27
-    slot_count: 156
-    enum_count: 5
-    type_count: 15
-    github_stars: 1
-    proportion_elements_with_a_description: 
-    proportion_elements_mapped: 
+    - Ontologies
+    - Down syndrome
+    - Clinical research
 title: This is the main LinkML registry

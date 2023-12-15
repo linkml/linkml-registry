@@ -2,7 +2,32 @@
 
 ## LinkML Schema Metamodel
 
-A metamodel for defining linked open data schemas
+The metamodel for schemas defined using the Linked Data Modeling Language framework.
+
+For more information on LinkML:
+
+* [linkml.io](https://linkml.io) main website
+* [specification](https://w3id.org/linkml/docs/specification/)
+
+LinkML is self-describing. Every LinkML schema consists of elements
+that instantiate classes in this metamodel.
+
+Core metaclasses:
+
+* [SchemaDefinition](https://w3id.org/linkml/SchemaDefinition)
+* [ClassDefinition](https://w3id.org/linkml/ClassDefinition)
+* [SlotDefinition](https://w3id.org/linkml/SlotDefinition)
+* [TypeDefinition](https://w3id.org/linkml/TypeDefinition)
+
+There are many subsets of *profiles* of the metamodel, for different purposes:
+
+* [MinimalSubset](https://w3id.org/linkml/MinimalSubset)
+* [BasicSubset](https://w3id.org/linkml/BasicSubset)
+* [BasicSubset](https://w3id.org/linkml/BasicSubset)
+
+For canonical reference documentation on any metamodel construct,
+refer to the official URI for each construct, e.g.
+[https://w3id.org/linkml/is_a](https://w3id.org/linkml/is_a)
 
 
 |key|value|
@@ -12,16 +37,15 @@ A metamodel for defining linked open data schemas
 |homepage|[https://linkml.github.io/linkml-model/docs/](https://linkml.github.io/linkml-model/docs/)|
 |schema_url|[https://github.com/linkml/linkml-model/blob/main/model/schema/meta.yaml](https://github.com/linkml/linkml-model/blob/main/model/schema/meta.yaml)|
 |github_repo|linkml/linkml-model|
-|schema_relative_path|model/schema/meta.yaml|
+|schema_relative_path|linkml_model/model/schema/meta.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|meta|
-|class_count|19|
-|slot_count|116|
-|enum_count|1|
-|type_count|14|
-|github_stars|10|
-|proportion_elements_with_a_description|0.97|
-|proportion_elements_mapped|0.28|
+|class_count|41|
+|slot_count|220|
+|enum_count|4|
+|type_count|19|
+|proportion_elements_with_a_description|0.96|
+|proportion_elements_mapped|0.29|
 
 ## LinkML template configuration
 
@@ -37,18 +61,16 @@ None
 |github_repo|linkml/template-config-model|
 |license|CC-0|
 |topics|meta|
-|github_stars|1|
 
 ## NMDC Schema
 
-Schema for National Microbiome Data Collaborative (NMDC). This scheme is organized into 3 separate modules:
-  
-This schema is organized into distinct modules:
-  
+Schema for National Microbiome Data Collaborative (NMDC).
+This schema is organized into multiple modules, such as:
+
  * a set of core types for representing data values
- * the mixs schema (auto-translated from mixs excel)
- * annotation schema
- * the NMDC schema itself
+ * a subset of the mixs schema
+ * an annotation schema
+ * the NMDC schema itself, into which the other modules are imported
 
 
 |key|value|
@@ -60,13 +82,12 @@ This schema is organized into distinct modules:
 |schema_relative_path|src/schema/nmdc.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|environmental microbiology|
-|class_count|48|
-|slot_count|741|
-|enum_count|1|
-|type_count|18|
-|github_stars|5|
-|proportion_elements_with_a_description|0.92|
-|proportion_elements_mapped|0.04|
+|class_count|69|
+|slot_count|864|
+|enum_count|124|
+|type_count|24|
+|proportion_elements_with_a_description|0.74|
+|proportion_elements_mapped|0.5|
 
 ## Biolink Model
 
@@ -82,17 +103,16 @@ Entity and association taxonomy and datamodel for life-sciences data
 |schema_relative_path|biolink-model.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|genomics; disease; phenotype; expression; GO; GO-CAM; human biology; model organism biology; biochemistry; biology|
-|class_count|257|
-|slot_count|425|
-|enum_count|9|
-|type_count|27|
-|github_stars|78|
-|proportion_elements_with_a_description|0.68|
-|proportion_elements_mapped|0.46|
+|class_count|302|
+|slot_count|460|
+|enum_count|19|
+|type_count|32|
+|proportion_elements_with_a_description|0.72|
+|proportion_elements_mapped|0.38|
 
 ## Simple Standard Sharing Object Mappings
 
-Datamodel for Simple Standard for Sharing Ontology Mappings (SSSOM)
+Datamodel for Simple Standard for Sharing Ontological Mappings (SSSOM)
 
 
 |key|value|
@@ -101,16 +121,15 @@ Datamodel for Simple Standard for Sharing Ontology Mappings (SSSOM)
 |title|Simple Standard Sharing Object Mappings|
 |homepage|[https://mapping-commons.github.io/sssom/](https://mapping-commons.github.io/sssom/)|
 |github_repo|mapping-commons/SSSOM|
-|schema_relative_path|model/schema/sssom.yaml|
+|schema_relative_path|src/sssom_schema/schema/sssom_schema.yaml|
 |license|CC-0|
 |topics|information; mappings|
-|class_count|2|
-|slot_count|49|
-|enum_count|5|
-|type_count|15|
-|github_stars|35|
-|proportion_elements_with_a_description|0.92|
-|proportion_elements_mapped|0.4|
+|class_count|5|
+|slot_count|71|
+|enum_count|3|
+|type_count|20|
+|proportion_elements_with_a_description|0.96|
+|proportion_elements_mapped|0.39|
 
 ## Knowledge Graph Change Language
 
@@ -129,18 +148,20 @@ A data model for describing change operations at a high level on an ontology or 
 |schema_relative_path|src/schema/kgcl.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|knowledge graphs|
-|class_count|66|
-|slot_count|39|
+|class_count|71|
+|slot_count|70|
 |enum_count|2|
-|type_count|15|
-|github_stars|12|
-|proportion_elements_with_a_description|0.73|
-|proportion_elements_mapped|0.26|
+|type_count|21|
+|proportion_elements_with_a_description|0.74|
+|proportion_elements_mapped|0.23|
 
 ## Knowledge Graph Visualization Configuration
 
-A data model for describing configurations / stylesheets for visualzing graphs, and in particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels, node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.
-An example of a use of this is https://github.com/cmungall/obographviz
+A data model for describing configurations / stylesheets for visualzing graphs, and
+in particular Knowledge Graphs or Ontologies. These graphs are characterized by having meaningful edge labels,
+node categories, IDs or URIs on each element, as well as additional rich metadata on the nodes or edges.
+
+An example of a use of this is https://github.com/INCATools/obographviz
 
 
 |key|value|
@@ -149,16 +170,15 @@ An example of a use of this is https://github.com/cmungall/obographviz
 |title|Knowledge Graph Visualization Configuration|
 |homepage|[https://berkeleybop.github.io/kgviz-model/](https://berkeleybop.github.io/kgviz-model/)|
 |github_repo|berkeleybop/kgviz-model|
-|schema_relative_path|model/schema/kgviz.yaml|
+|schema_relative_path|src/kgviz_model/linkml/kgviz.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|visualization|
 |class_count|16|
-|slot_count|30|
+|slot_count|31|
 |enum_count|3|
-|type_count|16|
-|github_stars|4|
-|proportion_elements_with_a_description|0.53|
-|proportion_elements_mapped|0.27|
+|type_count|21|
+|proportion_elements_with_a_description|0.57|
+|proportion_elements_mapped|0.32|
 
 ## Semantic SQL
 
@@ -183,7 +203,7 @@ as well as a rich searchable documentation system and other tooling.
 This schema is best browsed online: https://cmungall.github.io/semantic-sql/
 
 Note that things are in flux, and there some oddities that need ironed out, see
-issues for details
+issues for details.
 
 See the [github repo](https://github.com/cmungall/semantic-sql) for code to convert
 from the linkml yaml into SQL DDL
@@ -195,14 +215,13 @@ from the linkml yaml into SQL DDL
 |title|Semantic SQL|
 |homepage|[https://cmungall.github.io/semantic-sql/](https://cmungall.github.io/semantic-sql/)|
 |github_repo|cmungall/semantic-sql|
-|schema_relative_path|src/schema/semsql.yaml|
+|schema_relative_path|src/semsql/linkml/semsql.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|ontologies|
-|class_count|98|
-|slot_count|23|
+|class_count|103|
+|slot_count|34|
 |enum_count|0|
-|type_count|16|
-|github_stars|10|
+|type_count|21|
 |proportion_elements_with_a_description|0.54|
 |proportion_elements_mapped|0.27|
 
@@ -227,13 +246,12 @@ For full context/motivation see the [GitHub repo](https://github.com/chemkg/chem
 |schema_relative_path|src/schema/chemrof.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|chemistry|
-|class_count|122|
-|slot_count|120|
-|enum_count|5|
-|type_count|22|
-|github_stars|7|
-|proportion_elements_with_a_description|0.63|
-|proportion_elements_mapped|0.16|
+|class_count|126|
+|slot_count|217|
+|enum_count|9|
+|type_count|27|
+|proportion_elements_with_a_description|0.54|
+|proportion_elements_mapped|0.19|
 
 ## CRDC-H Model
 
@@ -246,20 +264,19 @@ None
 |title|CRDC-H Model|
 |homepage|[https://cancerdhc.github.io/ccdhmodel](https://cancerdhc.github.io/ccdhmodel)|
 |github_repo|cancerdhc/ccdhmodel|
-|schema_relative_path|src/schema/ccdhmodel.yaml|
+|schema_relative_path|model/schema/crdch_model.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|cancer|
 |class_count|41|
 |slot_count|0|
-|enum_count|108|
-|type_count|21|
-|github_stars|11|
+|enum_count|106|
+|type_count|26|
 |proportion_elements_with_a_description|0.98|
-|proportion_elements_mapped|0.12|
+|proportion_elements_mapped|0.15|
 
 ## common association file formats
 
-Various association data models
+None
 
 
 |key|value|
@@ -268,16 +285,8 @@ Various association data models
 |title|common association file formats|
 |homepage|[https://biodatamodels.github.io/ontology-associations/](https://biodatamodels.github.io/ontology-associations/)|
 |github_repo|biodatamodels/ontology-associations|
-|schema_relative_path|src/schema/all.yaml|
 |license|CC-0|
 |topics|genomics|
-|class_count|33|
-|slot_count|108|
-|enum_count|18|
-|type_count|25|
-|github_stars|4|
-|proportion_elements_with_a_description|0.32|
-|proportion_elements_mapped|0.23|
 
 ## Genome Feature Format LinkML rendering
 
@@ -296,10 +305,9 @@ Playing around with GFF spec
 |class_count|8|
 |slot_count|26|
 |enum_count|3|
-|type_count|16|
-|github_stars|5|
-|proportion_elements_with_a_description|0.64|
-|proportion_elements_mapped|0.37|
+|type_count|21|
+|proportion_elements_with_a_description|0.67|
+|proportion_elements_mapped|0.43|
 
 ## Chromosome ontology and ETL
 
@@ -315,7 +323,6 @@ None
 |github_repo|monarch-initiative/monochrom|
 |license|CC-0|
 |topics|genomics|
-|github_stars|9|
 
 ## 
 
@@ -340,7 +347,6 @@ None
 |github_repo|matentzn/babelon|
 |license|CC-0|
 |topics|ontologies|
-|github_stars|2|
 
 ## HOT-TermCI
 
@@ -358,14 +364,13 @@ Terminology Core Common Model
 |class_count|4|
 |slot_count|15|
 |enum_count|0|
-|type_count|14|
-|github_stars|3|
+|type_count|19|
 |proportion_elements_with_a_description|1.0|
-|proportion_elements_mapped|0.84|
+|proportion_elements_mapped|0.86|
 
 ## Alliance of Genome Resources Persistent Schema
 
-Alliance Schema Prototype
+Alliance Persistent Schema
 
 
 |key|value|
@@ -376,13 +381,12 @@ Alliance Schema Prototype
 |schema_relative_path|model/schema/allianceModel.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|genomics|
-|class_count|80|
-|slot_count|213|
-|enum_count|25|
-|type_count|15|
-|github_stars|3|
-|proportion_elements_with_a_description|0.55|
-|proportion_elements_mapped|0.08|
+|class_count|285|
+|slot_count|600|
+|enum_count|21|
+|type_count|20|
+|proportion_elements_with_a_description|0.71|
+|proportion_elements_mapped|0.04|
 
 ## 
 
@@ -404,11 +408,10 @@ None
 |name|OBOGraphs|
 |github_repo|biodatamodels/obograph|
 |topics|ontologies|
-|github_stars|4|
 
 ## Metadata schema for the German Human Genome-Phenome Archive (GHGA)
 
-The metadata schema for the German Human Genome-Phenome Archive (GHGA).
+The submission centric metadata schema for the German Human Genome-Phenome Archive (GHGA).
 
 
 |key|value|
@@ -417,14 +420,13 @@ The metadata schema for the German Human Genome-Phenome Archive (GHGA).
 |title|Metadata schema for the German Human Genome-Phenome Archive (GHGA)|
 |homepage|[https://ghga-de.github.io/ghga-metadata-schema/](https://ghga-de.github.io/ghga-metadata-schema/)|
 |github_repo|ghga-de/ghga-metadata-schema|
-|schema_relative_path|src/schema/ghga.yaml|
+|schema_relative_path|src/schema/submission.yaml|
 |class_count|26|
-|slot_count|45|
-|enum_count|0|
-|type_count|14|
-|github_stars|5|
-|proportion_elements_with_a_description|0.97|
-|proportion_elements_mapped|0.3|
+|slot_count|112|
+|enum_count|30|
+|type_count|19|
+|proportion_elements_with_a_description|0.98|
+|proportion_elements_mapped|0.18|
 
 ## Minimal Information About a new Cell Type
 
@@ -468,14 +470,13 @@ When should one provide an entry for a cell type in a MIANCT sheet?
 |class_count|2|
 |slot_count|11|
 |enum_count|3|
-|type_count|15|
-|github_stars|3|
-|proportion_elements_with_a_description|0.64|
-|proportion_elements_mapped|0.7|
+|type_count|20|
+|proportion_elements_with_a_description|0.69|
+|proportion_elements_mapped|0.75|
 
 ## iSamples
 
-Schema for documenting physical samples
+None
 
 
 |key|value|
@@ -484,16 +485,8 @@ Schema for documenting physical samples
 |title|iSamples|
 |homepage|[https://github.com/isamplesorg/metadata](https://github.com/isamplesorg/metadata)|
 |github_repo|isamplesorg/metadata|
-|schema_relative_path|iSamplesSchemaBasic0.3.yml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|samples; metadata; earth science|
-|class_count|6|
-|slot_count|27|
-|enum_count|3|
-|type_count|3|
-|github_stars|2|
-|proportion_elements_with_a_description|0.92|
-|proportion_elements_mapped|0.07|
 
 ## SPARQLFun
 
@@ -509,11 +502,24 @@ SPARQL Templates
 |schema_relative_path|sparqlfun/schema/sparqlfun.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|sparql; templates|
-|class_count|263|
-|slot_count|172|
+|class_count|92|
+|slot_count|61|
 |enum_count|2|
-|type_count|16|
-|github_stars|4|
-|proportion_elements_with_a_description|0.16|
-|proportion_elements_mapped|0.74|
+|type_count|21|
+|proportion_elements_with_a_description|0.33|
+|proportion_elements_mapped|0.34|
+
+## The INvestigation of Co-occurring conditions across the Lifespan to Understand Down syndromE (INCLUDE) data model
+
+None
+
+
+|key|value|
+| :---: | :---: |
+|name|INCLUDE|
+|title|The INvestigation of Co-occurring conditions across the Lifespan to Understand Down syndromE (INCLUDE) data model|
+|homepage|[https://github.com/include-dcc/include-linkml](https://github.com/include-dcc/include-linkml)|
+|github_repo|include-dcc/include-linkml|
+|license|CC-0|
+|topics|Ontologies; Down syndrome; Clinical research|
 
