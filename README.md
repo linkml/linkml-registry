@@ -18,7 +18,7 @@ Registry Schema:
 
 Make a Pull Request on:
 
- * [src/data/models.yaml](src/data/models.yaml)
+ * [src/linkml_registry/data/models.yaml](src/linkml_registry/data/models.yaml)
 
 You should also add the `linkml` tag on your repo so it shows up here: [https://github.com/topics/linkml](https://github.com/topics/linkml)
 

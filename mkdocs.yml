@@ -1,10 +1,6 @@
 site_name: "LinkML Registry"
 theme:
   name: readthedocs
-  analytics:
-    gtag: G-2SYBSJVZ23
-docs_dir: target/docs
-site_dir: docs
 nav:
   - Home: home.md
   - Registry: registry.md
@@ -12,4 +8,3 @@ nav:
   - Credits: credits.md
 site_url: https://linkml.github.io/linkml-registry/
 repo_url: https://github.com/linkml/linkml-registry
-edit_uri: blob/main/docs/
