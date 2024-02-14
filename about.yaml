@@ -1,0 +1,6 @@
+---
+name: linkml_registry
+author: LinkML Registry Authors <my-name@my-org.org>
+description: Registry for LinkML
+source_schema_path: src/linkml_registry/schema/registry.yaml
+
