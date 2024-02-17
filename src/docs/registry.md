@@ -135,16 +135,16 @@ Datamodel for Simple Standard for Sharing Ontological Mappings (SSSOM)
 
 A data model for describing change operations at a high level on an ontology or ontology-like artefact, such as a Knowledge Graph.
 
-* [Browse Schema](https://cmungall.github.io/knowledge-graph-change-language/)
-* [GitHub](https://github.com/cmungall/knowledge-graph-change-language)
+* [Browse Schema](https://incatools.github.io/kgcl/)
+* [GitHub](https://github.com/INCATools/kgcl)
 
 
 |key|value|
 | :---: | :---: |
 |name|KGCL|
 |title|Knowledge Graph Change Language|
-|homepage|[https://cmungall.github.io/knowledge-graph-change-language/](https://cmungall.github.io/knowledge-graph-change-language/)|
-|github_repo|cmungall/knowledge-graph-change-language|
+|homepage|[https://incatools.github.io/kgcl/](https://incatools.github.io/kgcl/)
+|github_repo|[https://github.com/INCATools/kgcl](https://github.com/INCATools/kgcl)
 |schema_relative_path|src/schema/kgcl.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|knowledge graphs|
@@ -200,21 +200,21 @@ Additionally, the framework provides automatic compilation to SQLAlchemy models,
 and tools for being able to turn views into indexed tables for efficient querying,
 as well as a rich searchable documentation system and other tooling.
 
-This schema is best browsed online: https://cmungall.github.io/semantic-sql/
+This schema is best browsed online: [Semantic SQL](https://incatools.github.io/semantic-sql/)
 
-Note that things are in flux, and there some oddities that need ironed out, see
+Note that things are in flux, and there some oddities that need ironed out; see
 issues for details.
 
-See the [github repo](https://github.com/cmungall/semantic-sql) for code to convert
-from the linkml yaml into SQL DDL
+See the [github repo](https://github.com/INCATools/semantic-sql) for code to convert
+from the linkml yaml into SQL DDL.
 
 
 |key|value|
 | :---: | :---: |
 |name|Semantic Sql|
 |title|Semantic SQL|
-|homepage|[https://cmungall.github.io/semantic-sql/](https://cmungall.github.io/semantic-sql/)|
-|github_repo|cmungall/semantic-sql|
+|homepage|[https://incatools.github.io/semantic-sql/](https://incatools.github.io/semantic-sql/)|
+|github_repo|[https://github.com/INCATools/semantic-sql](https://github.com/INCATools/semantic-sql)|
 |schema_relative_path|src/semsql/linkml/semsql.yaml|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|ontologies|
@@ -230,7 +230,7 @@ from the linkml yaml into SQL DDL
 A data model for managing information about chemical entities, ranging from atoms
 through molecules to complex mixtures.
 
-Aspects of this have been cribbed from various sources including CHEBI, SIO,
+Aspects of this have been cribbed from various sources including ChEBI, SIO,
 Wikipedia/Wikidata, the NCATS Translator Chemical Working Group, but all mistakes
 are my own.
 
