@@ -59,6 +59,7 @@ entries:
     slot_count: 220
     enum_count: 4
     type_count: 19
+    github_stars: 26
     proportion_elements_with_a_description: 0.9683098591549296
     proportion_elements_mapped: 0.2992957746478873
   LinkML Template Configuration Model:
@@ -70,6 +71,7 @@ entries:
     license: CC-0
     topics:
     - meta
+    github_stars: 1
   NMDC:
     name: NMDC
     title: NMDC Schema
@@ -87,6 +89,7 @@ entries:
     slot_count: 864
     enum_count: 124
     type_count: 24
+    github_stars: 23
     proportion_elements_with_a_description: 0.7446808510638298
     proportion_elements_mapped: 0.5023126734505088
   Biolink-Model:
@@ -112,6 +115,7 @@ entries:
     slot_count: 460
     enum_count: 19
     type_count: 32
+    github_stars: 155
     proportion_elements_with_a_description: 0.7220172201722017
     proportion_elements_mapped: 0.38253382533825336
   SSSOM:
@@ -129,6 +133,7 @@ entries:
     slot_count: 71
     enum_count: 3
     type_count: 20
+    github_stars: 128
     proportion_elements_with_a_description: 0.9696969696969697
     proportion_elements_mapped: 0.3939393939393939
   KGCL:
@@ -152,8 +157,43 @@ entries:
     slot_count: 70
     enum_count: 2
     type_count: 21
+    github_stars: 15
     proportion_elements_with_a_description: 0.7439024390243902
     proportion_elements_mapped: 0.23780487804878048
+  COMET:
+    name: COMET
+    title: linkml-common
+    description: Common Data Model Elements
+    homepage: https://linkml.io/linkml-common/
+    github_repo: linkml/linkml-common
+    schema_relative_path: src/linkml_common/schema/linkml_common.yaml
+    license: MIT
+    topics:
+    - common data model
+    class_count: 84
+    slot_count: 26
+    enum_count: 6
+    type_count: 19
+    github_stars: 5
+    proportion_elements_with_a_description: 0.5111111111111111
+    proportion_elements_mapped: 0.4222222222222222
+  CMDR:
+    name: CMDR
+    title: cmdr
+    description: Core Model for Data Research (Tentative)
+    homepage: https://linkml.io/cmdr/
+    github_repo: linkml/cmdr
+    schema_relative_path: src/cmdr/schema/cmdr.yaml
+    license: MIT
+    topics:
+    - common data model
+    class_count: 10
+    slot_count: 21
+    enum_count: 0
+    type_count: 19
+    github_stars: 6
+    proportion_elements_with_a_description: 0.54
+    proportion_elements_mapped: 0.42
   KGViz:
     name: KGViz
     title: Knowledge Graph Visualization Configuration
@@ -179,10 +219,11 @@ entries:
     slot_count: 31
     enum_count: 3
     type_count: 21
+    github_stars: 4
     proportion_elements_with_a_description: 0.5774647887323944
     proportion_elements_mapped: 0.323943661971831
-  Semantic Sql:
-    name: Semantic Sql
+  Semantic SQL:
+    name: Semantic SQL
     title: Semantic SQL
     description: "A datamodel for RDF, OWL, and OBO Ontologies designed to work harmoniously\
       \ with SQL databases.\n\nNote that the primary purpose of this linkml schema\
@@ -210,6 +251,7 @@ entries:
     slot_count: 34
     enum_count: 0
     type_count: 21
+    github_stars: 32
     proportion_elements_with_a_description: 0.5443037974683544
     proportion_elements_mapped: 0.2721518987341772
   Chemical Entities and Mixtures Model:
@@ -239,10 +281,11 @@ entries:
     slot_count: 217
     enum_count: 9
     type_count: 27
+    github_stars: 11
     proportion_elements_with_a_description: 0.5435356200527705
     proportion_elements_mapped: 0.19261213720316622
-  CCDH:
-    name: CCDH
+  CRDC-H-Model:
+    name: CRDC-H-Model
     title: CRDC-H Model
     homepage: https://cancerdhc.github.io/ccdhmodel
     schema_url: ''
@@ -255,10 +298,11 @@ entries:
     slot_count: 0
     enum_count: 106
     type_count: 26
+    github_stars: 16
     proportion_elements_with_a_description: 0.9884393063583815
     proportion_elements_mapped: 0.15028901734104047
-  ontology-associations:
-    name: ontology-associations
+  Ontology-Associations:
+    name: Ontology-Associations
     title: common association file formats
     homepage: https://biodatamodels.github.io/ontology-associations/
     schema_url: ''
@@ -266,6 +310,7 @@ entries:
     license: CC-0
     topics:
     - genomics
+    github_stars: 4
   GFF3:
     name: GFF3
     title: Genome Feature Format LinkML rendering
@@ -281,6 +326,7 @@ entries:
     slot_count: 26
     enum_count: 3
     type_count: 21
+    github_stars: 5
     proportion_elements_with_a_description: 0.6724137931034483
     proportion_elements_mapped: 0.43103448275862066
   Monochrom:
@@ -292,6 +338,7 @@ entries:
     license: CC-0
     topics:
     - genomics
+    github_stars: 12
   GSC MIxS:
     name: GSC MIxS
     title: ''
@@ -309,6 +356,7 @@ entries:
     license: CC-0
     topics:
     - ontologies
+    github_stars: 7
   HOT-TermCI:
     name: HOT-TermCI
     title: HOT-TermCI
@@ -324,6 +372,7 @@ entries:
     slot_count: 15
     enum_count: 0
     type_count: 19
+    github_stars: 3
     proportion_elements_with_a_description: 1.0
     proportion_elements_mapped: 0.868421052631579
   Alliance of Genome Resource Persistent Schema:
@@ -341,6 +390,7 @@ entries:
     slot_count: 600
     enum_count: 21
     type_count: 20
+    github_stars: 6
     proportion_elements_with_a_description: 0.712742980561555
     proportion_elements_mapped: 0.04103671706263499
   SESAR:
@@ -360,6 +410,7 @@ entries:
     license: ''
     topics:
     - ontologies
+    github_stars: 4
   GHGA Metadata:
     name: GHGA Metadata
     title: Metadata schema for the German Human Genome-Phenome Archive (GHGA)
@@ -372,6 +423,7 @@ entries:
     slot_count: 112
     enum_count: 30
     type_count: 19
+    github_stars: 13
     proportion_elements_with_a_description: 0.9893048128342246
     proportion_elements_mapped: 0.18716577540106952
   MIANCT:
@@ -408,6 +460,7 @@ entries:
     slot_count: 11
     enum_count: 3
     type_count: 20
+    github_stars: 4
     proportion_elements_with_a_description: 0.6944444444444444
     proportion_elements_mapped: 0.75
   iSamples:
@@ -420,6 +473,7 @@ entries:
     - samples
     - metadata
     - earth science
+    github_stars: 6
   sparqlfun:
     name: sparqlfun
     title: SPARQLFun
@@ -435,8 +489,27 @@ entries:
     slot_count: 61
     enum_count: 2
     type_count: 21
+    github_stars: 8
     proportion_elements_with_a_description: 0.3352272727272727
     proportion_elements_mapped: 0.3409090909090909
+  LinkML-Phenopackets:
+    name: LinkML-Phenopackets
+    title: LinkML-Phenopackets
+    description: 'Automatic translation of phenopackets protobuf to LinkML. Status:
+      EXPERIMENTAL.'
+    homepage: https://phenopackets-schema.readthedocs.io/en/latest/
+    github_repo: cmungall/linkml-phenopackets
+    schema_relative_path: src/phenopackets/schema/phenopackets.yaml
+    license: https://creativecommons.org/publicdomain/zero/1.0/
+    topics:
+    - clinical
+    class_count: 73
+    slot_count: 0
+    enum_count: 30
+    type_count: 19
+    github_stars: 7
+    proportion_elements_with_a_description: 0.4918032786885246
+    proportion_elements_mapped: 0.23770491803278687
   INCLUDE:
     name: INCLUDE
     title: The INvestigation of Co-occurring conditions across the Lifespan to Understand
@@ -449,4 +522,5 @@ entries:
     - Ontologies
     - Down syndrome
     - Clinical research
+    github_stars: 1
 title: This is the main LinkML registry

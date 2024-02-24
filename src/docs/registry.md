@@ -44,6 +44,7 @@ refer to the official URI for each construct, e.g.
 |slot_count|220|
 |enum_count|4|
 |type_count|19|
+|github_stars|26|
 |proportion_elements_with_a_description|0.96|
 |proportion_elements_mapped|0.29|
 
@@ -61,6 +62,7 @@ None
 |github_repo|linkml/template-config-model|
 |license|CC-0|
 |topics|meta|
+|github_stars|1|
 
 ## NMDC Schema
 
@@ -86,6 +88,7 @@ This schema is organized into multiple modules, such as:
 |slot_count|864|
 |enum_count|124|
 |type_count|24|
+|github_stars|23|
 |proportion_elements_with_a_description|0.74|
 |proportion_elements_mapped|0.5|
 
@@ -107,6 +110,7 @@ Entity and association taxonomy and datamodel for life-sciences data
 |slot_count|460|
 |enum_count|19|
 |type_count|32|
+|github_stars|155|
 |proportion_elements_with_a_description|0.72|
 |proportion_elements_mapped|0.38|
 
@@ -128,6 +132,7 @@ Datamodel for Simple Standard for Sharing Ontological Mappings (SSSOM)
 |slot_count|71|
 |enum_count|3|
 |type_count|20|
+|github_stars|128|
 |proportion_elements_with_a_description|0.96|
 |proportion_elements_mapped|0.39|
 
@@ -152,8 +157,53 @@ A data model for describing change operations at a high level on an ontology or 
 |slot_count|70|
 |enum_count|2|
 |type_count|21|
+|github_stars|15|
 |proportion_elements_with_a_description|0.74|
 |proportion_elements_mapped|0.23|
+
+## linkml-common
+
+Common Data Model Elements
+
+
+|key|value|
+| :---: | :---: |
+|name|COMET|
+|title|linkml-common|
+|homepage|[https://linkml.io/linkml-common/](https://linkml.io/linkml-common/)|
+|github_repo|linkml/linkml-common|
+|schema_relative_path|src/linkml_common/schema/linkml_common.yaml|
+|license|MIT|
+|topics|common data model|
+|class_count|84|
+|slot_count|26|
+|enum_count|6|
+|type_count|19|
+|github_stars|5|
+|proportion_elements_with_a_description|0.51|
+|proportion_elements_mapped|0.42|
+
+## cmdr
+
+Core Model for Data Research (Tentative)
+
+
+|key|value|
+| :---: | :---: |
+|name|CMDR|
+|title|cmdr|
+|homepage|[https://linkml.io/cmdr/](https://linkml.io/cmdr/)|
+|github_repo|linkml/cmdr|
+|schema_relative_path|src/cmdr/schema/cmdr.yaml|
+|license|MIT|
+|topics|common data model|
+|class_count|10|
+|slot_count|21|
+|enum_count|0|
+|type_count|19|
+|github_stars|6|
+|proportion_elements_with_a_description|0.54|
+|proportion_elements_mapped|0.42|
 
 ## Knowledge Graph Visualization Configuration
 
@@ -177,6 +227,7 @@ An example of a use of this is https://github.com/INCATools/obographviz
 |slot_count|31|
 |enum_count|3|
 |type_count|21|
+|github_stars|4|
 |proportion_elements_with_a_description|0.57|
 |proportion_elements_mapped|0.32|
 
@@ -211,7 +262,7 @@ from the linkml yaml into SQL DDL
 
 |key|value|
 | :---: | :---: |
-|name|Semantic Sql|
+|name|Semantic SQL|
 |title|Semantic SQL|
 |homepage|[https://cmungall.github.io/semantic-sql/](https://cmungall.github.io/semantic-sql/)|
 |github_repo|cmungall/semantic-sql|
@@ -222,6 +273,7 @@ from the linkml yaml into SQL DDL
 |slot_count|34|
 |enum_count|0|
 |type_count|21|
+|github_stars|32|
 |proportion_elements_with_a_description|0.54|
 |proportion_elements_mapped|0.27|
 
@@ -250,6 +302,7 @@ For full context/motivation see the [GitHub repo](https://github.com/chemkg/chem
 |slot_count|217|
 |enum_count|9|
 |type_count|27|
+|github_stars|11|
 |proportion_elements_with_a_description|0.54|
 |proportion_elements_mapped|0.19|
 
@@ -260,7 +313,7 @@ None
 
 |key|value|
 | :---: | :---: |
-|name|CCDH|
+|name|CRDC-H-Model|
 |title|CRDC-H Model|
 |homepage|[https://cancerdhc.github.io/ccdhmodel](https://cancerdhc.github.io/ccdhmodel)|
 |github_repo|cancerdhc/ccdhmodel|
@@ -271,6 +324,7 @@ None
 |slot_count|0|
 |enum_count|106|
 |type_count|26|
+|github_stars|16|
 |proportion_elements_with_a_description|0.98|
 |proportion_elements_mapped|0.15|
 
@@ -281,12 +335,13 @@ None
 
 |key|value|
 | :---: | :---: |
-|name|ontology-associations|
+|name|Ontology-Associations|
 |title|common association file formats|
 |homepage|[https://biodatamodels.github.io/ontology-associations/](https://biodatamodels.github.io/ontology-associations/)|
 |github_repo|biodatamodels/ontology-associations|
 |license|CC-0|
 |topics|genomics|
+|github_stars|4|
 
 ## Genome Feature Format LinkML rendering
 
@@ -306,6 +361,7 @@ Playing around with GFF spec
 |slot_count|26|
 |enum_count|3|
 |type_count|21|
+|github_stars|5|
 |proportion_elements_with_a_description|0.67|
 |proportion_elements_mapped|0.43|
 
@@ -323,6 +379,7 @@ None
 |github_repo|monarch-initiative/monochrom|
 |license|CC-0|
 |topics|genomics|
+|github_stars|12|
 
 ## 
 
@@ -347,6 +404,7 @@ None
 |github_repo|matentzn/babelon|
 |license|CC-0|
 |topics|ontologies|
+|github_stars|7|
 
 ## HOT-TermCI
 
@@ -365,6 +423,7 @@ Terminology Core Common Model
 |slot_count|15|
 |enum_count|0|
 |type_count|19|
+|github_stars|3|
 |proportion_elements_with_a_description|1.0|
 |proportion_elements_mapped|0.86|
 
@@ -385,6 +444,7 @@ Alliance Persistent Schema
 |slot_count|600|
 |enum_count|21|
 |type_count|20|
+|github_stars|6|
 |proportion_elements_with_a_description|0.71|
 |proportion_elements_mapped|0.04|
 
@@ -408,6 +468,7 @@ None
 |name|OBOGraphs|
 |github_repo|biodatamodels/obograph|
 |topics|ontologies|
+|github_stars|4|
 
 ## Metadata schema for the German Human Genome-Phenome Archive (GHGA)
 
@@ -425,6 +486,7 @@ The submission centric metadata schema for the German Human Genome-Phenome Archi
 |slot_count|112|
 |enum_count|30|
 |type_count|19|
+|github_stars|13|
 |proportion_elements_with_a_description|0.98|
 |proportion_elements_mapped|0.18|
 
@@ -471,6 +533,7 @@ When should one provide an entry for a cell type in a MIANCT sheet?
 |slot_count|11|
 |enum_count|3|
 |type_count|20|
+|github_stars|4|
 |proportion_elements_with_a_description|0.69|
 |proportion_elements_mapped|0.75|
 
@@ -487,6 +550,7 @@ None
 |github_repo|isamplesorg/metadata|
 |license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
 |topics|samples; metadata; earth science|
+|github_stars|6|
 
 ## SPARQLFun
 
@@ -506,8 +570,31 @@ SPARQL Templates
 |slot_count|61|
 |enum_count|2|
 |type_count|21|
+|github_stars|8|
 |proportion_elements_with_a_description|0.33|
 |proportion_elements_mapped|0.34|
+
+## LinkML-Phenopackets
+
+Automatic translation of phenopackets protobuf to LinkML. Status: EXPERIMENTAL.
+
+
+|key|value|
+| :---: | :---: |
+|name|LinkML-Phenopackets|
+|title|LinkML-Phenopackets|
+|homepage|[https://phenopackets-schema.readthedocs.io/en/latest/](https://phenopackets-schema.readthedocs.io/en/latest/)|
+|github_repo|cmungall/linkml-phenopackets|
+|schema_relative_path|src/phenopackets/schema/phenopackets.yaml|
+|license|[https://creativecommons.org/publicdomain/zero/1.0/](https://creativecommons.org/publicdomain/zero/1.0/)|
+|topics|clinical|
+|class_count|73|
+|slot_count|0|
+|enum_count|30|
+|type_count|19|
+|github_stars|7|
+|proportion_elements_with_a_description|0.49|
+|proportion_elements_mapped|0.23|
 
 ## The INvestigation of Co-occurring conditions across the Lifespan to Understand Down syndromE (INCLUDE) data model
 
@@ -522,4 +609,5 @@ None
 |github_repo|include-dcc/include-linkml|
 |license|CC-0|
 |topics|Ontologies; Down syndrome; Clinical research|
+|github_stars|1|
 

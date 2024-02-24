@@ -1,0 +1,242 @@
+name: LinkML-Main-Registry
+homepage: https://github.com/linkml/linkml-registry
+title: |-
+  This is the main LinkML registry
+entries:
+  LinkML Model:
+    homepage: https://linkml.github.io/linkml-model/docs/
+    schema_url: https://github.com/linkml/linkml-model/blob/main/model/schema/meta.yaml
+    github_repo: linkml/linkml-model
+    schema_relative_path: linkml_model/model/schema/meta.yaml
+    license: CC-0
+    title: LinkML metamodel
+    topics:
+      - meta
+  LinkML Template Configuration Model:
+    homepage: https://linkml.github.io/template-config-model/
+    schema_url: https://github.com/linkml/template-config-model/blob/main/model/schema/config_model.yaml
+    github_repo: linkml/template-config-model
+    license: CC-0
+    title: LinkML template configuration
+    topics:
+      -  meta
+  NMDC:
+    homepage: https://microbiomedata.github.io/nmdc-schema/
+    github_repo: microbiomedata/nmdc-schema
+    schema_relative_path: src/schema/nmdc.yaml
+    license: CC-0
+    title: National Microbiome Data Collaborative
+    topics:
+      -  environmental microbiology
+  Biolink-Model:
+    homepage: https://biolink.github.io/biolink-model/
+    github_repo: biolink/biolink-model
+    schema_relative_path: biolink-model.yaml
+    license: CC-0
+    title: Biolink Model
+    topics:
+      - genomics
+      - disease
+      - phenotype
+      - expression
+      - GO
+      - GO-CAM
+      - human biology
+      - model organism biology
+      - biochemistry
+      - biology
+  SSSOM:
+    homepage: https://mapping-commons.github.io/sssom/
+    github_repo: mapping-commons/SSSOM
+    schema_relative_path: src/sssom_schema/schema/sssom_schema.yaml
+    license: CC-0
+    title: Simple Standard Sharing Object Mappings
+    topics:
+      -  information
+      -  mappings
+  KGCL:
+    homepage: https://cmungall.github.io/knowledge-graph-change-language/
+    schema_url: ''
+    github_repo: cmungall/knowledge-graph-change-language
+    schema_relative_path: src/schema/kgcl.yaml
+    license: CC-0
+    title: Knowledge Graph Change Language
+    topics:
+      -  knowledge graphs
+  COMET:
+    homepage: https://linkml.io/linkml-common/
+    github_repo: linkml/linkml-common
+    schema_relative_path: src/linkml_common/schema/linkml_common.yaml
+    license: CC-0
+    title: LinkML Common Modeling Elements and Types (COMET)
+    topics:
+      - common data model
+  CMDR:
+    homepage: https://linkml.io/cmdr/
+    github_repo: linkml/cmdr
+    schema_relative_path: src/cmdr/schema/cmdr.yaml
+    license: CC-0
+    title: Core Model for Data Research
+    topics:
+      - common data model
+  KGViz:
+    homepage: https://berkeleybop.github.io/kgviz-model/
+    schema_url: ''
+    github_repo: berkeleybop/kgviz-model
+    schema_relative_path: src/kgviz_model/linkml/kgviz.yaml
+    license: CC-0
+    title: Knowledge Graph Visualization Configuration
+    topics:
+      -  visualization
+  Semantic SQL:
+    homepage: https://cmungall.github.io/semantic-sql/
+    github_repo: cmungall/semantic-sql
+    schema_relative_path: src/semsql/linkml/semsql.yaml
+    license: CC-0
+    title: Semantic SQL
+    topics:
+      -  ontologies
+  Chemical Entities and Mixtures Model:
+    homepage: https://chemkg.github.io/chemrof/
+    license: CC-0
+    github_repo: chemkg/chemrof
+    schema_relative_path: src/schema/chemrof.yaml
+    title: Chemistry Schema
+    topics:
+      -  chemistry
+      
+  CRDC-H-Model:
+    homepage: https://cancerdhc.github.io/ccdhmodel
+    schema_url: ''
+    license: CC-0
+    github_repo: cancerdhc/ccdhmodel
+    schema_relative_path: model/schema/crdch_model.yaml
+    title: CRDC-H Model
+    topics:
+      -  cancer
+  Ontology-Associations:
+    homepage: https://biodatamodels.github.io/ontology-associations/
+    schema_url: ''
+    github_repo: biodatamodels/ontology-associations
+    # schema_relative_path: src/schema/all.yaml
+    license: CC-0
+    title: common association file formats
+    topics:
+      -  genomics
+  GFF3:
+    homepage: https://biodatamodels.github.io/gff-schema/
+    schema_url: ''
+    github_repo: biodatamodels/gff-schema
+    schema_relative_path: src/schema/gff.yaml
+    license: CC-0
+    title: Genome Feature Format LinkML rendering
+    topics:
+      -  genomics
+  Monochrom:
+    homepage: https://monarch-initiative.github.io/monochrom/
+    schema_url: https://github.com/monarch-initiative/monochrom/blob/master/model/schema/chromo.yaml
+    github_repo: monarch-initiative/monochrom
+    license: CC-0
+    title: Chromosome ontology and ETL
+    topics:
+      -  genomics
+  GSC MIxS:
+    homepage: ''
+    schema_url: ''
+    license: ''
+    title: ''
+    topics:
+      -  genomics
+  Babelon:
+    homepage: https://matentzn.github.io/babelon/
+    schema_url: ''
+    github_repo: matentzn/babelon
+    license: CC-0
+    title: A schema for describing translations and language profiles for ontologies
+    topics:
+      -  ontologies
+  HOT-TermCI:
+    homepage: https://github.com/HOT-Ecosystem/TermCI-model
+    github_repo: HOT-Ecosystem/TermCI-model
+    schema_url: ''
+    schema_relative_path: src/schema/tccm_schema.yaml
+    license: ''
+    title: ''
+    topics:
+      -  clinical
+  Alliance of Genome Resource Persistent Schema:
+    title: Alliance of Genome Resources Persistent Schema
+    description: Alliance Persistent Schema
+    homepage: ''
+    schema_url: ''
+    github_repo: alliance-genome/agr_curation_schema
+    schema_relative_path: model/schema/allianceModel.yaml
+    license: https://creativecommons.org/publicdomain/zero/1.0/
+    topics:
+      - genomics
+  SESAR:
+    homepage: ''
+    schema_url: ''
+    license: ''
+    title: ''
+    topics:
+      -  earth science
+  OBOGraphs:
+    homepage: ''
+    schema_url: ''
+    github_repo: biodatamodels/obograph
+    license: ''
+    title: ''
+    topics:
+      -  ontologies
+  GHGA Metadata:
+    homepage: https://ghga-de.github.io/ghga-metadata-schema/
+    title: Metadata schema for the German Human Genome-Phenome Archive (GHGA)
+    github_repo: ghga-de/ghga-metadata-schema
+    schema_relative_path: src/schema/submission.yaml
+  MIANCT:
+    title: Minimal information about a New Cell Type
+    homepage: https://cmungall.github.io/mianct-schema/
+    github_repo: cmungall/mianct-schema
+    schema_relative_path: model/schema/mianct.yaml
+    topics:
+      - samples
+      - cell types
+  iSamples:
+    title: iSamples
+    homepage: https://github.com/isamplesorg/metadata
+    github_repo: isamplesorg/metadata
+    #schema_relative_path: src/schemas/isamples_core.yaml
+    license: https://creativecommons.org/publicdomain/zero/1.0/
+    topics:
+      - samples
+      - metadata
+      - earth science
+  sparqlfun:
+    homepage: https://github.com/linkml/sparqlfun
+    github_repo: linkml/sparqlfun
+    schema_relative_path: sparqlfun/schema/sparqlfun.yaml
+    license: https://creativecommons.org/publicdomain/zero/1.0/
+    topics:
+      - sparql
+      - templates
+
+  LinkML-Phenopackets:
+    homepage: https://phenopackets-schema.readthedocs.io/en/latest/
+    github_repo: cmungall/linkml-phenopackets
+    schema_relative_path: src/phenopackets/schema/phenopackets.yaml
+    license: https://creativecommons.org/publicdomain/zero/1.0/
+    topics:
+      -  clinical
+    
+  INCLUDE: 
+    homepage: https://github.com/include-dcc/include-linkml
+    schema_url: ''
+    github_repo: include-dcc/include-linkml
+    license: CC-0
+    title: The INvestigation of Co-occurring conditions across the Lifespan to Understand Down syndromE (INCLUDE) data model
+    topics:
+      -  Ontologies
+      -  Down syndrome
+      -  Clinical research
+      
