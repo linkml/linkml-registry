@@ -55,9 +55,9 @@ entries:
       -  information
       -  mappings
   KGCL:
-    homepage: https://cmungall.github.io/knowledge-graph-change-language/
+    homepage: https://incatools.github.io/kgcl/
     schema_url: ''
-    github_repo: cmungall/knowledge-graph-change-language
+    github_repo: INCATools/kgcl
     schema_relative_path: src/schema/kgcl.yaml
     license: CC-0
     title: Knowledge Graph Change Language
@@ -89,8 +89,8 @@ entries:
     topics:
       -  visualization
   Semantic SQL:
-    homepage: https://cmungall.github.io/semantic-sql/
-    github_repo: cmungall/semantic-sql
+    homepage: https://incatools.github.io/semantic-sql/
+    github_repo: INCATools/semantic-sql
     schema_relative_path: src/semsql/linkml/semsql.yaml
     license: CC-0
     title: Semantic SQL
@@ -222,7 +222,7 @@ entries:
       - templates
 
   LinkML-Phenopackets:
-    homepage: https://phenopackets-schema.readthedocs.io/en/latest/
+    homepage: https://phenopacket-schema.readthedocs.io/en/latest/
     github_repo: cmungall/linkml-phenopackets
     schema_relative_path: src/phenopackets/schema/phenopackets.yaml
     license: https://creativecommons.org/publicdomain/zero/1.0/
