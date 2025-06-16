@@ -1,4 +1,6 @@
 ---
+# Codespell configuration is within pyproject.toml
+---
 name: Codespell
 
 on:
