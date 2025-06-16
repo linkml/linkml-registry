@@ -8,6 +8,7 @@ dynamic = [ "version" ]
 dependencies = [
     "fastmcp>=2.7.1",
     "mcp>=1.9.3",
+    "pyyaml>=6.0.2",
     "requests>=2.32.4",
 ]
 

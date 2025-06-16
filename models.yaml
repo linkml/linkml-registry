@@ -5,48 +5,20 @@ entries:
     name: LinkML Model
     title: LinkML Schema Metamodel
     description: 'The metamodel for schemas defined using the Linked Data Modeling
-      Language framework.
-
-
-      For more information on LinkML:
-
-
+      Language framework. For more information on LinkML:
       * [linkml.io](https://linkml.io) main website
-
       * [specification](https://w3id.org/linkml/docs/specification/)
-
-
-      LinkML is self-describing. Every LinkML schema consists of elements
-
-      that instantiate classes in this metamodel.
-
-
+      LinkML is self-describing. Every LinkML schema consists of elements that instantiate classes in this metamodel.
       Core metaclasses:
-
-
       * [SchemaDefinition](https://w3id.org/linkml/SchemaDefinition)
-
       * [ClassDefinition](https://w3id.org/linkml/ClassDefinition)
-
       * [SlotDefinition](https://w3id.org/linkml/SlotDefinition)
-
       * [TypeDefinition](https://w3id.org/linkml/TypeDefinition)
-
-
       There are many subsets of *profiles* of the metamodel, for different purposes:
-
-
       * [MinimalSubset](https://w3id.org/linkml/MinimalSubset)
-
       * [BasicSubset](https://w3id.org/linkml/BasicSubset)
-
       * [BasicSubset](https://w3id.org/linkml/BasicSubset)
-
-
-      For canonical reference documentation on any metamodel construct,
-
-      refer to the official URI for each construct, e.g.
-
+      For canonical reference documentation on any metamodel construct, refer to the official URI for each construct, e.g.
       [https://w3id.org/linkml/is_a](https://w3id.org/linkml/is_a)'
     homepage: https://linkml.github.io/linkml-model/docs/
     schema_url: https://github.com/linkml/linkml-model/blob/main/model/schema/meta.yaml
@@ -258,18 +230,8 @@ entries:
     name: Chemical Entities and Mixtures Model
     title: Chemical Entities Mixtures and Reactions Ontological Framework
     description: 'A data model for managing information about chemical entities, ranging
-      from atoms
-
-      through molecules to complex mixtures.
-
-
-      Aspects of this have been cribbed from various sources including CHEBI, SIO,
-
-      Wikipedia/Wikidata, the NCATS Translator Chemical Working Group, but all mistakes
-
-      are my own.
-
-
+      from atoms through molecules to complex mixtures. Aspects of this have been cribbed from various sources including CHEBI, SIO,
+      Wikipedia/Wikidata, the NCATS Translator Chemical Working Group, but all mistakes are my own.
       For full context/motivation see the [GitHub repo](https://github.com/chemkg/chemrof).'
     homepage: https://chemkg.github.io/chemrof/
     github_repo: chemkg/chemrof
@@ -429,26 +391,21 @@ entries:
   MIANCT:
     name: MIANCT
     title: Minimal Information About a new Cell Type
-    description: "\nThis schema is CJM's attempt to translate Tiago's [minimal info\
-      \ doc](https://docs.google.com/document/d/1EVgs2Z5dpJs7cbuSBwWlg1xOWQEqMtbSKRGgdneXnU8/edit#)\
-      \ into a LinkML schema\n\nThe schema is fairly minimal and is in the form of\
-      \ a \"checklist\" style schema. It is a set of fields mostly associated with\
-      \ this class:\n\n  * [CellType](CellType.md)\n\nThere are a set of examples\
-      \ here:\n\n  * [tests/input](https://github.com/cmungall/mianct-schema/tree/main/tests/input)\n\
-      \nCurrently the examples are YAML, but the YAML is deliberately flat as this\
-      \ is a \"checklist\" schema, and we could have TSV/CSV/xlsx here\n\nTODO:\n\n\
-      \  - include \"packages\" and \"checklists\"; e.g.\n      - a neuron package\
-      \ would have the enum for morphologies constrained\n      - a transcriptomics\
-      \ package would make it required to enter the set of marker genes\n      - see\
-      \ [MIxS schema](https://cmungall.github.io/mixs-source/) for example of how\
-      \ this might work\n  - document how this relates to dosdp/robot templates\n\
-      \  \nWhen should one provide an entry for a cell type in a MIANCT sheet?\n\n\
-      \ - When there is a claim of a new cell class (type or state) that has not been\
-      \ described before\n - When new information is discovered for a previously cataloged\
-      \ type that might influence its cataloguing (i.e. description of the presence\
-      \ in a different species or in a new location)\n - When a cell type mentioned\
-      \ in the article has been described before, but is not yet catalogued on an\
-      \ authoritative source like the Cell Ontology."
+    description: "This schema is CJM's attempt to translate
+     [minimal info doc](https://docs.google.com/document/d/1EVgs2Z5dpJs7cbuSBwWlg1xOWQEqMtbSKRGgdneXnU8/edit#) into 
+     a LinkML schema. The schema is fairly minimal and is in the form of a \"checklist\" style schema. It is a set 
+     of fields mostly associated with this class: * [CellType](CellType.md) There are a set of examples here: 
+     * [tests/input](https://github.com/cmungall/mianct-schema/tree/main/tests/input) Currently the examples are YAML, 
+     but the YAML is deliberately flat as this is a \"checklist\" schema, and we could have TSV/CSV/xlsx here 
+     TODO: - include \"packages\" and \"checklists\"; e.g. - a neuron package would have the enum for morphologies
+      constrained - a transcriptomics package would make it required to enter the set of marker genes 
+      - see [MIxS schema](https://cmungall.github.io/mixs-source/) for example of how this might work 
+      - document how this relates to dosdp/robot templates When should one provide an entry for a cell type in a MIANCT sheet?
+      - When there is a claim of a new cell class (type or state) that has not been described before 
+      - When new information is discovered for a previously cataloged type that might influence its cataloguing 
+      (i.e. description of the presence in a different species or in a new location) -
+      - When a cell type mentioned in the article has been described before, but is not yet catalogued on an
+       authoritative source like the Cell Ontology."
     homepage: https://cmungall.github.io/mianct-schema/
     github_repo: cmungall/mianct-schema
     schema_relative_path: model/schema/mianct.yaml
