@@ -1,0 +1,43 @@
+[project]
+name = "linkml-registry"
+description = "Registry of LinkML schemas"
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = [ "version" ]
+
+dependencies = [
+    "fastmcp>=2.7.1",
+    "mcp>=1.9.3",
+    "requests>=2.32.4",
+]
+
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+# Ref.: https://github.com/ninoseki/uv-dynamic-versioning/
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "pep440"
+fallback-version = "0.0.0"
+
+[dependency-groups]
+dev = [
+  "pytest",
+  "black",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/linkml/linkml-registry"
+"Bug Tracker" = "https://github.com/linkml/linkml-registry/issues"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/linkml_registry"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
