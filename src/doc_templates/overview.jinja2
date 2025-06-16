@@ -1,0 +1,30 @@
+[//]: # (DO NOT MANUALLY EDIT THIS FILE. IT IS GENERATED FROM A TEMPLATE.)
+
+# LinkML Registry Entries
+
+## LinkML Schema Metamodel
+
+The metamodel for schemas defined using the Linked Data Modeling Language framework.
+
+For more information on LinkML:
+
+* [linkml.io](https://linkml.io) main website
+* [specification](https://w3id.org/linkml/docs/specification/)
+
+{%- for id, entry in entries.items() %}
+## {{ entry.title or id }}
+
+{% if entry.description %}{{ entry.description }}{% endif %}
+
+{% if entry.github_repo %}**GitHub Organization:** {{ entry.github_repo }}{% endif %}
+
+{% if entry.schema_url %}**Schema URL:** {{ entry.schema_url }}{% endif %}
+
+{% if entry.license %}**License:** {{ entry.license }}{% endif %}
+
+{% if entry.domain %}**Domain:** {{ entry.domain }}{% endif %}
+
+{% if entry.status %}**Status:** {{ entry.status }}{% endif %}
+
+{% if entry.topics %}**Topics:** {{ entry.topics|join(', ') }}{% endif %}
+{% endfor %}

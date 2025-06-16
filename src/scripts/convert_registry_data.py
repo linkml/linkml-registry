@@ -15,8 +15,8 @@ import re
 FIELD_MAPPINGS = {
     "org/repo": "name",
     "Schema": "title",
-    "Schema URI": "schema_url",
-    "Source URL (GitHub Preferred)": "schema_relative_path",
+    "Schema URI": "uri",
+    "Source URL (GitHub Preferred)": "schema_url",
     "Primary Technical Contacts": "contacts",
     "Type": "schema_type",
     "Domain": "domain",
@@ -58,7 +58,7 @@ def convert_data(input_text: str) -> Dict[str, Any]:
                     for i in range(len(headers))}
         
         # Skip entries without a name
-        if not row_data.get("org/repo"):
+        if not row_data.get("Schema") and not row_data.get("org/repo"):
             continue
             
         entry_name = row_data.get("Schema", "").strip()
@@ -74,14 +74,11 @@ def convert_data(input_text: str) -> Dict[str, Any]:
         entry = {}
         
         # Map fields
-        if row_data.get("GitHub"):
-            entry["github_repo"] = row_data["GitHub"]
-        
-        if row_data.get("Schema URI"):
-            entry["schema_url"] = row_data["Schema URI"]
-            
+        if row_data.get("org/repo"):
+            entry["github_repo"] = "https://github.com/"+row_data["org/repo"]
+
         if row_data.get("Source URL (GitHub Preferred)"):
-            entry["schema_relative_path"] = row_data["Source URL (GitHub Preferred)"]
+            entry["schema_url"] = row_data["Source URL (GitHub Preferred)"]
             
         if row_data.get("Description"):
             entry["description"] = row_data["Description"]
@@ -110,12 +107,13 @@ def convert_data(input_text: str) -> Dict[str, Any]:
         
         # Clean up and validate the entry
         entry = {k: v for k, v in entry.items() if v}
-        
-        # Use GitHub repo as key if Schema is missing
-        org_repo = row_data.get("org/repo", "").strip()
-        if entry and org_repo:
-            entries[entry_name] = entry
-    
+
+        # Add the entry to the entries dictionary using org/repo as the key
+        if entry:  # Only add if entry is not empty
+            entry_key = row_data.get("org/repo", "").strip()
+            if entry_key:
+                entries[entry_key] = entry
+
     # Create the registry structure
     registry = {
         "name": "LinkML-Main-Registry",
@@ -137,7 +135,13 @@ def main():
         input_text = sys.stdin.read()
     
     registry = convert_data(input_text)
-    
+
+    # Check if entries were created
+    if not registry["entries"]:
+        print("WARNING: No entries were created. Check the input data format.", file=sys.stderr)
+    else:
+        print(f"Created {len(registry['entries'])} entries", file=sys.stderr)
+
     # Output as YAML
     yaml_text = yaml.dump(registry, sort_keys=False, default_flow_style=False)
     
