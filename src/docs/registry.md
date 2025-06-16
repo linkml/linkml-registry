@@ -26,22 +26,6 @@ public
 
 **Topics:** Schema
 
-## GenomicsStandardsConsortium/mixs
-
-
-
-**GitHub Organization:** https://github.com/GSC
-
-
-
-**License:** CC-0
-
-**Domain:** Duplicate
-
-
-
-**Topics:** Duplicate
-
 ## NeurodataWithoutBorders/nwb-schema
 
 exploratory
@@ -57,38 +41,6 @@ exploratory
 **Status:** Neuroscience
 
 **Topics:** Schema Collection
-
-## alliance-genome/agr_curation_schema
-
-
-
-**GitHub Organization:** https://github.com/AGR
-
-
-
-**License:** CC-0
-
-**Domain:** Duplicate
-
-
-
-**Topics:** Duplicate
-
-## include-dcc/include-linkml
-
-
-
-**GitHub Organization:** https://github.com/INCLUDE
-
-
-
-**License:** CC-0
-
-**Domain:** Duplicate
-
-
-
-**Topics:** Duplicate
 
 ## bfurner/bdchm
 
@@ -121,22 +73,6 @@ public
 **Status:** Biology
 
 **Topics:** Schema
-
-## monarch-initiative/babelon
-
-
-
-**GitHub Organization:** https://github.com/Monarch
-
-
-
-**License:** CC-0
-
-**Domain:** Duplicate
-
-
-
-**Topics:** Duplicate
 
 ## loinc/comp-loinc
 
@@ -185,22 +121,6 @@ public
 **Status:** Generic
 
 **Topics:** Schema Collection
-
-## bridge2ai/model-card-schema
-
-
-
-**GitHub Organization:** https://github.com/Bridge2AI
-
-
-
-**License:** CC-0
-
-**Domain:** Duplicate
-
-
-
-**Topics:** Duplicate
 
 ## DOE
 
@@ -650,22 +570,6 @@ public
 
 **Topics:** Schema Collection
 
-## sujaypatil96/ga4gh-va
-
-
-
-**GitHub Organization:** https://github.com/GA4GH
-
-
-
-**License:** CC-0
-
-**Domain:** Duplicate
-
-
-
-**Topics:** Duplicate
-
 ## clingen-data-model/variant-functional-assay
 
 
@@ -985,22 +889,6 @@ public
 **Status:** Computer Science / Data Science
 
 **Topics:** Schema
-
-## loinc/comp-loinc
-
-
-
-**GitHub Organization:** https://github.com/LOINC
-
-
-
-**License:** CC-0
-
-**Domain:** Duplicate
-
-
-
-**Topics:** Duplicate
 
 ## lmodel/collections
 

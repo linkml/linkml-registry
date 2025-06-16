@@ -53,6 +53,11 @@ def generate_docs(registry_file, output_dir, templates_dir, overview_template, d
             "case_sensitive": False
         },
         {
+            "pattern": "duplicate",
+            "description": "Exclude entries containing 'duplicate'",
+            "case_sensitive": False
+        },
+        {
             "pattern": "draft",
             "description": "Exclude entries marked as 'draft'",
             "case_sensitive": False
