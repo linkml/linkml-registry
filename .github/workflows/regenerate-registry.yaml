@@ -49,3 +49,10 @@ jobs:
           else
             echo "'make discover' failed to finish successfully"
           fi
+      - name: Build documentation.
+        run: |
+          mkdir -p docs
+          touch docs/.nojekyll
+          make gendoc
+          ([ ! -f docs/about.md ] && cp src/docs/about.md docs/) || true
+          uv run mkdocs gh-deploy
