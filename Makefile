@@ -142,7 +142,8 @@ gendoc: $(DOCDIR) discover
 		--templates-dir src/doc_templates \
 		--overview-template overview.jinja2 \
 		--detail-template registry.jinja2 \
-		--src-docs-dir src/docs
+		--src-docs-dir src/docs ; \
+	cp linkml_registry.yaml $(DOCDIR) ; \
 
 
 testdoc: gendoc serve

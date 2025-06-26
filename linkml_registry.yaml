@@ -1,7 +1,7 @@
 name: LinkML-Discovery-Registry
 homepage: https://github.com/linkml/linkml-registry
 title: LinkML Registry (GitHub Search Discovery)
-description: LinkML projects discovered via GitHub Search API. Generated on 2025-06-25 18:02:02
+description: LinkML projects discovered via GitHub Search API. Generated on 2025-06-26 09:07:18
 entries:
   biolink/biolink-model:
     title: biolink-model

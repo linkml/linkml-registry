@@ -1,15 +1,12 @@
-[//]: # (DO NOT MANUALLY EDIT THIS FILE. IT IS GENERATED FROM A TEMPLATE.)
-
 # LinkML Registry
 
-## LinkML Schema Metamodel
+The LinkML Registry is a collection of projects that utilize the LinkML modeling language. 
+It serves as a resource for discovering how LinkML is applied across various domains and projects.
 
-The metamodel for schemas defined using the Linked Data Modeling Language framework.
+For more information on LinkML, please see:
 
-For more information on LinkML:
-
-* [linkml.io](https://linkml.io) main website
-* [specification](https://w3id.org/linkml/docs/specification/)
+* The Documentation (https://linkml.io/linkml/)
+* The Language Elements (https://w3id.org/linkml/docs/specification/)
 
 ## Registry Entries
 
