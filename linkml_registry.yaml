@@ -1,24 +1,8 @@
 name: LinkML-Discovery-Registry
 homepage: https://github.com/linkml/linkml-registry
 title: LinkML Registry (GitHub Search Discovery)
-description: LinkML projects discovered via GitHub Search API. Generated on 2025-06-25 17:55:09
+description: LinkML projects discovered via GitHub Search API. Generated on 2025-06-25 18:02:02
 entries:
-  linkml/linkml:
-    title: linkml
-    description: Linked Open Data Modeling Language
-    github_repo: https://github.com/linkml/linkml
-    license: NOASSERTION
-    domain: Computer Science
-    status: active
-    topics:
-    - data-dictionaries
-    - data-modeling
-    - hacktoberfest
-    - json-ld-context
-    - json-schema
-    schema_url: https://linkml.github.io/linkml/
-    contacts: linkml
-    github_stars: 380
   biolink/biolink-model:
     title: biolink-model
     description: Schema and generated objects for biolink data model and upper ontology
@@ -70,21 +54,6 @@ entries:
     schema_url: https://cidgoh.github.io/DataHarmonizer/
     contacts: cidgoh
     github_stars: 111
-  linkml/linkml-model:
-    title: linkml-model
-    description: Link Modeling Language (LinkML) model
-    github_repo: https://github.com/linkml/linkml-model
-    domain: Computer Science
-    status: active
-    topics:
-    - data-integration
-    - data-modeling
-    - graph-ql
-    - json-schema
-    - linked-data
-    schema_url: https://linkml.github.io/linkml-model/docs/
-    contacts: linkml
-    github_stars: 54
   mapping-commons/sssom-py:
     title: sssom-py
     description: Python toolkit for SSSOM mapping format
@@ -117,22 +86,6 @@ entries:
     schema_url: https://monarch-initiative.github.io/koza/
     contacts: monarch-initiative
     github_stars: 53
-  linkml/schema-automator:
-    title: schema-automator
-    description: Automated assistance for the schema development lifecycle
-    github_repo: https://github.com/linkml/schema-automator
-    license: BSD-3-Clause
-    domain: Computer Science
-    status: active
-    topics:
-    - csvs
-    - data-modeling
-    - incatools
-    - intelligent-concept-assistant
-    - linked-data
-    schema_url: https://linkml.io/schema-automator/
-    contacts: linkml
-    github_stars: 48
   INCATools/semantic-sql:
     title: semantic-sql
     description: SQL and SQLite builds of OWL ontologies
@@ -149,38 +102,6 @@ entries:
     schema_url: https://incatools.github.io/semantic-sql/
     contacts: INCATools
     github_stars: 46
-  linkml/schemasheets:
-    title: schemasheets
-    description: Structure your data in a FAIR way using google sheets or TSVs. These are then converted to LinkML, and from
-      there other formats
-    github_repo: https://github.com/linkml/schemasheets
-    domain: Computer Science
-    status: active
-    topics:
-    - fair-data
-    - linkml
-    - metadata
-    - schemas
-    - shacl
-    schema_url: https://linkml.io/schemasheets/
-    contacts: linkml
-    github_stars: 45
-  linkml/linkml-runtime:
-    title: linkml-runtime
-    description: Runtime support for linkml generated models
-    github_repo: https://github.com/linkml/linkml-runtime
-    license: CC0-1.0
-    domain: Computer Science
-    status: active
-    topics:
-    - conversion
-    - hacktoberfest
-    - instances
-    - linkml
-    - linkml-runtime
-    schema_url: https://linkml.github.io/linkml-runtime/
-    contacts: linkml
-    github_stars: 38
   microbiomedata/nmdc-schema:
     title: nmdc-schema
     description: National Microbiome Data Collaborative (NMDC) unified data model
@@ -197,16 +118,6 @@ entries:
     schema_url: https://microbiomedata.github.io/nmdc-schema/
     contacts: microbiomedata
     github_stars: 33
-  linkml/linkml-project-cookiecutter:
-    title: linkml-project-cookiecutter
-    description: A cookiecutter for linkml projects. An equivalent of `linkml-ws new project-name`.
-    github_repo: https://github.com/linkml/linkml-project-cookiecutter
-    license: CC0-1.0
-    domain: Computer Science
-    status: active
-    schema_url: https://linkml.github.io/linkml-project-cookiecutter/
-    contacts: linkml
-    github_stars: 28
   cmungall/semantic-llama:
     title: semantic-llama
     description: A knowledge extraction tool that uses a large language model to extract semantic information from text
@@ -223,37 +134,6 @@ entries:
     schema_url: https://cmungall.github.io/semantic-llama/
     contacts: cmungall
     github_stars: 28
-  linkml/linkml-map:
-    title: linkml-map
-    description: Mapping between LinkML schemas
-    github_repo: https://github.com/linkml/linkml-map
-    license: NOASSERTION
-    domain: Computer Science
-    status: active
-    topics:
-    - data-model-mapping
-    - etl
-    - linkml
-    - mapping
-    schema_url: https://linkml.github.io/linkml-map/
-    contacts: linkml
-    github_stars: 23
-  linkml/linkml-store:
-    title: linkml-store
-    description: wrapper for multiple linkml storage engines
-    github_repo: https://github.com/linkml/linkml-store
-    license: MIT
-    domain: Computer Science
-    status: active
-    topics:
-    - data-lake
-    - data-stack
-    - database-wrapper
-    - duckdb
-    - hdf5
-    schema_url: https://linkml.github.io/linkml-store/
-    contacts: linkml
-    github_stars: 21
   INCATools/kgcl:
     title: kgcl
     description: Datamodel for KGCL (Knowledge Graph Change Language)
@@ -330,37 +210,6 @@ entries:
     schema_url: https://ghga-de.github.io/ghga-metadata-schema/
     contacts: ghga-de
     github_stars: 14
-  linkml/linkml-owl:
-    title: linkml-owl
-    description: Extension of LinkML runtime for converting instances of LinkML classes to OWL (classes or instances)
-    github_repo: https://github.com/linkml/linkml-owl
-    domain: Computer Science
-    status: active
-    topics:
-    - design-patterns
-    - json2owl
-    - linkml
-    - metaclasses
-    - ontologies
-    schema_url: https://linkml.github.io/linkml-owl/
-    contacts: linkml
-    github_stars: 14
-  linkml/linkml-datalog:
-    title: linkml-datalog
-    description: Translates LinkML schemas into Datalog programs and executes them using Souffle, enabling advanced validation
-      and inference over instance data. ALPHA.
-    github_repo: https://github.com/linkml/linkml-datalog
-    domain: Computer Science
-    status: active
-    topics:
-    - constraints
-    - datalog
-    - linkml
-    - logic-programming
-    - rdf
-    schema_url: https://linkml.github.io/linkml-datalog/
-    contacts: linkml
-    github_stars: 13
   monarch-initiative/monochrom:
     title: monochrom
     description: Standardized identifiers and OWL classes for chromosomes and chromosomal parts across species
@@ -376,35 +225,6 @@ entries:
     schema_url: http://monarch-initiative.github.io/monochrom/
     contacts: monarch-initiative
     github_stars: 13
-  linkml/linkml-registry:
-    title: linkml-registry
-    description: Registry of schemas that use LinkML
-    github_repo: https://github.com/linkml/linkml-registry
-    domain: Computer Science
-    status: active
-    topics:
-    - linkml
-    - registry
-    - schema-registry
-    - schemas
-    schema_url: https://linkml.github.io/linkml-registry/registry/
-    contacts: linkml
-    github_stars: 12
-  linkml/prefixmaps:
-    title: prefixmaps
-    description: Semantic prefix map registry
-    github_repo: https://github.com/linkml/prefixmaps
-    license: Apache-2.0
-    domain: Biology
-    status: active
-    topics:
-    - bioregistry
-    - linkml
-    - obofoundry
-    - prefixmaps
-    schema_url: https://linkml.github.io/prefixmaps/
-    contacts: linkml
-    github_stars: 12
   py-typedlogic/py-typedlogic:
     title: py-typedlogic
     description: Logic plus python types
@@ -433,22 +253,6 @@ entries:
     - physical-specimen
     schema_url: https://isamplesorg.github.io/metadata/
     contacts: isamplesorg
-    github_stars: 11
-  linkml/sparqlfun:
-    title: sparqlfun
-    description: sparql templates for linkml (alpha)
-    github_repo: https://github.com/linkml/sparqlfun
-    license: CC0-1.0
-    domain: Computer Science
-    status: active
-    topics:
-    - linked-data
-    - linkml
-    - obofoundry
-    - ontobee
-    - ontologies
-    schema_url: https://linkml.github.io/sparqlfun/home/
-    contacts: linkml
     github_stars: 11
   cmungall/json-flattener:
     title: json-flattener
@@ -490,18 +294,6 @@ entries:
     schema_url: https://cmungall.github.io/linkml-phenopackets/
     contacts: cmungall
     github_stars: 8
-  linkml/linkml-runtime.js:
-    title: linkml-runtime.js
-    description: An implementation of the linkml-runtime in javascript ALPHA VERSION
-    github_repo: https://github.com/linkml/linkml-runtime.js
-    domain: Computer Science
-    status: active
-    topics:
-    - data-harmonizer
-    - linkml
-    schema_url: https://linkml.github.io/linkml-runtime.js/
-    contacts: linkml
-    github_stars: 8
   GX4FM-Base-X/SemanticDataLink:
     title: SemanticDataLink
     description: The Semantic Data Link repository hosts a Streamlit-based web application designed for managing and augmenting
@@ -514,34 +306,6 @@ entries:
     schema_url: https://gx4fm-base-x.github.io/SemanticDataLink/
     contacts: GX4FM-Base-X
     github_stars: 8
-  linkml/linkml-tutorial:
-    title: linkml-tutorial
-    github_repo: https://github.com/linkml/linkml-tutorial
-    license: MIT
-    domain: Computer Science
-    status: active
-    topics:
-    - linkml
-    - tutorial
-    schema_url: https://linkml.github.io/linkml-tutorial/
-    contacts: linkml
-    github_stars: 7
-  linkml/semantic-dsl:
-    title: semantic-dsl
-    description: Easy Domain Specific Languages for your Schemas
-    github_repo: https://github.com/linkml/semantic-dsl
-    license: BSD-3-Clause
-    domain: Computer Science
-    status: active
-    topics:
-    - grammar-generator
-    - grammars
-    - lark
-    - linkml
-    - rdf
-    schema_url: https://linkml.github.io/semantic-dsl/
-    contacts: linkml
-    github_stars: 7
   HendrikBorgelt/DCAT-ap_as_LinkML_template:
     title: DCAT-ap_as_LinkML_template
     github_repo: https://github.com/HendrikBorgelt/DCAT-ap_as_LinkML_template
@@ -566,64 +330,6 @@ entries:
     schema_url: https://biodatamodels.github.io/gff-schema/
     contacts: biodatamodels
     github_stars: 6
-  linkml/linkml-arrays:
-    title: linkml-arrays
-    description: Support for loading and dumping N-dimensional arrays in LinkML.
-    github_repo: https://github.com/linkml/linkml-arrays
-    license: BSD-3-Clause
-    domain: Computer Science
-    status: active
-    topics:
-    - arrays
-    - hdmf
-    - linked-data
-    - linkml
-    - multidimensional-arrays
-    schema_url: https://linkml.github.io/linkml-arrays
-    contacts: linkml
-    github_stars: 6
-  linkml/linkml-common:
-    title: linkml-common
-    description: ALPHA common modeling patterns
-    github_repo: https://github.com/linkml/linkml-common
-    license: MIT
-    domain: Computer Science
-    status: active
-    topics:
-    - common-data-model
-    - linkml
-    - schema-org
-    schema_url: https://linkml.github.io/linkml-common/
-    contacts: linkml
-    github_stars: 6
-  linkml/linkml-schemaorg:
-    title: linkml-schemaorg
-    description: Automated linkml rendering of schema.org
-    github_repo: https://github.com/linkml/linkml-schemaorg
-    license: MIT
-    domain: Computer Science
-    status: active
-    topics:
-    - linkml
-    - schema-org
-    schema_url: https://linkml.github.io/linkml-schemaorg/
-    contacts: linkml
-    github_stars: 6
-  linkml/linkml-dataops:
-    title: linkml-dataops
-    description: Data API for LinkML instance data
-    github_repo: https://github.com/linkml/linkml-dataops
-    domain: Computer Science
-    status: active
-    topics:
-    - change-objects
-    - data-modeling
-    - database
-    - linkml
-    - query-language
-    schema_url: https://linkml.github.io/linkml-dataops/
-    contacts: linkml
-    github_stars: 5
   microbiomedata/sample-annotator:
     title: sample-annotator
     description: NMDC Sample Annotator
@@ -692,50 +398,6 @@ entries:
     status: maintenance
     schema_url: https://p2p-ld.github.io/linkml-activitypub/
     contacts: p2p-ld
-    github_stars: 4
-  linkml/linkml-renderer:
-    title: linkml-renderer
-    description: Rendering of instance data as HTML, Markdown, Mermaid
-    github_repo: https://github.com/linkml/linkml-renderer
-    license: Apache-2.0
-    domain: Computer Science
-    status: active
-    topics:
-    - html
-    - instance-graphs
-    - linkml
-    - markdown
-    - mermaid
-    schema_url: https://linkml.github.io/linkml-renderer
-    contacts: linkml
-    github_stars: 4
-  linkml/linkml-solr:
-    title: linkml-solr
-    description: Simple wrapper for using Solr with LinkML schemas
-    github_repo: https://github.com/linkml/linkml-solr
-    domain: Computer Science
-    status: inactive
-    topics:
-    - linkml
-    - metadata
-    - solr
-    schema_url: https://linkml.github.io/linkml-solr/
-    contacts: linkml
-    github_stars: 4
-  linkml/linkml-sparql:
-    title: linkml-sparql
-    description: Maps LinkML queries to SPARQL and back (ALPHA)
-    github_repo: https://github.com/linkml/linkml-sparql
-    domain: Computer Science
-    status: active
-    topics:
-    - linked-data
-    - linkml
-    - ontology
-    - orm
-    - queries
-    schema_url: https://linkml.github.io/linkml-sparql/
-    contacts: linkml
     github_stars: 4
   cmungall/mianct-schema:
     title: mianct-schema
@@ -963,22 +625,6 @@ entries:
     schema_url: https://dailydreaming.github.io/linkml-aind-model/
     contacts: DailyDreaming
     github_stars: 1
-  linkml/linkml.github.io:
-    title: linkml.github.io
-    description: Website/splash page for main LinkML project
-    github_repo: https://github.com/linkml/linkml.github.io
-    license: MIT
-    domain: Computer Science
-    status: inactive
-    topics:
-    - data-modeling
-    - jekyll
-    - linkml
-    - splash-page
-    - website
-    schema_url: https://linkml.github.io/linkml.github.io/
-    contacts: linkml
-    github_stars: 1
   cancerDHC/sheet2linkml:
     title: sheet2linkml
     description: Python package for conversion of Google Sheet to LinkML for CCDH
@@ -1066,13 +712,6 @@ entries:
     status: unknown
     schema_url: https://chemkg.github.io/chemrof/
     contacts: chemkg
-  linkml/cmdr:
-    title: cmdr
-    github_repo: https://github.com/linkml/cmdr
-    domain: Schema
-    status: unknown
-    schema_url: https://linkml.github.io/cmdr/
-    contacts: linkml
   Colectica/cogs:
     title: cogs
     description: Convention-based Ontology Generation System
@@ -1377,14 +1016,6 @@ entries:
     status: unknown
     schema_url: https://dalito.github.io/linkml-project-copier/
     contacts: dalito
-  linkml/linkml-prov:
-    title: linkml-prov
-    description: LinkML rendering of PROV
-    github_repo: https://github.com/linkml/linkml-prov
-    domain: Computer Science
-    status: unknown
-    schema_url: https://linkml.github.io/linkml-prov/
-    contacts: linkml
   genomewalker/linkml-toolkit:
     title: linkml-toolkit
     github_repo: https://github.com/genomewalker/linkml-toolkit

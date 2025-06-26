@@ -54,6 +54,10 @@ class GitHubSearchDiscovery:
             
             for repo in repos:
                 full_name = repo['full_name']
+                # Skip repos from the linkml organization itself
+                if full_name.startswith('linkml/'):
+                    print(f"  Skipped linkml org repo: {full_name}")
+                    continue
                 if full_name not in all_repos and not repo.get('fork', False):
                     all_repos[full_name] = repo
                     print(f"  Found: {full_name} ({repo['stargazers_count']} stars)")
@@ -87,6 +91,10 @@ class GitHubSearchDiscovery:
                 
                 for repo in repos:
                     full_name = repo['full_name']
+                    # Skip repos from the linkml organization itself
+                    if full_name.startswith('linkml/'):
+                        print(f"  Skipped linkml org repo: {full_name}")
+                        continue
                     if full_name not in all_repos and not repo.get('fork', False):
                         all_repos[full_name] = repo
                         print(f"  Found: {full_name} ({repo.get('stargazers_count', 0)} stars)")
