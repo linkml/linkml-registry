@@ -13,8 +13,8 @@ For more information on LinkML:
 
 ## Registry Entries
 
-| Project | Title | Topics |
-|---------|-------|--------|
+| Title | Project | Topics |
+|-------|---------|--------|
 {%- for id, entry in entries.items() %}
-| {% if entry.github_repo %}[{{ id }}]({{ entry.github_repo }}){% else %}{{ id }}{% endif %}{% if entry.license %}<br/>{{ entry.license }}{% endif %} | {% if entry.schema_url %}[{{ entry.title or '' }}]({{ entry.schema_url }}){% else %}{{ entry.title or '' }}{% endif %}{% if entry.description %}<br/>{{ (entry.description or '')[:100] }}{% if entry.description and entry.description|length > 100 %}...{% endif %}{% endif %} | {% if entry.topics %}{{ entry.topics[:3]|join(', ') }}{% if entry.topics|length > 3 %}...{% endif %}{% endif %} |
+| {% if entry.schema_url %}[{{ entry.title or '' }}]({{ entry.schema_url }}){% else %}{{ entry.title or '' }}{% endif %}{% if entry.description %}<br/>{{ (entry.description or '')[:100] }}{% if entry.description and entry.description|length > 100 %}...{% endif %}{% endif %} | {% if entry.github_repo %}[{{ id }}]({{ entry.github_repo }}){% else %}{{ id }}{% endif %} | {% if entry.topics %}{{ entry.topics[:3]|join(', ') }}{% if entry.topics|length > 3 %}...{% endif %}{% endif %} |
 {%- endfor %}

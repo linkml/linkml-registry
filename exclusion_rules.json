@@ -1,7 +1,0 @@
-[
-  {
-    "pattern": "not a schema",
-    "description": "Exclude entries containing 'not a schema'",
-    "case_sensitive": false
-  }
-]
