@@ -1,6 +1,6 @@
 [//]: # (DO NOT MANUALLY EDIT THIS FILE. IT IS GENERATED FROM A TEMPLATE.)
 
-# LinkML Registry Entries
+# LinkML Registry
 
 ## LinkML Schema Metamodel
 
@@ -10,1074 +10,188 @@ For more information on LinkML:
 
 * [linkml.io](https://linkml.io) main website
 * [specification](https://w3id.org/linkml/docs/specification/)
-## linkml/linkml-model
 
-public
-
-**GitHub Organization:** https://github.com/LinkML
-
-**Schema URL:** https://linkml.io/linkml-model/latest/docs/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Generic
-
-**Topics:** Schema
-
-## NeurodataWithoutBorders/nwb-schema
-
-exploratory
-
-**GitHub Organization:** https://github.com/NWB
-
-
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Neuroscience
-
-**Topics:** Schema Collection
-
-## bfurner/bdchm
-
-public
-
-**GitHub Organization:** https://github.com/BDC
-
-**Schema URL:** https://bfurner.github.io/bdchm/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Clinical, Biology
-
-**Topics:** Schema
-
-## NCATS
-
-
-
-**GitHub Organization:** https://github.com/NCATS
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Biology
-
-**Topics:** Schema
-
-## loinc/comp-loinc
-
-experimental?
-
-**GitHub Organization:** https://github.com/LOINC, Monarch
-
-**Schema URL:** https://loinc.org/core
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Clinical
-
-**Topics:** Schema
-
-## cmungall/linkml-phenopackets
-
-shadow
-
-**GitHub Organization:** https://github.com/GA4GH, Monarch
-
-**Schema URL:** https://cmungall.github.io/linkml-phenopackets/
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Clinical
-
-**Topics:** Schema Collection
-
-## INCATools/kgcl
-
-public
-
-**GitHub Organization:** https://github.com/Monarch, Bioportal
-
-**Schema URL:** w3id.org/kgcl/
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Generic
-
-**Topics:** Schema Collection
-
-## DOE
-
-pre-alpha
-
-**GitHub Organization:** https://github.com/DOE
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Computer Science / Data Science, Biology
-
-**Topics:** Schema
-
-## kbase/credit_engine
-
-public
-
-**GitHub Organization:** https://github.com/KBase
-
-**Schema URL:** https://github.com/kbase/credit_engine
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Bibliography
-
-**Topics:** Schema
-
-## cancerDHC/ccdhmodel
-
-abandoned/archived/inactive
-
-**GitHub Organization:** https://github.com/NCI
-
-**Schema URL:** https://cancerdhc.github.io/ccdhmodel/v1.1/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Cancer
-
-**Topics:** Schema
-
-## isamplesorg/metadata
-
-
-
-**GitHub Organization:** https://github.com/iSamples
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-
-
-**Topics:** Schema
-
-## Mitre
-
-
-
-**GitHub Organization:** https://github.com/Mitre
-
-
-
-**License:** CC-0
-
-**Domain:** Unknown
-
-
-
-**Topics:** Unknown
-
-## AltosLabs
-
-
-
-**GitHub Organization:** https://github.com/AltosLabs
-
-
-
-**License:** CC-0
-
-**Domain:** Unknown
-
-
-
-**Topics:** Unknown
-
-## Sveino/arcZcode
-
-minimal
-
-**GitHub Organization:** https://github.com/Unknown
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Generic
-
-**Topics:** Schema
-
-## chemkg/chemrof
-
-public
-
-**GitHub Organization:** https://github.com/LBNL
-
-**Schema URL:** https://chemkg.github.io/chemrof/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Chemistry
-
-**Topics:** Schema
-
-## cmungall/linkml-gocam
-
-public
-
-**GitHub Organization:** https://github.com/GO
-
-**Schema URL:** https://cmungall.github.io/linkml-gocam/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Molecular Biology, Biology
-
-**Topics:** Schema
-
-## matentzn/omop-linkml
-
-exploratory
-
-**GitHub Organization:** https://github.com/OHDSI
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Clinical
-
-**Topics:** Schema
-
-## NFDI4Chem/MIChI
-
-
-
-**GitHub Organization:** https://github.com/NFDI4Chem
-
-**Schema URL:** https://nfdi4chem.github.io/MIChI/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Neuroscience
-
-**Topics:** Schema
-
-## nfdi4cat/pid4cat-model
-
-public
-
-**GitHub Organization:** https://github.com/NFDI4Cat
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Chemistry
-
-**Topics:** Schema
-
-## genestorian/ShareYourCloning_LinkML
-
-public
-
-**GitHub Organization:** https://github.com/Genestorian
-
-**Schema URL:** https://w3id.org/genestorian/ShareYourCloning_LinkML
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Molecular Biology
-
-**Topics:** Schema
-
-## CDISC
-
-private
-
-**GitHub Organization:** https://github.com/CDISC
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Clinical
-
-**Topics:** Schema
-
-## Netbeheer-Nederland/im-e-system-capacity
-
-public
-
-**GitHub Organization:** https://github.com/Alliander
-
-**Schema URL:** https://netbeheer-nederland.github.io/im-e-system-capacity/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Energy Infrastructure
-
-**Topics:** Schema
-
-## cimug-org/cpsm-docs
-
-public
-
-**GitHub Organization:** https://github.com/CIMug
-
-
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Energy Infrastructure
-
-**Topics:** Schema Collection
-
-## HZB
-
-public
-
-**GitHub Organization:** https://github.com/HZB
-
-
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Chemistry
-
-**Topics:** Schema Collection
-
-## PlasmoGenEpi/portable-microhaplotype-object
-
-public
-
-**GitHub Organization:** https://github.com/PlasmoGenEpi
-
-**Schema URL:** https://plasmogenepi.github.io/portable-microhaplotype-object
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Molecular Biology
-
-**Topics:** Schema
-
-## Netbeheer-Nederland/im-e-equipment
-
-public
-
-**GitHub Organization:** https://github.com/Netbeheer Nederland
-
-**Schema URL:** https://netbeheer-nederland.github.io/im-e-equipment/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Energy Infrastructure
-
-**Topics:** Schema
-
-## Enola
-
-exploratory
-
-**GitHub Organization:** https://github.com/Enola
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Computer Science / Data Science
-
-**Topics:** Schema
-
-## biobox-analytics/biobox-analytics
-
-public
-
-**GitHub Organization:** https://github.com/BioBox
-
-**Schema URL:** https://ontology.biobox.io/linkml/
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Molecular Biology, Cell Biology
-
-**Topics:** Schema Collection
-
-## chanzuckerberg/czid-platformics
-
-
-
-**GitHub Organization:** https://github.com/CZI
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Molecular Biology
-
-**Topics:** Schema
-
-## W3C
-
-
-
-**GitHub Organization:** https://github.com/W3C
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Computer Science / Data Science
-
-**Topics:** Schema
-
-## GREGoR Data Model
-
-prototype
-
-**GitHub Organization:** https://github.com/GREGoR Data Model
-
-**Schema URL:** https://madanucd.github.io/gregor_linkml/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-
-
-**Topics:** Schema
-
-## In2PrimateBrains
-
-prototype
-
-**GitHub Organization:** https://github.com/In2PrimateBrains
-
-**Schema URL:** https://in2primatebrains.github.io/DataMetadataWorkflowDocs/landing.html
-
-**License:** CC-0
-
-**Domain:** Unknown
-
-**Status:** Neuroscience
-
-**Topics:** Unknown
-
-## USDA
-
-public
-
-**GitHub Organization:** https://github.com/USDA
-
-**Schema URL:** https://kaiiam.github.io/mifc/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Food Science
-
-**Topics:** Schema
-
-## brain-bican/models
-
-
-
-**GitHub Organization:** https://github.com/BICAN
-
-
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-
-
-**Topics:** Schema Collection
-
-## OMI
-
-public
-
-**GitHub Organization:** https://github.com/OMI
-
-
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Chemistry, Bibliography, Biology, Clinical, Computer Science / Data Science
-
-**Topics:** Schema Collection
-
-## clingen-data-model/variant-functional-assay
-
-
-
-**GitHub Organization:** https://github.com/ClinGen
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Molecular Biology
-
-**Topics:** Schema
-
-## con/journals
-
-public
-
-**GitHub Organization:** https://github.com/CON
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Bibliography, Neuroscience
-
-**Topics:** Schema
-
-## M-WET
-
-
-
-**GitHub Organization:** https://github.com/M-WET
-
-**Schema URL:** https://mwet.utexas.edu/metadata/nmr
-
-**License:** CC-0
-
-**Domain:** Schema
-
-
-
-**Topics:** Schema
-
-## biobricks-ai/biobricks-schema
-
-
-
-**GitHub Organization:** https://github.com/BioBricks
-
-**Schema URL:** https://biobricks-ai.github.io/biobricks-schema/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Biology
-
-**Topics:** Schema
-
-## Hydrologiq
-
-
-
-**GitHub Organization:** https://github.com/Hydrologiq
-
-**Schema URL:** www.hydrologiq.com/api-platform/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Energy Infrastructure
-
-**Topics:** Schema
-
-## omnibenchmark
-
-
-
-**GitHub Organization:** https://github.com/omnibenchmark
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Computer Science / Data Science
-
-**Topics:** Schema
-
-## AKC
-
-
-
-**GitHub Organization:** https://github.com/AKC
-
-**Schema URL:** https://airr-knowledge.github.io/ak-schema/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Biology
-
-**Topics:** Schema
-
-## GX4FM
-
-
-
-**GitHub Organization:** https://github.com/GX4FM
-
-**Schema URL:** https://github.com/GX4FM-Base-X/SemanticDataLink/tree/main/linkml/yaml/hamburg
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Transportation Infrastructure
-
-**Topics:** Schema Collection
-
-## sdsc-ordes/modos-schema
-
-public
-
-**GitHub Organization:** https://github.com/SDSC-ORDES
-
-**Schema URL:** https://sdsc-ordes.github.io/modos-schema/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Molecular Biology
-
-**Topics:** Schema
-
-## usnistgov/nist-labcas-linkml
-
-private
-
-**GitHub Organization:** https://github.com/US NIST
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Computer Science / Data Science, Bioinformatics, Biology, Molecular Biology, Microbiology, Genome Editing, Flow Cytometry, Telemetry
-
-**Topics:** Schema
-
-## guts-consortium/schema
-
-public
-
-**GitHub Organization:** https://github.com/GUTS
-
-**Schema URL:** https://guts-consortium.github.io/schema/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Clinical
-
-**Topics:** Schema
-
-## abcd-j/schema
-
-public
-
-**GitHub Organization:** https://github.com/ABCD-J
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Computer Science / Data Science, Clinical
-
-**Topics:** Schema
-
-## VHP4Safety/vhp4safety-docs
-
-
-
-**GitHub Organization:** https://github.com/VHP4Safety/vhp4safety-docs
-
-
-
-**License:** CC-0
-
-**Domain:** Unknown
-
-
-
-**Topics:** Unknown
-
-## lmodel/base
-
-public
-
-**GitHub Organization:** https://github.com/Linux Foundation
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Cybersecurity
-
-**Topics:** Schema
-
-## cidgoh/pathogen-genomics-package
-
-public
-
-**GitHub Organization:** https://github.com/CIDGOH
-
-
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Infectious Disease, Public Health
-
-**Topics:** Schema Collection
-
-## govuk-one-login/data-vocab
-
-public
-
-**GitHub Organization:** https://github.com/GOV.UK
-
-**Schema URL:** https://vocab.account.gov.uk/linkml/
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Cybersecurity, Government
-
-**Topics:** Schema Collection
-
-## BioImage-Archive/bia-mifa-models
-
-public
-
-**GitHub Organization:** https://github.com/BIA
-
-**Schema URL:** https://bioimage-archive.github.io/bia-mifa-models/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-
-
-**Topics:** Schema
-
-## FAIR-MI/miiid-schema
-
-prototype
-
-**GitHub Organization:** https://github.com/FAIR-MI
-
-**Schema URL:** https://w3id.org/FAIR-MI/miiid-schema
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Microbiology, Molecular Biology
-
-**Topics:** Schema
-
-## scFAIR/celltag_schema
-
-abandoned/archived/inactive
-
-**GitHub Organization:** https://github.com/scFAIR
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Molecular Biology, Cell Biology
-
-**Topics:** Schema
-
-## 4TUResearchData/soss
-
-public
-
-**GitHub Organization:** https://github.com/4TU.ResearchData
-
-**Schema URL:** https://w3id.org/linkml/examples/softinfo
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Computer Science / Data Science
-
-**Topics:** Schema
-
-## lmodel/collections
-
-
-
-**GitHub Organization:** https://github.com/Linux Foundation, AGR
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-
-
-**Topics:** Schema
-
-## hubmapconsortium/hra-do-processor
-
-public
-
-**GitHub Organization:** https://github.com/HuBMAP Consortium
-
-
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Biology
-
-**Topics:** Schema Collection
-
-## CBIIT/CCDH-ccdhmodel
-
-
-
-**GitHub Organization:** https://github.com/CBIIT
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Cancer, Clinical
-
-**Topics:** Schema
-
-## chicagopcdc/linkml-data-dictionary
-
-
-
-**GitHub Organization:** https://github.com/Pediatric Cancer Data Commons
-
-
-
-**License:** CC-0
-
-**Domain:** Schema
-
-
-
-**Topics:** Schema
-
-## opencontext/oc-metadata
-
-
-
-**GitHub Organization:** https://github.com/Open Context
-
-**Schema URL:** http://resource.isamples.org/schema/0.2.1
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Computer Science / Data Science
-
-**Topics:** Schema
-
-## TIBHannover/ConfIDent_schema
-
-public
-
-**GitHub Organization:** https://github.com/TIBHanover
-
-**Schema URL:** https://raw.githubusercontent.com/TIBHannover/ConfIDent_schema/main/src/linkml/confident_schema.yaml#
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Events
-
-**Topics:** Schema
-
-## progenetix/publication-schema
-
-
-
-**GitHub Organization:** https://github.com/Progenetix
-
-**Schema URL:** https://github.com/progenetix/publication-schema/tree/main
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Bibliography
-
-**Topics:** Schema
-
-## adhollander/PPOD_Core
-
-prototype
-
-**GitHub Organization:** https://github.com/ICICLE
-
-**Schema URL:** https://github.com/PPODschema/PPOD_Core
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Computer Science / Data Science
-
-**Topics:** Schema
-
-## DataBiosphere/biocore-data-model
-
-public
-
-**GitHub Organization:** https://github.com/AnVIL
-
-
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Clinical, Molecular Biology
-
-**Topics:** Schema Collection
-
-## ncihtan/htan-linkml
-
-prototype
-
-**GitHub Organization:** https://github.com/HTAN
-
-**Schema URL:** https://w3id.org/ncihtan/htan-linkml
-
-**License:** CC-0
-
-**Domain:** Schema
-
-**Status:** Cancer, Clinical, Molecular Biology
-
-**Topics:** Schema
-
-## saved-models/ext
-
-
-
-**GitHub Organization:** https://github.com/marine.gov.scot
-
-**Schema URL:** https://marine.gov.scot/metadata/saved/schema/
-
-**License:** CC-0
-
-**Domain:** Schema Collection
-
-**Status:** Biology
-
-**Topics:** Schema Collection
-
-## Siemens
-
-
-
-**GitHub Organization:** https://github.com/Siemens
-
-**Schema URL:** https://common-device-management.code.siemens.io/documentation/asset-modeling/base-schema/
-
-**License:** CC-0
-
-**Domain:** Schema
-
-
-
-**Topics:** Schema
+## Registry Entries
+
+| Project | Title | Description | License | Domain | Status | Topics |
+|---------|-------|-------------|---------|--------|--------|--------|
+| [linkml/linkml](https://github.com/linkml/linkml) | [linkml](https://linkml.github.io/linkml/) | Linked Open Data Modeling Language | NOASSERTION | Computer Science | active | data-dictionaries, data-modeling, hacktoberfest... |
+| [biolink/biolink-model](https://github.com/biolink/biolink-model) | [biolink-model](https://biolink.github.io/biolink-model/) | Schema and generated objects for biolink data model and upper ontology | NOASSERTION | Biology | active | biolink, datamodel, gene-ontology... |
+| [mapping-commons/sssom](https://github.com/mapping-commons/sssom) | [sssom](https://mapping-commons.github.io/sssom/) | Simple Standard for Sharing Ontology Mappings | BSD-3-Clause | Computer Science | active | linkml, mapping, mapping-commons... |
+| [cidgoh/DataHarmonizer](https://github.com/cidgoh/DataHarmonizer) | [DataHarmonizer](https://cidgoh.github.io/DataHarmonizer/) | A standardized browser-based spreadsheet editor and validator that can be run of... | MIT | Biology | active | application, data, harmonization... |
+| [linkml/linkml-model](https://github.com/linkml/linkml-model) | [linkml-model](https://linkml.github.io/linkml-model/docs/) | Link Modeling Language (LinkML) model |  | Computer Science | active | data-integration, data-modeling, graph-ql... |
+| [mapping-commons/sssom-py](https://github.com/mapping-commons/sssom-py) | [sssom-py](https://mapping-commons.github.io/sssom-py/index.html#) | Python toolkit for SSSOM mapping format | MIT | Computer Science | active | linkml, mappings, obofoundry... |
+| [monarch-initiative/koza](https://github.com/monarch-initiative/koza) | [koza](https://monarch-initiative.github.io/koza/) | Data transformation framework for LinkML data models | BSD-3-Clause | Computer Science | active | etl, knowledge-graph, koza... |
+| [linkml/schema-automator](https://github.com/linkml/schema-automator) | [schema-automator](https://linkml.io/schema-automator/) | Automated assistance for the schema development lifecycle | BSD-3-Clause | Computer Science | active | csvs, data-modeling, incatools... |
+| [INCATools/semantic-sql](https://github.com/INCATools/semantic-sql) | [semantic-sql](https://incatools.github.io/semantic-sql/) | SQL and SQLite builds of OWL ontologies | BSD-3-Clause | Computer Science | active | linkml, oaklib, obofoundry... |
+| [linkml/schemasheets](https://github.com/linkml/schemasheets) | [schemasheets](https://linkml.io/schemasheets/) | Structure your data in a FAIR way using google sheets or TSVs. These are then co... |  | Computer Science | active | fair-data, linkml, metadata... |
+| [linkml/linkml-runtime](https://github.com/linkml/linkml-runtime) | [linkml-runtime](https://linkml.github.io/linkml-runtime/) | Runtime support for linkml generated models | CC0-1.0 | Computer Science | active | conversion, hacktoberfest, instances... |
+| [microbiomedata/nmdc-schema](https://github.com/microbiomedata/nmdc-schema) | [nmdc-schema](https://microbiomedata.github.io/nmdc-schema/) | National Microbiome Data Collaborative (NMDC) unified data model | CC0-1.0 | Biology | active | ecoinformatics, fair-data, genomics... |
+| [linkml/linkml-project-cookiecutter](https://github.com/linkml/linkml-project-cookiecutter) | [linkml-project-cookiecutter](https://linkml.github.io/linkml-project-cookiecutter/) | A cookiecutter for linkml projects. An equivalent of `linkml-ws new project-name... | CC0-1.0 | Computer Science | active |  |
+| [cmungall/semantic-llama](https://github.com/cmungall/semantic-llama) | [semantic-llama](https://cmungall.github.io/semantic-llama/) | A knowledge extraction tool that uses a large language model to extract semantic... | BSD-3-Clause | Computer Science | maintenance | ai, knowledge-extraction, language-models... |
+| [linkml/linkml-map](https://github.com/linkml/linkml-map) | [linkml-map](https://linkml.github.io/linkml-map/) | Mapping between LinkML schemas | NOASSERTION | Computer Science | active | data-model-mapping, etl, linkml... |
+| [linkml/linkml-store](https://github.com/linkml/linkml-store) | [linkml-store](https://linkml.github.io/linkml-store/) | wrapper for multiple linkml storage engines | MIT | Computer Science | active | data-lake, data-stack, database-wrapper... |
+| [INCATools/kgcl](https://github.com/INCATools/kgcl) | [kgcl](https://w3id.org/kgcl/) | Datamodel for KGCL (Knowledge Graph Change Language) | MIT | Computer Science | active | kgcl, linkml, ontology-changes... |
+| [INCATools/kgcl-rdflib](https://github.com/INCATools/kgcl-rdflib) | [kgcl-rdflib](https://incatools.github.io/kgcl-rdflib/) | Tools for working with KGCL | MIT | Computer Science | active | diff, diffs, kg... |
+| [monarch-initiative/monarch-ingest](https://github.com/monarch-initiative/monarch-ingest) | [monarch-ingest](https://monarch-initiative.github.io/monarch-ingest/) | Data ingest application for Monarch Initiative knowledge graph using Koza | BSD-3-Clause | Computer Science | active | kgx, knowledge-graphs, linkml... |
+| [cancerDHC/ccdhmodel](https://github.com/cancerDHC/ccdhmodel) | [ccdhmodel](https://cancerdhc.github.io/ccdhmodel/) | CRDC-H model in LinkML, developed by the Center for Cancer Data Harmonization (C... | BSD-3-Clause | Computer Science | inactive | google-sheets, linkml |
+| [ghga-de/ghga-metadata-schema](https://github.com/ghga-de/ghga-metadata-schema) | [ghga-metadata-schema](https://ghga-de.github.io/ghga-metadata-schema/) | Metadata schema for the German Human Genome-Phenome Archive (GHGA) | Apache-2.0 | Computer Science | active | fega, ghga, linkml... |
+| [linkml/linkml-owl](https://github.com/linkml/linkml-owl) | [linkml-owl](https://linkml.github.io/linkml-owl/) | Extension of LinkML runtime for converting instances of LinkML classes to OWL (c... |  | Computer Science | active | design-patterns, json2owl, linkml... |
+| [linkml/linkml-datalog](https://github.com/linkml/linkml-datalog) | [linkml-datalog](https://linkml.github.io/linkml-datalog/) | Translates LinkML schemas into Datalog programs and executes them using Souffle,... |  | Computer Science | active | constraints, datalog, linkml... |
+| [monarch-initiative/monochrom](https://github.com/monarch-initiative/monochrom) | [monochrom](http://monarch-initiative.github.io/monochrom/) | Standardized identifiers and OWL classes for chromosomes and chromosomal parts a... |  | Biology | active | chromosomes, etl, genomics... |
+| [linkml/linkml-registry](https://github.com/linkml/linkml-registry) | [linkml-registry](https://linkml.github.io/linkml-registry/registry/) | Registry of schemas that use LinkML |  | Computer Science | active | linkml, registry, schema-registry... |
+| [linkml/prefixmaps](https://github.com/linkml/prefixmaps) | [prefixmaps](https://linkml.github.io/prefixmaps/) | Semantic prefix map registry | Apache-2.0 | Biology | active | bioregistry, linkml, obofoundry... |
+| [py-typedlogic/py-typedlogic](https://github.com/py-typedlogic/py-typedlogic) | [py-typedlogic](https://py-typedlogic.github.io) | Logic plus python types | MIT | Computer Science | active | answer-set-programming, clif, clingo... |
+| [isamplesorg/metadata](https://github.com/isamplesorg/metadata) | [metadata](https://isamplesorg.github.io/metadata/) | Collation of metadata examples and notes for the project |  | Computer Science | active | linkml, metadata, physical-specimen |
+| [linkml/sparqlfun](https://github.com/linkml/sparqlfun) | [sparqlfun](https://linkml.github.io/sparqlfun/home/) | sparql templates for linkml (alpha) | CC0-1.0 | Computer Science | active | linked-data, linkml, obofoundry... |
+| [cmungall/json-flattener](https://github.com/cmungall/json-flattener) | [json-flattener](https://cmungall.github.io/json-flattener/) | Python library for denormalizing nested dicts or json objects to tables and back | BSD-3-Clause | Computer Science | active | dataframes, denormalization, linkml... |
+| [Netbeheer-Nederland/im-tc57cim](https://github.com/Netbeheer-Nederland/im-tc57cim) | [im-tc57cim](https://netbeheer-nederland.github.io/docs/im-tc57cim/latest) | The CIM information model represented as LinkML schemas. | Apache-2.0 | Computer Science | active |  |
+| [cmungall/linkml-phenopackets](https://github.com/cmungall/linkml-phenopackets) | [linkml-phenopackets](https://cmungall.github.io/linkml-phenopackets/) | EXPERIMENTAL rendering of phenopackets in linkml |  | Computer Science | maintenance | human-phenotype-ontology, linkml, metadata... |
+| [linkml/linkml-runtime.js](https://github.com/linkml/linkml-runtime.js) | [linkml-runtime.js](https://linkml.github.io/linkml-runtime.js/) | An implementation of the linkml-runtime in javascript ALPHA VERSION |  | Computer Science | active | data-harmonizer, linkml |
+| [GX4FM-Base-X/SemanticDataLink](https://github.com/GX4FM-Base-X/SemanticDataLink) | [SemanticDataLink](https://gx4fm-base-x.github.io/SemanticDataLink/) | The Semantic Data Link repository hosts a Streamlit-based web application design... | Apache-2.0 | Computer Science | active |  |
+| [linkml/linkml-tutorial](https://github.com/linkml/linkml-tutorial) | [linkml-tutorial](https://linkml.github.io/linkml-tutorial/) |  | MIT | Computer Science | active | linkml, tutorial |
+| [linkml/semantic-dsl](https://github.com/linkml/semantic-dsl) | [semantic-dsl](https://linkml.github.io/semantic-dsl/) | Easy Domain Specific Languages for your Schemas | BSD-3-Clause | Computer Science | active | grammar-generator, grammars, lark... |
+| [HendrikBorgelt/DCAT-ap_as_LinkML_template](https://github.com/HendrikBorgelt/DCAT-ap_as_LinkML_template) | [DCAT-ap_as_LinkML_template](https://hendrikborgelt.github.io/DCAT-ap_as_LinkML_template/) |  | MIT | Computer Science | active |  |
+| [biodatamodels/gff-schema](https://github.com/biodatamodels/gff-schema) | [gff-schema](https://biodatamodels.github.io/gff-schema/) | LinkML schema for GFF3, the Genome Feature Format |  | Biology | inactive | bioinformatics, formats, genomics... |
+| [linkml/linkml-arrays](https://github.com/linkml/linkml-arrays) | [linkml-arrays](https://linkml.github.io/linkml-arrays) | Support for loading and dumping N-dimensional arrays in LinkML. | BSD-3-Clause | Computer Science | active | arrays, hdmf, linked-data... |
+| [linkml/linkml-common](https://github.com/linkml/linkml-common) | [linkml-common](https://linkml.github.io/linkml-common/) | ALPHA common modeling patterns | MIT | Computer Science | active | common-data-model, linkml, schema-org |
+| [linkml/linkml-schemaorg](https://github.com/linkml/linkml-schemaorg) | [linkml-schemaorg](https://linkml.github.io/linkml-schemaorg/) | Automated linkml rendering of schema.org | MIT | Computer Science | active | linkml, schema-org |
+| [linkml/linkml-dataops](https://github.com/linkml/linkml-dataops) | [linkml-dataops](https://linkml.github.io/linkml-dataops/) | Data API for LinkML instance data |  | Computer Science | active | change-objects, data-modeling, database... |
+| [microbiomedata/sample-annotator](https://github.com/microbiomedata/sample-annotator) | [sample-annotator](https://microbiomedata.github.io/sample-annotator/static/intro.html) | NMDC Sample Annotator |  | Biology | active | annotator, environment-ontology, environmentontology... |
+| [bridge2ai/data-sheets-schema](https://github.com/bridge2ai/data-sheets-schema) | [data-sheets-schema](https://bridge2ai.github.io/data-sheets-schema/) | Datasheets for Datasets, as LinkML Schema | MIT | Computer Science | active |  |
+| [Netbeheer-Nederland/gen-linkml-profile](https://github.com/Netbeheer-Nederland/gen-linkml-profile) | [gen-linkml-profile](https://netbeheer-nederland.github.io/gen-linkml-profile/) | LinkML schema profiler. |  | Computer Science | active |  |
+| [Netbeheer-Nederland/im-cgmes](https://github.com/Netbeheer-Nederland/im-cgmes) | [im-cgmes](https://netbeheer-nederland.github.io/im-cgmes/) | ENTSO-E CGMES profiles represented as LinkML schemas. | Apache-2.0 | Computer Science | active |  |
+| [berkeleybop/kgviz-model](https://github.com/berkeleybop/kgviz-model) | [kgviz-model](https://berkeleybop.github.io/kgviz-model/) | Schema for configurations / stylesheets for visualizing ontology and KGs |  | Biology | inactive | graphviz, javascript, kgs... |
+| [p2p-ld/linkml-activitypub](https://github.com/p2p-ld/linkml-activitypub) | [linkml-activitypub](https://p2p-ld.github.io/linkml-activitypub/) | LinkML Schema representation of ActivityPub | GPL-3.0 | Computer Science | maintenance |  |
+| [linkml/linkml-renderer](https://github.com/linkml/linkml-renderer) | [linkml-renderer](https://linkml.github.io/linkml-renderer) | Rendering of instance data as HTML, Markdown, Mermaid | Apache-2.0 | Computer Science | active | html, instance-graphs, linkml... |
+| [linkml/linkml-solr](https://github.com/linkml/linkml-solr) | [linkml-solr](https://linkml.github.io/linkml-solr/) | Simple wrapper for using Solr with LinkML schemas |  | Computer Science | inactive | linkml, metadata, solr |
+| [linkml/linkml-sparql](https://github.com/linkml/linkml-sparql) | [linkml-sparql](https://linkml.github.io/linkml-sparql/) | Maps LinkML queries to SPARQL and back (ALPHA) |  | Computer Science | active | linked-data, linkml, ontology... |
+| [cmungall/mianct-schema](https://github.com/cmungall/mianct-schema) | [mianct-schema](https://cmungall.github.io/mianct-schema/) | Minimal Information About a New Cell Type |  | Computer Science | inactive | anatomy, cell-ontology, cell-types... |
+| [cmdoret/mtg_ontology](https://github.com/cmdoret/mtg_ontology) | [mtg_ontology](https://cmdoret.github.io/mtg_ontology/) | An ontology describing cards in Magic The Gathering. | GPL-3.0 | Computer Science | active | linkml, mtg, ontology... |
+| [p2p-ld/nwb-linkml](https://github.com/p2p-ld/nwb-linkml) | [nwb-linkml](https://nwb-linkml.readthedocs.io) | Translating NWB schema language to linkml | GPL-3.0 | Computer Science | maintenance |  |
+| [biodatamodels/ontology-associations](https://github.com/biodatamodels/ontology-associations) | [ontology-associations](http://biodatamodels.github.io/ontology-associations) | schema for ontology associations |  | Biology | inactive | annotation, bioinformatics, datamodels... |
+| [Netbeheer-Nederland/cim-to-linkml](https://github.com/Netbeheer-Nederland/cim-to-linkml) | [cim-to-linkml](https://netbeheer-nederland.github.io/cim-to-linkml/) | Generates LinkML schemas for packages in the CIM information model. |  | Computer Science | active |  |
+| [include-dcc/include-linkml](https://github.com/include-dcc/include-linkml) | [include-linkml](https://include-dcc.github.io/include-linkml/) | LinkML Schema for INCLUDE DCC | MIT | Computer Science | active |  |
+| [FAIR-MI/miiid-schema](https://github.com/FAIR-MI/miiid-schema) | [miiid-schema](https://fair-mi.github.io/miiid-schema/) | A metadata schema for the Minimum Information about Intermicrobial Interaction D... | GPL-3.0 | Computer Science | inactive | fair-data, linkml, linkml-schema... |
+| [bridge2ai/model-card-schema](https://github.com/bridge2ai/model-card-schema) | [model-card-schema](https://bridge2ai.github.io/model-card-schema/) | LinkML rendering of model cards | MIT | Computer Science | active | ai, bridge2ai, deep-learning... |
+| [nfdi4cat/pid4cat-model](https://github.com/nfdi4cat/pid4cat-model) | [pid4cat-model](https://nfdi4cat.github.io/pid4cat-model/) | Handle-based PIDs with a rich LinkML metadata model for resources in catalysis (... | MIT | Computer Science | active | handles, linkml, linkml-schema... |
+| [bioenergy-research-centers/brc-schema](https://github.com/bioenergy-research-centers/brc-schema) | [brc-schema](https://bioenergy-research-centers.github.io/brc-schema/) | LinkML schema repo for bioenergy.org data integration | NOASSERTION | Biology | active | linkml-schema |
+| [Sveino/CIM4Diagram](https://github.com/Sveino/CIM4Diagram) | [CIM4Diagram](https://sveino.github.io/CIM4Diagram/) | CIM use of LinkML for creating vocabulary and profile for Diagram | Apache-2.0 | Computer Science | active |  |
+| [cdisc-org/DataExchange-ODM-LinkML](https://github.com/cdisc-org/DataExchange-ODM-LinkML) | [DataExchange-ODM-LinkML](https://cdisc-org.github.io/DataExchange-ODM-LinkML/) | LinkML related work for ODMv2 | MIT | Computer Science | inactive | data-exchange-standard |
+| [alliance-genome/DEPRECATED_agr_persistent_schema](https://github.com/alliance-genome/DEPRECATED_agr_persistent_schema) | [DEPRECATED_agr_persistent_schema](https://alliance-genome.github.io/DEPRECATED_agr_persistent_schema/) | Repository using linkml templating system for generating Alliance of Genome Reso... |  | Computer Science | inactive | linkml |
+| [Knowledge-Graph-Hub/neat-ml-schema](https://github.com/Knowledge-Graph-Hub/neat-ml-schema) | [neat-ml-schema](https://knowledge-graph-hub.github.io/neat-ml-schema/) | A repository that contains the LinkML model for specifying graph ML pipelines | MIT | Computer Science | maintenance |  |
+| [OpenCloning/OpenCloning_LinkML](https://github.com/OpenCloning/OpenCloning_LinkML) | [OpenCloning_LinkML](https://opencloning.github.io/OpenCloning_LinkML/) | A LinkML data model for OpenCloning | MIT | Computer Science | active |  |
+| [adhollander/PPODLinkML](https://github.com/adhollander/PPODLinkML) | [PPODLinkML](https://adhollander.github.io/PPODLinkML/) | A LinkML representation of the PPOD schema | CC0-1.0 | Computer Science | maintenance |  |
+| [sepio-framework/sepio-linkml](https://github.com/sepio-framework/sepio-linkml) | [sepio-linkml](https://sepio-framework.github.io/sepio-linkml/) | LinkML-based specification of the SEPIO information model. | Apache-2.0 | Computer Science | active |  |
+| [tmprd/valve-linkml](https://github.com/tmprd/valve-linkml) | [valve-linkml](https://tmprd.github.io/valve-linkml/) | Convert LinkML schema + data to VALVE tables and vice versa | BSD-3-Clause | Computer Science | inactive |  |
+| [DailyDreaming/linkml-aind-model](https://github.com/DailyDreaming/linkml-aind-model) | [linkml-aind-model](https://dailydreaming.github.io/linkml-aind-model/) | Translate pydantic-based schemas from python modules to LinkML. |  | Computer Science | inactive |  |
+| [linkml/linkml.github.io](https://github.com/linkml/linkml.github.io) | [linkml.github.io](https://linkml.github.io/linkml.github.io/) | Website/splash page for main LinkML project | MIT | Computer Science | inactive | data-modeling, jekyll, linkml... |
+| [cancerDHC/sheet2linkml](https://github.com/cancerDHC/sheet2linkml) | [sheet2linkml](https://cancerdhc.github.io/sheet2linkml/) | Python package for conversion of Google Sheet to LinkML for CCDH | Apache-2.0 | Computer Science | inactive |  |
+| [anvilproject/acr-harmonized-data-model](https://github.com/anvilproject/acr-harmonized-data-model) | [acr-harmonized-data-model](https://anvilproject.github.io/acr-harmonized-data-model/) | ACR Data Model |  | Schema | unknown |  |
+| [alliance-genome/agr_curation_schema](https://github.com/alliance-genome/agr_curation_schema) | [agr_curation_schema](https://alliance-genome.github.io/agr_curation_schema/) | Schema repository for the Alliance of Genome Resources persistent data store |  | Schema | unknown |  |
+| [krishnapraveen7/alpha-repos](https://github.com/krishnapraveen7/alpha-repos) | [alpha-repos](https://krishnapraveen7.github.io/alpha-repos/) |  |  | Schema | unknown |  |
+| [alspac/alspac-data-catalogue-schema](https://github.com/alspac/alspac-data-catalogue-schema) | [alspac-data-catalogue-schema](https://alspac.github.io/alspac-data-catalogue-schema/) | This repo is for the schema of alspac data catalogues and meta data for alspac d... |  | Schema | unknown |  |
+| [Sveino/arcZcode](https://github.com/Sveino/arcZcode) | [arcZcode](https://sveino.github.io/arcZcode/) | Architecture as Code |  | Schema | unknown |  |
+| [josephmisiti/awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning) | [awesome-machine-learning](https://josephmisiti.github.io/awesome-machine-learning/) | A curated list of awesome Machine Learning frameworks, libraries and software. |  | Computer Science | unknown |  |
+| [hsolbrig/BDP-Ontology](https://github.com/hsolbrig/BDP-Ontology) | [BDP-Ontology](https://hsolbrig.github.io/BDP-Ontology/) |  |  | Schema | unknown |  |
+| [BioImage-Archive/bia-mifa-models](https://github.com/BioImage-Archive/bia-mifa-models) | [bia-mifa-models](https://bioimage-archive.github.io/bia-mifa-models/) |  |  | Schema | unknown |  |
+| [diatomsRcool/biotic-interactions](https://github.com/diatomsRcool/biotic-interactions) | [biotic-interactions](https://diatomsrcool.github.io/biotic-interactions/) | LinkML model for biotic interactions - designed for use with OntoGPT |  | Biology | unknown |  |
+| [chemkg/chemrof](https://github.com/chemkg/chemrof) | [chemrof](https://chemkg.github.io/chemrof/) | Schema for chemistry ontology classes |  | Chemistry | unknown |  |
+| [linkml/cmdr](https://github.com/linkml/cmdr) | [cmdr](https://linkml.github.io/cmdr/) |  |  | Schema | unknown |  |
+| [Colectica/cogs](https://github.com/Colectica/cogs) | [cogs](https://colectica.github.io/cogs/) | Convention-based Ontology Generation System |  | Infrastructure | unknown |  |
+| [TIBHannover/ConfIDent_schema](https://github.com/TIBHannover/ConfIDent_schema) | [ConfIDent_schema](https://tibhannover.github.io/ConfIDent_schema/) | The data schema for the ConfIDent project. |  | Schema | unknown |  |
+| [EMSL-Computing/CoreMS](https://github.com/EMSL-Computing/CoreMS) | [CoreMS](https://emsl-computing.github.io/CoreMS/) | CoreMS is a comprehensive mass spectrometry software framework |  | Computer Science | unknown |  |
+| [NCATS-Tangerine/CPKG](https://github.com/NCATS-Tangerine/CPKG) | [CPKG](https://ncats-tangerine.github.io/CPKG/) | Translation tools for ClinicalProfile to Knowledge Graphs |  | Clinical | unknown |  |
+| [cmungall/data-manifesto](https://github.com/cmungall/data-manifesto) | [data-manifesto](https://cmungall.github.io/data-manifesto/) | semantic modeling of data manifests |  | Schema | unknown |  |
+| [saved-models/data-utilities](https://github.com/saved-models/data-utilities) | [data-utilities](https://saved-models.github.io/data-utilities/) | SAVED project - data processing tools for fish farms |  | Schema | unknown |  |
+| [govuk-one-login/data-vocab](https://github.com/govuk-one-login/data-vocab) | [data-vocab](https://govuk-one-login.github.io/data-vocab/) | Vocabulary and schemas for digital identity |  | Schema | unknown |  |
+| [psychoinformatics-de/datalad-concepts](https://github.com/psychoinformatics-de/datalad-concepts) | [datalad-concepts](https://psychoinformatics-de.github.io/datalad-concepts/) |  |  | Schema | unknown |  |
+| [StroemPhi/dcat-4C-ap](https://github.com/StroemPhi/dcat-4C-ap) | [dcat-4C-ap](https://stroemphi.github.io/dcat-4C-ap/) |  |  | Schema | unknown |  |
+| [ddialliance/ddimodel](https://github.com/ddialliance/ddimodel) | [ddimodel](https://ddialliance.github.io/ddimodel/) | Model for DDI Lifecycle |  | Schema | unknown |  |
+| [magland/dendro_analyses](https://github.com/magland/dendro_analyses) | [dendro_analyses](https://magland.github.io/dendro_analyses/) | misc analyses for dendro projects |  | Schema | unknown |  |
+| [Knowledge-Graph-Hub/eco-kg](https://github.com/Knowledge-Graph-Hub/eco-kg) | [eco-kg](https://knowledge-graph-hub.github.io/eco-kg/) |  |  | Schema | unknown |  |
+| [enola-dev/enola](https://github.com/enola-dev/enola) | [enola](https://enola-dev.github.io/enola/) | Enola 🕵🏾‍♀️ Holmes was an SRE. |  | Schema | unknown |  |
+| [NCATSTranslator/Explanatory-Agent](https://github.com/NCATSTranslator/Explanatory-Agent) | [Explanatory-Agent](https://ncatstranslator.github.io/Explanatory-Agent/) |  |  | Schema | unknown |  |
+| [microbiomedata/external-metadata-awareness](https://github.com/microbiomedata/external-metadata-awareness) | [external-metadata-awareness](https://microbiomedata.github.io/external-metadata-awareness/) | Tools for fetching and processing external schemas, ontologies and metadata reco... |  | Computer Science | unknown |  |
+| [hsolbrig/foo-model](https://github.com/hsolbrig/foo-model) | [foo-model](https://hsolbrig.github.io/foo-model/) |  |  | Schema | unknown |  |
+| [slabstech/gaganyatri.in](https://github.com/slabstech/gaganyatri.in) | [gaganyatri.in](https://slabstech.github.io/gaganyatri.in/) | Gaganyatri - Space Operations for Mars Transfer |  | Schema | unknown |  |
+| [mukundanps/ghp-vocab](https://github.com/mukundanps/ghp-vocab) | [ghp-vocab](https://mukundanps.github.io/ghp-vocab/) | Vocabulary for Good Health Pass |  | Clinical | unknown |  |
+| [geneontology/go-fastapi](https://github.com/geneontology/go-fastapi) | [go-fastapi](https://geneontology.github.io/go-fastapi/) |  |  | Schema | unknown |  |
+| [geneontology/go-site](https://github.com/geneontology/go-site) | [go-site](https://geneontology.github.io/go-site/) | A collection of metadata, tools, and files associated with the Gene Ontology pub... |  | Government | unknown |  |
+| [OHDSI/Hestia](https://github.com/OHDSI/Hestia) | [Hestia](https://ohdsi.github.io/Hestia/) | Hestia is an API for function calling on the OMOP CDM. |  | Schema | unknown |  |
+| [HZB-CE-DataSchemas/hzb-catalysisLabs-schema](https://github.com/HZB-CE-DataSchemas/hzb-catalysisLabs-schema) | [hzb-catalysisLabs-schema](https://hzb-ce-dataschemas.github.io/hzb-catalysisLabs-schema/) | A datamodel for describing entities and their semantic associations (e.g., mappi... |  | Schema | unknown |  |
+| [khaledk2/idr_metadata_model](https://github.com/khaledk2/idr_metadata_model) | [idr_metadata_model](https://khaledk2.github.io/idr_metadata_model/) |  |  | Schema | unknown |  |
+| [ritger-alliander/im-measurement](https://github.com/ritger-alliander/im-measurement) | [im-measurement](https://ritger-alliander.github.io/im-measurement/) | Measurement Profile |  | Schema | unknown |  |
+| [Netbeheer-Nederland/im-object](https://github.com/Netbeheer-Nederland/im-object) | [im-object](https://netbeheer-nederland.github.io/im-object/) | Information models for the Object information model. |  | Schema | unknown |  |
+| [InsightSoftwareConsortium/ITK-Wasm](https://github.com/InsightSoftwareConsortium/ITK-Wasm) | [ITK-Wasm](https://insightsoftwareconsortium.github.io/ITK-Wasm/) | High performance spatial analysis in a web browser and across programming langua... |  | Schema | unknown |  |
+| [hsolbrig/jsonasobj](https://github.com/hsolbrig/jsonasobj) | [jsonasobj](https://hsolbrig.github.io/jsonasobj/) | Extension to the python json library that represents JSON as first class python ... |  | Schema | unknown |  |
+| [ncbo/kg-bioportal](https://github.com/ncbo/kg-bioportal) | [kg-bioportal](https://ncbo.github.io/kg-bioportal/) | BioPortal, as a Knowledge Graph |  | Biology | unknown |  |
+| [Knowledge-Graph-Hub/kg-covid-19](https://github.com/Knowledge-Graph-Hub/kg-covid-19) | [kg-covid-19](https://knowledge-graph-hub.github.io/kg-covid-19/) | An instance of KG Hub to produce a knowledge graph for COVID-19 response. |  | Schema | unknown |  |
+| [Knowledge-Graph-Hub/kg-envpolyreg](https://github.com/Knowledge-Graph-Hub/kg-envpolyreg) | [kg-envpolyreg](https://knowledge-graph-hub.github.io/kg-envpolyreg/) |  |  | Schema | unknown |  |
+| [MrBearWithHisSword/KGQA-COVID](https://github.com/MrBearWithHisSword/KGQA-COVID) | [KGQA-COVID](https://mrbearwithhissword.github.io/KGQA-COVID/) |  |  | Schema | unknown |  |
+| [biolink/kgx](https://github.com/biolink/kgx) | [kgx](https://biolink.github.io/kgx/) | KGX is a Python library for exchanging Knowledge Graphs |  | Schema | unknown |  |
+| [genophenoenvo/knowledge-graph](https://github.com/genophenoenvo/knowledge-graph) | [knowledge-graph](https://genophenoenvo.github.io/knowledge-graph/) |  |  | Schema | unknown |  |
+| [chicagopcdc/linkml-data-dictionary](https://github.com/chicagopcdc/linkml-data-dictionary) | [linkml-data-dictionary](https://chicagopcdc.github.io/linkml-data-dictionary/) | Define the data dictionary using LinkML for data validation and reusable artifac... |  | Computer Science | unknown |  |
+| [hsolbrig/linkml-enhanced-template](https://github.com/hsolbrig/linkml-enhanced-template) | [linkml-enhanced-template](https://hsolbrig.github.io/linkml-enhanced-template/) | Linkml template playground |  | Computer Science | unknown |  |
+| [rsc3/linkml-examples](https://github.com/rsc3/linkml-examples) | [linkml-examples](https://rsc3.github.io/linkml-examples/) | Tests and examples of linkml |  | Computer Science | unknown |  |
+| [manulera/linkml-playground](https://github.com/manulera/linkml-playground) | [linkml-playground](https://manulera.github.io/linkml-playground/) | linkml-playground |  | Computer Science | unknown |  |
+| [vladistan/linkml-pokemon](https://github.com/vladistan/linkml-pokemon) | [linkml-pokemon](https://vladistan.github.io/linkml-pokemon/) |  |  | Computer Science | unknown |  |
+| [dalito/linkml-project-copier](https://github.com/dalito/linkml-project-copier) | [linkml-project-copier](https://dalito.github.io/linkml-project-copier/) | A copier template for your next LinkML project |  | Computer Science | unknown |  |
+| [linkml/linkml-prov](https://github.com/linkml/linkml-prov) | [linkml-prov](https://linkml.github.io/linkml-prov/) | LinkML rendering of PROV |  | Computer Science | unknown |  |
+| [genomewalker/linkml-toolkit](https://github.com/genomewalker/linkml-toolkit) | [linkml-toolkit](https://genomewalker.github.io/linkml-toolkit/) |  |  | Computer Science | unknown |  |
+| [sierra-moxon/linkml-tutorial-1](https://github.com/sierra-moxon/linkml-tutorial-1) | [linkml-tutorial-1](https://sierra-moxon.github.io/linkml-tutorial-1/) | my new linkml project! |  | Computer Science | unknown |  |
+| [KGerring/linkml_tools](https://github.com/KGerring/linkml_tools) | [linkml_tools](https://kgerring.github.io/linkml_tools/) | grouping pf useful others |  | Computer Science | unknown |  |
+| [tcr/markdown-corpus](https://github.com/tcr/markdown-corpus) | [markdown-corpus](https://tcr.github.io/markdown-corpus/) | Many markdown files taken from around github |  | Schema | unknown |  |
+| [microbiomedata/metadata_converter](https://github.com/microbiomedata/metadata_converter) | [metadata_converter](https://microbiomedata.github.io/metadata_converter/) | Conversion of schemas/templates/metadata to biolinkml |  | Biology | unknown |  |
+| [microbiomedata/minimal-metab](https://github.com/microbiomedata/minimal-metab) | [minimal-metab](https://microbiomedata.github.io/minimal-metab/) |  |  | Schema | unknown |  |
+| [GenomicsStandardsConsortium/mixs](https://github.com/GenomicsStandardsConsortium/mixs) | [mixs](https://genomicsstandardsconsortium.github.io/mixs/) | Minimum Information about any (X) Sequence” (MIxS) specification |  | Schema | unknown |  |
+| [cmungall/mixs-source](https://github.com/cmungall/mixs-source) | [mixs-source](https://cmungall.github.io/mixs-source/) |  |  | Schema | unknown |  |
+| [sdsc-ordes/modos-schema](https://github.com/sdsc-ordes/modos-schema) | [modos-schema](https://sdsc-ordes.github.io/modos-schema/) | Metadata schema for the SMOC Multi-Omics Digital-Object |  | Biology | unknown |  |
+| [kjappelbaum/mofdscribe-schema](https://github.com/kjappelbaum/mofdscribe-schema) | [mofdscribe-schema](https://kjappelbaum.github.io/mofdscribe-schema/) |  |  | Schema | unknown |  |
+| [monarch-initiative/monarch-documentation](https://github.com/monarch-initiative/monarch-documentation) | [monarch-documentation](https://monarch-initiative.github.io/monarch-documentation/) | Technical documentation for all Monarch applications, packages, services and rel... |  | Schema | unknown |  |
+| [matentzn/monarch-provenance](https://github.com/matentzn/monarch-provenance) | [monarch-provenance](https://matentzn.github.io/monarch-provenance/) |  |  | Schema | unknown |  |
+| [monarch-initiative/mondo](https://github.com/monarch-initiative/mondo) | [mondo](https://monarch-initiative.github.io/mondo/) | Mondo Disease Ontology |  | Schema | unknown |  |
+| [monarch-initiative/mondo-ingest](https://github.com/monarch-initiative/mondo-ingest) | [mondo-ingest](https://monarch-initiative.github.io/mondo-ingest/) | Coordinating the mondo-ingest with external sources |  | Schema | unknown |  |
+| [usnistgov/NIST-GEC_Lexicon](https://github.com/usnistgov/NIST-GEC_Lexicon) | [NIST-GEC_Lexicon](https://usnistgov.github.io/NIST-GEC_Lexicon/) | NIST Genome Editing Consortium Lexicon Schema Repository |  | Schema | unknown |  |
+| [jeffbaumes/nmdc-client](https://github.com/jeffbaumes/nmdc-client) | [nmdc-client](https://jeffbaumes.github.io/nmdc-client/) | A Python client for the National Microbiome Data Collaborative |  | Biology | unknown |  |
+| [microbiomedata/nmdc-metadata](https://github.com/microbiomedata/nmdc-metadata) | [nmdc-metadata](https://microbiomedata.github.io/nmdc-metadata/) | Managing metadata and policy around metadata in NMDC |  | Government | unknown |  |
+| [microbiomedata/nmdc-runtime](https://github.com/microbiomedata/nmdc-runtime) | [nmdc-runtime](https://microbiomedata.github.io/nmdc-runtime/) | Runtime system for NMDC data management and orchestration |  | Infrastructure | unknown |  |
+| [StroemPhi/NMRspec](https://github.com/StroemPhi/NMRspec) | [NMRspec](https://stroemphi.github.io/NMRspec/) | Prototype to semantify NMR spectroscopy research data |  | Schema | unknown |  |
+| [NeurodataWithoutBorders/nwb_hackathons](https://github.com/NeurodataWithoutBorders/nwb_hackathons) | [nwb_hackathons](https://neurodatawithoutborders.github.io/nwb_hackathons/) | Repository for collecting materials from nwb hackathons |  | Schema | unknown |  |
+| [oborel/obo-relations](https://github.com/oborel/obo-relations) | [obo-relations](https://oborel.github.io/obo-relations/) | RO is an ontology of relations for use with biological ontologies |  | Biology | unknown |  |
+| [biodatamodels/obograph](https://github.com/biodatamodels/obograph) | [obograph](https://biodatamodels.github.io/obograph/) |  |  | Schema | unknown |  |
+| [omnibenchmark/omnibenchmark](https://github.com/omnibenchmark/omnibenchmark) | [omnibenchmark](https://omnibenchmark.github.io/omnibenchmark/) | The omnibenchmark CLI |  | Schema | unknown |  |
+| [monarch-initiative/ontogpt](https://github.com/monarch-initiative/ontogpt) | [ontogpt](https://monarch-initiative.github.io/ontogpt/) | LLM-based ontological extraction tools, including SPIRES |  | Schema | unknown |  |
+| [INCATools/ontology-development-kit](https://github.com/INCATools/ontology-development-kit) | [ontology-development-kit](https://incatools.github.io/ontology-development-kit/) | Ontology lifecycle management |  | Schema | unknown |  |
+| [NovoNordisk-OpenSource/openstudybuilder-solution](https://github.com/NovoNordisk-OpenSource/openstudybuilder-solution) | [openstudybuilder-solution](https://novonordisk-opensource.github.io/openstudybuilder-solution/) |  |  | Schema | unknown |  |
+| [wd15/pfhub-cli-old](https://github.com/wd15/pfhub-cli-old) | [pfhub-cli-old](https://wd15.github.io/pfhub-cli-old/) |  |  | Schema | unknown |  |
+| [PistoiaAlliance/Pistoia-Alliance-PGO](https://github.com/PistoiaAlliance/Pistoia-Alliance-PGO) | [Pistoia-Alliance-PGO](https://pistoiaalliance.github.io/Pistoia-Alliance-PGO/) | Pistoia Alliance Pharma General Ontology - One, shared and maintained upper leve... |  | Computer Science | unknown |  |
+| [chanzuckerberg/platformics](https://github.com/chanzuckerberg/platformics) | [platformics](https://chanzuckerberg.github.io/platformics/) | Codegen Python GraphQL Entity Framework |  | Schema | unknown |  |
+| [swiss/political-affairs-ech-group](https://github.com/swiss/political-affairs-ech-group) | [political-affairs-ech-group](https://swiss.github.io/political-affairs-ech-group/) | The working repository to develop standards for the swiss political system. |  | Computer Science | unknown |  |
+| [prefixcommons/prefixcommons-py](https://github.com/prefixcommons/prefixcommons-py) | [prefixcommons-py](https://prefixcommons.github.io/prefixcommons-py/) | Prefix commons python utlities |  | Schema | unknown |  |
+| [leibniz-psychology/psyndex2linkeddata](https://github.com/leibniz-psychology/psyndex2linkeddata) | [psyndex2linkeddata](https://leibniz-psychology.github.io/psyndex2linkeddata/) | A set of python tools for describing PSYNDEX data in RDF and for converting from... |  | Computer Science | unknown |  |
+| [liuji1031/research-paper-schema](https://github.com/liuji1031/research-paper-schema) | [research-paper-schema](https://liuji1031.github.io/research-paper-schema/) |  |  | Schema | unknown |  |
+| [NCATS-Tangerine/rhea-beacon](https://github.com/NCATS-Tangerine/rhea-beacon) | [rhea-beacon](https://ncats-tangerine.github.io/rhea-beacon/) | Knowledge Beacon wrapper for the Rhea Annotated Reactions database (https://www.... |  | Schema | unknown |  |
+| [IBM/risk-atlas-nexus](https://github.com/IBM/risk-atlas-nexus) | [risk-atlas-nexus](https://ibm.github.io/risk-atlas-nexus/) | Risk Atlas Nexus: tooling to bring together resources related to governance of f... |  | Government | unknown |  |
+| [AnacletoLAB/RNA-KG](https://github.com/AnacletoLAB/RNA-KG) | [RNA-KG](https://anacletolab.github.io/RNA-KG/) |  |  | Schema | unknown |  |
+| [pysemtec/semantic-python-overview](https://github.com/pysemtec/semantic-python-overview) | [semantic-python-overview](https://pysemtec.github.io/semantic-python-overview/) | (subjective) overview of projects which are related both to python and semantic ... |  | Schema | unknown |  |
+| [vemonet/semanticscience-model](https://github.com/vemonet/semanticscience-model) | [semanticscience-model](https://vemonet.github.io/semanticscience-model/) | LinkML model for the SemanticScience Integrated Ontology |  | Computer Science | unknown |  |
+| [clingen-data-model/sepio-models](https://github.com/clingen-data-model/sepio-models) | [sepio-models](https://clingen-data-model.github.io/sepio-models/) | Shared SEPIO models based on the bioLinkML modeling language supporting the meta... |  | Biology | unknown |  |
+| [axenov/SketchML](https://github.com/axenov/SketchML) | [SketchML](https://axenov.github.io/SketchML/) | :whale: SketchML - distributed Machine Leaning framework for Apache Flink :star: |  | Computer Science | unknown |  |
+| [NCATS-Tangerine/smpdb-beacon](https://github.com/NCATS-Tangerine/smpdb-beacon) | [smpdb-beacon](https://ncats-tangerine.github.io/smpdb-beacon/) |  |  | Schema | unknown |  |
+| [margo/specification](https://github.com/margo/specification) | [specification](https://margo.github.io/specification/) | Margo Specification |  | Schema | unknown |  |
+| [bridge2ai/standards-schemas](https://github.com/bridge2ai/standards-schemas) | [standards-schemas](https://bridge2ai.github.io/standards-schemas/) | Data schema for Bridge2AI Standards. |  | Computer Science | unknown |  |
+| [iarpa-felix/synbio-schema](https://github.com/iarpa-felix/synbio-schema) | [synbio-schema](https://iarpa-felix.github.io/synbio-schema/) | A schema for synthetic biology, inspired by IARPA FELIX |  | Biology | unknown |  |
+| [timsbiomed/tccm-api](https://github.com/timsbiomed/tccm-api) | [tccm-api](https://timsbiomed.github.io/tccm-api/) |  |  | Schema | unknown |  |
+| [timsbiomed/tccm-model-lite](https://github.com/timsbiomed/tccm-model-lite) | [tccm-model-lite](https://timsbiomed.github.io/tccm-model-lite/) |  |  | Schema | unknown |  |
+| [hsolbrig/template-fun-model](https://github.com/hsolbrig/template-fun-model) | [template-fun-model](https://hsolbrig.github.io/template-fun-model/) | Demo |  | Schema | unknown |  |
+| [timsbiomed/TermCI-model](https://github.com/timsbiomed/TermCI-model) | [TermCI-model](https://timsbiomed.github.io/TermCI-model/) | The Terminology Code Index Entry model |  | Schema | unknown |  |
+| [sierra-moxon/testviz](https://github.com/sierra-moxon/testviz) | [testviz](https://sierra-moxon.github.io/testviz/) |  |  | Schema | unknown |  |
+| [swhume/threesixtyeye](https://github.com/swhume/threesixtyeye) | [threesixtyeye](https://swhume.github.io/threesixtyeye/) | Sam Hume's public 360i sandbox |  | Government | unknown |  |
+| [NCATS-Tangerine/tkg-beacon](https://github.com/NCATS-Tangerine/tkg-beacon) | [tkg-beacon](https://ncats-tangerine.github.io/tkg-beacon/) | Knowledge Beacon wrapper of a Translator Knowledge Graph data model compliant Ne... |  | Schema | unknown |  |
+| [Netbeheer-Nederland/tmpl-cm](https://github.com/Netbeheer-Nederland/tmpl-cm) | [tmpl-cm](https://netbeheer-nederland.github.io/tmpl-cm/) | Template repository for conceptual models. |  | Schema | unknown |  |
+| [MaastrichtU-IDS/translator-openpredict](https://github.com/MaastrichtU-IDS/translator-openpredict) | [translator-openpredict](https://maastrichtu-ids.github.io/translator-openpredict/) | 🔮🐍 A package to help serve predictions of biomedical concepts associations as Tr... |  | Biology | unknown |  |
+| [co-cddo/ukgov-metadata-exchange-model](https://github.com/co-cddo/ukgov-metadata-exchange-model) | [ukgov-metadata-exchange-model](https://co-cddo.github.io/ukgov-metadata-exchange-model/) | A metadata model for describing data assets for exchanging between UK government... |  | Government | unknown |  |
+| [perma-id/w3id.org](https://github.com/perma-id/w3id.org) | [w3id.org](https://perma-id.github.io/w3id.org/) | Website source code for w3id.org. |  | Schema | unknown |  |
+| [w3c/wot](https://github.com/w3c/wot) | [wot](https://w3c.github.io/wot/) | Web of Things |  | Schema | unknown |  |
+| [monarch-initiative/zfin-genotype-to-phenotype-ingest](https://github.com/monarch-initiative/zfin-genotype-to-phenotype-ingest) | [zfin-genotype-to-phenotype-ingest](https://monarch-initiative.github.io/zfin-genotype-to-phenotype-ingest/) |  |  | Schema | unknown |  |

@@ -1,6 +1,6 @@
 [//]: # (DO NOT MANUALLY EDIT THIS FILE. IT IS GENERATED FROM A TEMPLATE.)
 
-# LinkML Registry Entries
+# LinkML Registry
 
 ## LinkML Schema Metamodel
 
@@ -11,20 +11,10 @@ For more information on LinkML:
 * [linkml.io](https://linkml.io) main website
 * [specification](https://w3id.org/linkml/docs/specification/)
 
+## Registry Entries
+
+| Project | Title | Description | License | Domain | Status | Topics |
+|---------|-------|-------------|---------|--------|--------|--------|
 {%- for id, entry in entries.items() %}
-## {{ entry.title or id }}
-
-{% if entry.description %}{{ entry.description }}{% endif %}
-
-{% if entry.github_repo %}**GitHub Organization:** {{ entry.github_repo }}{% endif %}
-
-{% if entry.schema_url %}**Schema URL:** {{ entry.schema_url }}{% endif %}
-
-{% if entry.license %}**License:** {{ entry.license }}{% endif %}
-
-{% if entry.domain %}**Domain:** {{ entry.domain }}{% endif %}
-
-{% if entry.status %}**Status:** {{ entry.status }}{% endif %}
-
-{% if entry.topics %}**Topics:** {{ entry.topics|join(', ') }}{% endif %}
-{% endfor %}
+| {% if entry.github_repo %}[{{ id }}]({{ entry.github_repo }}){% else %}{{ id }}{% endif %} | {% if entry.schema_url %}[{{ entry.title or '' }}]({{ entry.schema_url }}){% else %}{{ entry.title or '' }}{% endif %} | {{ (entry.description or '')[:80] }}{% if entry.description and entry.description|length > 80 %}...{% endif %} | {{ entry.license or '' }} | {{ entry.domain or '' }} | {{ entry.status or '' }} | {% if entry.topics %}{{ entry.topics[:3]|join(', ') }}{% if entry.topics|length > 3 %}...{% endif %}{% endif %} |
+{%- endfor %}

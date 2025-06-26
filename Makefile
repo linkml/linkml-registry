@@ -50,6 +50,7 @@ help: status
 	@echo "make testdoc -- builds docs and runs local test server"
 	@echo "make deploy -- deploys site"
 	@echo "make update -- updates linkml version"
+	@echo "make discover -- discover LinkML repositories"
 	@echo "make help -- show this help"
 	@echo ""
 
@@ -121,29 +122,6 @@ lint:
 check-config:
 	@(grep my-datamodel about.yaml > /dev/null && printf "\n**Project not configured**:\n\n  - Remember to edit 'about.yaml'\n\n" || exit 0)
 
-convert-examples-to-%:
-	$(patsubst %, $(RUN) linkml-convert  % -s $(SOURCE_SCHEMA_PATH) -C Person, $(shell ${SHELL} find src/data/examples -name "*.yaml"))
-
-examples/%.yaml: src/data/examples/%.yaml
-	$(RUN) linkml-convert -s $(SOURCE_SCHEMA_PATH) -C Person $< -o $@
-examples/%.json: src/data/examples/%.yaml
-	$(RUN) linkml-convert -s $(SOURCE_SCHEMA_PATH) -C Person $< -o $@
-examples/%.ttl: src/data/examples/%.yaml
-	$(RUN) linkml-convert -P EXAMPLE=http://example.org/ -s $(SOURCE_SCHEMA_PATH) -C Person $< -o $@
-
-test-examples: examples/output
-
-examples/output: src/linkml_common/schema/linkml_common.yaml
-	mkdir -p $@
-	$(RUN) linkml-run-examples \
-		--output-formats json \
-		--output-formats yaml \
-		--counter-example-input-directory src/data/examples/invalid \
-		--input-directory src/data/examples/valid \
-		--output-directory $@ \
-		--schema $< > $@/README.md
-.PHONY: examples/output
-
 # Test documentation locally
 serve: mkd-serve
 
@@ -155,9 +133,17 @@ $(PYMODEL):
 $(DOCDIR):
 	mkdir -p $@
 
-gendoc: $(DOCDIR)
+gendoc: $(DOCDIR) discover
 	cp $(SRC)/docs/*md $(DOCDIR) ; \
-	$(RUN) gen-doc ${GEN_DARGS} -d $(DOCDIR) $(SOURCE_SCHEMA_PATH)
+	$(RUN) gen-doc ${GEN_DARGS} -d $(DOCDIR) $(SOURCE_SCHEMA_PATH) ; \
+	$(RUN) python src/scripts/generate_registry_docs.py \
+		--registry-file linkml_registry.yaml \
+		--output-dir $(DOCDIR) \
+		--templates-dir src/doc_templates \
+		--overview-template overview.jinja2 \
+		--detail-template registry.jinja2 \
+		--src-docs-dir src/docs
+
 
 testdoc: gendoc serve
 
@@ -181,6 +167,9 @@ git-status:
 .cruft.json:
 	echo "creating a stub for .cruft.json. IMPORTANT: setup via cruft not cookiecutter recommended!" ; \
 	touch $@
+
+discover:
+	$(RUN) python src/scripts/discover_linkml_repos.py --analyze --min-stars 0 --output linkml_registry.yaml
 
 clean:
 	rm -rf $(DEST)

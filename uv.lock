@@ -665,6 +665,7 @@ wheels = [
 name = "linkml-registry"
 source = { editable = "." }
 dependencies = [
+    { name = "click" },
     { name = "fastmcp" },
     { name = "jinja2" },
     { name = "linkml" },
@@ -681,6 +682,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "click", specifier = ">=8.2.1" },
     { name = "fastmcp", specifier = ">=2.7.1" },
     { name = "jinja2", specifier = ">=3.1.6" },
     { name = "linkml", specifier = ">=1.9.2" },
