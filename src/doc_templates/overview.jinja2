@@ -1,16 +1,14 @@
 # LinkML Registry
 
-The metamodel for schemas defined using the Linked Data Modeling Language framework.
-
 For more information on LinkML:
 
-* [linkml.io](https://linkml.io) main website
-* [specification](https://w3id.org/linkml/docs/specification/)
+* [LinkML Documentation](https://linkml.io)
+* [LinkML Meta Model Specification](https://w3id.org/linkml/docs/specification/)
 
 ## Registry Entries
 
-| Title | Project | Topics |
-|-------|---------|--------|
+| Title | Topics | Stars | GitHub URL |
+|-------|--------|-------|-----------|
 {%- for id, entry in entries.items() %}
-| {% if entry.schema_url %}[{{ entry.title or '' }}]({{ entry.schema_url }}){% else %}{{ entry.title or '' }}{% endif %}{% if entry.description %}<br/>{{ (entry.description or '')[:100] }}{% if entry.description and entry.description|length > 100 %}...{% endif %}{% endif %} | {% if entry.github_repo %}[{{ id }}]({{ entry.github_repo }}){% else %}{{ id }}{% endif %} | {% if entry.topics %}{{ entry.topics[:3]|join(', ') }}{% if entry.topics|length > 3 %}...{% endif %}{% endif %} |
+| {% if entry.schema_url %}[{{ entry.title or '' }}]({{ entry.schema_url }}){% else %}{{ entry.title or '' }}{% endif %}{% if entry.description %}<br/>{{ (entry.description or '')[:100] }}{% if entry.description and entry.description|length > 100 %}...{% endif %}{% endif %} | {% if entry.topics %}{{ entry.topics[:3]|join(', ') }}{% if entry.topics|length > 3 %}...{% endif %}{% endif %} | {{ entry.github_stars or 0 }} [(details)](details/{{ id | replace(':', '_') | replace('/', '_') }}.md) | {% if entry.github_repo %}[{{ id }}]({{ entry.github_repo }}){% else %}{{ id }}{% endif %} |
 {%- endfor %}

@@ -135,7 +135,6 @@ $(DOCDIR):
 
 gendoc: $(DOCDIR) discover
 	cp $(SRC)/docs/*md $(DOCDIR) ; \
-	$(RUN) gen-doc ${GEN_DARGS} -d $(DOCDIR) $(SOURCE_SCHEMA_PATH) ; \
 	$(RUN) python src/scripts/generate_registry_docs.py \
 		--registry-file linkml_registry.yaml \
 		--output-dir $(DOCDIR) \
@@ -144,7 +143,11 @@ gendoc: $(DOCDIR) discover
 		--detail-template registry.jinja2 \
 		--src-docs-dir src/docs ; \
 	cp linkml_registry.yaml $(DOCDIR) ; \
+	$(RUN) gen-doc ${GEN_DARGS} -d $(DOCDIR) --template-directory $(SRC)/$(TEMPLATEDIR) $(SOURCE_SCHEMA_PATH) ; \
 
+
+spell:
+	$(RUN) codespell --skip=".venv,.git" .
 
 testdoc: gendoc serve
 

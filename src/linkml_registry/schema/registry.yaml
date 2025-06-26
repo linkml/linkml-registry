@@ -2,7 +2,12 @@ id: https://w3id.org/linkml_registry
 name: linkml_registry
 title: Schema for LinkML Schema Registry
 description: |-
-  Datamodel for LinkML Registry and evaluation framework
+  The LinkML Registry is an automatically generated catalog of LinkML schemas, built by using GitHub’s Search API to discover repositories that reference LinkML.
+  It is maintained by automated scripts that continuously search for, analyze, and index LinkML-based projects.
+  [View Registry](registry.md)
+  Registry Data (YAML) : [linkml_registry.yaml](linkml_registry.yaml)
+  Registry (Markdown) : [https://linkml.github.io/linkml-registry/registry/](https://linkml.github.io/linkml-registry/registry/)
+
 
 imports:
 - linkml:types
