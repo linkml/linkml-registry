@@ -32,6 +32,8 @@ jobs:
         run: uv sync
 
       - name: Generate web-based documentation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p docs
           touch docs/.nojekyll
