@@ -23,6 +23,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
@@ -45,11 +47,15 @@ jobs:
           if [ $? -eq 0 ]; then
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
-            git add linkml_registry.yaml
-            git commit -m "Regenerate LinkML registry artifacts"
-            git push
+            git add linkml_registry.yaml docs/
+            if ! git diff --cached --quiet; then
+              git commit -m "Regenerate LinkML registry artifacts"
+              git push origin HEAD:main
+            else
+              echo "No changes to commit"
+            fi
           else
-            echo "'make discover' failed to finish successfully"
+            echo "'make gendoc' failed to finish successfully"
           fi
           ([ ! -f docs/about.md ] && cp src/docs/about.md docs/) || true
           uv run mkdocs gh-deploy
