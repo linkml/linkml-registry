@@ -4,14 +4,16 @@ theme:
   palette:
     scheme: teal
     primary: navy
+  logo: images/logo.jpg
 plugins:
   - search
   - mermaid2
 nav:
   # - Home: build-details.md
-  - View: registry.md
+  - Overview: index.md
+  - View Registry: registry.md
   - Registry Build Details: build-details.md
-  - Registry LinkML Schema: index.md
+  - Registry Schema: schema.md
 extra:
   analytics:
     provider: google

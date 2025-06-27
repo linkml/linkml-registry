@@ -16,6 +16,7 @@ DEST = project
 PYMODEL = $(SRC)/$(SCHEMA_NAME)/datamodel
 DOCDIR = docs
 EXAMPLEDIR = examples
+TEMPLATEDIR = doc_templates
 SHEET_MODULE = personinfo_enums
 SHEET_ID = $(shell ${SHELL} ./utils/get-value.sh google_sheet_id)
 SHEET_TABS = $(shell ${SHELL} ./utils/get-value.sh google_sheet_tabs)
@@ -135,6 +136,7 @@ $(DOCDIR):
 
 gendoc: $(DOCDIR) discover
 	cp $(SRC)/docs/*md $(DOCDIR) ; \
+	cp -R $(SRC)/docs/images/ $(DOCDIR) ; \
 	$(RUN) python src/scripts/generate_registry_docs.py \
 		--registry-file linkml_registry.yaml \
 		--output-dir $(DOCDIR) \
@@ -143,7 +145,9 @@ gendoc: $(DOCDIR) discover
 		--detail-template registry.jinja2 \
 		--src-docs-dir src/docs ; \
 	cp linkml_registry.yaml $(DOCDIR) ; \
-	$(RUN) gen-doc ${GEN_DARGS} -d $(DOCDIR) --template-directory $(SRC)/$(TEMPLATEDIR) $(SOURCE_SCHEMA_PATH) ; \
+	$(RUN) gen-doc --directory $(DOCDIR) --template-directory $(SRC)/$(TEMPLATEDIR) $(SOURCE_SCHEMA_PATH) ; \
+	mv $(DOCDIR)/index.md $(DOCDIR)/schema.md ; \
+	cp $(DOCDIR)/registry.md $(DOCDIR)/index.md \
 
 
 spell:
