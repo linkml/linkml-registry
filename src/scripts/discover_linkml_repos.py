@@ -16,6 +16,68 @@ from typing import Dict, List, Optional, Any
 import click
 from datetime import datetime
 import time
+from enum import Enum
+
+
+class ExcludeList(Enum):
+    """
+    Curated list of repository URLs to exclude from LinkML discovery.
+    These are false positives that contain linkml-like terms but are not actual LinkML projects.
+    """
+    AWESOME_MACHINE_LEARNING = "https://github.com/josephmisiti/awesome-machine-learning"
+    W3ID = "https://github.com/perma-id/w3id.org"
+    WOC = "https://github.com/w3c/wot"
+
+
+def extract_contacts(repo: Dict[str, Any]) -> Optional[str]:
+    """Extract contact information."""
+    owner = repo['owner']
+    return owner.get('login', 'Unknown')
+
+
+def generate_registry_yaml(entries: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Generate the registry YAML structure."""
+
+    # Sort entries by GitHub stars (descending), then alphabetically by title
+    sorted_entries = sorted(entries, key=lambda x: (-x.get('github_stars', 0), x.get('title', '').lower()))
+
+    # Convert entries to registry format
+    registry_entries = {}
+
+    for entry in sorted_entries:
+        # Use owner/repo as the key
+        github_url = entry.get('github_repo', '')
+        if 'github.com/' in github_url:
+            key = github_url.split('github.com/')[-1]
+        else:
+            key = entry.get('title', 'unknown')
+
+        # Clean up the entry
+        clean_entry = {k: v for k, v in entry.items() if v and v != 'Unknown'}
+        registry_entries[key] = clean_entry
+
+    registry = {
+        'name': 'LinkML-Discovery-Registry',
+        'homepage': 'https://github.com/linkml/linkml-registry',
+        'title': 'LinkML Registry (GitHub Search Discovery)',
+        'description': f'LinkML projects discovered via GitHub Search API. Generated on {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}',
+        'entries': registry_entries
+    }
+
+    return registry
+
+
+def is_excluded_repository(repo: Dict[str, Any]) -> bool:
+    """Check if repository should be excluded based on the curated exclude list."""
+    repo_url = repo.get('html_url', '')
+
+    # Check against each item in the exclude list
+    for exclude_item in ExcludeList:
+        if repo_url == exclude_item.value:
+            print(f"  Excluded false positive: {repo['full_name']} (matched exclude list)")
+            return True
+
+    return False
 
 
 class GitHubSearchDiscovery:
@@ -34,7 +96,7 @@ class GitHubSearchDiscovery:
             }
         
         self.base_url = 'https://api.github.com'
-    
+
     def search_linkml_repositories(self) -> List[Dict[str, Any]]:
         """Search for repositories that have LinkML dependencies."""
         
@@ -42,10 +104,10 @@ class GitHubSearchDiscovery:
         
         # First, do general repository searches using REST API
         repo_search_queries = [
-            "linkml language:python",
+            "linkml language:python",  # Quoted to avoid FlinkML
             "linkml-project-cookiecutter",
-            "linkml in:description",
-            "LinkML in:description"
+            "linkml in:description",  # Quoted to avoid FlinkML
+            "LinkML in:description"   # Quoted to avoid FlinkML
         ]
         
         for query in repo_search_queries:
@@ -58,24 +120,78 @@ class GitHubSearchDiscovery:
                 if full_name.startswith('linkml/'):
                     print(f"  Skipped linkml org repo: {full_name}")
                     continue
+                # Skip excluded repositories
+                if is_excluded_repository(repo):
+                    continue
                 if full_name not in all_repos and not repo.get('fork', False):
                     all_repos[full_name] = repo
-                    print(f"  Found: {full_name} ({repo['stargazers_count']} stars)")
+                    stars = repo.get('stargazers_count', 0)
+                    print(f"  Found: {full_name} ({stars} stars)")
                 elif repo.get('fork', False):
                     print(f"  Skipped fork: {full_name}")
             
             # Conservative rate limiting for REST API
             time.sleep(2)
         
+        # Search README files for LinkML content using code search
+        if self.token:
+            readme_search_queries = [
+                "linkml",  # Exact match with quotes to avoid FlinkML
+                "LinkML",  # Exact match with quotes to avoid FlinkML
+                "linkml-project-cookiecutter"
+            ]
+            
+            for query in readme_search_queries:
+                print(f"README search: {query}")
+                code_results = self._search_readme_content(query)
+                
+                for result in code_results:
+                    repo = result.get('repository', {})
+                    full_name = repo.get('full_name', '')
+                    
+                    if not full_name:
+                        continue
+                        
+                    # Skip repos from the linkml organization itself
+                    if full_name.startswith('linkml/'):
+                        print(f"  Skipped linkml org repo: {full_name}")
+                        continue
+                    # Skip excluded repositories
+                    if is_excluded_repository(repo):
+                        continue
+                        
+                    if full_name not in all_repos and not repo.get('fork', False):
+                        all_repos[full_name] = repo
+                        stars = repo.get('stargazers_count', 0)
+                        print(f"  Found in README: {full_name} ({stars} stars)")
+                    elif repo.get('fork', False):
+                        print(f"  Skipped fork: {full_name}")
+                
+                # Conservative rate limiting for code search
+                time.sleep(6)
+        
         # Then, search for linkml in specific files using REST code search
         if self.token:
             file_search_queries = [
                 "linkml filename:pyproject.toml",
-                "linkml filename:requirements.txt", 
+                "LinkML filename:pyproject.toml",
+                "Linkml filename:pyproject.toml",
+                "schema-automator filename:pyproject.toml",
+                "dependencies schema-automator filename:pyproject.toml",
+                "dependencies linkml filename:pyproject.toml",
+                "description linkml filename:pyproject.toml",
+                "description LinkML filename:pyproject.toml",
+                "description Linkml filename:pyproject.toml",
+                "linkml filename:requirements.txt",
+                "schema-automator filename:requirements.txt",
                 "linkml filename:setup.py",
+                "schema-automator filename:setup.py",
                 "linkml filename:setup.cfg",
+                "schema-automator filename:setup.cfg",
                 "linkml filename:poetry.lock",
+                "schema-automator filename:poetry.lock",
                 "linkml filename:Pipfile",
+                "schema-automator filename:Pipfile",
                 "linkml-project-cookiecutter filename:README.md",
                 "linkml-project-cookiecutter filename:README.rst",
                 "linkml-project-cookiecutter filename:readme.md",
@@ -95,9 +211,13 @@ class GitHubSearchDiscovery:
                     if full_name.startswith('linkml/'):
                         print(f"  Skipped linkml org repo: {full_name}")
                         continue
+                    # Skip excluded repositories
+                    if is_excluded_repository(repo):
+                        continue
                     if full_name not in all_repos and not repo.get('fork', False):
                         all_repos[full_name] = repo
-                        print(f"  Found: {full_name} ({repo.get('stargazers_count', 0)} stars)")
+                        stars = repo.get('stargazers_count', 0)
+                        print(f"  Found: {full_name} ({stars} stars)")
                     elif repo.get('fork', False):
                         print(f"  Skipped fork: {full_name}")
                 
@@ -137,6 +257,36 @@ class GitHubSearchDiscovery:
             print(f"  Error searching for '{query}': {e}")
             return []
     
+    def _search_readme_content(self, search_string: str, per_page: int = 30) -> List[Dict[str, Any]]:
+        """Search for a string in README.md files using GitHub's code search API."""
+        
+        if not self.token:
+            return []
+            
+        url = f"{self.base_url}/search/code"
+        query = f"{search_string} in:file filename:README.md"
+        params = {
+            'q': query,
+            'per_page': per_page
+        }
+
+        try:
+            response = requests.get(url, headers=self.headers, params=params)
+            
+            if response.status_code == 403:
+                print(f"  Rate limit exceeded for query: {query}")
+                return []
+            elif response.status_code != 200:
+                print(f"  Search failed for query '{query}': {response.status_code}")
+                return []
+            
+            data = response.json()
+            return data.get('items', [])
+            
+        except Exception as e:
+            print(f"  Error searching for '{query}': {e}")
+            return []
+    
     def _search_code_rest(self, query: str, per_page: int = 20) -> List[Dict[str, Any]]:
         """Search for code using GitHub REST API code search."""
         
@@ -156,7 +306,7 @@ class GitHubSearchDiscovery:
             
             if response.status_code == 403:
                 print(f"  Rate limit exceeded for code search: {query}")
-                print(f"  Waiting 60 seconds before continuing...")
+                print("Waiting 60 seconds before continuing...")
                 time.sleep(60)
                 return []
             elif response.status_code == 422:
@@ -239,18 +389,38 @@ class GitHubSearchDiscovery:
             entry['schema_url'] = schema_url
         
         # Extract contacts
-        contacts = self._extract_contacts(repo)
+        contacts = extract_contacts(repo)
         if contacts:
             entry['contacts'] = contacts
         
         # Add GitHub stars for sorting
-        entry['github_stars'] = repo.get('stargazers_count', 0)
+        stars = repo.get('stargazers_count', 0)
+        if stars is None:
+            stars = 0
+        
+        # If stars is 0 or missing, try to fetch from repository API directly
+        if stars == 0 and self.token:
+            try:
+                repo_api_url = f"{self.base_url}/repos/{repo['full_name']}"
+                response = requests.get(repo_api_url, headers=self.headers)
+                if response.status_code == 200:
+                    repo_data = response.json()
+                    direct_stars = repo_data.get('stargazers_count', 0)
+                    if direct_stars > 0:
+                        stars = direct_stars
+                        print(f"  Updated {repo['full_name']} stars: {stars} (from repo API)")
+                time.sleep(1)  # Rate limiting
+            except Exception as e:
+                print(f"  Failed to fetch direct stars for {repo['full_name']}: {e}")
+        
+        entry['github_stars'] = stars
         
         return entry
     
     def _extract_license(self, repo: Dict[str, Any]) -> str:
         """Extract license information."""
         license_info = repo.get('license')
+        # If license is not available, return 'Unknown'
         if license_info and license_info.get('spdx_id'):
             return license_info['spdx_id']
         return 'Unknown'
@@ -335,42 +505,6 @@ class GitHubSearchDiscovery:
         
         # Return the first plausible URL (we can't easily verify without making requests)
         return possible_urls[0]
-    
-    def _extract_contacts(self, repo: Dict[str, Any]) -> Optional[str]:
-        """Extract contact information."""
-        owner = repo['owner']
-        return owner.get('login', 'Unknown')
-    
-    def generate_registry_yaml(self, entries: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """Generate the registry YAML structure."""
-        
-        # Sort entries by GitHub stars (descending), then alphabetically by title
-        sorted_entries = sorted(entries, key=lambda x: (-x.get('github_stars', 0), x.get('title', '').lower()))
-        
-        # Convert entries to registry format
-        registry_entries = {}
-        
-        for entry in sorted_entries:
-            # Use owner/repo as the key
-            github_url = entry.get('github_repo', '')
-            if 'github.com/' in github_url:
-                key = github_url.split('github.com/')[-1]
-            else:
-                key = entry.get('title', 'unknown')
-            
-            # Clean up the entry
-            clean_entry = {k: v for k, v in entry.items() if v and v != 'Unknown'}
-            registry_entries[key] = clean_entry
-        
-        registry = {
-            'name': 'LinkML-Discovery-Registry',
-            'homepage': 'https://github.com/linkml/linkml-registry',
-            'title': 'LinkML Registry (GitHub Search Discovery)',
-            'description': f'LinkML projects discovered via GitHub Search API. Generated on {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}',
-            'entries': registry_entries
-        }
-        
-        return registry
 
 
 @click.command()
@@ -384,17 +518,17 @@ def main(token, output, min_stars, analyze):
     try:
         discovery = GitHubSearchDiscovery(token)
         
-        print("🚀 Starting LinkML project discovery...")
+        print("Starting LinkML project discovery...")
         repos = discovery.search_linkml_repositories()
         
         if not repos:
-            print("❌ No repositories found!")
+            print("No repositories found!")
             return
         
         # Filter by stars
         if min_stars > 0:
             repos = [r for r in repos if r.get('stargazers_count', 0) >= min_stars]
-            print(f"📊 Filtered to {len(repos)} repos with >= {min_stars} stars")
+            print(f"\n Filtered to {len(repos)} repos with >= {min_stars} stars")
         
         if not analyze:
             # Quick mode - just basic info
@@ -405,32 +539,33 @@ def main(token, output, min_stars, analyze):
                     'description': repo.get('description', ''),
                     'github_repo': repo['html_url'],
                     'license': discovery._extract_license(repo),
-                    'stars': repo.get('stargazers_count', 0)
+                    'github_stars': repo.get('stargazers_count', 0)
                 }
                 registry_entries.append(entry)
             
-            registry = discovery.generate_registry_yaml(registry_entries)
+            registry = generate_registry_yaml(registry_entries)
         else:
             # Full analysis mode
-            print(f"\n🔬 Analyzing {len(repos)} repositories...")
+            print(f"\n Analyzing {len(repos)} repositories...")
             registry_entries = []
             
             for i, repo in enumerate(repos, 1):
+                # Show progress
                 print(f"[{i:2d}/{len(repos)}] ", end="")
                 entry = discovery.analyze_repository(repo)
                 if entry:
                     registry_entries.append(entry)
             
-            print(f"\n✅ Successfully analyzed {len(registry_entries)} repositories")
-            registry = discovery.generate_registry_yaml(registry_entries)
+            print(f"\n Successfully analyzed {len(registry_entries)} repositories")
+            registry = generate_registry_yaml(registry_entries)
         
         # Write output
         output_path = Path(output)
         with open(output_path, 'w') as f:
             yaml.dump(registry, f, default_flow_style=False, sort_keys=False, width=120)
         
-        print(f"\n🎉 Registry saved to {output_path}")
-        print(f"📈 Total LinkML projects: {len(registry['entries'])}")
+        print(f"\n Registry saved to {output_path}")
+        print(f"\n Total LinkML projects: {len(registry['entries'])}")
         
         # Show some stats
         if registry['entries']:
@@ -443,8 +578,8 @@ def main(token, output, min_stars, analyze):
                 domain_key = entry.get('domain', 'Unknown')
                 domains[domain_key] = domains.get(domain_key, 0) + 1
             
-            print(f"\n📊 License distribution: {dict(sorted(licenses.items(), key=lambda x: x[1], reverse=True))}")
-            print(f"📊 Domain distribution: {dict(sorted(domains.items(), key=lambda x: x[1], reverse=True))}")
+            print(f"\n License distribution: {dict(sorted(licenses.items(), key=lambda x: x[1], reverse=True))}")
+            print(f"\n Domain distribution: {dict(sorted(domains.items(), key=lambda x: x[1], reverse=True))}")
         
     except Exception as e:
         print(f"Error: {e}")
