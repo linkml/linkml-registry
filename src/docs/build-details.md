@@ -19,6 +19,15 @@ your project is included by follows the guidelines below:
   - `poetry.lock`, `Pipfile`
   - README files (`.md`, `.rst`)
 - **Public Repository**: Ensure your repository is public and not archived and not forked from another project.
+
+**Important Note**: GitHub's code search API does not index all repositories or files immediately. 
+Some repositories, particularly newer ones or those with lower activity levels, may not have their 
+files indexed by GitHub's search system. This means that even if your project meets all the 
+criteria above, it may not appear in the registry due to GitHub's indexing limitations rather than 
+issues with your project setup. If your project doesn't appear, you may need to wait for GitHub to
+index your files, or consider increasing repository activity through commits, stars, or community 
+engagement.
+
 - **Bonus Repository Metadata**: Include relevant metadata in your repository:
   - A clear description of the project
   - Use of LinkML in your codebase

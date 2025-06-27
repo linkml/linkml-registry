@@ -26,6 +26,8 @@ The main discovery script (`src/scripts/discover_linkml_repos.py`) performs the 
   - `poetry.lock`, `Pipfile`
   - README files (`.md`, `.rst`)
 
+**Note**: GitHub's code search API does not index all repositories or files immediately. Some repositories, particularly newer ones or those with lower activity, may not have their files indexed and therefore won't be discovered through file content searches. If your LinkML project is not appearing in the registry, it may be due to GitHub's indexing limitations rather than the search criteria.
+
 #### Filtering Logic
 The following filters are applied to discovered repositories:
 
