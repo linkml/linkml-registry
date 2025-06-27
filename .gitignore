@@ -2,6 +2,10 @@ Pipfile
 target/
 site/
 venv/
+docs/details
+docs/images
+docs/*
+docs/details/*
 docs/*md
 docs/types/
 */my_schema.*
