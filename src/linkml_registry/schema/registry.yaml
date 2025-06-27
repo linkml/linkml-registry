@@ -2,7 +2,10 @@ id: https://w3id.org/linkml_registry
 name: linkml_registry
 title: Schema for LinkML Schema Registry
 description: |-
-  Datamodel for LinkML Registry and evaluation framework
+  The LinkML Registry is an automatically generated catalog of LinkML schemas, built by using GitHub’s Search API to discover repositories that reference LinkML.
+  It is maintained by automated scripts that continuously search for, analyze, and index LinkML-based projects.
+ 
+  [View Registry](registry.md)
 
 imports:
 - linkml:types
@@ -22,9 +25,12 @@ prefixes:
 default_prefix: linkml_registry
 types:
   https identifier:
+    description: An identifier that must be an HTTPS URL
     typeof: string
+
 classes:
   schema registry:
+    description: A registry containing metadata about LinkML schemas
     slots:
       - name
       - homepage
@@ -35,6 +41,7 @@ classes:
       - domain
       - topics
   schema metadata:
+    description: Metadata about a LinkML schema including evaluation metrics
     mixins:
       - evaluation
     slots:
@@ -50,24 +57,34 @@ classes:
       - topics
     slot_usage: {}
   evaluation:
+    description: Mixin class containing evaluation metrics for a schema
     mixin: true
     attributes:
       score:
+        description: Overall evaluation score for the schema
       class_count:
+        description: Number of classes in the schema
         is_a: count statistic
       slot_count:
+        description: Number of slots in the schema
         is_a: count statistic
       enum_count:
+        description: Number of enums in the schema
         is_a: count statistic
       type_count:
+        description: Number of types in the schema
         is_a: count statistic
       github stars:
+        description: Number of GitHub stars for the repository
         is_a: count statistic
       proportion elements with a description:
+        description: Proportion of schema elements that have descriptions
         is_a: proportion statistic
       proportion elements mapped:
+        description: Proportion of schema elements that are mapped to external vocabularies
         is_a: proportion statistic
       errors:
+        description: List of validation errors found in the schema
         multivalued: true
 slots:
   name:
@@ -120,7 +137,6 @@ slots:
     slot_uri: dcterms:subject
     multivalued: true
   topics:
-    range: string
     examples:
       - value: clinical
     slot_uri: dcterms:subject
@@ -131,14 +147,20 @@ slots:
     multivalued: true
     slot_uri: dcterms:hasPart
   score:
+    description: Overall evaluation score for the schema
     range: integer
   github stars:
+    description: Number of GitHub stars for the repository
     range: integer
   schema relative path:
+    description: Relative path to the schema file within the repository
   statistic:
+    description: Base class for statistical measures
   count statistic:
+    description: A statistic representing a count of items
     range: integer
   proportion statistic:
+    description: A statistic representing a proportion or percentage
     range: float
 enums:
   license_enum:

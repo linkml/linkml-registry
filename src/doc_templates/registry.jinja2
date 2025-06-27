@@ -1,0 +1,19 @@
+# {{ entry.id }}
+
+{% if entry.title %}**Title:** {{ entry.title }}{% endif %}
+
+{% if entry.description %}**Description:** {{ entry.description }}{% endif %}
+
+{% if entry.github_repo %}**GitHub Organization:** {{ entry.github_repo }}{% endif %}
+
+{% if entry.schema_url %}**Schema URL:** {{ entry.schema_url }}{% endif %}
+
+{% if entry.license %}**License:** {{ entry.license }}{% endif %}
+
+{% if entry.domain %}**Domain:** {{ entry.domain }}{% endif %}
+
+{% if entry.status %}**Status:** {{ entry.status }}{% endif %}
+
+{% if entry.topics %}**Topics:** {{ entry.topics|join(', ') }}{% endif %}
+
+{% if entry.contacts %}**Contacts:** {{ entry.contacts }}{% endif %}

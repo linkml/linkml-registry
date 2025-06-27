@@ -6,7 +6,7 @@ SHELL := bash
 .SUFFIXES:
 .SECONDARY:
 
-RUN = poetry run
+RUN = uv run
 # get values from about.yaml file
 SCHEMA_NAME = $(shell ${SHELL} ./utils/get-value.sh name)
 SOURCE_SCHEMA_PATH = $(shell ${SHELL} ./utils/get-value.sh source_schema_path)
@@ -16,6 +16,7 @@ DEST = project
 PYMODEL = $(SRC)/$(SCHEMA_NAME)/datamodel
 DOCDIR = docs
 EXAMPLEDIR = examples
+TEMPLATEDIR = doc_templates
 SHEET_MODULE = personinfo_enums
 SHEET_ID = $(shell ${SHELL} ./utils/get-value.sh google_sheet_id)
 SHEET_TABS = $(shell ${SHELL} ./utils/get-value.sh google_sheet_tabs)
@@ -50,6 +51,7 @@ help: status
 	@echo "make testdoc -- builds docs and runs local test server"
 	@echo "make deploy -- deploys site"
 	@echo "make update -- updates linkml version"
+	@echo "make discover -- discover LinkML repositories"
 	@echo "make help -- show this help"
 	@echo ""
 
@@ -63,7 +65,7 @@ setup: install gen-project gen-examples gendoc git-init-add
 # install any dependencies required for building
 install:
 	git init
-	poetry install
+	uv install
 .PHONY: install
 
 # ---
@@ -83,7 +85,7 @@ update-template:
 
 # todo: consider pinning to template
 update-linkml:
-	poetry add -D linkml@latest
+	uv add -D linkml@latest
 
 # EXPERIMENTAL
 create-data-harmonizer:
@@ -107,7 +109,7 @@ gen-project: $(PYMODEL)
 	$(RUN) gen-project ${GEN_PARGS} -d $(DEST) $(SOURCE_SCHEMA_PATH) && mv $(DEST)/*.py $(PYMODEL)
 
 
-test: test-schema test-python test-examples
+test: test-schema test-python
 
 test-schema:
 	$(RUN) gen-project ${GEN_PARGS} -d tmp $(SOURCE_SCHEMA_PATH)
@@ -121,29 +123,6 @@ lint:
 check-config:
 	@(grep my-datamodel about.yaml > /dev/null && printf "\n**Project not configured**:\n\n  - Remember to edit 'about.yaml'\n\n" || exit 0)
 
-convert-examples-to-%:
-	$(patsubst %, $(RUN) linkml-convert  % -s $(SOURCE_SCHEMA_PATH) -C Person, $(shell ${SHELL} find src/data/examples -name "*.yaml"))
-
-examples/%.yaml: src/data/examples/%.yaml
-	$(RUN) linkml-convert -s $(SOURCE_SCHEMA_PATH) -C Person $< -o $@
-examples/%.json: src/data/examples/%.yaml
-	$(RUN) linkml-convert -s $(SOURCE_SCHEMA_PATH) -C Person $< -o $@
-examples/%.ttl: src/data/examples/%.yaml
-	$(RUN) linkml-convert -P EXAMPLE=http://example.org/ -s $(SOURCE_SCHEMA_PATH) -C Person $< -o $@
-
-test-examples: examples/output
-
-examples/output: src/linkml_common/schema/linkml_common.yaml
-	mkdir -p $@
-	$(RUN) linkml-run-examples \
-		--output-formats json \
-		--output-formats yaml \
-		--counter-example-input-directory src/data/examples/invalid \
-		--input-directory src/data/examples/valid \
-		--output-directory $@ \
-		--schema $< > $@/README.md
-.PHONY: examples/output
-
 # Test documentation locally
 serve: mkd-serve
 
@@ -155,9 +134,24 @@ $(PYMODEL):
 $(DOCDIR):
 	mkdir -p $@
 
-gendoc: $(DOCDIR)
+gendoc: $(DOCDIR) discover
 	cp $(SRC)/docs/*md $(DOCDIR) ; \
-	$(RUN) gen-doc ${GEN_DARGS} -d $(DOCDIR) $(SOURCE_SCHEMA_PATH)
+	cp -R $(SRC)/docs/images/ $(DOCDIR) ; \
+	$(RUN) python src/scripts/generate_registry_docs.py \
+		--registry-file linkml_registry.yaml \
+		--output-dir $(DOCDIR) \
+		--templates-dir src/doc_templates \
+		--overview-template overview.jinja2 \
+		--detail-template registry.jinja2 \
+		--src-docs-dir src/docs ; \
+	cp linkml_registry.yaml $(DOCDIR) ; \
+	$(RUN) gen-doc --directory $(DOCDIR) --template-directory $(SRC)/$(TEMPLATEDIR) $(SOURCE_SCHEMA_PATH) ; \
+	mv $(DOCDIR)/index.md $(DOCDIR)/schema.md ; \
+	cp $(DOCDIR)/registry.md $(DOCDIR)/index.md \
+
+
+spell:
+	$(RUN) codespell --skip=".venv,.git" .
 
 testdoc: gendoc serve
 
@@ -170,7 +164,7 @@ git-init-add: git-init git-add git-commit git-status
 git-init:
 	git init
 git-add: .cruft.json
-	git add .gitignore .github .cruft.json Makefile LICENSE *.md examples utils about.yaml mkdocs.yml poetry.lock project.Makefile pyproject.toml src/linkml_common/schema/*yaml src/*/datamodel/*py src/data src/docs tests src/*/_version.py
+	git add .gitignore .github .cruft.json Makefile LICENSE *.md examples utils about.yaml mkdocs.yml uv.lock pyproject.toml src/*/datamodel/*py src/data src/docs tests src/*/_version.py
 	git add $(patsubst %, project/%, $(PROJECT_FOLDERS))
 git-commit:
 	git commit -m 'chore: initial commit' -a
@@ -182,10 +176,12 @@ git-status:
 	echo "creating a stub for .cruft.json. IMPORTANT: setup via cruft not cookiecutter recommended!" ; \
 	touch $@
 
+discover:
+	$(RUN) python src/scripts/discover_linkml_repos.py --analyze --min-stars 0 --output linkml_registry.yaml
+
 clean:
 	rm -rf $(DEST)
 	rm -rf tmp
 	rm -fr docs/*
 	rm -fr $(PYMODEL)/*
 
-include project.Makefile

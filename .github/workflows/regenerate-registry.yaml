@@ -1,0 +1,55 @@
+name: Regenerate LinkML Registry Artifacts
+
+# Controls when the action will run. Triggers the workflow on push
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'  # Weekly on Monday at 2 AM UTC
+  release:
+    types: [created]
+  workflow_dispatch:
+    types: trigger-build-artifacts
+
+jobs:
+  rebuild-artifacts:
+    name: Build and commit registry artifacts
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      # this permission is mandatory for trusted publishing
+      id-token: write
+      # needed to push changes back to repo
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install project dependencies
+        run: uv sync
+
+      - name: Generate LinkML Registry Artifacts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p docs
+          touch docs/.nojekyll
+          make gendoc
+          if [ $? -eq 0 ]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add linkml_registry.yaml
+            git commit -m "Regenerate LinkML registry artifacts"
+            git push
+          else
+            echo "'make discover' failed to finish successfully"
+          fi
+          ([ ! -f docs/about.md ] && cp src/docs/about.md docs/) || true
+          uv run mkdocs gh-deploy

@@ -1,0 +1,55 @@
+[project]
+name = "linkml-registry"
+description = "Registry of LinkML schemas"
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = [ "version" ]
+
+dependencies = [
+    "click>=8.2.1",
+    "fastmcp>=2.7.1",
+    "jinja2>=3.1.6",
+    "linkml>=1.9.2",
+    "mcp>=1.9.3",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.14",
+    "mkdocs-mermaid2-plugin>=1.2.1",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.4",
+]
+
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+# Ref.: https://github.com/ninoseki/uv-dynamic-versioning/
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "pep440"
+fallback-version = "0.0.0"
+
+[dependency-groups]
+dev = [
+  "pytest",
+  "black",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/linkml/linkml-registry"
+"Bug Tracker" = "https://github.com/linkml/linkml-registry/issues"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/linkml_registry"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.codespell]
+skip = '.idea,.git,SEMMEDDB*,semmed*,*.svg,docs,src/docs/registry.md'
+ignore-regex = '\.venv/.*'
+ignore-words-list = 'amination,ehr,mor,brite,nin,mirgate'

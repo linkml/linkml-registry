@@ -6,3 +6,13 @@ docs/*md
 docs/types/
 */my_schema.*
 */__pycache__/*
+.idea
+.venv
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.claude

@@ -1,0 +1,637 @@
+name: LinkML-Discovery-Registry
+homepage: https://github.com/linkml/linkml-registry
+title: LinkML Registry (GitHub Search Discovery)
+description: LinkML projects discovered via GitHub Search API. Generated on 2025-06-26 17:17:11
+entries:
+  biolink/biolink-model:
+    title: biolink-model
+    description: Schema and generated objects for biolink data model and upper ontology
+    github_repo: https://github.com/biolink/biolink-model
+    license: NOASSERTION
+    domain: Biology
+    status: active
+    topics:
+    - biolink
+    - datamodel
+    - gene-ontology
+    - json-api
+    - knowledge-graphs
+    schema_url: https://biolink.github.io/biolink-model/
+    contacts: biolink
+    github_stars: 197
+  mapping-commons/sssom:
+    title: sssom
+    description: Simple Standard for Sharing Ontology Mappings
+    github_repo: https://github.com/mapping-commons/sssom
+    license: BSD-3-Clause
+    domain: Computer Science
+    status: active
+    topics:
+    - linkml
+    - mapping
+    - mapping-commons
+    - mapping-standards
+    - mapping-tools
+    schema_url: https://mapping-commons.github.io/sssom/
+    contacts: mapping-commons
+    github_stars: 167
+  cidgoh/DataHarmonizer:
+    title: DataHarmonizer
+    description: A standardized browser-based spreadsheet editor and validator that can be run offline and locally, and which
+      includes templates for SARS-CoV-2 and Monkeypox sampling data. This project, created by the Centre for Infectious Disease
+      Genomics and One Health (CIDGOH), at Simon Fraser University, is now an open-source collaboration with contributions
+      from the National Microbiome Data Collaborative (NMDC), the LinkML development team, and others.
+    github_repo: https://github.com/cidgoh/DataHarmonizer
+    license: MIT
+    domain: Biology
+    status: active
+    topics:
+    - application
+    - data
+    - harmonization
+    - javascript
+    - linkml
+    schema_url: https://cidgoh.github.io/DataHarmonizer/
+    contacts: cidgoh
+    github_stars: 111
+  mapping-commons/sssom-py:
+    title: sssom-py
+    description: Python toolkit for SSSOM mapping format
+    github_repo: https://github.com/mapping-commons/sssom-py
+    license: MIT
+    domain: Computer Science
+    status: active
+    topics:
+    - linkml
+    - mappings
+    - obofoundry
+    - ontology-mappings
+    - sssom
+    schema_url: https://mapping-commons.github.io/sssom-py/index.html#
+    contacts: mapping-commons
+    github_stars: 54
+  monarch-initiative/koza:
+    title: koza
+    description: Data transformation framework for LinkML data models
+    github_repo: https://github.com/monarch-initiative/koza
+    license: BSD-3-Clause
+    domain: Computer Science
+    status: active
+    topics:
+    - etl
+    - knowledge-graph
+    - koza
+    - linkml
+    - monarchinitiative
+    schema_url: https://monarch-initiative.github.io/koza/
+    contacts: monarch-initiative
+    github_stars: 53
+  INCATools/semantic-sql:
+    title: semantic-sql
+    description: SQL and SQLite builds of OWL ontologies
+    github_repo: https://github.com/INCATools/semantic-sql
+    license: BSD-3-Clause
+    domain: Computer Science
+    status: active
+    topics:
+    - linkml
+    - oaklib
+    - obofoundry
+    - ontologies
+    - owl
+    schema_url: https://incatools.github.io/semantic-sql/
+    contacts: INCATools
+    github_stars: 46
+  microbiomedata/nmdc-schema:
+    title: nmdc-schema
+    description: National Microbiome Data Collaborative (NMDC) unified data model
+    github_repo: https://github.com/microbiomedata/nmdc-schema
+    license: CC0-1.0
+    domain: Biology
+    status: active
+    topics:
+    - ecoinformatics
+    - fair-data
+    - genomics
+    - linkml
+    - metabolomics
+    schema_url: https://microbiomedata.github.io/nmdc-schema/
+    contacts: microbiomedata
+    github_stars: 33
+  cmungall/semantic-llama:
+    title: semantic-llama
+    description: A knowledge extraction tool that uses a large language model to extract semantic information from text
+    github_repo: https://github.com/cmungall/semantic-llama
+    license: BSD-3-Clause
+    domain: Computer Science
+    status: maintenance
+    topics:
+    - ai
+    - knowledge-extraction
+    - language-models
+    - linkml
+    - oaklib
+    schema_url: https://cmungall.github.io/semantic-llama/
+    contacts: cmungall
+    github_stars: 28
+  INCATools/kgcl:
+    title: kgcl
+    description: Datamodel for KGCL (Knowledge Graph Change Language)
+    github_repo: https://github.com/INCATools/kgcl
+    license: MIT
+    domain: Computer Science
+    status: active
+    topics:
+    - kgcl
+    - linkml
+    - ontology-changes
+    - ontology-diffs
+    - rdf
+    schema_url: https://w3id.org/kgcl/
+    contacts: INCATools
+    github_stars: 18
+  INCATools/kgcl-rdflib:
+    title: kgcl-rdflib
+    description: Tools for working with KGCL
+    github_repo: https://github.com/INCATools/kgcl-rdflib
+    license: MIT
+    domain: Computer Science
+    status: active
+    topics:
+    - diff
+    - diffs
+    - kg
+    - knowledge-graph
+    - linkml
+    schema_url: https://incatools.github.io/kgcl-rdflib/
+    contacts: INCATools
+    github_stars: 18
+  monarch-initiative/monarch-ingest:
+    title: monarch-ingest
+    description: Data ingest application for Monarch Initiative knowledge graph using Koza
+    github_repo: https://github.com/monarch-initiative/monarch-ingest
+    license: BSD-3-Clause
+    domain: Computer Science
+    status: active
+    topics:
+    - kgx
+    - knowledge-graphs
+    - linkml
+    - linkml-schema
+    - monarchinitiative
+    schema_url: https://monarch-initiative.github.io/monarch-ingest/
+    contacts: monarch-initiative
+    github_stars: 17
+  cancerDHC/ccdhmodel:
+    title: ccdhmodel
+    description: CRDC-H model in LinkML, developed by the Center for Cancer Data Harmonization (CCDH)
+    github_repo: https://github.com/cancerDHC/ccdhmodel
+    license: BSD-3-Clause
+    domain: Computer Science
+    status: inactive
+    topics:
+    - google-sheets
+    - linkml
+    schema_url: https://cancerdhc.github.io/ccdhmodel/
+    contacts: cancerDHC
+    github_stars: 16
+  ghga-de/ghga-metadata-schema:
+    title: ghga-metadata-schema
+    description: Metadata schema for the German Human Genome-Phenome Archive (GHGA)
+    github_repo: https://github.com/ghga-de/ghga-metadata-schema
+    license: Apache-2.0
+    domain: Computer Science
+    status: active
+    topics:
+    - fega
+    - ghga
+    - linkml
+    - metadata-schema
+    schema_url: https://ghga-de.github.io/ghga-metadata-schema/
+    contacts: ghga-de
+    github_stars: 14
+  monarch-initiative/monochrom:
+    title: monochrom
+    description: Standardized identifiers and OWL classes for chromosomes and chromosomal parts across species
+    github_repo: https://github.com/monarch-initiative/monochrom
+    domain: Biology
+    status: active
+    topics:
+    - chromosomes
+    - etl
+    - genomics
+    - linkml
+    - monarchinitiative
+    schema_url: http://monarch-initiative.github.io/monochrom/
+    contacts: monarch-initiative
+    github_stars: 13
+  py-typedlogic/py-typedlogic:
+    title: py-typedlogic
+    description: Logic plus python types
+    github_repo: https://github.com/py-typedlogic/py-typedlogic
+    license: MIT
+    domain: Computer Science
+    status: active
+    topics:
+    - answer-set-programming
+    - clif
+    - clingo
+    - common-logic
+    - datalog
+    schema_url: https://py-typedlogic.github.io
+    contacts: py-typedlogic
+    github_stars: 12
+  isamplesorg/metadata:
+    title: metadata
+    description: Collation of metadata examples and notes for the project
+    github_repo: https://github.com/isamplesorg/metadata
+    domain: Computer Science
+    status: active
+    topics:
+    - linkml
+    - metadata
+    - physical-specimen
+    schema_url: https://isamplesorg.github.io/metadata/
+    contacts: isamplesorg
+    github_stars: 11
+  cmungall/json-flattener:
+    title: json-flattener
+    description: Python library for denormalizing nested dicts or json objects to tables and back
+    github_repo: https://github.com/cmungall/json-flattener
+    license: BSD-3-Clause
+    domain: Computer Science
+    status: active
+    topics:
+    - dataframes
+    - denormalization
+    - linkml
+    - pandas
+    schema_url: https://cmungall.github.io/json-flattener/
+    contacts: cmungall
+    github_stars: 10
+  Netbeheer-Nederland/im-tc57cim:
+    title: im-tc57cim
+    description: The CIM information model represented as LinkML schemas.
+    github_repo: https://github.com/Netbeheer-Nederland/im-tc57cim
+    license: Apache-2.0
+    domain: Computer Science
+    status: active
+    schema_url: https://netbeheer-nederland.github.io/docs/im-tc57cim/latest
+    contacts: Netbeheer-Nederland
+    github_stars: 8
+  cmungall/linkml-phenopackets:
+    title: linkml-phenopackets
+    description: EXPERIMENTAL rendering of phenopackets in linkml
+    github_repo: https://github.com/cmungall/linkml-phenopackets
+    domain: Computer Science
+    status: maintenance
+    topics:
+    - human-phenotype-ontology
+    - linkml
+    - metadata
+    - monarchinitiative
+    - phenopackets
+    schema_url: https://cmungall.github.io/linkml-phenopackets/
+    contacts: cmungall
+    github_stars: 8
+  GX4FM-Base-X/SemanticDataLink:
+    title: SemanticDataLink
+    description: The Semantic Data Link repository hosts a Streamlit-based web application designed for managing and augmenting
+      data schemas using LinkML (Linked Data Modeling Language). This tool provides a user-friendly interface for uploading,
+      validating, and enhancing data schemas with additional layers of contextual or definitional metadata, known as overlays.
+    github_repo: https://github.com/GX4FM-Base-X/SemanticDataLink
+    license: Apache-2.0
+    domain: Computer Science
+    status: active
+    schema_url: https://gx4fm-base-x.github.io/SemanticDataLink/
+    contacts: GX4FM-Base-X
+    github_stars: 8
+  HendrikBorgelt/DCAT-ap_as_LinkML_template:
+    title: DCAT-ap_as_LinkML_template
+    github_repo: https://github.com/HendrikBorgelt/DCAT-ap_as_LinkML_template
+    license: MIT
+    domain: Computer Science
+    status: active
+    schema_url: https://hendrikborgelt.github.io/DCAT-ap_as_LinkML_template/
+    contacts: HendrikBorgelt
+    github_stars: 6
+  biodatamodels/gff-schema:
+    title: gff-schema
+    description: LinkML schema for GFF3, the Genome Feature Format
+    github_repo: https://github.com/biodatamodels/gff-schema
+    domain: Biology
+    status: inactive
+    topics:
+    - bioinformatics
+    - formats
+    - genomics
+    - gff
+    - linkml
+    schema_url: https://biodatamodels.github.io/gff-schema/
+    contacts: biodatamodels
+    github_stars: 6
+  microbiomedata/sample-annotator:
+    title: sample-annotator
+    description: NMDC Sample Annotator
+    github_repo: https://github.com/microbiomedata/sample-annotator
+    domain: Biology
+    status: active
+    topics:
+    - annotator
+    - environment-ontology
+    - environmentontology
+    - envo
+    - linkml
+    schema_url: https://microbiomedata.github.io/sample-annotator/static/intro.html
+    contacts: microbiomedata
+    github_stars: 5
+  bridge2ai/data-sheets-schema:
+    title: data-sheets-schema
+    description: Datasheets for Datasets, as LinkML Schema
+    github_repo: https://github.com/bridge2ai/data-sheets-schema
+    license: MIT
+    domain: Computer Science
+    status: active
+    schema_url: https://bridge2ai.github.io/data-sheets-schema/
+    contacts: bridge2ai
+    github_stars: 4
+  Netbeheer-Nederland/gen-linkml-profile:
+    title: gen-linkml-profile
+    description: LinkML schema profiler.
+    github_repo: https://github.com/Netbeheer-Nederland/gen-linkml-profile
+    domain: Computer Science
+    status: active
+    schema_url: https://netbeheer-nederland.github.io/gen-linkml-profile/
+    contacts: Netbeheer-Nederland
+    github_stars: 4
+  Netbeheer-Nederland/im-cgmes:
+    title: im-cgmes
+    description: ENTSO-E CGMES profiles represented as LinkML schemas.
+    github_repo: https://github.com/Netbeheer-Nederland/im-cgmes
+    license: Apache-2.0
+    domain: Computer Science
+    status: active
+    schema_url: https://netbeheer-nederland.github.io/im-cgmes/
+    contacts: Netbeheer-Nederland
+    github_stars: 4
+  berkeleybop/kgviz-model:
+    title: kgviz-model
+    description: Schema for configurations / stylesheets for visualizing ontology and KGs
+    github_repo: https://github.com/berkeleybop/kgviz-model
+    domain: Biology
+    status: inactive
+    topics:
+    - graphviz
+    - javascript
+    - kgs
+    - linkml
+    - node
+    schema_url: https://berkeleybop.github.io/kgviz-model/
+    contacts: berkeleybop
+    github_stars: 4
+  p2p-ld/linkml-activitypub:
+    title: linkml-activitypub
+    description: LinkML Schema representation of ActivityPub
+    github_repo: https://github.com/p2p-ld/linkml-activitypub
+    license: GPL-3.0
+    domain: Computer Science
+    status: maintenance
+    schema_url: https://p2p-ld.github.io/linkml-activitypub/
+    contacts: p2p-ld
+    github_stars: 4
+  cmungall/mianct-schema:
+    title: mianct-schema
+    description: Minimal Information About a New Cell Type
+    github_repo: https://github.com/cmungall/mianct-schema
+    domain: Computer Science
+    status: inactive
+    topics:
+    - anatomy
+    - cell-ontology
+    - cell-types
+    - checklist
+    - json-schema
+    schema_url: https://cmungall.github.io/mianct-schema/
+    contacts: cmungall
+    github_stars: 4
+  cmdoret/mtg_ontology:
+    title: mtg_ontology
+    description: An ontology describing cards in Magic The Gathering.
+    github_repo: https://github.com/cmdoret/mtg_ontology
+    license: GPL-3.0
+    domain: Computer Science
+    status: active
+    topics:
+    - linkml
+    - mtg
+    - ontology
+    - rdf
+    schema_url: https://cmdoret.github.io/mtg_ontology/
+    contacts: cmdoret
+    github_stars: 4
+  p2p-ld/nwb-linkml:
+    title: nwb-linkml
+    description: Translating NWB schema language to linkml
+    github_repo: https://github.com/p2p-ld/nwb-linkml
+    license: GPL-3.0
+    domain: Computer Science
+    status: maintenance
+    schema_url: https://nwb-linkml.readthedocs.io
+    contacts: p2p-ld
+    github_stars: 4
+  biodatamodels/ontology-associations:
+    title: ontology-associations
+    description: schema for ontology associations
+    github_repo: https://github.com/biodatamodels/ontology-associations
+    domain: Biology
+    status: inactive
+    topics:
+    - annotation
+    - bioinformatics
+    - datamodels
+    - formats
+    - gafs
+    schema_url: http://biodatamodels.github.io/ontology-associations
+    contacts: biodatamodels
+    github_stars: 4
+  Netbeheer-Nederland/cim-to-linkml:
+    title: cim-to-linkml
+    description: Generates LinkML schemas for packages in the CIM information model.
+    github_repo: https://github.com/Netbeheer-Nederland/cim-to-linkml
+    domain: Computer Science
+    status: active
+    schema_url: https://netbeheer-nederland.github.io/cim-to-linkml/
+    contacts: Netbeheer-Nederland
+    github_stars: 3
+  include-dcc/include-linkml:
+    title: include-linkml
+    description: LinkML Schema for INCLUDE DCC
+    github_repo: https://github.com/include-dcc/include-linkml
+    license: MIT
+    domain: Computer Science
+    status: active
+    schema_url: https://include-dcc.github.io/include-linkml/
+    contacts: include-dcc
+    github_stars: 3
+  FAIR-MI/miiid-schema:
+    title: miiid-schema
+    description: A metadata schema for the Minimum Information about Intermicrobial Interaction Data (MIIID) using LinkML
+    github_repo: https://github.com/FAIR-MI/miiid-schema
+    license: GPL-3.0
+    domain: Computer Science
+    status: inactive
+    topics:
+    - fair-data
+    - linkml
+    - linkml-schema
+    - metadata-standard
+    - microbial-ecology
+    schema_url: https://fair-mi.github.io/miiid-schema/
+    contacts: FAIR-MI
+    github_stars: 3
+  bridge2ai/model-card-schema:
+    title: model-card-schema
+    description: LinkML rendering of model cards
+    github_repo: https://github.com/bridge2ai/model-card-schema
+    license: MIT
+    domain: Computer Science
+    status: active
+    topics:
+    - ai
+    - bridge2ai
+    - deep-learning
+    - linkml
+    - metadata
+    schema_url: https://bridge2ai.github.io/model-card-schema/
+    contacts: bridge2ai
+    github_stars: 3
+  nfdi4cat/pid4cat-model:
+    title: pid4cat-model
+    description: Handle-based PIDs with a rich LinkML metadata model for resources in catalysis (PID4Cat)
+    github_repo: https://github.com/nfdi4cat/pid4cat-model
+    license: MIT
+    domain: Computer Science
+    status: active
+    topics:
+    - handles
+    - linkml
+    - linkml-schema
+    - persistent-identifiers
+    schema_url: https://nfdi4cat.github.io/pid4cat-model/
+    contacts: nfdi4cat
+    github_stars: 3
+  bioenergy-research-centers/brc-schema:
+    title: brc-schema
+    description: LinkML schema repo for bioenergy.org data integration
+    github_repo: https://github.com/bioenergy-research-centers/brc-schema
+    license: NOASSERTION
+    domain: Biology
+    status: active
+    topics:
+    - linkml-schema
+    schema_url: https://bioenergy-research-centers.github.io/brc-schema/
+    contacts: bioenergy-research-centers
+    github_stars: 2
+  Sveino/CIM4Diagram:
+    title: CIM4Diagram
+    description: CIM use of LinkML for creating vocabulary and profile for Diagram
+    github_repo: https://github.com/Sveino/CIM4Diagram
+    license: Apache-2.0
+    domain: Computer Science
+    status: active
+    schema_url: https://sveino.github.io/CIM4Diagram/
+    contacts: Sveino
+    github_stars: 2
+  cdisc-org/DataExchange-ODM-LinkML:
+    title: DataExchange-ODM-LinkML
+    description: LinkML related work for ODMv2
+    github_repo: https://github.com/cdisc-org/DataExchange-ODM-LinkML
+    license: MIT
+    domain: Computer Science
+    status: inactive
+    topics:
+    - data-exchange-standard
+    schema_url: https://cdisc-org.github.io/DataExchange-ODM-LinkML/
+    contacts: cdisc-org
+    github_stars: 2
+  alliance-genome/DEPRECATED_agr_persistent_schema:
+    title: DEPRECATED_agr_persistent_schema
+    description: Repository using linkml templating system for generating Alliance of Genome Resources persistent database
+      schema
+    github_repo: https://github.com/alliance-genome/DEPRECATED_agr_persistent_schema
+    domain: Computer Science
+    status: inactive
+    topics:
+    - linkml
+    schema_url: https://alliance-genome.github.io/DEPRECATED_agr_persistent_schema/
+    contacts: alliance-genome
+    github_stars: 2
+  Knowledge-Graph-Hub/neat-ml-schema:
+    title: neat-ml-schema
+    description: A repository that contains the LinkML model for specifying graph ML pipelines
+    github_repo: https://github.com/Knowledge-Graph-Hub/neat-ml-schema
+    license: MIT
+    domain: Computer Science
+    status: maintenance
+    schema_url: https://knowledge-graph-hub.github.io/neat-ml-schema/
+    contacts: Knowledge-Graph-Hub
+    github_stars: 2
+  OpenCloning/OpenCloning_LinkML:
+    title: OpenCloning_LinkML
+    description: A LinkML data model for OpenCloning
+    github_repo: https://github.com/OpenCloning/OpenCloning_LinkML
+    license: MIT
+    domain: Computer Science
+    status: active
+    schema_url: https://opencloning.github.io/OpenCloning_LinkML/
+    contacts: OpenCloning
+    github_stars: 2
+  adhollander/PPODLinkML:
+    title: PPODLinkML
+    description: A LinkML representation of the PPOD schema
+    github_repo: https://github.com/adhollander/PPODLinkML
+    license: CC0-1.0
+    domain: Computer Science
+    status: maintenance
+    schema_url: https://adhollander.github.io/PPODLinkML/
+    contacts: adhollander
+    github_stars: 2
+  sepio-framework/sepio-linkml:
+    title: sepio-linkml
+    description: LinkML-based specification of the SEPIO information model.
+    github_repo: https://github.com/sepio-framework/sepio-linkml
+    license: Apache-2.0
+    domain: Computer Science
+    status: active
+    schema_url: https://sepio-framework.github.io/sepio-linkml/
+    contacts: sepio-framework
+    github_stars: 2
+  tmprd/valve-linkml:
+    title: valve-linkml
+    description: Convert LinkML schema + data to VALVE tables and vice versa
+    github_repo: https://github.com/tmprd/valve-linkml
+    license: BSD-3-Clause
+    domain: Computer Science
+    status: inactive
+    schema_url: https://tmprd.github.io/valve-linkml/
+    contacts: tmprd
+    github_stars: 2
+  DailyDreaming/linkml-aind-model:
+    title: linkml-aind-model
+    description: Translate pydantic-based schemas from python modules to LinkML.
+    github_repo: https://github.com/DailyDreaming/linkml-aind-model
+    domain: Computer Science
+    status: inactive
+    schema_url: https://dailydreaming.github.io/linkml-aind-model/
+    contacts: DailyDreaming
+    github_stars: 1
+  cancerDHC/sheet2linkml:
+    title: sheet2linkml
+    description: Python package for conversion of Google Sheet to LinkML for CCDH
+    github_repo: https://github.com/cancerDHC/sheet2linkml
+    license: Apache-2.0
+    domain: Computer Science
+    status: inactive
+    schema_url: https://cancerdhc.github.io/sheet2linkml/
+    contacts: cancerDHC
+    github_stars: 1
