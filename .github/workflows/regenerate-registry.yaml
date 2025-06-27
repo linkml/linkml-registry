@@ -3,9 +3,10 @@ name: Regenerate LinkML Registry Artifacts
 # Controls when the action will run. Triggers the workflow on push
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '0 7 * * 1'  # Weekly on Monday at 2 AM UTC
+  release:
+    types: [created]
   workflow_dispatch:
     types: trigger-build-artifacts
 
@@ -38,7 +39,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          make discover
+          mkdir -p docs
+          touch docs/.nojekyll
           make gendoc
           if [ $? -eq 0 ]; then
             git config --local user.email "action@github.com"
@@ -49,10 +51,5 @@ jobs:
           else
             echo "'make discover' failed to finish successfully"
           fi
-      - name: Build documentation.
-        run: |
-          mkdir -p docs
-          touch docs/.nojekyll
-          make gendoc
           ([ ! -f docs/about.md ] && cp src/docs/about.md docs/) || true
           uv run mkdocs gh-deploy
