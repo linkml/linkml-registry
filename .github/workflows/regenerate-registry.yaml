@@ -58,4 +58,4 @@ jobs:
             echo "'make gendoc' failed to finish successfully"
           fi
           ([ ! -f docs/about.md ] && cp src/docs/about.md docs/) || true
-          uv run mkdocs gh-deploy
+          uv run mkdocs gh-deploy --force
