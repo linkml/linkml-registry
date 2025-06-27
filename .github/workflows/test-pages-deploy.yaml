@@ -1,0 +1,49 @@
+name: Preview documentation build
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          version: "latest"
+
+      - name: Set up Python 3
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: uv install
+
+      - name: Derive files from sources
+        run: |
+          make squeaky-clean all
+
+      - name: Generate web-based documentation
+        run: |
+          mkdir -p docs
+          touch docs/.nojekyll
+          make gendoc
+          uv run mkdocs build -d site
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: site/
+          preview-branch: gh-pages
