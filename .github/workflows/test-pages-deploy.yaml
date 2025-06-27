@@ -31,10 +31,6 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
-      - name: Derive files from sources
-        run: |
-          make squeaky-clean all
-
       - name: Generate web-based documentation
         run: |
           mkdir -p docs
