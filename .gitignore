@@ -19,3 +19,4 @@ build/
 dist/
 wheels/
 *.egg-info
+.claude

@@ -1,10 +1,22 @@
-site_name: "LinkML Registry"
+site_name: "LinkML Schema Registry"
 theme:
-  name: readthedocs
+  name: material
+  palette:
+    scheme: teal
+    primary: navy
+  logo: images/logo.jpg
+plugins:
+  - search
+  - mermaid2
 nav:
-  - Home: home.md
-  - Registry: registry.md
-  - Index: index.md
-  - Credits: credits.md
+  # - Home: build-details.md
+  - Overview: index.md
+  - View Registry: registry.md
+  - Registry Build Details: build-details.md
+  - Registry Schema: schema.md
+extra:
+  analytics:
+    provider: google
+    property: G-J23SCD6JB8
 site_url: https://linkml.github.io/linkml-registry/
 repo_url: https://github.com/linkml/linkml-registry
