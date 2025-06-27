@@ -1,7 +1,7 @@
 name: LinkML-Discovery-Registry
 homepage: https://github.com/linkml/linkml-registry
 title: LinkML Registry (GitHub Search Discovery)
-description: LinkML projects discovered via GitHub Search API. Generated on 2025-06-27 01:02:18
+description: LinkML projects discovered via GitHub Search API. Generated on 2025-06-27 17:06:08
 entries:
   monarch-initiative/ontogpt:
     title: ontogpt
@@ -620,6 +620,15 @@ entries:
     schema_url: https://monarch-initiative.github.io/mondo-ingest/
     contacts: monarch-initiative
     github_stars: 7
+  microbiomedata/nmdc-runtime:
+    title: nmdc-runtime
+    description: Runtime system for NMDC data management and orchestration
+    github_repo: https://github.com/microbiomedata/nmdc-runtime
+    domain: Infrastructure
+    status: unknown
+    schema_url: https://microbiomedata.github.io/nmdc-runtime/
+    contacts: microbiomedata
+    github_stars: 7
   HendrikBorgelt/DCAT-ap_as_LinkML_template:
     title: DCAT-ap_as_LinkML_template
     github_repo: https://github.com/HendrikBorgelt/DCAT-ap_as_LinkML_template
@@ -1116,6 +1125,15 @@ entries:
     schema_url: https://knowledge-graph-hub.github.io/neat-ml-schema/
     contacts: Knowledge-Graph-Hub
     github_stars: 2
+  microbiomedata/nmdc-metadata:
+    title: nmdc-metadata
+    description: Managing metadata and policy around metadata in NMDC
+    github_repo: https://github.com/microbiomedata/nmdc-metadata
+    domain: Government
+    status: unknown
+    schema_url: https://microbiomedata.github.io/nmdc-metadata/
+    contacts: microbiomedata
+    github_stars: 2
   OpenCloning/OpenCloning_LinkML:
     title: OpenCloning_LinkML
     description: A LinkML data model for OpenCloning
@@ -1135,6 +1153,15 @@ entries:
     status: maintenance
     schema_url: https://adhollander.github.io/PPODLinkML/
     contacts: adhollander
+    github_stars: 2
+  microbiomedata/refscan:
+    title: refscan
+    description: Command-line program that scans NMDC database for referential integrity violations
+    github_repo: https://github.com/microbiomedata/refscan
+    domain: Schema
+    status: unknown
+    schema_url: https://microbiomedata.github.io/refscan/
+    contacts: microbiomedata
     github_stars: 2
   AV-EFI/sdk-adlib-exporter:
     title: sdk-adlib-exporter
@@ -1252,6 +1279,15 @@ entries:
     schema_url: https://kgerring.github.io/linkml_tools/
     contacts: KGerring
     github_stars: 1
+  microbiomedata/metadata_converter:
+    title: metadata_converter
+    description: Conversion of schemas/templates/metadata to biolinkml
+    github_repo: https://github.com/microbiomedata/metadata_converter
+    domain: Biology
+    status: unknown
+    schema_url: https://microbiomedata.github.io/metadata_converter/
+    contacts: microbiomedata
+    github_stars: 1
   kjappelbaum/mofdscribe-schema:
     title: mofdscribe-schema
     github_repo: https://github.com/kjappelbaum/mofdscribe-schema
@@ -1312,6 +1348,14 @@ entries:
     status: unknown
     schema_url: https://sensein.github.io/structsense/
     contacts: sensein
+    github_stars: 1
+  microbiomedata/submission-schema:
+    title: submission-schema
+    github_repo: https://github.com/microbiomedata/submission-schema
+    domain: Schema
+    status: unknown
+    schema_url: https://microbiomedata.github.io/submission-schema/
+    contacts: microbiomedata
     github_stars: 1
   timsbiomed/tccm-model-lite:
     title: tccm-model-lite
@@ -1585,14 +1629,6 @@ entries:
     status: unknown
     schema_url: https://everycure-org.github.io/matrix-schema/
     contacts: everycure-org
-  microbiomedata/metadata_converter:
-    title: metadata_converter
-    description: Conversion of schemas/templates/metadata to biolinkml
-    github_repo: https://github.com/microbiomedata/metadata_converter
-    domain: Biology
-    status: unknown
-    schema_url: https://microbiomedata.github.io/metadata_converter/
-    contacts: microbiomedata
   MontpellierRessourcesImagerie/microscopemetrics-schema:
     title: microscopemetrics-schema
     github_repo: https://github.com/MontpellierRessourcesImagerie/microscopemetrics-schema
@@ -1615,22 +1651,6 @@ entries:
     status: unknown
     schema_url: https://sdsc-ordes.github.io/modos-schema/
     contacts: sdsc-ordes
-  microbiomedata/nmdc-metadata:
-    title: nmdc-metadata
-    description: Managing metadata and policy around metadata in NMDC
-    github_repo: https://github.com/microbiomedata/nmdc-metadata
-    domain: Government
-    status: unknown
-    schema_url: https://microbiomedata.github.io/nmdc-metadata/
-    contacts: microbiomedata
-  microbiomedata/nmdc-runtime:
-    title: nmdc-runtime
-    description: Runtime system for NMDC data management and orchestration
-    github_repo: https://github.com/microbiomedata/nmdc-runtime
-    domain: Infrastructure
-    status: unknown
-    schema_url: https://microbiomedata.github.io/nmdc-runtime/
-    contacts: microbiomedata
   cmungall/obo-metadata:
     title: obo-metadata
     description: EXPERIMENTAL obo metadata repo
@@ -1718,14 +1738,6 @@ entries:
     status: unknown
     schema_url: https://leibniz-psychology.github.io/psyndex2linkeddata/
     contacts: leibniz-psychology
-  microbiomedata/refscan:
-    title: refscan
-    description: Command-line program that scans NMDC database for referential integrity violations
-    github_repo: https://github.com/microbiomedata/refscan
-    domain: Schema
-    status: unknown
-    schema_url: https://microbiomedata.github.io/refscan/
-    contacts: microbiomedata
   liuji1031/research-paper-schema:
     title: research-paper-schema
     github_repo: https://github.com/liuji1031/research-paper-schema
@@ -1764,13 +1776,6 @@ entries:
     status: unknown
     schema_url: https://clingen-data-model.github.io/sepio-models/
     contacts: clingen-data-model
-  microbiomedata/submission-schema:
-    title: submission-schema
-    github_repo: https://github.com/microbiomedata/submission-schema
-    domain: Schema
-    status: unknown
-    schema_url: https://microbiomedata.github.io/submission-schema/
-    contacts: microbiomedata
   iarpa-felix/synbio-schema:
     title: synbio-schema
     description: A schema for synthetic biology, inspired by IARPA FELIX
