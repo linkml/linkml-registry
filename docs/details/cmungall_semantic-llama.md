@@ -12,7 +12,7 @@
 
 **Domain:** Computer Science
 
-**Status:** maintenance
+**Status:** active
 
 **Topics:** ai, knowledge-extraction, language-models, linkml, oaklib
 
