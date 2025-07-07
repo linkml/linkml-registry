@@ -8,12 +8,12 @@
 
 **Schema URL:** https://dalito.github.io/linkml-project-copier/
 
-
+**License:** MIT
 
 **Domain:** Computer Science
 
-**Status:** unknown
+**Status:** active
 
-
+**Topics:** copier, linkml, schema, template
 
 **Contacts:** dalito
