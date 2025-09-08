@@ -1,7 +1,7 @@
 name: LinkML-Discovery-Registry
 homepage: https://github.com/linkml/linkml-registry
 title: LinkML Registry (GitHub Search Discovery)
-description: LinkML projects discovered via GitHub Search API. Generated on 2025-09-01 07:08:51
+description: LinkML projects discovered via GitHub Search API. Generated on 2025-09-08 07:08:31
 entries:
   monarch-initiative/ontogpt:
     title: ontogpt
@@ -11,7 +11,7 @@ entries:
     status: unknown
     schema_url: https://monarch-initiative.github.io/ontogpt/
     contacts: monarch-initiative
-    github_stars: 723
+    github_stars: 725
   pysemtec/semantic-python-overview:
     title: semantic-python-overview
     description: (subjective) overview of projects which are related both to python and semantic technologies (RDF, OWL, Reasoning,
@@ -21,7 +21,7 @@ entries:
     status: unknown
     schema_url: https://pysemtec.github.io/semantic-python-overview/
     contacts: pysemtec
-    github_stars: 533
+    github_stars: 535
   ozekik/awesome-ontology:
     title: awesome-ontology
     description: A curated list of ontology things
@@ -30,7 +30,7 @@ entries:
     status: unknown
     schema_url: https://ozekik.github.io/awesome-ontology/
     contacts: ozekik
-    github_stars: 411
+    github_stars: 414
   INCATools/ontology-development-kit:
     title: ontology-development-kit
     description: Ontology lifecycle management
@@ -39,7 +39,7 @@ entries:
     status: unknown
     schema_url: https://incatools.github.io/ontology-development-kit/
     contacts: INCATools
-    github_stars: 267
+    github_stars: 268
   monarch-initiative/mondo:
     title: mondo
     description: Mondo Disease Ontology
@@ -48,7 +48,7 @@ entries:
     status: unknown
     schema_url: https://monarch-initiative.github.io/mondo/
     contacts: monarch-initiative
-    github_stars: 265
+    github_stars: 266
   InsightSoftwareConsortium/ITK-Wasm:
     title: ITK-Wasm
     description: High performance spatial analysis in a web browser and across programming languages and hardware architectures
@@ -89,7 +89,7 @@ entries:
     - mapping-tools
     schema_url: https://mapping-commons.github.io/sssom/
     contacts: mapping-commons
-    github_stars: 172
+    github_stars: 173
   INCATools/ontology-access-kit:
     title: ontology-access-kit
     description: 'Ontology Access Kit: A python library and command line application for working with ontologies'
@@ -144,7 +144,7 @@ entries:
     status: unknown
     schema_url: https://ibm.github.io/risk-atlas-nexus/
     contacts: IBM
-    github_stars: 96
+    github_stars: 97
   Knowledge-Graph-Hub/kg-covid-19:
     title: kg-covid-19
     description: An instance of KG Hub to produce a knowledge graph for COVID-19 response.
@@ -171,7 +171,7 @@ entries:
     status: unknown
     schema_url: https://w3c-cg.github.io/awesome-semantic-shapes/
     contacts: w3c-cg
-    github_stars: 59
+    github_stars: 60
   EMSL-Computing/CoreMS:
     title: CoreMS
     description: CoreMS is a comprehensive mass spectrometry software framework
@@ -213,6 +213,15 @@ entries:
     schema_url: https://mapping-commons.github.io/sssom-py/index.html#
     contacts: mapping-commons
     github_stars: 54
+  hdmf-dev/hdmf:
+    title: hdmf
+    description: The Hierarchical Data Modeling Framework
+    github_repo: https://github.com/hdmf-dev/hdmf
+    domain: Schema
+    status: unknown
+    schema_url: https://hdmf-dev.github.io/hdmf/
+    contacts: hdmf-dev
+    github_stars: 52
   GenomicsStandardsConsortium/mixs:
     title: mixs
     description: "Minimum Information about any (X) Sequence\u201D (MIxS) specification"
@@ -222,24 +231,6 @@ entries:
     schema_url: https://genomicsstandardsconsortium.github.io/mixs/
     contacts: GenomicsStandardsConsortium
     github_stars: 49
-  geneontology/go-site:
-    title: go-site
-    description: A collection of metadata, tools, and files associated with the Gene Ontology public web presence.
-    github_repo: https://github.com/geneontology/go-site
-    domain: Government
-    status: unknown
-    schema_url: https://geneontology.github.io/go-site/
-    contacts: geneontology
-    github_stars: 47
-  oist/optinist:
-    title: optinist
-    description: calcium imaging pipeline tool
-    github_repo: https://github.com/oist/optinist
-    domain: Schema
-    status: unknown
-    schema_url: https://oist.github.io/optinist/
-    contacts: oist
-    github_stars: 47
   INCATools/semantic-sql:
     title: semantic-sql
     description: SQL and SQLite builds of OWL ontologies
@@ -256,6 +247,15 @@ entries:
     schema_url: https://incatools.github.io/semantic-sql/
     contacts: INCATools
     github_stars: 47
+  geneontology/go-site:
+    title: go-site
+    description: A collection of metadata, tools, and files associated with the Gene Ontology public web presence.
+    github_repo: https://github.com/geneontology/go-site
+    domain: Government
+    status: unknown
+    schema_url: https://geneontology.github.io/go-site/
+    contacts: geneontology
+    github_stars: 46
   microbiomedata/nmdc-schema:
     title: nmdc-schema
     description: National Microbiome Data Collaborative (NMDC) unified data model
@@ -289,7 +289,7 @@ entries:
     status: unknown
     schema_url: https://enola-dev.github.io/enola/
     contacts: enola-dev
-    github_stars: 39
+    github_stars: 40
   berkeleybop/artificial-intelligence-ontology:
     title: artificial-intelligence-ontology
     description: An ontology modeling classes and relationships describing deep learning networks, their component layers
@@ -316,14 +316,6 @@ entries:
     schema_url: https://cmungall.github.io/semantic-llama/
     contacts: cmungall
     github_stars: 28
-  everycure-org/matrix:
-    title: matrix
-    github_repo: https://github.com/everycure-org/matrix
-    domain: Schema
-    status: unknown
-    schema_url: https://everycure-org.github.io/matrix/
-    contacts: everycure-org
-    github_stars: 24
   NeurodataWithoutBorders/nwb_hackathons:
     title: nwb_hackathons
     description: Repository for collecting materials from nwb hackathons
@@ -390,6 +382,15 @@ entries:
     schema_url: https://monarch-initiative.github.io/monarch-ingest/
     contacts: monarch-initiative
     github_stars: 19
+  Knowledge-Graph-Hub/kg-registry:
+    title: kg-registry
+    description: A simple registry for KGHub projects
+    github_repo: https://github.com/Knowledge-Graph-Hub/kg-registry
+    domain: Schema
+    status: unknown
+    schema_url: https://knowledge-graph-hub.github.io/kg-registry/
+    contacts: Knowledge-Graph-Hub
+    github_stars: 18
   INCATools/kgcl-rdflib:
     title: kgcl-rdflib
     description: Tools for working with KGCL
@@ -501,15 +502,6 @@ entries:
     schema_url: https://py-typedlogic.github.io
     contacts: py-typedlogic
     github_stars: 13
-  bridge2ai/b2ai-standards-registry:
-    title: b2ai-standards-registry
-    description: Bridge2AI Standards Registry data models, API specification, and other documentation.
-    github_repo: https://github.com/bridge2ai/b2ai-standards-registry
-    domain: Computer Science
-    status: unknown
-    schema_url: https://bridge2ai.github.io/b2ai-standards-registry/
-    contacts: bridge2ai
-    github_stars: 12
   alliance-genome/agr_curation_schema:
     title: agr_curation_schema
     description: Schema repository for the Alliance of Genome Resources persistent data store
@@ -562,7 +554,7 @@ entries:
     status: unknown
     schema_url: https://stroemphi.github.io/dcat-4C-ap/
     contacts: StroemPhi
-    github_stars: 8
+    github_stars: 9
   Netbeheer-Nederland/im-tc57cim:
     title: im-tc57cim
     description: The CIM information model represented as LinkML schemas.
@@ -588,24 +580,6 @@ entries:
     schema_url: https://cmungall.github.io/linkml-phenopackets/
     contacts: cmungall
     github_stars: 8
-  BIH-CEI/rd-cdm:
-    title: rd-cdm
-    description: Repo for the ontology-based rare disease common data model harmonising international registry use, FHIR,
-      and Phenopackets
-    github_repo: https://github.com/BIH-CEI/rd-cdm
-    domain: Schema
-    status: unknown
-    schema_url: https://bih-cei.github.io/rd-cdm/
-    contacts: BIH-CEI
-    github_stars: 8
-  psychoinformatics-de/datalad-concepts:
-    title: datalad-concepts
-    github_repo: https://github.com/psychoinformatics-de/datalad-concepts
-    domain: Schema
-    status: unknown
-    schema_url: https://psychoinformatics-de.github.io/datalad-concepts/
-    contacts: psychoinformatics-de
-    github_stars: 7
   SovereignCloudStack/gx-credential-generator:
     title: gx-credential-generator
     description: Tools for creating Gaia-X Credentials (OpenStack, k8s, ...)
@@ -614,6 +588,14 @@ entries:
     status: unknown
     schema_url: https://sovereigncloudstack.github.io/gx-credential-generator/
     contacts: SovereignCloudStack
+    github_stars: 7
+  Knowledge-Graph-Hub/knowledge-graph-hub.github.io:
+    title: knowledge-graph-hub.github.io
+    github_repo: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
+    domain: Schema
+    status: unknown
+    schema_url: https://knowledge-graph-hub.github.io/knowledge-graph-hub.github.io/
+    contacts: Knowledge-Graph-Hub
     github_stars: 7
   monarch-initiative/monarch-documentation:
     title: monarch-documentation
@@ -677,6 +659,16 @@ entries:
     - linkml
     schema_url: https://biodatamodels.github.io/gff-schema/
     contacts: biodatamodels
+    github_stars: 6
+  PNNL-CompBio/srpAnalytics:
+    title: srpAnalytics
+    description: This repository contains the code necessary to process any new data for the Superfund Research Program Analytics
+      Portal.
+    github_repo: https://github.com/PNNL-CompBio/srpAnalytics
+    domain: Computer Science
+    status: unknown
+    schema_url: https://pnnl-compbio.github.io/srpAnalytics/
+    contacts: PNNL-CompBio
     github_stars: 6
   govuk-one-login/data-vocab:
     title: data-vocab
@@ -1025,14 +1017,6 @@ entries:
     schema_url: https://timsbiomed.github.io/TermCI-model/
     contacts: timsbiomed
     github_stars: 3
-  cmungall/ai-gene-review:
-    title: ai-gene-review
-    github_repo: https://github.com/cmungall/ai-gene-review
-    domain: Computer Science
-    status: unknown
-    schema_url: https://cmungall.github.io/ai-gene-review/
-    contacts: cmungall
-    github_stars: 2
   krishnapraveen7/alpha-repos:
     title: alpha-repos
     github_repo: https://github.com/krishnapraveen7/alpha-repos
@@ -1058,6 +1042,14 @@ entries:
     status: active
     schema_url: https://ber-data.github.io/bertron-schema/
     contacts: ber-data
+    github_stars: 2
+  BioImage-Archive/bia-mifa-models:
+    title: bia-mifa-models
+    github_repo: https://github.com/BioImage-Archive/bia-mifa-models
+    domain: Schema
+    status: unknown
+    schema_url: https://bioimage-archive.github.io/bia-mifa-models/
+    contacts: BioImage-Archive
     github_stars: 2
   galaxyproject/brc-analytics:
     title: brc-analytics
@@ -1089,6 +1081,24 @@ entries:
     schema_url: https://sveino.github.io/CIM4Diagram/
     contacts: Sveino
     github_stars: 2
+  WengLab-InformaticsResearch/cohd_api:
+    title: cohd_api
+    github_repo: https://github.com/WengLab-InformaticsResearch/cohd_api
+    domain: Schema
+    status: unknown
+    schema_url: https://wenglab-informaticsresearch.github.io/cohd_api/
+    contacts: WengLab-InformaticsResearch
+    github_stars: 2
+  AV-EFI/collections2efi:
+    title: collections2efi
+    description: Code used at Stiftung Deutsche Kinemathek to register AVefi compliant PIDs for collections on record in their
+      local Adlib database
+    github_repo: https://github.com/AV-EFI/collections2efi
+    domain: Schema
+    status: unknown
+    schema_url: https://av-efi.github.io/collections2efi/
+    contacts: AV-EFI
+    github_stars: 2
   cdisc-org/DataExchange-ODM-LinkML:
     title: DataExchange-ODM-LinkML
     description: LinkML related work for ODMv2
@@ -1113,15 +1123,6 @@ entries:
     schema_url: https://alliance-genome.github.io/DEPRECATED_agr_persistent_schema/
     contacts: alliance-genome
     github_stars: 2
-  oral-health-and-disease-ontologies/DFA-Study:
-    title: DFA-Study
-    description: Repository for resources related to dental fear and anxiety (DFA) studies.
-    github_repo: https://github.com/oral-health-and-disease-ontologies/DFA-Study
-    domain: Schema
-    status: unknown
-    schema_url: https://oral-health-and-disease-ontologies.github.io/DFA-Study/
-    contacts: oral-health-and-disease-ontologies
-    github_stars: 2
   NCATSTranslator/Explanatory-Agent:
     title: Explanatory-Agent
     github_repo: https://github.com/NCATSTranslator/Explanatory-Agent
@@ -1138,14 +1139,6 @@ entries:
     status: unknown
     schema_url: https://slabstech.github.io/gaganyatri.in/
     contacts: slabstech
-    github_stars: 2
-  pkalita-lbl/linkml-initializer:
-    title: linkml-initializer
-    github_repo: https://github.com/pkalita-lbl/linkml-initializer
-    domain: Computer Science
-    status: unknown
-    schema_url: https://pkalita-lbl.github.io/linkml-initializer/
-    contacts: pkalita-lbl
     github_stars: 2
   vladistan/linkml-pokemon:
     title: linkml-pokemon
@@ -1182,14 +1175,6 @@ entries:
     schema_url: https://microbiomedata.github.io/nmdc-metadata/
     contacts: microbiomedata
     github_stars: 2
-  hrshdhgd/ontodiff-curator:
-    title: ontodiff-curator
-    github_repo: https://github.com/hrshdhgd/ontodiff-curator
-    domain: Schema
-    status: unknown
-    schema_url: https://hrshdhgd.github.io/ontodiff-curator/
-    contacts: hrshdhgd
-    github_stars: 2
   OpenCloning/OpenCloning_LinkML:
     title: OpenCloning_LinkML
     description: A LinkML data model for OpenCloning
@@ -1210,13 +1195,22 @@ entries:
     schema_url: https://adhollander.github.io/PPODLinkML/
     contacts: adhollander
     github_stars: 2
+  Existentialist-Robot/ProcesSieve:
+    title: ProcesSieve
+    description: Agile ideation, instantiation, iteration on business processes.
+    github_repo: https://github.com/Existentialist-Robot/ProcesSieve
+    domain: Schema
+    status: unknown
+    schema_url: https://existentialist-robot.github.io/ProcesSieve/
+    contacts: Existentialist-Robot
+    github_stars: 2
   sepio-framework/sepio-linkml:
     title: sepio-linkml
     description: LinkML-based specification of the SEPIO information model.
     github_repo: https://github.com/sepio-framework/sepio-linkml
     license: Apache-2.0
     domain: Computer Science
-    status: active
+    status: maintenance
     schema_url: https://sepio-framework.github.io/sepio-linkml/
     contacts: sepio-framework
     github_stars: 2
@@ -1265,15 +1259,6 @@ entries:
     schema_url: https://cmungall.github.io/comet/
     contacts: cmungall
     github_stars: 1
-  eliteportal/data-dictionary:
-    title: data-dictionary
-    description: Data dictionary to be used with DCA
-    github_repo: https://github.com/eliteportal/data-dictionary
-    domain: Schema
-    status: unknown
-    schema_url: https://eliteportal.github.io/data-dictionary/
-    contacts: eliteportal
-    github_stars: 1
   Knowledge-Graph-Hub/kg-envpolyreg:
     title: kg-envpolyreg
     github_repo: https://github.com/Knowledge-Graph-Hub/kg-envpolyreg
@@ -1307,6 +1292,14 @@ entries:
     status: unknown
     schema_url: https://microbiomedata.github.io/metadata_converter/
     contacts: microbiomedata
+    github_stars: 1
+  MontpellierRessourcesImagerie/microscopemetrics-omero:
+    title: microscopemetrics-omero
+    github_repo: https://github.com/MontpellierRessourcesImagerie/microscopemetrics-omero
+    domain: Schema
+    status: unknown
+    schema_url: https://montpellierressourcesimagerie.github.io/microscopemetrics-omero/
+    contacts: MontpellierRessourcesImagerie
     github_stars: 1
   sdsc-ordes/modos-schema:
     title: modos-schema
@@ -1352,14 +1345,13 @@ entries:
     schema_url: https://stroemphi.github.io/NMRspec/
     contacts: StroemPhi
     github_stars: 1
-  cancerDHC/sheet2linkml:
-    title: sheet2linkml
-    description: Python package for conversion of Google Sheet to LinkML for CCDH
-    github_repo: https://github.com/cancerDHC/sheet2linkml
-    domain: Computer Science
+  morteza/omni:
+    title: omni
+    github_repo: https://github.com/morteza/omni
+    domain: Schema
     status: unknown
-    schema_url: https://cancerdhc.github.io/sheet2linkml/
-    contacts: cancerDHC
+    schema_url: https://morteza.github.io/omni/
+    contacts: morteza
     github_stars: 1
   axenov/SketchML:
     title: SketchML
@@ -1378,6 +1370,14 @@ entries:
     schema_url: https://ncats-tangerine.github.io/smpdb-beacon/
     contacts: NCATS-Tangerine
     github_stars: 1
+  microbiomedata/submission-schema:
+    title: submission-schema
+    github_repo: https://github.com/microbiomedata/submission-schema
+    domain: Schema
+    status: unknown
+    schema_url: https://microbiomedata.github.io/submission-schema/
+    contacts: microbiomedata
+    github_stars: 1
   timsbiomed/tccm-model-lite:
     title: tccm-model-lite
     github_repo: https://github.com/timsbiomed/tccm-model-lite
@@ -1386,14 +1386,13 @@ entries:
     schema_url: https://timsbiomed.github.io/tccm-model-lite/
     contacts: timsbiomed
     github_stars: 1
-  INCATools/verificado:
-    title: verificado
-    github_repo: https://github.com/INCATools/verificado
+  monarch-initiative/alliance-phenotype-association-ingest:
+    title: alliance-phenotype-association-ingest
+    github_repo: https://github.com/monarch-initiative/alliance-phenotype-association-ingest
     domain: Schema
     status: unknown
-    schema_url: https://incatools.github.io/verificado/
-    contacts: INCATools
-    github_stars: 1
+    schema_url: https://monarch-initiative.github.io/alliance-phenotype-association-ingest/
+    contacts: monarch-initiative
   alspac/alspac-data-catalogue-schema:
     title: alspac-data-catalogue-schema
     description: This repo is for the schema of alspac data catalogues and meta data for alspac data sets
@@ -1417,14 +1416,13 @@ entries:
     status: unknown
     schema_url: https://sierra-moxon.github.io/automate_mappings/
     contacts: sierra-moxon
-  seanchatmangpt/autotel:
-    title: autotel
-    description: Automated OpenTelemetry
-    github_repo: https://github.com/seanchatmangpt/autotel
-    domain: Schema
+  sierra-moxon/biolink-model-doc:
+    title: biolink-model-doc
+    github_repo: https://github.com/sierra-moxon/biolink-model-doc
+    domain: Biology
     status: unknown
-    schema_url: https://seanchatmangpt.github.io/autotel/
-    contacts: seanchatmangpt
+    schema_url: https://sierra-moxon.github.io/biolink-model-doc/
+    contacts: sierra-moxon
   diatomsRcool/biotic-interactions:
     title: biotic-interactions
     description: LinkML model for biotic interactions - designed for use with OntoGPT
@@ -1433,14 +1431,6 @@ entries:
     status: unknown
     schema_url: https://diatomsrcool.github.io/biotic-interactions/
     contacts: diatomsRcool
-  kbase/cdm-schema:
-    title: cdm-schema
-    description: Schema files for the KBase CDM
-    github_repo: https://github.com/kbase/cdm-schema
-    domain: Schema
-    status: unknown
-    schema_url: https://kbase.github.io/cdm-schema/
-    contacts: kbase
   Cellular-Semantics/cell-annotation-schema:
     title: cell-annotation-schema
     github_repo: https://github.com/Cellular-Semantics/cell-annotation-schema
@@ -1448,13 +1438,13 @@ entries:
     status: unknown
     schema_url: https://cellular-semantics.github.io/cell-annotation-schema/
     contacts: Cellular-Semantics
-  sierra-moxon/clinical-studies-schema:
-    title: clinical-studies-schema
-    github_repo: https://github.com/sierra-moxon/clinical-studies-schema
-    domain: Clinical
+  Cellular-Semantics/cellmark_schema:
+    title: cellmark_schema
+    github_repo: https://github.com/Cellular-Semantics/cellmark_schema
+    domain: Schema
     status: unknown
-    schema_url: https://sierra-moxon.github.io/clinical-studies-schema/
-    contacts: sierra-moxon
+    schema_url: https://cellular-semantics.github.io/cellmark_schema/
+    contacts: Cellular-Semantics
   NCATS-Tangerine/CPKG:
     title: CPKG
     description: Translation tools for ClinicalProfile to Knowledge Graphs
@@ -1471,14 +1461,14 @@ entries:
     status: unknown
     schema_url: https://in2primatebrains.github.io/DataMetadataWorkflowDocs/
     contacts: In2PrimateBrains
-  magland/dendro_analyses:
-    title: dendro_analyses
-    description: misc analyses for dendro projects
-    github_repo: https://github.com/magland/dendro_analyses
+  Netbeheer-Nederland/dp-meetdata:
+    title: dp-meetdata
+    description: Information models for the Meetdata data product.
+    github_repo: https://github.com/Netbeheer-Nederland/dp-meetdata
     domain: Schema
     status: unknown
-    schema_url: https://magland.github.io/dendro_analyses/
-    contacts: magland
+    schema_url: https://netbeheer-nederland.github.io/dp-meetdata/
+    contacts: Netbeheer-Nederland
   cmungall/edd-schema:
     title: edd-schema
     github_repo: https://github.com/cmungall/edd-schema
@@ -1486,6 +1476,13 @@ entries:
     status: unknown
     schema_url: https://cmungall.github.io/edd-schema/
     contacts: cmungall
+  heycatwonton/EssDiveSampleRF:
+    title: EssDiveSampleRF
+    github_repo: https://github.com/heycatwonton/EssDiveSampleRF
+    domain: Schema
+    status: unknown
+    schema_url: https://heycatwonton.github.io/EssDiveSampleRF/
+    contacts: heycatwonton
   heycatwonton/EssDiveSampleRFOld:
     title: EssDiveSampleRFOld
     github_repo: https://github.com/heycatwonton/EssDiveSampleRFOld
@@ -1493,6 +1490,15 @@ entries:
     status: unknown
     schema_url: https://heycatwonton.github.io/EssDiveSampleRFOld/
     contacts: heycatwonton
+  microbiomedata/external-metadata-awareness:
+    title: external-metadata-awareness
+    description: Tools for fetching and processing external schemas, ontologies and metadata records. Includes value set maintenance
+      and some GitHub org exploration.
+    github_repo: https://github.com/microbiomedata/external-metadata-awareness
+    domain: Computer Science
+    status: unknown
+    schema_url: https://microbiomedata.github.io/external-metadata-awareness/
+    contacts: microbiomedata
   hsolbrig/foo-model:
     title: foo-model
     github_repo: https://github.com/hsolbrig/foo-model
@@ -1500,14 +1506,6 @@ entries:
     status: unknown
     schema_url: https://hsolbrig.github.io/foo-model/
     contacts: hsolbrig
-  sujaypatil96/ga4gh-va-schema:
-    title: ga4gh-va-schema
-    description: Data model for variant annotation in the GA4GH consortium.
-    github_repo: https://github.com/sujaypatil96/ga4gh-va-schema
-    domain: Schema
-    status: unknown
-    schema_url: https://sujaypatil96.github.io/ga4gh-va-schema/
-    contacts: sujaypatil96
   mukundanps/ghp-vocab:
     title: ghp-vocab
     description: Vocabulary for Good Health Pass
@@ -1531,6 +1529,13 @@ entries:
     status: unknown
     schema_url: https://rly.github.io/hdmf-term-lists/
     contacts: rly
+  cmungall/hoopla:
+    title: hoopla
+    github_repo: https://github.com/cmungall/hoopla
+    domain: Schema
+    status: unknown
+    schema_url: https://cmungall.github.io/hoopla/
+    contacts: cmungall
   German-BioImaging/idr_metadata_model:
     title: idr_metadata_model
     github_repo: https://github.com/German-BioImaging/idr_metadata_model
@@ -1545,6 +1550,13 @@ entries:
     status: unknown
     schema_url: https://ree-gupta.github.io/in2pb-linkml-test/
     contacts: ree-gupta
+  161sam/InfoTerminal:
+    title: InfoTerminal
+    github_repo: https://github.com/161sam/InfoTerminal
+    domain: Schema
+    status: unknown
+    schema_url: https://161sam.github.io/InfoTerminal/
+    contacts: 161sam
   hsolbrig/jsonasobj:
     title: jsonasobj
     description: Extension to the python json library that represents JSON as first class python objects.
@@ -1569,6 +1581,22 @@ entries:
     status: unknown
     schema_url: https://hsolbrig.github.io/linkml-enhanced-template/
     contacts: hsolbrig
+  turbomam/linkml-gen-something-functional:
+    title: linkml-gen-something-functional
+    description: Fragments of schemas including features that may not work with all genrated artifacts
+    github_repo: https://github.com/turbomam/linkml-gen-something-functional
+    domain: Computer Science
+    status: unknown
+    schema_url: https://turbomam.github.io/linkml-gen-something-functional/
+    contacts: turbomam
+  rajavishah/linkml-learn:
+    title: linkml-learn
+    description: Playing around with LinkML Stuff to check whether it's a good choice to use for Bilayers
+    github_repo: https://github.com/rajavishah/linkml-learn
+    domain: Computer Science
+    status: unknown
+    schema_url: https://rajavishah.github.io/linkml-learn/
+    contacts: rajavishah
   manulera/linkml-playground:
     title: linkml-playground
     description: linkml-playground
@@ -1591,36 +1619,13 @@ entries:
     status: unknown
     schema_url: https://graham-thomas.github.io/linkml-tutorial-2024/
     contacts: graham-thomas
-  cwseidel/linkml-tutorial-2024:
-    title: linkml-tutorial-2024
-    description: LinkML tutorial from ISMB 2024
-    github_repo: https://github.com/cwseidel/linkml-tutorial-2024
-    domain: Computer Science
-    status: unknown
-    schema_url: https://cwseidel.github.io/linkml-tutorial-2024/
-    contacts: cwseidel
-  microbiomedata/minimal-metab:
-    title: minimal-metab
-    github_repo: https://github.com/microbiomedata/minimal-metab
+  pro-dho/microscopemetrics-django-dash-omero:
+    title: microscopemetrics-django-dash-omero
+    github_repo: https://github.com/pro-dho/microscopemetrics-django-dash-omero
     domain: Schema
     status: unknown
-    schema_url: https://microbiomedata.github.io/minimal-metab/
-    contacts: microbiomedata
-  bartkl/music-library-jsonld-poc:
-    title: music-library-jsonld-poc
-    description: 'PoC: From JSON to JSON-LD with LinkML and my music library data.'
-    github_repo: https://github.com/bartkl/music-library-jsonld-poc
-    domain: Computer Science
-    status: unknown
-    schema_url: https://bartkl.github.io/music-library-jsonld-poc/
-    contacts: bartkl
-  microbiomedata/nmdc-ontology:
-    title: nmdc-ontology
-    github_repo: https://github.com/microbiomedata/nmdc-ontology
-    domain: Schema
-    status: unknown
-    schema_url: https://microbiomedata.github.io/nmdc-ontology/
-    contacts: microbiomedata
+    schema_url: https://pro-dho.github.io/microscopemetrics-django-dash-omero/
+    contacts: pro-dho
   omnibenchmark/omni-schema:
     title: omni-schema
     description: Data model for omnibenchmark.
@@ -1659,20 +1664,6 @@ entries:
     status: unknown
     schema_url: https://samuvack.github.io/OSLO2LINKML/
     contacts: samuvack
-  eu-parc/parco-hbm:
-    title: parco-hbm
-    github_repo: https://github.com/eu-parc/parco-hbm
-    domain: Schema
-    status: unknown
-    schema_url: https://eu-parc.github.io/parco-hbm/
-    contacts: eu-parc
-  plbremer/parkerslinkmltest:
-    title: parkerslinkmltest
-    github_repo: https://github.com/plbremer/parkerslinkmltest
-    domain: Computer Science
-    status: unknown
-    schema_url: https://plbremer.github.io/parkerslinkmltest/
-    contacts: plbremer
   multimeric/PCDMLinkML:
     title: PCDMLinkML
     description: Portland Common Data Model, in LinkML
@@ -1696,6 +1687,20 @@ entries:
     status: unknown
     schema_url: https://usnistgov.github.io/pfhub-schema/
     contacts: usnistgov
+  yaseminbridges/pheval.amelie:
+    title: pheval.amelie
+    github_repo: https://github.com/yaseminbridges/pheval.amelie
+    domain: Schema
+    status: unknown
+    schema_url: https://yaseminbridges.github.io/pheval.amelie/
+    contacts: yaseminbridges
+  liuji1031/research-paper-schema:
+    title: research-paper-schema
+    github_repo: https://github.com/liuji1031/research-paper-schema
+    domain: Schema
+    status: unknown
+    schema_url: https://liuji1031.github.io/research-paper-schema/
+    contacts: liuji1031
   NCATS-Tangerine/rhea-beacon:
     title: rhea-beacon
     description: Knowledge Beacon wrapper for the Rhea Annotated Reactions database (https://www.rhea-db.org)
@@ -1727,21 +1732,6 @@ entries:
     status: unknown
     schema_url: https://clingen-data-model.github.io/sepio-models/
     contacts: clingen-data-model
-  sneakers-the-rat/slides:
-    title: slides
-    description: collectin my slides instead of having them be all over everywhere
-    github_repo: https://github.com/sneakers-the-rat/slides
-    domain: Schema
-    status: unknown
-    schema_url: https://sneakers-the-rat.github.io/slides/
-    contacts: sneakers-the-rat
-  TranslatorSRI/SRI_testing:
-    title: SRI_testing
-    github_repo: https://github.com/TranslatorSRI/SRI_testing
-    domain: Schema
-    status: unknown
-    schema_url: https://translatorsri.github.io/SRI_testing/
-    contacts: TranslatorSRI
   hsolbrig/stoplight_harmonization_project:
     title: stoplight_harmonization_project
     description: A toy model for prototyping and demonstrating LinkML based data harmonization
@@ -1780,13 +1770,6 @@ entries:
     status: unknown
     schema_url: https://hsolbrig.github.io/template-fun-model/
     contacts: hsolbrig
-  sierra-moxon/testviz:
-    title: testviz
-    github_repo: https://github.com/sierra-moxon/testviz
-    domain: Schema
-    status: unknown
-    schema_url: https://sierra-moxon.github.io/testviz/
-    contacts: sierra-moxon
   NCATS-Tangerine/tkg-beacon:
     title: tkg-beacon
     description: Knowledge Beacon wrapper of a Translator Knowledge Graph data model compliant Neo4j Database
@@ -1803,13 +1786,6 @@ entries:
     status: unknown
     schema_url: https://netbeheer-nederland.github.io/tmpl-cm/
     contacts: Netbeheer-Nederland
-  saezlab/tum-bc:
-    title: tum-bc
-    github_repo: https://github.com/saezlab/tum-bc
-    domain: Schema
-    status: unknown
-    schema_url: https://saezlab.github.io/tum-bc/
-    contacts: saezlab
   sierra-moxon/vrs_linkml:
     title: vrs_linkml
     description: LinkML Version of the GA4GH Variation Representation Specification
@@ -1817,12 +1793,4 @@ entries:
     domain: Computer Science
     status: unknown
     schema_url: https://sierra-moxon.github.io/vrs_linkml/
-    contacts: sierra-moxon
-  sierra-moxon/water-sample-schema:
-    title: water-sample-schema
-    description: Sample LinkML project setup for 2024 paper figures
-    github_repo: https://github.com/sierra-moxon/water-sample-schema
-    domain: Computer Science
-    status: unknown
-    schema_url: https://sierra-moxon.github.io/water-sample-schema/
     contacts: sierra-moxon
