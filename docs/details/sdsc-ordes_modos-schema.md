@@ -2,7 +2,7 @@
 
 **Title:** modos-schema
 
-**Description:** Metadata schema for the SMOC Multi-Omics Digital-Object
+**Description:** Metadata schema for the Multi-Omics Digital-Object
 
 **GitHub Organization:** https://github.com/sdsc-ordes/modos-schema
 
