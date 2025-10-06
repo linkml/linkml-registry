@@ -14,6 +14,6 @@
 
 **Status:** active
 
-**Topics:** biolink, datamodel, gene-ontology, json-api, knowledge-graphs
+**Topics:** ai4curation, biolink, datamodel, gene-ontology, json-api
 
 **Contacts:** biolink
