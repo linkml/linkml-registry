@@ -12,7 +12,7 @@
 
 **Domain:** Computer Science
 
-**Status:** active
+**Status:** maintenance
 
 **Topics:** ai, bridge2ai, deep-learning, linkml, metadata
 
