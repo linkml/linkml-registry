@@ -6,7 +6,7 @@
 
 **GitHub Organization:** https://github.com/bioenergy-research-centers/brc-schema
 
-**Schema URL:** https://bioenergy-research-centers.github.io/brc-schema/
+**Schema URL:** https://bioenergy-research-centers.github.io/brc-schema
 
 **License:** NOASSERTION
 

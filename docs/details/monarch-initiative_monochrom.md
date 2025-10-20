@@ -14,6 +14,6 @@
 
 **Status:** active
 
-**Topics:** chromosomes, etl, genomics, linkml, monarchinitiative
+**Topics:** ai4curation, chromosomes, etl, genomics, linkml
 
 **Contacts:** monarch-initiative
