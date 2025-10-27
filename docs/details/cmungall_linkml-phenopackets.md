@@ -12,7 +12,7 @@
 
 **Domain:** Computer Science
 
-**Status:** maintenance
+**Status:** active
 
 **Topics:** human-phenotype-ontology, linkml, metadata, monarchinitiative, phenopackets
 

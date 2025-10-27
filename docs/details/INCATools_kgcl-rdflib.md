@@ -12,7 +12,7 @@
 
 **Domain:** Computer Science
 
-**Status:** active
+**Status:** maintenance
 
 **Topics:** diff, diffs, kg, knowledge-graph, linkml
 
