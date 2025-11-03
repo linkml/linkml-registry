@@ -10,10 +10,10 @@
 
 
 
-**Domain:** Computer Science
+**Domain:** Schema
 
-**Status:** inactive
+**Status:** unknown
 
-**Topics:** anatomy, cell-ontology, cell-types, checklist, json-schema
+
 
 **Contacts:** cmungall

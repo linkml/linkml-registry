@@ -14,6 +14,6 @@
 
 **Status:** active
 
-**Topics:** linkml, oaklib, obofoundry, ontologies, owl
+**Topics:** ai4curation, linkml, monarchinitiative, oaklib, obofoundry
 
 **Contacts:** INCATools
