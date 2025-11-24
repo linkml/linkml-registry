@@ -12,7 +12,7 @@
 
 **Domain:** Computer Science
 
-**Status:** inactive
+**Status:** active
 
 **Topics:** google-sheets, linkml
 
