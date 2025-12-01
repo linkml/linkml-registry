@@ -12,7 +12,7 @@
 
 **Domain:** Biology
 
-**Status:** maintenance
+**Status:** active
 
 **Topics:** annotator, environment-ontology, environmentontology, envo, linkml
 
