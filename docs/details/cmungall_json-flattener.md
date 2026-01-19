@@ -12,7 +12,7 @@
 
 **Domain:** Computer Science
 
-**Status:** active
+**Status:** maintenance
 
 **Topics:** dataframes, denormalization, linkml, pandas
 
