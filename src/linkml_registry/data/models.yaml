@@ -239,4 +239,12 @@ entries:
       -  Ontologies
       -  Down syndrome
       -  Clinical research
+
+  cordful: 
+    homepage: https://multimeric.github.io/cordful/
+    github_repo: https://github.com/multimeric/cordful
+    license: MIT
+    title: 'CORDFUL: Conversion Of RDF Unto LinkML'
+    topics:
+      - rdf
       
