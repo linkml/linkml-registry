@@ -1,0 +1,1623 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://linkml.github.io/linkml-registry/registry/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../build-details/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>View Registry - LinkML Schema Registry</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-J23SCD6JB8"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-J23SCD6JB8",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-J23SCD6JB8",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="teal" data-md-color-primary="navy" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linkml-registry" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LinkML Schema Registry" class="md-header__button md-logo" aria-label="LinkML Schema Registry" data-md-component="logo">
+      
+  <img src="../images/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LinkML Schema Registry
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              View Registry
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/linkml/linkml-registry" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LinkML Schema Registry" class="md-nav__button md-logo" aria-label="LinkML Schema Registry" data-md-component="logo">
+      
+  <img src="../images/logo.jpg" alt="logo">
+
+    </a>
+    LinkML Schema Registry
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/linkml/linkml-registry" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    View Registry
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    View Registry
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#registry-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registry Entries
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build-details/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registry Build Details
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registry Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#registry-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registry Entries
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="linkml-registry">LinkML Registry</h1>
+<p>For more information on LinkML:</p>
+<ul>
+<li><a href="https://linkml.io">LinkML Documentation</a></li>
+<li><a href="https://w3id.org/linkml/docs/specification/">LinkML Meta Model Specification</a></li>
+</ul>
+<h2 id="registry-entries">Registry Entries</h2>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Topics</th>
+<th>Stars</th>
+<th>GitHub URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://monarch-initiative.github.io/ontogpt/">ontogpt</a><br/>LLM-based ontological extraction tools, including SPIRES</td>
+<td></td>
+<td>798 <a href="../details/monarch-initiative_ontogpt/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/ontogpt">monarch-initiative/ontogpt</a></td>
+</tr>
+<tr>
+<td><a href="https://pysemtec.github.io/semantic-python-overview/">semantic-python-overview</a><br/>(subjective) overview of projects which are related both to python and semantic technologies (RDF, O...</td>
+<td></td>
+<td>549 <a href="../details/pysemtec_semantic-python-overview/">(details)</a></td>
+<td><a href="https://github.com/pysemtec/semantic-python-overview">pysemtec/semantic-python-overview</a></td>
+</tr>
+<tr>
+<td><a href="https://incatools.github.io/ontology-development-kit/">ontology-development-kit</a><br/>Ontology lifecycle management</td>
+<td></td>
+<td>299 <a href="../details/INCATools_ontology-development-kit/">(details)</a></td>
+<td><a href="https://github.com/INCATools/ontology-development-kit">INCATools/ontology-development-kit</a></td>
+</tr>
+<tr>
+<td><a href="https://monarch-initiative.github.io/mondo/">mondo</a><br/>Mondo Disease Ontology</td>
+<td></td>
+<td>291 <a href="../details/monarch-initiative_mondo/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/mondo">monarch-initiative/mondo</a></td>
+</tr>
+<tr>
+<td><a href="https://insightsoftwareconsortium.github.io/ITK-Wasm/">ITK-Wasm</a><br/>High performance spatial analysis in a web browser and across programming languages and hardware arc...</td>
+<td></td>
+<td>224 <a href="../details/InsightSoftwareConsortium_ITK-Wasm/">(details)</a></td>
+<td><a href="https://github.com/InsightSoftwareConsortium/ITK-Wasm">InsightSoftwareConsortium/ITK-Wasm</a></td>
+</tr>
+<tr>
+<td><a href="https://biolink.github.io/biolink-model/">biolink-model</a><br/>Schema and generated objects for biolink data model and upper ontology</td>
+<td>ai4curation, biolink, datamodel...</td>
+<td>223 <a href="../details/biolink_biolink-model/">(details)</a></td>
+<td><a href="https://github.com/biolink/biolink-model">biolink/biolink-model</a></td>
+</tr>
+<tr>
+<td><a href="https://pydna-group.github.io/pydna/">pydna</a><br/>Clone with Python! Data structures for double stranded DNA &amp; simulation of homologous recombination,...</td>
+<td></td>
+<td>217 <a href="../details/pydna-group_pydna/">(details)</a></td>
+<td><a href="https://github.com/pydna-group/pydna">pydna-group/pydna</a></td>
+</tr>
+<tr>
+<td><a href="https://mapping-commons.github.io/sssom/">sssom</a><br/>Simple Standard for Sharing Ontology Mappings</td>
+<td>linkml, mapping, mapping-commons...</td>
+<td>185 <a href="../details/mapping-commons_sssom/">(details)</a></td>
+<td><a href="https://github.com/mapping-commons/sssom">mapping-commons/sssom</a></td>
+</tr>
+<tr>
+<td><a href="https://incatools.github.io/ontology-access-kit/">ontology-access-kit</a><br/>Ontology Access Kit: A python library and command line application for working with ontologies</td>
+<td></td>
+<td>159 <a href="../details/INCATools_ontology-access-kit/">(details)</a></td>
+<td><a href="https://github.com/INCATools/ontology-access-kit">INCATools/ontology-access-kit</a></td>
+</tr>
+<tr>
+<td><a href="https://cidgoh.github.io/DataHarmonizer/">DataHarmonizer</a><br/>A standardized browser-based spreadsheet editor and validator that can be run offline and locally, a...</td>
+<td>application, data, harmonization...</td>
+<td>119 <a href="../details/cidgoh_DataHarmonizer/">(details)</a></td>
+<td><a href="https://github.com/cidgoh/DataHarmonizer">cidgoh/DataHarmonizer</a></td>
+</tr>
+<tr>
+<td><a href="https://oborel.github.io/obo-relations/">obo-relations</a><br/>RO is an ontology of relations for use with biological ontologies</td>
+<td></td>
+<td>110 <a href="../details/oborel_obo-relations/">(details)</a></td>
+<td><a href="https://github.com/oborel/obo-relations">oborel/obo-relations</a></td>
+</tr>
+<tr>
+<td><a href="https://knowledge-graph-hub.github.io/kg-covid-19/">kg-covid-19</a><br/>An instance of KG Hub to produce a knowledge graph for COVID-19 response.</td>
+<td></td>
+<td>85 <a href="../details/Knowledge-Graph-Hub_kg-covid-19/">(details)</a></td>
+<td><a href="https://github.com/Knowledge-Graph-Hub/kg-covid-19">Knowledge-Graph-Hub/kg-covid-19</a></td>
+</tr>
+<tr>
+<td><a href="https://psych-ds.github.io/psych-DS/">psych-DS</a><br/>YAML-based schema model for the Psych-DS project and its tools</td>
+<td></td>
+<td>82 <a href="../details/psych-ds_psych-DS/">(details)</a></td>
+<td><a href="https://github.com/psych-ds/psych-DS">psych-ds/psych-DS</a></td>
+</tr>
+<tr>
+<td><a href="https://monarch-initiative.github.io/koza/">koza</a><br/>Data transformation framework for LinkML data models</td>
+<td>etl, knowledge-graph, koza...</td>
+<td>62 <a href="../details/monarch-initiative_koza/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/koza">monarch-initiative/koza</a></td>
+</tr>
+<tr>
+<td><a href="https://mapping-commons.github.io/sssom-py/index.html#">sssom-py</a><br/>Python toolkit for SSSOM mapping format</td>
+<td>linkml, mappings, obofoundry...</td>
+<td>60 <a href="../details/mapping-commons_sssom-py/">(details)</a></td>
+<td><a href="https://github.com/mapping-commons/sssom-py">mapping-commons/sssom-py</a></td>
+</tr>
+<tr>
+<td><a href="https://genomicsstandardsconsortium.github.io/mixs/">mixs</a><br/>Minimum Information about any (X) Sequence” (MIxS) specification</td>
+<td></td>
+<td>58 <a href="../details/GenomicsStandardsConsortium_mixs/">(details)</a></td>
+<td><a href="https://github.com/GenomicsStandardsConsortium/mixs">GenomicsStandardsConsortium/mixs</a></td>
+</tr>
+<tr>
+<td><a href="https://incatools.github.io/semantic-sql/">semantic-sql</a><br/>SQL and SQLite builds of OWL ontologies</td>
+<td>ai4curation, linkml, monarchinitiative...</td>
+<td>56 <a href="../details/INCATools_semantic-sql/">(details)</a></td>
+<td><a href="https://github.com/INCATools/semantic-sql">INCATools/semantic-sql</a></td>
+</tr>
+<tr>
+<td><a href="https://hdmf-dev.github.io/hdmf/">hdmf</a><br/>The Hierarchical Data Modeling Framework</td>
+<td></td>
+<td>55 <a href="../details/hdmf-dev_hdmf/">(details)</a></td>
+<td><a href="https://github.com/hdmf-dev/hdmf">hdmf-dev/hdmf</a></td>
+</tr>
+<tr>
+<td><a href="https://geneontology.github.io/go-site/">go-site</a><br/>A collection of metadata, tools, and files associated with the Gene Ontology public web presence.</td>
+<td></td>
+<td>49 <a href="../details/geneontology_go-site/">(details)</a></td>
+<td><a href="https://github.com/geneontology/go-site">geneontology/go-site</a></td>
+</tr>
+<tr>
+<td><a href="https://oist.github.io/optinist/">optinist</a><br/>calcium imaging pipeline tool</td>
+<td></td>
+<td>48 <a href="../details/oist_optinist/">(details)</a></td>
+<td><a href="https://github.com/oist/optinist">oist/optinist</a></td>
+</tr>
+<tr>
+<td><a href="https://margo.github.io/specification/">specification</a><br/>Margo Specification</td>
+<td></td>
+<td>47 <a href="../details/margo_specification/">(details)</a></td>
+<td><a href="https://github.com/margo/specification">margo/specification</a></td>
+</tr>
+<tr>
+<td><a href="https://microbiomedata.github.io/nmdc-schema/">nmdc-schema</a><br/>National Microbiome Data Collaborative (NMDC) unified data model</td>
+<td>ecoinformatics, fair-data, genomics...</td>
+<td>44 <a href="../details/microbiomedata_nmdc-schema/">(details)</a></td>
+<td><a href="https://github.com/microbiomedata/nmdc-schema">microbiomedata/nmdc-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://berkeleybop.github.io/artificial-intelligence-ontology/">artificial-intelligence-ontology</a><br/>An ontology modeling classes and relationships describing deep learning networks, their component la...</td>
+<td></td>
+<td>42 <a href="../details/berkeleybop_artificial-intelligence-ontology/">(details)</a></td>
+<td><a href="https://github.com/berkeleybop/artificial-intelligence-ontology">berkeleybop/artificial-intelligence-ontology</a></td>
+</tr>
+<tr>
+<td><a href="https://chanzuckerberg.github.io/alhazen/">alhazen</a><br/>AI agents + toolkits for scientific knowledge</td>
+<td></td>
+<td>37 <a href="../details/chanzuckerberg_alhazen/">(details)</a></td>
+<td><a href="https://github.com/chanzuckerberg/alhazen">chanzuckerberg/alhazen</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/semantic-llama/">semantic-llama</a><br/>A knowledge extraction tool that uses a large language model to extract semantic information from te...</td>
+<td>ai, knowledge-extraction, language-models...</td>
+<td>29 <a href="../details/cmungall_semantic-llama/">(details)</a></td>
+<td><a href="https://github.com/cmungall/semantic-llama">cmungall/semantic-llama</a></td>
+</tr>
+<tr>
+<td><a href="https://cdisc-org.github.io/COSMoS/">COSMoS</a><br/>CDISC Conceptual and Operational Standards Metadata Services (COSMoS)</td>
+<td></td>
+<td>24 <a href="../details/cdisc-org_COSMoS/">(details)</a></td>
+<td><a href="https://github.com/cdisc-org/COSMoS">cdisc-org/COSMoS</a></td>
+</tr>
+<tr>
+<td><a href="https://w3id.org/kgcl/">kgcl</a><br/>Datamodel for KGCL (Knowledge Graph Change Language)</td>
+<td>kgcl, linkml, ontology-changes...</td>
+<td>21 <a href="../details/INCATools_kgcl/">(details)</a></td>
+<td><a href="https://github.com/INCATools/kgcl">INCATools/kgcl</a></td>
+</tr>
+<tr>
+<td><a href="https://monarch-initiative.github.io/monarch-ingest/">monarch-ingest</a><br/>Data ingest application for Monarch Initiative knowledge graph using Koza</td>
+<td>kgx, knowledge-graphs, linkml...</td>
+<td>21 <a href="../details/monarch-initiative_monarch-ingest/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/monarch-ingest">monarch-initiative/monarch-ingest</a></td>
+</tr>
+<tr>
+<td><a href="https://chemkg.github.io/chemrof">chemrof</a><br/>Schema for chemistry ontology classes</td>
+<td>chebi, chemistry, linkml...</td>
+<td>20 <a href="../details/chemkg_chemrof/">(details)</a></td>
+<td><a href="https://github.com/chemkg/chemrof">chemkg/chemrof</a></td>
+</tr>
+<tr>
+<td><a href="https://knowledge-graph-hub.github.io/kg-registry/">kg-registry</a><br/>A registry of Knowledge Graphs, their data sources, and the ways they fit together.</td>
+<td></td>
+<td>20 <a href="../details/Knowledge-Graph-Hub_kg-registry/">(details)</a></td>
+<td><a href="https://github.com/Knowledge-Graph-Hub/kg-registry">Knowledge-Graph-Hub/kg-registry</a></td>
+</tr>
+<tr>
+<td><a href="https://incatools.github.io/kgcl-rdflib/">kgcl-rdflib</a><br/>Tools for working with KGCL</td>
+<td>diff, diffs, kg...</td>
+<td>19 <a href="../details/INCATools_kgcl-rdflib/">(details)</a></td>
+<td><a href="https://github.com/INCATools/kgcl-rdflib">INCATools/kgcl-rdflib</a></td>
+</tr>
+<tr>
+<td><a href="https://py-typedlogic.github.io">py-typedlogic</a><br/>Logic plus python types</td>
+<td>answer-set-programming, clif, clingo...</td>
+<td>19 <a href="../details/py-typedlogic_py-typedlogic/">(details)</a></td>
+<td><a href="https://github.com/py-typedlogic/py-typedlogic">py-typedlogic/py-typedlogic</a></td>
+</tr>
+<tr>
+<td><a href="https://cancerdhc.github.io/ccdhmodel/">ccdhmodel</a><br/>CRDC-H model in LinkML, developed by the Center for Cancer Data Harmonization (CCDH)</td>
+<td>google-sheets, linkml</td>
+<td>17 <a href="../details/cancerDHC_ccdhmodel/">(details)</a></td>
+<td><a href="https://github.com/cancerDHC/ccdhmodel">cancerDHC/ccdhmodel</a></td>
+</tr>
+<tr>
+<td><a href="https://loinc.github.io/comp-loinc/">comp-loinc</a><br/>Computational LOINC in OWL.</td>
+<td></td>
+<td>17 <a href="../details/loinc_comp-loinc/">(details)</a></td>
+<td><a href="https://github.com/loinc/comp-loinc">loinc/comp-loinc</a></td>
+</tr>
+<tr>
+<td><a href="https://ddialliance.github.io/ddimodel/">ddimodel</a><br/>Model for DDI Lifecycle</td>
+<td></td>
+<td>16 <a href="../details/ddialliance_ddimodel/">(details)</a></td>
+<td><a href="https://github.com/ddialliance/ddimodel">ddialliance/ddimodel</a></td>
+</tr>
+<tr>
+<td><a href="https://swiss.github.io/political-affairs-ech-group/">political-affairs-ech-group</a><br/>The working repository to develop standards for the swiss political system.</td>
+<td></td>
+<td>16 <a href="../details/swiss_political-affairs-ech-group/">(details)</a></td>
+<td><a href="https://github.com/swiss/political-affairs-ech-group">swiss/political-affairs-ech-group</a></td>
+</tr>
+<tr>
+<td><a href="http://monarch-initiative.github.io/monochrom/">monochrom</a><br/>Standardized identifiers and OWL classes for chromosomes and chromosomal parts across species</td>
+<td>ai4curation, chromosomes, etl...</td>
+<td>15 <a href="../details/monarch-initiative_monochrom/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/monochrom">monarch-initiative/monochrom</a></td>
+</tr>
+<tr>
+<td><a href="https://ghga-de.github.io/ghga-metadata-schema/">ghga-metadata-schema</a><br/>Metadata schema for the German Human Genome-Phenome Archive (GHGA)</td>
+<td>fega, ghga, linkml...</td>
+<td>14 <a href="../details/ghga-de_ghga-metadata-schema/">(details)</a></td>
+<td><a href="https://github.com/ghga-de/ghga-metadata-schema">ghga-de/ghga-metadata-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://co-cddo.github.io/ukgov-metadata-exchange-model/">ukgov-metadata-exchange-model</a><br/>A metadata model for describing data assets for exchanging between UK government organisations.</td>
+<td></td>
+<td>14 <a href="../details/co-cddo_ukgov-metadata-exchange-model/">(details)</a></td>
+<td><a href="https://github.com/co-cddo/ukgov-metadata-exchange-model">co-cddo/ukgov-metadata-exchange-model</a></td>
+</tr>
+<tr>
+<td><a href="https://tcr.github.io/markdown-corpus/">markdown-corpus</a><br/>Many markdown files taken from around github</td>
+<td></td>
+<td>13 <a href="../details/tcr_markdown-corpus/">(details)</a></td>
+<td><a href="https://github.com/tcr/markdown-corpus">tcr/markdown-corpus</a></td>
+</tr>
+<tr>
+<td><a href="https://monarch-initiative.github.io/namo/">namo</a></td>
+<td>ai4curation, artificial-intelligence, linkml...</td>
+<td>12 <a href="../details/monarch-initiative_namo/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/namo">monarch-initiative/namo</a></td>
+</tr>
+<tr>
+<td><a href="https://maastrichtu-ids.github.io/translator-openpredict/">translator-openpredict</a><br/>🔮🐍 A package to help serve predictions of biomedical concepts associations as Translator Reasoner AP...</td>
+<td></td>
+<td>12 <a href="../details/MaastrichtU-IDS_translator-openpredict/">(details)</a></td>
+<td><a href="https://github.com/MaastrichtU-IDS/translator-openpredict">MaastrichtU-IDS/translator-openpredict</a></td>
+</tr>
+<tr>
+<td><a href="https://alliance-genome.github.io/agr_curation_schema/">agr_curation_schema</a><br/>Schema repository for the Alliance of Genome Resources persistent data store</td>
+<td></td>
+<td>11 <a href="../details/alliance-genome_agr_curation_schema/">(details)</a></td>
+<td><a href="https://github.com/alliance-genome/agr_curation_schema">alliance-genome/agr_curation_schema</a></td>
+</tr>
+<tr>
+<td><a href="https://monarch-initiative.github.io/dismech/">dismech</a><br/>Disease Mechanisms KB</td>
+<td></td>
+<td>11 <a href="../details/monarch-initiative_dismech/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/dismech">monarch-initiative/dismech</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/json-flattener/">json-flattener</a><br/>Python library for denormalizing nested dicts or json objects to tables and back</td>
+<td>dataframes, denormalization, linkml...</td>
+<td>11 <a href="../details/cmungall_json-flattener/">(details)</a></td>
+<td><a href="https://github.com/cmungall/json-flattener">cmungall/json-flattener</a></td>
+</tr>
+<tr>
+<td><a href="https://nfdi-de.github.io/chem-dcat-ap/">chem-dcat-ap</a><br/>This is an extension of the DCAT Application Profile PLUS LinkML schema. It is intended to be used b...</td>
+<td>linkml-schema</td>
+<td>10 <a href="../details/nfdi-de_chem-dcat-ap/">(details)</a></td>
+<td><a href="https://github.com/nfdi-de/chem-dcat-ap">nfdi-de/chem-dcat-ap</a></td>
+</tr>
+<tr>
+<td><a href="https://nfdi-de.github.io/dcat-ap-plus/">dcat-ap-plus</a><br/>A domain-agnostic extension of the DCAT Application Profile. It allow providing domain-specific meta...</td>
+<td></td>
+<td>9 <a href="../details/nfdi-de_dcat-ap-plus/">(details)</a></td>
+<td><a href="https://github.com/nfdi-de/dcat-ap-plus">nfdi-de/dcat-ap-plus</a></td>
+</tr>
+<tr>
+<td><a href="https://netbeheer-nederland.github.io/docs/im-tc57cim/latest">im-tc57cim</a><br/>The CIM information model represented as LinkML schemas.</td>
+<td></td>
+<td>9 <a href="../details/Netbeheer-Nederland_im-tc57cim/">(details)</a></td>
+<td><a href="https://github.com/Netbeheer-Nederland/im-tc57cim">Netbeheer-Nederland/im-tc57cim</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/linkml-phenopackets/">linkml-phenopackets</a><br/>EXPERIMENTAL rendering of phenopackets in linkml</td>
+<td>human-phenotype-ontology, linkml, metadata...</td>
+<td>9 <a href="../details/cmungall_linkml-phenopackets/">(details)</a></td>
+<td><a href="https://github.com/cmungall/linkml-phenopackets">cmungall/linkml-phenopackets</a></td>
+</tr>
+<tr>
+<td><a href="https://psychoinformatics-de.github.io/datalad-concepts/">datalad-concepts</a></td>
+<td></td>
+<td>8 <a href="../details/psychoinformatics-de_datalad-concepts/">(details)</a></td>
+<td><a href="https://github.com/psychoinformatics-de/datalad-concepts">psychoinformatics-de/datalad-concepts</a></td>
+</tr>
+<tr>
+<td><a href="https://temeta.github.io/define-json/">define-json</a><br/>A metadata exchange model for Data Contracts and specs. Simplified successor to Define-XML that link...</td>
+<td></td>
+<td>8 <a href="../details/TeMeta_define-json/">(details)</a></td>
+<td><a href="https://github.com/TeMeta/define-json">TeMeta/define-json</a></td>
+</tr>
+<tr>
+<td><a href="https://bih-cei.github.io/rarelink/">rarelink</a><br/>RareLink - A REDCap-based framework linking international registries to FHIR and Phenopackets</td>
+<td></td>
+<td>8 <a href="../details/BIH-CEI_rarelink/">(details)</a></td>
+<td><a href="https://github.com/BIH-CEI/rarelink">BIH-CEI/rarelink</a></td>
+</tr>
+<tr>
+<td><a href="https://sensein.github.io/structsense/">structsense</a></td>
+<td></td>
+<td>8 <a href="../details/sensein_structsense/">(details)</a></td>
+<td><a href="https://github.com/sensein/structsense">sensein/structsense</a></td>
+</tr>
+<tr>
+<td><a href="https://ai4curation.github.io/ai-gene-review/">ai-gene-review</a><br/>Demonstration of AI review of existing functional annotations</td>
+<td></td>
+<td>7 <a href="../details/ai4curation_ai-gene-review/">(details)</a></td>
+<td><a href="https://github.com/ai4curation/ai-gene-review">ai4curation/ai-gene-review</a></td>
+</tr>
+<tr>
+<td><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a><br/>Microbial Culture Media Knowledge Graph - Comprehensive collection of 10,000+ culture media recipes ...</td>
+<td>cultivation, growth-media, media...</td>
+<td>7 <a href="../details/CultureBotAI_CultureMech/">(details)</a></td>
+<td><a href="https://github.com/CultureBotAI/CultureMech">CultureBotAI/CultureMech</a></td>
+</tr>
+<tr>
+<td><a href="https://ohdsi.github.io/Hestia/">Hestia</a><br/>Hestia is an API for function calling on the OMOP CDM.</td>
+<td></td>
+<td>7 <a href="../details/OHDSI_Hestia/">(details)</a></td>
+<td><a href="https://github.com/OHDSI/Hestia">OHDSI/Hestia</a></td>
+</tr>
+<tr>
+<td><a href="https://netbeheer-nederland.github.io/im-cgmes/">im-cgmes</a><br/>ENTSO-E CGMES profiles represented as LinkML schemas.</td>
+<td></td>
+<td>7 <a href="../details/Netbeheer-Nederland_im-cgmes/">(details)</a></td>
+<td><a href="https://github.com/Netbeheer-Nederland/im-cgmes">Netbeheer-Nederland/im-cgmes</a></td>
+</tr>
+<tr>
+<td><a href="https://tum-ens.github.io/InfDB/">InfDB</a><br/>infDB  (Infrastructure and Energy Database) provides a modular and easy-to-configure open-source dat...</td>
+<td></td>
+<td>7 <a href="../details/tum-ens_InfDB/">(details)</a></td>
+<td><a href="https://github.com/tum-ens/InfDB">tum-ens/InfDB</a></td>
+</tr>
+<tr>
+<td><a href="https://vladistan.github.io/linkml-qudt/">linkml-qudt</a><br/>Conversion of QUDT ontology to LinkML</td>
+<td>knowledge-graph, linkml, linkml-schema...</td>
+<td>7 <a href="../details/vladistan_linkml-qudt/">(details)</a></td>
+<td><a href="https://github.com/vladistan/linkml-qudt">vladistan/linkml-qudt</a></td>
+</tr>
+<tr>
+<td><a href="https://monarch-initiative.github.io/monarch-documentation/">monarch-documentation</a><br/>Technical documentation for all Monarch applications, packages, services and related projects.</td>
+<td></td>
+<td>7 <a href="../details/monarch-initiative_monarch-documentation/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/monarch-documentation">monarch-initiative/monarch-documentation</a></td>
+</tr>
+<tr>
+<td><a href="https://monarch-initiative.github.io/mondo-ingest/">mondo-ingest</a><br/>Coordinating the mondo-ingest with external sources</td>
+<td></td>
+<td>7 <a href="../details/monarch-initiative_mondo-ingest/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/mondo-ingest">monarch-initiative/mondo-ingest</a></td>
+</tr>
+<tr>
+<td><a href="https://gx4fm-base-x.github.io/SemanticDataLink/">SemanticDataLink</a><br/>The Semantic Data Link repository hosts a Streamlit-based web application designed for managing and ...</td>
+<td></td>
+<td>7 <a href="../details/GX4FM-Base-X_SemanticDataLink/">(details)</a></td>
+<td><a href="https://github.com/GX4FM-Base-X/SemanticDataLink">GX4FM-Base-X/SemanticDataLink</a></td>
+</tr>
+<tr>
+<td><a href="https://pnnl-compbio.github.io/srpAnalytics/">srpAnalytics</a><br/>This repository contains the code necessary to process any new data for the Superfund Research Progr...</td>
+<td></td>
+<td>7 <a href="../details/PNNL-CompBio_srpAnalytics/">(details)</a></td>
+<td><a href="https://github.com/PNNL-CompBio/srpAnalytics">PNNL-CompBio/srpAnalytics</a></td>
+</tr>
+<tr>
+<td><a href="https://hendrikborgelt.github.io/DCAT-ap_as_LinkML_template/">DCAT-ap_as_LinkML_template</a></td>
+<td></td>
+<td>6 <a href="../details/HendrikBorgelt_DCAT-ap_as_LinkML_template/">(details)</a></td>
+<td><a href="https://github.com/HendrikBorgelt/DCAT-ap_as_LinkML_template">HendrikBorgelt/DCAT-ap_as_LinkML_template</a></td>
+</tr>
+<tr>
+<td><a href="https://biodatamodels.github.io/gff-schema/">gff-schema</a><br/>LinkML schema for GFF3, the Genome Feature Format</td>
+<td>bioinformatics, formats, genomics...</td>
+<td>6 <a href="../details/biodatamodels_gff-schema/">(details)</a></td>
+<td><a href="https://github.com/biodatamodels/gff-schema">biodatamodels/gff-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://microbiomedata.github.io/sample-annotator/static/intro.html">sample-annotator</a><br/>NMDC Sample Annotator</td>
+<td>annotator, environment-ontology, environmentontology...</td>
+<td>6 <a href="../details/microbiomedata_sample-annotator/">(details)</a></td>
+<td><a href="https://github.com/microbiomedata/sample-annotator">microbiomedata/sample-annotator</a></td>
+</tr>
+<tr>
+<td><a href="https://bridge2ai.github.io/data-sheets-schema/">data-sheets-schema</a><br/>Datasheets for Datasets, as LinkML Schema</td>
+<td></td>
+<td>5 <a href="../details/bridge2ai_data-sheets-schema/">(details)</a></td>
+<td><a href="https://github.com/bridge2ai/data-sheets-schema">bridge2ai/data-sheets-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://govuk-one-login.github.io/data-vocab/">data-vocab</a><br/>Vocabulary and schemas for digital identity</td>
+<td></td>
+<td>5 <a href="../details/govuk-one-login_data-vocab/">(details)</a></td>
+<td><a href="https://github.com/govuk-one-login/data-vocab">govuk-one-login/data-vocab</a></td>
+</tr>
+<tr>
+<td><a href="https://offis-dip.github.io/erwartung/">erwartung</a><br/>Just what you expect from your electricity grid data.</td>
+<td>cgmes, cim, common-information-model...</td>
+<td>5 <a href="../details/OFFIS-DIP_erwartung/">(details)</a></td>
+<td><a href="https://github.com/OFFIS-DIP/erwartung">OFFIS-DIP/erwartung</a></td>
+</tr>
+<tr>
+<td><a href="https://knowledge-graph-hub.github.io/kg-enp/">kg-enp</a><br/>KG-ENP: a knowledge graph for experimental natural products, based off ENPKG</td>
+<td></td>
+<td>5 <a href="../details/Knowledge-Graph-Hub_kg-enp/">(details)</a></td>
+<td><a href="https://github.com/Knowledge-Graph-Hub/kg-enp">Knowledge-Graph-Hub/kg-enp</a></td>
+</tr>
+<tr>
+<td><a href="https://cmdoret.github.io/mtg_ontology/">mtg_ontology</a><br/>An ontology describing cards in Magic The Gathering.</td>
+<td>linkml, mtg, ontology...</td>
+<td>5 <a href="../details/cmdoret_mtg_ontology/">(details)</a></td>
+<td><a href="https://github.com/cmdoret/mtg_ontology">cmdoret/mtg_ontology</a></td>
+</tr>
+<tr>
+<td><a href="https://prefixcommons.github.io/prefixcommons-py/">prefixcommons-py</a><br/>Prefix commons python utlities</td>
+<td></td>
+<td>5 <a href="../details/prefixcommons_prefixcommons-py/">(details)</a></td>
+<td><a href="https://github.com/prefixcommons/prefixcommons-py">prefixcommons/prefixcommons-py</a></td>
+</tr>
+<tr>
+<td><a href="https://regen-network.github.io/regen-data-standards/">regen-data-standards</a></td>
+<td></td>
+<td>5 <a href="../details/regen-network_regen-data-standards/">(details)</a></td>
+<td><a href="https://github.com/regen-network/regen-data-standards">regen-network/regen-data-standards</a></td>
+</tr>
+<tr>
+<td><a href="https://galaxyproject.github.io/brc-analytics/">brc-analytics</a></td>
+<td></td>
+<td>4 <a href="../details/galaxyproject_brc-analytics/">(details)</a></td>
+<td><a href="https://github.com/galaxyproject/brc-analytics">galaxyproject/brc-analytics</a></td>
+</tr>
+<tr>
+<td><a href="https://netbeheer-nederland.github.io/cim-to-linkml/">cim-to-linkml</a><br/>Generates LinkML schemas for packages in the CIM information model.</td>
+<td></td>
+<td>4 <a href="../details/Netbeheer-Nederland_cim-to-linkml/">(details)</a></td>
+<td><a href="https://github.com/Netbeheer-Nederland/cim-to-linkml">Netbeheer-Nederland/cim-to-linkml</a></td>
+</tr>
+<tr>
+<td><a href="https://tibhannover.github.io/ConfIDent_schema/">ConfIDent_schema</a><br/>The data schema for the ConfIDent project.</td>
+<td></td>
+<td>4 <a href="../details/TIBHannover_ConfIDent_schema/">(details)</a></td>
+<td><a href="https://github.com/TIBHannover/ConfIDent_schema">TIBHannover/ConfIDent_schema</a></td>
+</tr>
+<tr>
+<td><a href="https://chanzuckerberg.github.io/czid-platformics/">czid-platformics</a></td>
+<td></td>
+<td>4 <a href="../details/chanzuckerberg_czid-platformics/">(details)</a></td>
+<td><a href="https://github.com/chanzuckerberg/czid-platformics">chanzuckerberg/czid-platformics</a></td>
+</tr>
+<tr>
+<td><a href="https://saved-models.github.io/data-utilities/">data-utilities</a><br/>SAVED project - data processing tools for fish farms</td>
+<td></td>
+<td>4 <a href="../details/saved-models_data-utilities/">(details)</a></td>
+<td><a href="https://github.com/saved-models/data-utilities">saved-models/data-utilities</a></td>
+</tr>
+<tr>
+<td><a href="https://netbeheer-nederland.github.io/gen-linkml-profile/">gen-linkml-profile</a><br/>LinkML schema profiler.</td>
+<td></td>
+<td>4 <a href="../details/Netbeheer-Nederland_gen-linkml-profile/">(details)</a></td>
+<td><a href="https://github.com/Netbeheer-Nederland/gen-linkml-profile">Netbeheer-Nederland/gen-linkml-profile</a></td>
+</tr>
+<tr>
+<td><a href="https://iterorganization.github.io/imas-codex/">imas-codex</a></td>
+<td></td>
+<td>4 <a href="../details/iterorganization_imas-codex/">(details)</a></td>
+<td><a href="https://github.com/iterorganization/imas-codex">iterorganization/imas-codex</a></td>
+</tr>
+<tr>
+<td><a href="https://p2p-ld.github.io/linkml-activitypub/">linkml-activitypub</a><br/>LinkML Schema representation of ActivityPub</td>
+<td></td>
+<td>4 <a href="../details/p2p-ld_linkml-activitypub/">(details)</a></td>
+<td><a href="https://github.com/p2p-ld/linkml-activitypub">p2p-ld/linkml-activitypub</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/mianct-schema/">mianct-schema</a><br/>Minimal Information About a New Cell Type</td>
+<td></td>
+<td>4 <a href="../details/cmungall_mianct-schema/">(details)</a></td>
+<td><a href="https://github.com/cmungall/mianct-schema">cmungall/mianct-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://bridge2ai.github.io/model-card-schema/">model-card-schema</a><br/>LinkML rendering of model cards</td>
+<td>ai, bridge2ai, deep-learning...</td>
+<td>4 <a href="../details/bridge2ai_model-card-schema/">(details)</a></td>
+<td><a href="https://github.com/bridge2ai/model-card-schema">bridge2ai/model-card-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://rtiinternational.github.io/NHLBI-BDC-DMC-HM/">NHLBI-BDC-DMC-HM</a><br/>BioData Catalyst Harmonized Model</td>
+<td></td>
+<td>4 <a href="../details/RTIInternational_NHLBI-BDC-DMC-HM/">(details)</a></td>
+<td><a href="https://github.com/RTIInternational/NHLBI-BDC-DMC-HM">RTIInternational/NHLBI-BDC-DMC-HM</a></td>
+</tr>
+<tr>
+<td><a href="https://nwb-linkml.readthedocs.io">nwb-linkml</a><br/>Translating NWB schema language to linkml</td>
+<td></td>
+<td>4 <a href="../details/p2p-ld_nwb-linkml/">(details)</a></td>
+<td><a href="https://github.com/p2p-ld/nwb-linkml">p2p-ld/nwb-linkml</a></td>
+</tr>
+<tr>
+<td><a href="https://biodatamodels.github.io/obograph/">obograph</a></td>
+<td></td>
+<td>4 <a href="../details/biodatamodels_obograph/">(details)</a></td>
+<td><a href="https://github.com/biodatamodels/obograph">biodatamodels/obograph</a></td>
+</tr>
+<tr>
+<td><a href="https://sepio-framework.github.io/sepio-linkml/">sepio-linkml</a><br/>LinkML-based specification of the SEPIO information model.</td>
+<td></td>
+<td>4 <a href="../details/sepio-framework_sepio-linkml/">(details)</a></td>
+<td><a href="https://github.com/sepio-framework/sepio-linkml">sepio-framework/sepio-linkml</a></td>
+</tr>
+<tr>
+<td><a href="https://ber-data.github.io/bertron-schema/">bertron-schema</a><br/>LinkML schema for BERtron project.</td>
+<td></td>
+<td>3 <a href="../details/ber-data_bertron-schema/">(details)</a></td>
+<td><a href="https://github.com/ber-data/bertron-schema">ber-data/bertron-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/bibliomancer/">bibliomancer</a><br/>Performs magic on bibliographies</td>
+<td></td>
+<td>3 <a href="../details/cmungall_bibliomancer/">(details)</a></td>
+<td><a href="https://github.com/cmungall/bibliomancer">cmungall/bibliomancer</a></td>
+</tr>
+<tr>
+<td><a href="https://monarch-initiative.github.io/cde-harmonization/">cde-harmonization</a><br/>Initial private repo for P1 CDE harmonization</td>
+<td></td>
+<td>3 <a href="../details/monarch-initiative_cde-harmonization/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/cde-harmonization">monarch-initiative/cde-harmonization</a></td>
+</tr>
+<tr>
+<td><a href="https://charm-bdf.github.io/CHARMTwinsights/">CHARMTwinsights</a><br/>CHARMTwinsight is part of the CHARM suite of tools, focused on predictive analytics via flexible mod...</td>
+<td></td>
+<td>3 <a href="../details/CHARM-BDF_CHARMTwinsights/">(details)</a></td>
+<td><a href="https://github.com/CHARM-BDF/CHARMTwinsights">CHARM-BDF/CHARMTwinsights</a></td>
+</tr>
+<tr>
+<td><a href="https://knowledge-graph-hub.github.io/eco-kg/">eco-kg</a></td>
+<td></td>
+<td>3 <a href="../details/Knowledge-Graph-Hub_eco-kg/">(details)</a></td>
+<td><a href="https://github.com/Knowledge-Graph-Hub/eco-kg">Knowledge-Graph-Hub/eco-kg</a></td>
+</tr>
+<tr>
+<td><a href="https://include-dcc.github.io/include-linkml/">include-linkml</a><br/>LinkML Schema for INCLUDE DCC</td>
+<td></td>
+<td>3 <a href="../details/include-dcc_include-linkml/">(details)</a></td>
+<td><a href="https://github.com/include-dcc/include-linkml">include-dcc/include-linkml</a></td>
+</tr>
+<tr>
+<td><a href="https://mrbearwithhissword.github.io/KGQA-COVID/">KGQA-COVID</a></td>
+<td></td>
+<td>3 <a href="../details/MrBearWithHisSword_KGQA-COVID/">(details)</a></td>
+<td><a href="https://github.com/MrBearWithHisSword/KGQA-COVID">MrBearWithHisSword/KGQA-COVID</a></td>
+</tr>
+<tr>
+<td><a href="https://fair-mi.github.io/miiid-schema/">miiid-schema</a><br/>A metadata schema for the Minimum Information about Intermicrobial Interaction Data (MIIID) using Li...</td>
+<td>fair-data, linkml, linkml-schema...</td>
+<td>3 <a href="../details/FAIR-MI_miiid-schema/">(details)</a></td>
+<td><a href="https://github.com/FAIR-MI/miiid-schema">FAIR-MI/miiid-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/mixs-source/">mixs-source</a></td>
+<td></td>
+<td>3 <a href="../details/cmungall_mixs-source/">(details)</a></td>
+<td><a href="https://github.com/cmungall/mixs-source">cmungall/mixs-source</a></td>
+</tr>
+<tr>
+<td><a href="https://monarch-initiative.github.io/monarch-project-copier/">monarch-project-copier</a><br/>New template for monarch repos, replaces old cookiecutter</td>
+<td></td>
+<td>3 <a href="../details/monarch-initiative_monarch-project-copier/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/monarch-project-copier">monarch-initiative/monarch-project-copier</a></td>
+</tr>
+<tr>
+<td><a href="https://opencloning.github.io/OpenCloning_LinkML/">OpenCloning_LinkML</a><br/>A LinkML data model for OpenCloning</td>
+<td></td>
+<td>3 <a href="../details/OpenCloning_OpenCloning_LinkML/">(details)</a></td>
+<td><a href="https://github.com/OpenCloning/OpenCloning_LinkML">OpenCloning/OpenCloning_LinkML</a></td>
+</tr>
+<tr>
+<td><a href="https://nfdi4cat.github.io/pid4cat-model/">pid4cat-model</a><br/>Handle-based PIDs with a rich LinkML metadata model for resources in catalysis (PID4Cat)</td>
+<td>handles, linkml, linkml-schema...</td>
+<td>3 <a href="../details/nfdi4cat_pid4cat-model/">(details)</a></td>
+<td><a href="https://github.com/nfdi4cat/pid4cat-model">nfdi4cat/pid4cat-model</a></td>
+</tr>
+<tr>
+<td><a href="https://adhollander.github.io/PPODLinkML/">PPODLinkML</a><br/>A LinkML representation of the PPOD schema</td>
+<td></td>
+<td>3 <a href="../details/adhollander_PPODLinkML/">(details)</a></td>
+<td><a href="https://github.com/adhollander/PPODLinkML">adhollander/PPODLinkML</a></td>
+</tr>
+<tr>
+<td><a href="https://bridge2ai.github.io/standards-schemas/">standards-schemas</a><br/>Data schema for Bridge2AI Standards.</td>
+<td></td>
+<td>3 <a href="../details/bridge2ai_standards-schemas/">(details)</a></td>
+<td><a href="https://github.com/bridge2ai/standards-schemas">bridge2ai/standards-schemas</a></td>
+</tr>
+<tr>
+<td><a href="https://timsbiomed.github.io/TermCI-model/">TermCI-model</a><br/>The Terminology Code Index Entry model</td>
+<td></td>
+<td>3 <a href="../details/timsbiomed_TermCI-model/">(details)</a></td>
+<td><a href="https://github.com/timsbiomed/TermCI-model">timsbiomed/TermCI-model</a></td>
+</tr>
+<tr>
+<td><a href="https://ncatstranslator.github.io/translator-ingests/">translator-ingests</a><br/>NCATS Biomedical Data Translator Data INGest and Operations WG consolidated data ingest pipeline pro...</td>
+<td></td>
+<td>3 <a href="../details/NCATSTranslator_translator-ingests/">(details)</a></td>
+<td><a href="https://github.com/NCATSTranslator/translator-ingests">NCATSTranslator/translator-ingests</a></td>
+</tr>
+<tr>
+<td><a href="https://hsolbrig.github.io/BDP-Ontology/">BDP-Ontology</a></td>
+<td></td>
+<td>2 <a href="../details/hsolbrig_BDP-Ontology/">(details)</a></td>
+<td><a href="https://github.com/hsolbrig/BDP-Ontology">hsolbrig/BDP-Ontology</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/biostride/">biostride</a><br/>BioStructures Image Database and Experiments Schema</td>
+<td></td>
+<td>2 <a href="../details/cmungall_biostride/">(details)</a></td>
+<td><a href="https://github.com/cmungall/biostride">cmungall/biostride</a></td>
+</tr>
+<tr>
+<td><a href="https://av-efi.github.io/collections2efi/">collections2efi</a><br/>Code used at Stiftung Deutsche Kinemathek to register AVefi compliant PIDs for collections on record...</td>
+<td></td>
+<td>2 <a href="../details/AV-EFI_collections2efi/">(details)</a></td>
+<td><a href="https://github.com/AV-EFI/collections2efi">AV-EFI/collections2efi</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/data-manifesto/">data-manifesto</a><br/>semantic modeling of data manifests</td>
+<td></td>
+<td>2 <a href="../details/cmungall_data-manifesto/">(details)</a></td>
+<td><a href="https://github.com/cmungall/data-manifesto">cmungall/data-manifesto</a></td>
+</tr>
+<tr>
+<td><a href="https://cdisc-org.github.io/DataExchange-ODM-LinkML/">DataExchange-ODM-LinkML</a><br/>LinkML related work for ODMv2</td>
+<td>data-exchange-standard</td>
+<td>2 <a href="../details/cdisc-org_DataExchange-ODM-LinkML/">(details)</a></td>
+<td><a href="https://github.com/cdisc-org/DataExchange-ODM-LinkML">cdisc-org/DataExchange-ODM-LinkML</a></td>
+</tr>
+<tr>
+<td><a href="https://ncatstranslator.github.io/Explanatory-Agent/">Explanatory-Agent</a></td>
+<td></td>
+<td>2 <a href="../details/NCATSTranslator_Explanatory-Agent/">(details)</a></td>
+<td><a href="https://github.com/NCATSTranslator/Explanatory-Agent">NCATSTranslator/Explanatory-Agent</a></td>
+</tr>
+<tr>
+<td><a href="https://microbiomedata.github.io/external-metadata-awareness/">external-metadata-awareness</a><br/>Tools for fetching and processing external schemas, ontologies and metadata records. Includes value ...</td>
+<td></td>
+<td>2 <a href="../details/microbiomedata_external-metadata-awareness/">(details)</a></td>
+<td><a href="https://github.com/microbiomedata/external-metadata-awareness">microbiomedata/external-metadata-awareness</a></td>
+</tr>
+<tr>
+<td><a href="https://slabstech.github.io/gaganyatri.in/">gaganyatri.in</a><br/>Gaganyatri - Space Operations for Mars Transfer</td>
+<td></td>
+<td>2 <a href="../details/slabstech_gaganyatri.in/">(details)</a></td>
+<td><a href="https://github.com/slabstech/gaganyatri.in">slabstech/gaganyatri.in</a></td>
+</tr>
+<tr>
+<td><a href="https://german-bioimaging.github.io/idr_metadata_model/">idr_metadata_model</a></td>
+<td></td>
+<td>2 <a href="../details/German-BioImaging_idr_metadata_model/">(details)</a></td>
+<td><a href="https://github.com/German-BioImaging/idr_metadata_model">German-BioImaging/idr_metadata_model</a></td>
+</tr>
+<tr>
+<td><a href="https://vladistan.github.io/linkml-pokemon/">linkml-pokemon</a><br/>Adaptation of Pokemon Knowledge Graph as LinkML Schema</td>
+<td>agentic-ai, knowledge-graph, linked-data...</td>
+<td>2 <a href="../details/vladistan_linkml-pokemon/">(details)</a></td>
+<td><a href="https://github.com/vladistan/linkml-pokemon">vladistan/linkml-pokemon</a></td>
+</tr>
+<tr>
+<td><a href="https://genomewalker.github.io/linkml-toolkit/">linkml-toolkit</a></td>
+<td></td>
+<td>2 <a href="../details/genomewalker_linkml-toolkit/">(details)</a></td>
+<td><a href="https://github.com/genomewalker/linkml-toolkit">genomewalker/linkml-toolkit</a></td>
+</tr>
+<tr>
+<td><a href="https://echemdb.github.io/metadata-schema/">metadata-schema</a><br/>Metadata schema describing electrochemical data</td>
+<td></td>
+<td>2 <a href="../details/echemdb_metadata-schema/">(details)</a></td>
+<td><a href="https://github.com/echemdb/metadata-schema">echemdb/metadata-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://monarch-initiative.github.io/monarch-gene-mapping/">monarch-gene-mapping</a><br/>Code for mapping source namespaces to preffered namespacing</td>
+<td></td>
+<td>2 <a href="../details/monarch-initiative_monarch-gene-mapping/">(details)</a></td>
+<td><a href="https://github.com/monarch-initiative/monarch-gene-mapping">monarch-initiative/monarch-gene-mapping</a></td>
+</tr>
+<tr>
+<td><a href="https://matentzn.github.io/monarch-provenance/">monarch-provenance</a></td>
+<td></td>
+<td>2 <a href="../details/matentzn_monarch-provenance/">(details)</a></td>
+<td><a href="https://github.com/matentzn/monarch-provenance">matentzn/monarch-provenance</a></td>
+</tr>
+<tr>
+<td><a href="https://microbiomedata.github.io/nmdc-metadata/">nmdc-metadata</a><br/>Managing metadata and policy around metadata in NMDC</td>
+<td></td>
+<td>2 <a href="../details/microbiomedata_nmdc-metadata/">(details)</a></td>
+<td><a href="https://github.com/microbiomedata/nmdc-metadata">microbiomedata/nmdc-metadata</a></td>
+</tr>
+<tr>
+<td><a href="https://anvilproject.github.io/acr-harmonized-data-model/">acr-harmonized-data-model</a><br/>ACR Data Model</td>
+<td></td>
+<td>1 <a href="../details/anvilproject_acr-harmonized-data-model/">(details)</a></td>
+<td><a href="https://github.com/anvilproject/acr-harmonized-data-model">anvilproject/acr-harmonized-data-model</a></td>
+</tr>
+<tr>
+<td><a href="https://airr-knowledge.github.io/ak-schema/">ak-schema</a><br/>AIRR Knowledge Schema</td>
+<td></td>
+<td>1 <a href="../details/airr-knowledge_ak-schema/">(details)</a></td>
+<td><a href="https://github.com/airr-knowledge/ak-schema">airr-knowledge/ak-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://arpa-h-bdf.github.io/bdfkb-schema/">bdfkb-schema</a></td>
+<td></td>
+<td>1 <a href="../details/ARPA-H-BDF_bdfkb-schema/">(details)</a></td>
+<td><a href="https://github.com/ARPA-H-BDF/bdfkb-schema">ARPA-H-BDF/bdfkb-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://beril-model.github.io/beril-model/">beril-model</a><br/>A proposed LinkML schema in support of sample interoperability at the Department of Energy's Biologi...</td>
+<td></td>
+<td>1 <a href="../details/beril-model_beril-model/">(details)</a></td>
+<td><a href="https://github.com/beril-model/beril-model">beril-model/beril-model</a></td>
+</tr>
+<tr>
+<td><a href="https://bioimage-archive.github.io/BIA-ro-crate/">BIA-ro-crate</a><br/>A CLI tool to convert between BioImage Archive API objects and RO-crate (specifically include those ...</td>
+<td></td>
+<td>1 <a href="../details/BioImage-Archive_BIA-ro-crate/">(details)</a></td>
+<td><a href="https://github.com/BioImage-Archive/BIA-ro-crate">BioImage-Archive/BIA-ro-crate</a></td>
+</tr>
+<tr>
+<td><a href="https://cellannotation.github.io/cas-tools/">cas-tools</a><br/>Cell Annotation Schema Tools</td>
+<td></td>
+<td>1 <a href="../details/cellannotation_cas-tools/">(details)</a></td>
+<td><a href="https://github.com/cellannotation/cas-tools">cellannotation/cas-tools</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/comet/">comet</a></td>
+<td></td>
+<td>1 <a href="../details/cmungall_comet/">(details)</a></td>
+<td><a href="https://github.com/cmungall/comet">cmungall/comet</a></td>
+</tr>
+<tr>
+<td><a href="https://dharunashokkumar.github.io/cs-archive/">cs-archive</a><br/>A comprehensive CS knowledge hub with 20+ curated categories for students - skills, resources, proje...</td>
+<td></td>
+<td>1 <a href="../details/dharunashokkumar_cs-archive/">(details)</a></td>
+<td><a href="https://github.com/dharunashokkumar/cs-archive">dharunashokkumar/cs-archive</a></td>
+</tr>
+<tr>
+<td><a href="https://ncihtan.github.io/htan2-data-model/">htan2-data-model</a><br/>Data Model for HTAN Phase 2</td>
+<td></td>
+<td>1 <a href="../details/ncihtan_htan2-data-model/">(details)</a></td>
+<td><a href="https://github.com/ncihtan/htan2-data-model">ncihtan/htan2-data-model</a></td>
+</tr>
+<tr>
+<td><a href="https://hzb-ce-dataschemas.github.io/hzb-catalysisLabs-schema/">hzb-catalysisLabs-schema</a><br/>A datamodel for describing entities and their semantic associations (e.g., mappings to vocabularies/...</td>
+<td></td>
+<td>1 <a href="../details/HZB-CE-DataSchemas_hzb-catalysisLabs-schema/">(details)</a></td>
+<td><a href="https://github.com/HZB-CE-DataSchemas/hzb-catalysisLabs-schema">HZB-CE-DataSchemas/hzb-catalysisLabs-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://knowledge-graph-hub.github.io/kg-envpolyreg/">kg-envpolyreg</a></td>
+<td></td>
+<td>1 <a href="../details/Knowledge-Graph-Hub_kg-envpolyreg/">(details)</a></td>
+<td><a href="https://github.com/Knowledge-Graph-Hub/kg-envpolyreg">Knowledge-Graph-Hub/kg-envpolyreg</a></td>
+</tr>
+<tr>
+<td><a href="https://genophenoenvo.github.io/knowledge-graph/">knowledge-graph</a></td>
+<td></td>
+<td>1 <a href="../details/genophenoenvo_knowledge-graph/">(details)</a></td>
+<td><a href="https://github.com/genophenoenvo/knowledge-graph">genophenoenvo/knowledge-graph</a></td>
+</tr>
+<tr>
+<td><a href="https://chicagopcdc.github.io/linkml-data-dictionary/">linkml-data-dictionary</a><br/>Define the data dictionary using LinkML for data validation and reusable artifacts. (Proof of concep...</td>
+<td></td>
+<td>1 <a href="../details/chicagopcdc_linkml-data-dictionary/">(details)</a></td>
+<td><a href="https://github.com/chicagopcdc/linkml-data-dictionary">chicagopcdc/linkml-data-dictionary</a></td>
+</tr>
+<tr>
+<td><a href="https://microbiomedata.github.io/metadata_converter/">metadata_converter</a><br/>Conversion of schemas/templates/metadata to biolinkml</td>
+<td></td>
+<td>1 <a href="../details/microbiomedata_metadata_converter/">(details)</a></td>
+<td><a href="https://github.com/microbiomedata/metadata_converter">microbiomedata/metadata_converter</a></td>
+</tr>
+<tr>
+<td><a href="https://sdsc-ordes.github.io/modos-schema/">modos-schema</a><br/>Metadata schema for the Multi-Omics Digital-Object</td>
+<td></td>
+<td>1 <a href="../details/sdsc-ordes_modos-schema/">(details)</a></td>
+<td><a href="https://github.com/sdsc-ordes/modos-schema">sdsc-ordes/modos-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://kjappelbaum.github.io/mofdscribe-schema/">mofdscribe-schema</a></td>
+<td></td>
+<td>1 <a href="../details/kjappelbaum_mofdscribe-schema/">(details)</a></td>
+<td><a href="https://github.com/kjappelbaum/mofdscribe-schema">kjappelbaum/mofdscribe-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://jeffbaumes.github.io/nmdc-client/">nmdc-client</a><br/>A Python client for the National Microbiome Data Collaborative</td>
+<td></td>
+<td>1 <a href="../details/jeffbaumes_nmdc-client/">(details)</a></td>
+<td><a href="https://github.com/jeffbaumes/nmdc-client">jeffbaumes/nmdc-client</a></td>
+</tr>
+<tr>
+<td><a href="https://stroemphi.github.io/NMRspec/">NMRspec</a><br/>Prototype to semantify NMR spectroscopy research data</td>
+<td></td>
+<td>1 <a href="../details/StroemPhi_NMRspec/">(details)</a></td>
+<td><a href="https://github.com/StroemPhi/NMRspec">StroemPhi/NMRspec</a></td>
+</tr>
+<tr>
+<td><a href="https://sphere-cancer-cag.github.io/omop-link/">omop-link</a><br/>linkML model of OMOP Common Data Model</td>
+<td></td>
+<td>1 <a href="../details/SPHERE-Cancer-CAG_omop-link/">(details)</a></td>
+<td><a href="https://github.com/SPHERE-Cancer-CAG/omop-link">SPHERE-Cancer-CAG/omop-link</a></td>
+</tr>
+<tr>
+<td><a href="https://axenov.github.io/SketchML/">SketchML</a><br/>:whale: SketchML - distributed Machine Leaning framework for Apache Flink :star:</td>
+<td></td>
+<td>1 <a href="../details/axenov_SketchML/">(details)</a></td>
+<td><a href="https://github.com/axenov/SketchML">axenov/SketchML</a></td>
+</tr>
+<tr>
+<td><a href="https://ncats-tangerine.github.io/smpdb-beacon/">smpdb-beacon</a></td>
+<td></td>
+<td>1 <a href="../details/NCATS-Tangerine_smpdb-beacon/">(details)</a></td>
+<td><a href="https://github.com/NCATS-Tangerine/smpdb-beacon">NCATS-Tangerine/smpdb-beacon</a></td>
+</tr>
+<tr>
+<td><a href="https://mapping-commons.github.io/sssom-validate-ui/">sssom-validate-ui</a></td>
+<td></td>
+<td>1 <a href="../details/mapping-commons_sssom-validate-ui/">(details)</a></td>
+<td><a href="https://github.com/mapping-commons/sssom-validate-ui">mapping-commons/sssom-validate-ui</a></td>
+</tr>
+<tr>
+<td><a href="https://ehs-data-standards.github.io/synthetic-population-schema/">synthetic-population-schema</a><br/>A LinkML version of RTI's synthetic population schema</td>
+<td></td>
+<td>1 <a href="../details/EHS-Data-Standards_synthetic-population-schema/">(details)</a></td>
+<td><a href="https://github.com/EHS-Data-Standards/synthetic-population-schema">EHS-Data-Standards/synthetic-population-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://timsbiomed.github.io/tccm-model-lite/">tccm-model-lite</a></td>
+<td></td>
+<td>1 <a href="../details/timsbiomed_tccm-model-lite/">(details)</a></td>
+<td><a href="https://github.com/timsbiomed/tccm-model-lite">timsbiomed/tccm-model-lite</a></td>
+</tr>
+<tr>
+<td><a href="https://alspac.github.io/alspac-data-catalogue-schema/">alspac-data-catalogue-schema</a><br/>This repo is for the schema of alspac data catalogues and meta data for alspac data sets</td>
+<td></td>
+<td>0 <a href="../details/alspac_alspac-data-catalogue-schema/">(details)</a></td>
+<td><a href="https://github.com/alspac/alspac-data-catalogue-schema">alspac/alspac-data-catalogue-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://sveino.github.io/arcZcode/">arcZcode</a><br/>Architecture as Code</td>
+<td></td>
+<td>0 <a href="../details/Sveino_arcZcode/">(details)</a></td>
+<td><a href="https://github.com/Sveino/arcZcode">Sveino/arcZcode</a></td>
+</tr>
+<tr>
+<td><a href="https://sierra-moxon.github.io/automate_mappings/">automate_mappings</a></td>
+<td></td>
+<td>0 <a href="../details/sierra-moxon_automate_mappings/">(details)</a></td>
+<td><a href="https://github.com/sierra-moxon/automate_mappings">sierra-moxon/automate_mappings</a></td>
+</tr>
+<tr>
+<td><a href="https://diatomsrcool.github.io/biotic-interactions/">biotic-interactions</a><br/>LinkML model for biotic interactions - designed for use with OntoGPT</td>
+<td></td>
+<td>0 <a href="../details/diatomsRcool_biotic-interactions/">(details)</a></td>
+<td><a href="https://github.com/diatomsRcool/biotic-interactions">diatomsRcool/biotic-interactions</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/bridge-schemas/">bridge-schemas</a></td>
+<td></td>
+<td>0 <a href="../details/cmungall_bridge-schemas/">(details)</a></td>
+<td><a href="https://github.com/cmungall/bridge-schemas">cmungall/bridge-schemas</a></td>
+</tr>
+<tr>
+<td><a href="https://cellular-semantics.github.io/cell-annotation-schema/">cell-annotation-schema</a><br/>A general, open-standard schema for cell annotations and related metadata.</td>
+<td></td>
+<td>0 <a href="../details/Cellular-Semantics_cell-annotation-schema/">(details)</a></td>
+<td><a href="https://github.com/Cellular-Semantics/cell-annotation-schema">Cellular-Semantics/cell-annotation-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://ncats-tangerine.github.io/CPKG/">CPKG</a><br/>Translation tools for ClinicalProfile to Knowledge Graphs</td>
+<td></td>
+<td>0 <a href="../details/NCATS-Tangerine_CPKG/">(details)</a></td>
+<td><a href="https://github.com/NCATS-Tangerine/CPKG">NCATS-Tangerine/CPKG</a></td>
+</tr>
+<tr>
+<td><a href="https://ebiquity.github.io/crystalia-collector/">crystalia-collector</a></td>
+<td></td>
+<td>0 <a href="../details/Ebiquity_crystalia-collector/">(details)</a></td>
+<td><a href="https://github.com/Ebiquity/crystalia-collector">Ebiquity/crystalia-collector</a></td>
+</tr>
+<tr>
+<td><a href="https://in2primatebrains.github.io/DataMetadataWorkflowDocs/">DataMetadataWorkflowDocs</a><br/>Documentation for In2PrimateBrains Data and Metadata Workflows</td>
+<td></td>
+<td>0 <a href="../details/In2PrimateBrains_DataMetadataWorkflowDocs/">(details)</a></td>
+<td><a href="https://github.com/In2PrimateBrains/DataMetadataWorkflowDocs">In2PrimateBrains/DataMetadataWorkflowDocs</a></td>
+</tr>
+<tr>
+<td><a href="https://earth-metabolome-initiative.github.io/emi-ontology-linkml/">emi-ontology-linkml</a></td>
+<td></td>
+<td>0 <a href="../details/earth-metabolome-initiative_emi-ontology-linkml/">(details)</a></td>
+<td><a href="https://github.com/earth-metabolome-initiative/emi-ontology-linkml">earth-metabolome-initiative/emi-ontology-linkml</a></td>
+</tr>
+<tr>
+<td><a href="https://hsolbrig.github.io/foo-model/">foo-model</a></td>
+<td></td>
+<td>0 <a href="../details/hsolbrig_foo-model/">(details)</a></td>
+<td><a href="https://github.com/hsolbrig/foo-model">hsolbrig/foo-model</a></td>
+</tr>
+<tr>
+<td><a href="https://sujaypatil96.github.io/ga4gh-va-schema/">ga4gh-va-schema</a><br/>Data model for variant annotation in the GA4GH consortium.</td>
+<td></td>
+<td>0 <a href="../details/sujaypatil96_ga4gh-va-schema/">(details)</a></td>
+<td><a href="https://github.com/sujaypatil96/ga4gh-va-schema">sujaypatil96/ga4gh-va-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://mukundanps.github.io/ghp-vocab/">ghp-vocab</a><br/>Vocabulary for Good Health Pass</td>
+<td></td>
+<td>0 <a href="../details/mukundanps_ghp-vocab/">(details)</a></td>
+<td><a href="https://github.com/mukundanps/ghp-vocab">mukundanps/ghp-vocab</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/hoopla/">hoopla</a></td>
+<td></td>
+<td>0 <a href="../details/cmungall_hoopla/">(details)</a></td>
+<td><a href="https://github.com/cmungall/hoopla">cmungall/hoopla</a></td>
+</tr>
+<tr>
+<td><a href="https://ree-gupta.github.io/in2pb-linkml-test/">in2pb-linkml-test</a></td>
+<td></td>
+<td>0 <a href="../details/ree-gupta_in2pb-linkml-test/">(details)</a></td>
+<td><a href="https://github.com/ree-gupta/in2pb-linkml-test">ree-gupta/in2pb-linkml-test</a></td>
+</tr>
+<tr>
+<td><a href="https://hsolbrig.github.io/jsonasobj/">jsonasobj</a><br/>Extension to the python json library that represents JSON as first class python objects.</td>
+<td></td>
+<td>0 <a href="../details/hsolbrig_jsonasobj/">(details)</a></td>
+<td><a href="https://github.com/hsolbrig/jsonasobj">hsolbrig/jsonasobj</a></td>
+</tr>
+<tr>
+<td><a href="https://cmungall.github.io/linkml-cfde/">linkml-cfde</a><br/>EXPERIMENTAL rendering of Common Fund Data Ecocystem as LinkML</td>
+<td></td>
+<td>0 <a href="../details/cmungall_linkml-cfde/">(details)</a></td>
+<td><a href="https://github.com/cmungall/linkml-cfde">cmungall/linkml-cfde</a></td>
+</tr>
+<tr>
+<td><a href="https://hsolbrig.github.io/linkml-enhanced-template/">linkml-enhanced-template</a><br/>Linkml template playground</td>
+<td></td>
+<td>0 <a href="../details/hsolbrig_linkml-enhanced-template/">(details)</a></td>
+<td><a href="https://github.com/hsolbrig/linkml-enhanced-template">hsolbrig/linkml-enhanced-template</a></td>
+</tr>
+<tr>
+<td><a href="https://manulera.github.io/linkml-playground/">linkml-playground</a><br/>linkml-playground</td>
+<td></td>
+<td>0 <a href="../details/manulera_linkml-playground/">(details)</a></td>
+<td><a href="https://github.com/manulera/linkml-playground">manulera/linkml-playground</a></td>
+</tr>
+<tr>
+<td><a href="https://cwseidel.github.io/linkml-tutorial-2024/">linkml-tutorial-2024</a><br/>LinkML tutorial from ISMB 2024</td>
+<td></td>
+<td>0 <a href="../details/cwseidel_linkml-tutorial-2024/">(details)</a></td>
+<td><a href="https://github.com/cwseidel/linkml-tutorial-2024">cwseidel/linkml-tutorial-2024</a></td>
+</tr>
+<tr>
+<td><a href="https://pro-dho.github.io/microscopemetrics-django-dash-omero/">microscopemetrics-django-dash-omero</a></td>
+<td></td>
+<td>0 <a href="../details/pro-dho_microscopemetrics-django-dash-omero/">(details)</a></td>
+<td><a href="https://github.com/pro-dho/microscopemetrics-django-dash-omero">pro-dho/microscopemetrics-django-dash-omero</a></td>
+</tr>
+<tr>
+<td><a href="https://microbiomedata.github.io/minimal-metab/">minimal-metab</a><br/>A LinkML cookiecutter repo for modelling metabolomics from the ground up</td>
+<td></td>
+<td>0 <a href="../details/microbiomedata_minimal-metab/">(details)</a></td>
+<td><a href="https://github.com/microbiomedata/minimal-metab">microbiomedata/minimal-metab</a></td>
+</tr>
+<tr>
+<td><a href="https://genomicsstandardsconsortium.github.io/mixs-missing-value-sandbox/">mixs-missing-value-sandbox</a><br/>experimentation with formal representations of missing data</td>
+<td></td>
+<td>0 <a href="../details/GenomicsStandardsConsortium_mixs-missing-value-sandbox/">(details)</a></td>
+<td><a href="https://github.com/GenomicsStandardsConsortium/mixs-missing-value-sandbox">GenomicsStandardsConsortium/mixs-missing-value-sandbox</a></td>
+</tr>
+<tr>
+<td><a href="https://microbiomedata.github.io/nmdc-ontology/">nmdc-ontology</a><br/>The NMDC Ontology (NMDCO) is used by the National Microbiome Data Collaborative (NMDC) to annotate m...</td>
+<td></td>
+<td>0 <a href="../details/microbiomedata_nmdc-ontology/">(details)</a></td>
+<td><a href="https://github.com/microbiomedata/nmdc-ontology">microbiomedata/nmdc-ontology</a></td>
+</tr>
+<tr>
+<td><a href="https://stroemphi.github.io/Ontology-Metadata/">Ontology-Metadata</a><br/>A schema for ontology metadata (WIP)</td>
+<td></td>
+<td>0 <a href="../details/StroemPhi_Ontology-Metadata/">(details)</a></td>
+<td><a href="https://github.com/StroemPhi/Ontology-Metadata">StroemPhi/Ontology-Metadata</a></td>
+</tr>
+<tr>
+<td><a href="https://liuji1031.github.io/ontology_to_schema/">ontology_to_schema</a></td>
+<td></td>
+<td>0 <a href="../details/liuji1031_ontology_to_schema/">(details)</a></td>
+<td><a href="https://github.com/liuji1031/ontology_to_schema">liuji1031/ontology_to_schema</a></td>
+</tr>
+<tr>
+<td><a href="https://opencloning.github.io/OpenCloning-submission/">OpenCloning-submission</a><br/>An API to submit ShareYourCloning templates</td>
+<td></td>
+<td>0 <a href="../details/OpenCloning_OpenCloning-submission/">(details)</a></td>
+<td><a href="https://github.com/OpenCloning/OpenCloning-submission">OpenCloning/OpenCloning-submission</a></td>
+</tr>
+<tr>
+<td><a href="https://samuvack.github.io/OSLO2LINKML/">OSLO2LINKML</a></td>
+<td></td>
+<td>0 <a href="../details/samuvack_OSLO2LINKML/">(details)</a></td>
+<td><a href="https://github.com/samuvack/OSLO2LINKML">samuvack/OSLO2LINKML</a></td>
+</tr>
+<tr>
+<td><a href="https://multimeric.github.io/PCDMLinkML/">PCDMLinkML</a><br/>Portland Common Data Model, in LinkML</td>
+<td></td>
+<td>0 <a href="../details/multimeric_PCDMLinkML/">(details)</a></td>
+<td><a href="https://github.com/multimeric/PCDMLinkML">multimeric/PCDMLinkML</a></td>
+</tr>
+<tr>
+<td><a href="https://wd15.github.io/pfhub-cli-old/">pfhub-cli-old</a></td>
+<td></td>
+<td>0 <a href="../details/wd15_pfhub-cli-old/">(details)</a></td>
+<td><a href="https://github.com/wd15/pfhub-cli-old">wd15/pfhub-cli-old</a></td>
+</tr>
+<tr>
+<td><a href="https://plasmogenepi.github.io/portable-microhaplotype-object/">portable-microhaplotype-object</a><br/>A schema to define the minimum amount of data needed to export a microhaplotype calling pipeline ana...</td>
+<td></td>
+<td>0 <a href="../details/PlasmoGenEpi_portable-microhaplotype-object/">(details)</a></td>
+<td><a href="https://github.com/PlasmoGenEpi/portable-microhaplotype-object">PlasmoGenEpi/portable-microhaplotype-object</a></td>
+</tr>
+<tr>
+<td><a href="https://ncats-tangerine.github.io/rhea-beacon/">rhea-beacon</a><br/>Knowledge Beacon wrapper for the Rhea Annotated Reactions database (https://www.rhea-db.org)</td>
+<td></td>
+<td>0 <a href="../details/NCATS-Tangerine_rhea-beacon/">(details)</a></td>
+<td><a href="https://github.com/NCATS-Tangerine/rhea-beacon">NCATS-Tangerine/rhea-beacon</a></td>
+</tr>
+<tr>
+<td><a href="https://sierra-moxon.github.io/schema-automator-monarch/">schema-automator-monarch</a></td>
+<td></td>
+<td>0 <a href="../details/sierra-moxon_schema-automator-monarch/">(details)</a></td>
+<td><a href="https://github.com/sierra-moxon/schema-automator-monarch">sierra-moxon/schema-automator-monarch</a></td>
+</tr>
+<tr>
+<td><a href="https://vemonet.github.io/semanticscience-model/">semanticscience-model</a><br/>LinkML model for the SemanticScience Integrated Ontology</td>
+<td></td>
+<td>0 <a href="../details/vemonet_semanticscience-model/">(details)</a></td>
+<td><a href="https://github.com/vemonet/semanticscience-model">vemonet/semanticscience-model</a></td>
+</tr>
+<tr>
+<td><a href="https://clingen-data-model.github.io/sepio-models/">sepio-models</a><br/>Shared SEPIO models based on the bioLinkML modeling language supporting the metakb and clingen sepio...</td>
+<td></td>
+<td>0 <a href="../details/clingen-data-model_sepio-models/">(details)</a></td>
+<td><a href="https://github.com/clingen-data-model/sepio-models">clingen-data-model/sepio-models</a></td>
+</tr>
+<tr>
+<td><a href="https://sneakers-the-rat.github.io/slides/">slides</a><br/>collectin my slides instead of having them be all over everywhere</td>
+<td></td>
+<td>0 <a href="../details/sneakers-the-rat_slides/">(details)</a></td>
+<td><a href="https://github.com/sneakers-the-rat/slides">sneakers-the-rat/slides</a></td>
+</tr>
+<tr>
+<td><a href="https://iarpa-felix.github.io/synbio-schema/">synbio-schema</a><br/>A schema for synthetic biology, inspired by IARPA FELIX</td>
+<td></td>
+<td>0 <a href="../details/iarpa-felix_synbio-schema/">(details)</a></td>
+<td><a href="https://github.com/iarpa-felix/synbio-schema">iarpa-felix/synbio-schema</a></td>
+</tr>
+<tr>
+<td><a href="https://timsbiomed.github.io/tccm-api/">tccm-api</a></td>
+<td></td>
+<td>0 <a href="../details/timsbiomed_tccm-api/">(details)</a></td>
+<td><a href="https://github.com/timsbiomed/tccm-api">timsbiomed/tccm-api</a></td>
+</tr>
+<tr>
+<td><a href="https://hsolbrig.github.io/template-fun-model/">template-fun-model</a><br/>Demo</td>
+<td></td>
+<td>0 <a href="../details/hsolbrig_template-fun-model/">(details)</a></td>
+<td><a href="https://github.com/hsolbrig/template-fun-model">hsolbrig/template-fun-model</a></td>
+</tr>
+<tr>
+<td><a href="https://yibeichan.github.io/test-linkml-cookiecutter/">test-linkml-cookiecutter</a><br/>test linkml cookiecutter</td>
+<td></td>
+<td>0 <a href="../details/yibeichan_test-linkml-cookiecutter/">(details)</a></td>
+<td><a href="https://github.com/yibeichan/test-linkml-cookiecutter">yibeichan/test-linkml-cookiecutter</a></td>
+</tr>
+<tr>
+<td><a href="https://sierra-moxon.github.io/test_predicates/">test_predicates</a></td>
+<td></td>
+<td>0 <a href="../details/sierra-moxon_test_predicates/">(details)</a></td>
+<td><a href="https://github.com/sierra-moxon/test_predicates">sierra-moxon/test_predicates</a></td>
+</tr>
+<tr>
+<td><a href="https://ncats-tangerine.github.io/tkg-beacon/">tkg-beacon</a><br/>Knowledge Beacon wrapper of a Translator Knowledge Graph data model compliant Neo4j Database</td>
+<td></td>
+<td>0 <a href="../details/NCATS-Tangerine_tkg-beacon/">(details)</a></td>
+<td><a href="https://github.com/NCATS-Tangerine/tkg-beacon">NCATS-Tangerine/tkg-beacon</a></td>
+</tr>
+<tr>
+<td><a href="https://netbeheer-nederland.github.io/tmpl-cm/">tmpl-cm</a><br/>Template repository for conceptual models.</td>
+<td></td>
+<td>0 <a href="../details/Netbeheer-Nederland_tmpl-cm/">(details)</a></td>
+<td><a href="https://github.com/Netbeheer-Nederland/tmpl-cm">Netbeheer-Nederland/tmpl-cm</a></td>
+</tr>
+<tr>
+<td><a href="https://saezlab.github.io/tum-bc/">tum-bc</a></td>
+<td></td>
+<td>0 <a href="../details/saezlab_tum-bc/">(details)</a></td>
+<td><a href="https://github.com/saezlab/tum-bc">saezlab/tum-bc</a></td>
+</tr>
+<tr>
+<td><a href="https://sierra-moxon.github.io/vrs_linkml/">vrs_linkml</a><br/>LinkML Version of the GA4GH Variation Representation Specification</td>
+<td></td>
+<td>0 <a href="../details/sierra-moxon_vrs_linkml/">(details)</a></td>
+<td><a href="https://github.com/sierra-moxon/vrs_linkml">sierra-moxon/vrs_linkml</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
