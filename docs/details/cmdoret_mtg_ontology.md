@@ -8,12 +8,12 @@
 
 **Schema URL:** https://cmdoret.github.io/mtg_ontology/
 
-**License:** GPL-3.0
 
-**Domain:** Computer Science
 
-**Status:** maintenance
+**Domain:** Schema
 
-**Topics:** linkml, mtg, ontology, rdf
+**Status:** unknown
+
+
 
 **Contacts:** cmdoret
