@@ -12,7 +12,7 @@
 
 **Domain:** Computer Science
 
-**Status:** inactive
+**Status:** active
 
 **Topics:** fair-data, linkml, linkml-schema, metadata-standard, microbial-ecology
 

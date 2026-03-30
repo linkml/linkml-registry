@@ -12,7 +12,7 @@
 
 **Domain:** Biology
 
-**Status:** inactive
+**Status:** active
 
 **Topics:** bioinformatics, formats, genomics, gff, linkml
 
