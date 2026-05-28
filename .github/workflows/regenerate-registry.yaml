@@ -37,6 +37,17 @@ jobs:
       - name: Install project dependencies
         run: uv sync
 
+      - name: Capture previous registry entry count
+        id: prev-count
+        run: |
+          if [ -f linkml_registry.yaml ]; then
+            OLD_COUNT=$(uv run python -c "import yaml,sys; d=yaml.safe_load(open('linkml_registry.yaml')); print(len((d or {}).get('entries') or {}))")
+          else
+            OLD_COUNT=0
+          fi
+          echo "old_count=${OLD_COUNT}" >> "$GITHUB_OUTPUT"
+          echo "Previous registry entry count: ${OLD_COUNT}"
+
       - name: Generate LinkML Registry Artifacts
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -44,18 +55,58 @@ jobs:
           mkdir -p docs
           touch docs/.nojekyll
           make gendoc
-          if [ $? -eq 0 ]; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git add linkml_registry.yaml docs/
-            if ! git diff --cached --quiet; then
-              git commit -m "Regenerate LinkML registry artifacts"
-              git push origin HEAD:main
-            else
-              echo "No changes to commit"
-            fi
-          else
-            echo "'make gendoc' failed to finish successfully"
+
+      - name: Verify new registry is not a regression
+        env:
+          OLD_COUNT: ${{ steps.prev-count.outputs.old_count }}
+          # Hard floor on entry count. Recent baseline is ~200; set conservatively.
+          MIN_EXPECTED: "150"
+          # Fail if new count drops by more than this fraction of the old count.
+          MAX_DROP_FRACTION: "0.15"
+        run: |
+          if [ ! -f linkml_registry.yaml ]; then
+            echo "::error::linkml_registry.yaml was not produced by make gendoc"
+            exit 1
           fi
+          NEW_COUNT=$(uv run python -c "import yaml; d=yaml.safe_load(open('linkml_registry.yaml')); print(len((d or {}).get('entries') or {}))")
+          echo "new_count=${NEW_COUNT}" >> "$GITHUB_OUTPUT"
+          {
+            echo "## Registry regeneration"
+            echo ""
+            echo "- Previous entries: ${OLD_COUNT}"
+            echo "- New entries: ${NEW_COUNT}"
+            echo "- Hard floor: ${MIN_EXPECTED}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "${NEW_COUNT}" -lt "${MIN_EXPECTED}" ]; then
+            echo "::error::New registry has ${NEW_COUNT} entries (< MIN_EXPECTED=${MIN_EXPECTED}); refusing to publish."
+            exit 1
+          fi
+
+          if [ "${OLD_COUNT}" -gt 0 ]; then
+            # Bash can't do floats; use python for the threshold comparison.
+            REGRESSED=$(python3 -c "import os,sys; o=int(os.environ['OLD_COUNT']); n=int('${NEW_COUNT}'); f=float(os.environ['MAX_DROP_FRACTION']); sys.stdout.write('1' if n < o*(1.0 - f) else '0')")
+            if [ "${REGRESSED}" = "1" ]; then
+              echo "::error::New registry entry count (${NEW_COUNT}) dropped >${MAX_DROP_FRACTION} below previous (${OLD_COUNT}); refusing to publish."
+              exit 1
+            fi
+          fi
+
+          echo "Registry size check passed (${NEW_COUNT} entries)."
+
+      - name: Commit regenerated registry
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add linkml_registry.yaml docs/
+          if ! git diff --cached --quiet; then
+            git commit -m "Regenerate LinkML registry artifacts"
+            git push origin HEAD:main
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Deploy to GitHub Pages
+        run: |
           ([ ! -f docs/about.md ] && cp src/docs/about.md docs/) || true
           uv run mkdocs gh-deploy --force
