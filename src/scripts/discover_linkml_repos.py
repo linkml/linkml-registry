@@ -9,6 +9,7 @@ in pyproject.toml and requirements.txt files.
 import os
 import sys
 import json
+import random
 import yaml
 import requests
 from pathlib import Path
@@ -17,6 +18,10 @@ import click
 from datetime import datetime
 import time
 from enum import Enum
+
+
+class RateLimitExhaustedError(RuntimeError):
+    """Raised when GitHub rate-limit retries are exhausted for a single request."""
 
 
 class ExcludeList(Enum):
@@ -83,6 +88,11 @@ def is_excluded_repository(repo: Dict[str, Any]) -> bool:
 class GitHubSearchDiscovery:
     """Discover LinkML projects using GitHub Search REST API."""
     
+    # Retry/backoff configuration for GitHub rate limits.
+    MAX_RETRIES = 5
+    BACKOFF_SCHEDULE = [30, 60, 120, 300, 600]  # seconds, per retry attempt
+    MAX_RESET_WAIT = 15 * 60  # cap on waiting for X-RateLimit-Reset, seconds
+
     def __init__(self, token: Optional[str] = None):
         """Initialize with GitHub token."""
         self.token = token or os.getenv('GITHUB_TOKEN') or os.getenv('GH_TOKEN')
@@ -94,8 +104,168 @@ class GitHubSearchDiscovery:
                 'Authorization': f'token {self.token}',
                 'Accept': 'application/vnd.github.v3+json'
             }
-        
+
         self.base_url = 'https://api.github.com'
+        # Queries that exhausted retries and were skipped. Inspected by the caller
+        # to decide whether to fail the run.
+        self.failed_queries: List[str] = []
+        # Cache of /repos/{full_name} lookups. Value is None when the lookup
+        # failed (and was recorded in failed_queries). Used both to avoid
+        # duplicate API calls and to enrich the minimal repository objects that
+        # GitHub returns for code-search / README-search results.
+        self._repo_cache: Dict[str, Optional[Dict[str, Any]]] = {}
+
+    def _compute_sleep_seconds(self, response: requests.Response, attempt: int) -> float:
+        """Pick a sleep duration after a 403/429 based on response headers.
+
+        Priority:
+          1. Retry-After header (secondary rate limit / abuse detection).
+          2. X-RateLimit-Reset when X-RateLimit-Remaining == 0 (primary limit).
+          3. Exponential backoff schedule.
+        Jitter is added to avoid synchronized retries.
+        """
+        retry_after = response.headers.get('Retry-After')
+        if retry_after:
+            try:
+                return float(retry_after) + random.uniform(0, 2)
+            except ValueError:
+                pass
+
+        remaining = response.headers.get('X-RateLimit-Remaining')
+        reset = response.headers.get('X-RateLimit-Reset')
+        if remaining is not None and reset is not None:
+            try:
+                if int(remaining) == 0:
+                    wait = int(reset) - int(time.time())
+                    if wait > 0:
+                        return min(wait, self.MAX_RESET_WAIT) + random.uniform(0, 2)
+            except ValueError:
+                pass
+
+        idx = min(attempt, len(self.BACKOFF_SCHEDULE) - 1)
+        return self.BACKOFF_SCHEDULE[idx] + random.uniform(0, 5)
+
+    def _proactive_throttle(self, response: requests.Response) -> None:
+        """If we are about to exhaust the rate limit, sleep until reset."""
+        remaining = response.headers.get('X-RateLimit-Remaining')
+        reset = response.headers.get('X-RateLimit-Reset')
+        if remaining is None or reset is None:
+            return
+        try:
+            remaining_int = int(remaining)
+            reset_int = int(reset)
+        except ValueError:
+            return
+        if remaining_int < 3:
+            wait = reset_int - int(time.time())
+            if wait > 0:
+                wait = min(wait, self.MAX_RESET_WAIT)
+                print(f"  Rate limit nearly exhausted ({remaining_int} remaining); sleeping {wait}s until reset")
+                time.sleep(wait + random.uniform(0, 2))
+
+    def _request_with_retry(self, url: str, params: Optional[Dict[str, Any]] = None,
+                            description: str = '') -> requests.Response:
+        """GET ``url`` with retries that honor GitHub's rate-limit headers.
+
+        Raises RateLimitExhaustedError after MAX_RETRIES rate-limited attempts.
+        Raises requests.RequestException for non-rate-limit network errors after
+        MAX_RETRIES.
+        """
+        last_response: Optional[requests.Response] = None
+        last_exc: Optional[Exception] = None
+
+        for attempt in range(self.MAX_RETRIES):
+            try:
+                response = requests.get(url, headers=self.headers, params=params, timeout=30)
+            except requests.RequestException as exc:
+                last_exc = exc
+                sleep_s = self.BACKOFF_SCHEDULE[min(attempt, len(self.BACKOFF_SCHEDULE) - 1)]
+                print(f"  Network error on {description or url}: {exc}; retrying in {sleep_s}s "
+                      f"(attempt {attempt + 1}/{self.MAX_RETRIES})")
+                time.sleep(sleep_s + random.uniform(0, 5))
+                continue
+
+            last_response = response
+
+            if response.status_code in (403, 429):
+                # Distinguish rate limit from a real 403 (e.g. permission denied).
+                body_msg = ''
+                try:
+                    body_msg = (response.json().get('message') or '').lower()
+                except (ValueError, AttributeError):
+                    body_msg = ''
+                is_rate_limit = (
+                    response.status_code == 429
+                    or 'rate limit' in body_msg
+                    or 'abuse detection' in body_msg
+                    or response.headers.get('X-RateLimit-Remaining') == '0'
+                    or response.headers.get('Retry-After') is not None
+                )
+                if not is_rate_limit:
+                    # A real 403 (e.g. forbidden); do not retry.
+                    return response
+
+                sleep_s = self._compute_sleep_seconds(response, attempt)
+                kind = 'secondary' if 'abuse' in body_msg or 'secondary' in body_msg else 'primary'
+                print(f"  Hit GitHub {kind} rate limit on {description or url} "
+                      f"(status {response.status_code}); sleeping {sleep_s:.1f}s "
+                      f"(attempt {attempt + 1}/{self.MAX_RETRIES})")
+                time.sleep(sleep_s)
+                continue
+
+            # Success or non-rate-limit error: let caller decide.
+            self._proactive_throttle(response)
+            return response
+
+        if last_response is not None:
+            raise RateLimitExhaustedError(
+                f"Rate limit retries exhausted for {description or url}: "
+                f"last status {last_response.status_code}"
+            )
+        raise RateLimitExhaustedError(
+            f"Network retries exhausted for {description or url}: {last_exc}"
+        )
+
+    def _fetch_full_repo(self, full_name: str) -> Optional[Dict[str, Any]]:
+        """Fetch canonical repo metadata via /repos/{full_name}.
+
+        Results are cached so the same repo is not refetched across the many
+        code-search queries that may surface it. Returns None on failure (rate
+        limit exhausted, 404, network error). The minimal repository object
+        embedded in code-search results lacks stargazers_count, license,
+        archived, and topics, so we need this to get accurate metadata.
+        """
+        if full_name in self._repo_cache:
+            return self._repo_cache[full_name]
+
+        url = f"{self.base_url}/repos/{full_name}"
+        try:
+            response = self._request_with_retry(
+                url, description=f"repo metadata {full_name}"
+            )
+        except RateLimitExhaustedError as exc:
+            print(f"  Rate limit hit fetching {full_name}: {exc}")
+            self.failed_queries.append(f"repo-meta:{full_name}")
+            self._repo_cache[full_name] = None
+            return None
+        except requests.RequestException as exc:
+            print(f"  Network error fetching {full_name}: {exc}")
+            self._repo_cache[full_name] = None
+            return None
+
+        if response.status_code != 200:
+            print(f"  Failed to fetch {full_name}: HTTP {response.status_code}")
+            self._repo_cache[full_name] = None
+            return None
+
+        try:
+            data = response.json()
+        except ValueError:
+            self._repo_cache[full_name] = None
+            return None
+
+        self._repo_cache[full_name] = data
+        return data
 
     def search_linkml_repositories(self) -> List[Dict[str, Any]]:
         """Search for repositories that have LinkML dependencies."""
@@ -131,7 +301,7 @@ class GitHubSearchDiscovery:
                     print(f"  Skipped fork: {full_name}")
             
             # Conservative rate limiting for REST API
-            time.sleep(2)
+            time.sleep(5)
         
         # Search README files for LinkML content using code search
         if self.token:
@@ -144,32 +314,37 @@ class GitHubSearchDiscovery:
             for query in readme_search_queries:
                 print(f"README search: {query}")
                 code_results = self._search_readme_content(query)
-                
+
                 for result in code_results:
-                    repo = result.get('repository', {})
-                    full_name = repo.get('full_name', '')
-                    
+                    minimal_repo = result.get('repository', {})
+                    full_name = minimal_repo.get('full_name', '')
+
                     if not full_name:
                         continue
-                        
+
                     # Skip repos from the linkml organization itself
                     if full_name.startswith('linkml/'):
                         print(f"  Skipped linkml org repo: {full_name}")
                         continue
+
+                    # The README/code-search "repository" object lacks stars,
+                    # license, archived, and topics; enrich via /repos/{name}.
+                    repo = self._fetch_full_repo(full_name) or minimal_repo
+
                     # Skip excluded repositories
                     if is_excluded_repository(repo):
                         continue
-                        
+
                     if full_name not in all_repos and not repo.get('fork', False):
                         all_repos[full_name] = repo
-                        stars = repo.get('stargazers_count', 0)
+                        stars = repo.get('stargazers_count', 0) or 0
                         print(f"  Found in README: {full_name} ({stars} stars)")
                     elif repo.get('fork', False):
                         print(f"  Skipped fork: {full_name}")
-                
+
                 # Conservative rate limiting for code search
-                time.sleep(6)
-        
+                time.sleep(10)
+
         # Then, search for linkml in specific files using REST code search
         if self.token:
             file_search_queries = [
@@ -222,16 +397,20 @@ class GitHubSearchDiscovery:
                         print(f"  Skipped fork: {full_name}")
                 
                 # Conservative rate limiting for code search (stricter limits than repo search)
-                time.sleep(6)
+                time.sleep(10)
         else:
             print("Skipping file searches - requires GitHub token for code search API")
         
         print(f"\nTotal unique repositories found: {len(all_repos)}")
+        if self.failed_queries:
+            print(f"\nWARNING: {len(self.failed_queries)} search queries were dropped after exhausting retries:")
+            for q in self.failed_queries:
+                print(f"  - {q}")
         return list(all_repos.values())
     
     def _search_repositories(self, query: str, per_page: int = 50) -> List[Dict[str, Any]]:
         """Execute repository search using GitHub Search API."""
-        
+
         url = f"{self.base_url}/search/repositories"
         params = {
             'q': query,
@@ -239,30 +418,36 @@ class GitHubSearchDiscovery:
             'order': 'desc',
             'per_page': per_page
         }
-        
+
         try:
-            response = requests.get(url, headers=self.headers, params=params)
-            
-            if response.status_code == 403:
-                print(f"  Rate limit exceeded for query: {query}")
-                return []
-            elif response.status_code != 200:
-                print(f"  Search failed for query '{query}': {response.status_code}")
-                return []
-            
-            data = response.json()
-            return data.get('items', [])
-            
-        except Exception as e:
-            print(f"  Error searching for '{query}': {e}")
+            response = self._request_with_retry(url, params=params,
+                                                description=f"repo search '{query}'")
+        except RateLimitExhaustedError as exc:
+            print(f"  {exc}")
+            self.failed_queries.append(f"repo:{query}")
             return []
+        except requests.RequestException as exc:
+            print(f"  Error searching for '{query}': {exc}")
+            self.failed_queries.append(f"repo:{query}")
+            return []
+
+        if response.status_code != 200:
+            print(f"  Search failed for query '{query}': {response.status_code}")
+            return []
+
+        try:
+            data = response.json()
+        except ValueError as exc:
+            print(f"  Invalid JSON for query '{query}': {exc}")
+            return []
+        return data.get('items', [])
     
     def _search_readme_content(self, search_string: str, per_page: int = 30) -> List[Dict[str, Any]]:
         """Search for a string in README.md files using GitHub's code search API."""
-        
+
         if not self.token:
             return []
-            
+
         url = f"{self.base_url}/search/code"
         query = f"{search_string} in:file filename:README.md"
         params = {
@@ -271,28 +456,37 @@ class GitHubSearchDiscovery:
         }
 
         try:
-            response = requests.get(url, headers=self.headers, params=params)
-            
-            if response.status_code == 403:
-                print(f"  Rate limit exceeded for query: {query}")
-                return []
-            elif response.status_code != 200:
-                print(f"  Search failed for query '{query}': {response.status_code}")
-                return []
-            
-            data = response.json()
-            return data.get('items', [])
-            
-        except Exception as e:
-            print(f"  Error searching for '{query}': {e}")
+            response = self._request_with_retry(url, params=params,
+                                                description=f"readme search '{query}'")
+        except RateLimitExhaustedError as exc:
+            print(f"  {exc}")
+            self.failed_queries.append(f"readme:{query}")
             return []
+        except requests.RequestException as exc:
+            print(f"  Error searching for '{query}': {exc}")
+            self.failed_queries.append(f"readme:{query}")
+            return []
+
+        if response.status_code == 422:
+            print(f"  README search query invalid: {query}")
+            return []
+        if response.status_code != 200:
+            print(f"  Search failed for query '{query}': {response.status_code}")
+            return []
+
+        try:
+            data = response.json()
+        except ValueError as exc:
+            print(f"  Invalid JSON for query '{query}': {exc}")
+            return []
+        return data.get('items', [])
     
     def _search_code_rest(self, query: str, per_page: int = 20) -> List[Dict[str, Any]]:
         """Search for code using GitHub REST API code search."""
-        
+
         if not self.token:
             return []
-        
+
         url = f"{self.base_url}/search/code"
         params = {
             'q': query,
@@ -300,68 +494,75 @@ class GitHubSearchDiscovery:
             'order': 'desc',
             'per_page': per_page
         }
-        
+
         try:
-            response = requests.get(url, headers=self.headers, params=params)
-            
-            if response.status_code == 403:
-                print(f"  Rate limit exceeded for code search: {query}")
-                print("Waiting 60 seconds before continuing...")
-                time.sleep(60)
-                return []
-            elif response.status_code == 422:
-                print(f"  Code search query invalid: {query}")
-                return []
-            elif response.status_code != 200:
-                print(f"  Code search failed for query '{query}': {response.status_code}")
-                return []
-            
+            response = self._request_with_retry(url, params=params,
+                                                description=f"code search '{query}'")
+        except RateLimitExhaustedError as exc:
+            print(f"  {exc}")
+            self.failed_queries.append(f"code:{query}")
+            return []
+        except requests.RequestException as exc:
+            print(f"  Error in code search for '{query}': {exc}")
+            self.failed_queries.append(f"code:{query}")
+            return []
+
+        if response.status_code == 422:
+            print(f"  Code search query invalid: {query}")
+            return []
+        if response.status_code != 200:
+            print(f"  Code search failed for query '{query}': {response.status_code}")
+            return []
+
+        try:
             data = response.json()
-            
-            # Check rate limit headers
-            rate_limit_remaining = response.headers.get('X-RateLimit-Remaining')
-            if rate_limit_remaining and int(rate_limit_remaining) < 5:
-                print(f"  Code search rate limit low ({rate_limit_remaining} remaining), slowing down...")
-                time.sleep(10)
-            
-            # Extract unique repositories from code search results
-            repos = []
-            repo_names_seen = set()
-            
-            for item in data.get('items', []):
-                repo_data = item['repository']
-                repo_name = repo_data['full_name']
-                
-                # Skip if we've already processed this repository
-                if repo_name in repo_names_seen:
-                    continue
-                repo_names_seen.add(repo_name)
-                
-                # Convert to standard format
-                repo = {
+        except ValueError as exc:
+            print(f"  Invalid JSON in code search for '{query}': {exc}")
+            return []
+
+        # Extract unique repositories from code search results.
+        # The repository object embedded in code-search results is heavily
+        # stripped down (no stargazers_count, license, archived, or topics),
+        # so we enrich each one via /repos/{full_name}.
+        repos = []
+        repo_names_seen = set()
+
+        for item in data.get('items', []):
+            repo_data = item['repository']
+            repo_name = repo_data['full_name']
+
+            # Skip if we've already processed this repository
+            if repo_name in repo_names_seen:
+                continue
+            repo_names_seen.add(repo_name)
+
+            full = self._fetch_full_repo(repo_name)
+            if full is not None:
+                repos.append(full)
+            else:
+                # Enrichment failed; fall back to the minimal record so we at
+                # least keep the discovery hit. The failed lookup is already
+                # tracked in failed_queries and will trigger the fail-on-rate-
+                # limit guard at the end of the run.
+                repos.append({
                     'name': repo_data['name'],
                     'full_name': repo_data['full_name'],
                     'description': repo_data.get('description'),
                     'html_url': repo_data['html_url'],
-                    'stargazers_count': repo_data.get('stargazers_count', 0),
-                    'archived': repo_data.get('archived', False),
-                    'private': repo_data.get('private', False),
+                    'stargazers_count': repo_data.get('stargazers_count', 0) or 0,
+                    'archived': bool(repo_data.get('archived')),
+                    'private': bool(repo_data.get('private')),
                     'size': repo_data.get('size', 0),
                     'updated_at': repo_data.get('updated_at'),
                     'homepage': repo_data.get('homepage'),
-                    'topics': repo_data.get('topics', []),
+                    'topics': repo_data.get('topics') or [],
                     'language': repo_data.get('language'),
                     'license': repo_data.get('license'),
-                    'owner': repo_data.get('owner', {})
-                }
-                repos.append(repo)
-            
-            print(f"  Found {len(repos)} unique repositories")
-            return repos
-            
-        except Exception as e:
-            print(f"  Error in code search for '{query}': {e}")
-            return []
+                    'owner': repo_data.get('owner', {}),
+                })
+
+        print(f"  Found {len(repos)} unique repositories")
+        return repos
     
     def analyze_repository(self, repo: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         """Analyze a repository to extract LinkML project information."""
@@ -393,28 +594,14 @@ class GitHubSearchDiscovery:
         if contacts:
             entry['contacts'] = contacts
         
-        # Add GitHub stars for sorting
-        stars = repo.get('stargazers_count', 0)
-        if stars is None:
-            stars = 0
-        
-        # If stars is 0 or missing, try to fetch from repository API directly
-        if stars == 0 and self.token:
-            try:
-                repo_api_url = f"{self.base_url}/repos/{repo['full_name']}"
-                response = requests.get(repo_api_url, headers=self.headers)
-                if response.status_code == 200:
-                    repo_data = response.json()
-                    direct_stars = repo_data.get('stargazers_count', 0)
-                    if direct_stars > 0:
-                        stars = direct_stars
-                        print(f"  Updated {repo['full_name']} stars: {stars} (from repo API)")
-                time.sleep(1)  # Rate limiting
-            except Exception as e:
-                print(f"  Failed to fetch direct stars for {repo['full_name']}: {e}")
-        
+        # Stars: enrichment in the search phase already replaced the stripped
+        # code-search repo object with the canonical /repos/{name} response,
+        # so this is reliable. If enrichment failed for this repo, the missing
+        # data will have been recorded in failed_queries and the run will exit
+        # non-zero downstream.
+        stars = repo.get('stargazers_count') or 0
         entry['github_stars'] = stars
-        
+
         return entry
     
     def _extract_license(self, repo: Dict[str, Any]) -> str:
@@ -512,17 +699,24 @@ class GitHubSearchDiscovery:
 @click.option('--output', required=True, help='Output file for discovered registry')
 @click.option('--min-stars', default=1, help='Minimum stars required (default: 1)')
 @click.option('--analyze/--no-analyze', default=True, help='Whether to analyze repositories for metadata')
-def main(token, output, min_stars, analyze):
+@click.option('--fail-on-rate-limit/--no-fail-on-rate-limit', default=True,
+              help='Exit non-zero if any search query was dropped due to rate limits '
+                   '(default: enabled; disable for best-effort local runs)')
+def main(token, output, min_stars, analyze, fail_on_rate_limit):
     """Discover LinkML projects using GitHub Search REST API."""
-    
+
     try:
         discovery = GitHubSearchDiscovery(token)
-        
+
         print("Starting LinkML project discovery...")
         repos = discovery.search_linkml_repositories()
-        
+
         if not repos:
             print("No repositories found!")
+            if fail_on_rate_limit and discovery.failed_queries:
+                print(f"ERROR: {len(discovery.failed_queries)} queries were dropped "
+                      f"due to rate limits; refusing to publish empty result.")
+                sys.exit(2)
             return
         
         # Filter by stars
@@ -580,7 +774,14 @@ def main(token, output, min_stars, analyze):
             
             print(f"\n License distribution: {dict(sorted(licenses.items(), key=lambda x: x[1], reverse=True))}")
             print(f"\n Domain distribution: {dict(sorted(domains.items(), key=lambda x: x[1], reverse=True))}")
-        
+
+        if fail_on_rate_limit and discovery.failed_queries:
+            print(f"\nERROR: {len(discovery.failed_queries)} search queries were dropped "
+                  f"due to GitHub rate limits. The registry produced by this run is "
+                  f"likely incomplete; refusing to publish. "
+                  f"Re-run later or pass --no-fail-on-rate-limit to override.")
+            sys.exit(2)
+
     except Exception as e:
         print(f"Error: {e}")
         import traceback
